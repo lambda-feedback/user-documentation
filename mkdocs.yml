@@ -1,0 +1,68 @@
+# Project information
+site_name: Documentation
+site_author: Pierre Tharreau, Louis Manestar
+site_description: >-
+  Architecture, syntax and usage details for an online learning platform
+  focused on providing rich feedback to the user.
+
+# Page Tree
+nav:
+  - Welcome: index.md
+  - Authoring Content:
+      - "authoring_content/index.md"
+      - Problem Set Structure:
+          - "authoring_content/problem_set_structure/index.md"
+          - Question: "authoring_content/problem_set_structure/question.md"
+          - Content: "authoring_content/problem_set_structure/content.md"
+
+      - Response Area Components:
+          - "authoring_content/response_area_components/index.md"
+          - TextInput: "authoring_content/response_area_components/TextInput.md"
+          - NumberInput: "authoring_content/response_area_components/NumberInput.md"
+          - TrueFalse: "authoring_content/response_area_components/TrueFalse.md"
+          - NumericUnits: "authoring_content/response_area_components/NumericUnits.md"
+          - ExpressionInput: "authoring_content/response_area_components/ExpressionInput.md"
+          - MultipleChoice: "authoring_content/response_area_components/MultipleChoice.md"
+          - Matrix: "authoring_content/response_area_components/Matrix.md"
+
+      - Grading Functions:
+          - "authoring_content/grading_functions/index.md"
+
+  - System Architecture: architecture.md
+
+# Configuration
+theme:
+  name: material
+  features:
+    - navigation.indexes # Attach documents to sections
+    - navigation.instant
+    # - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/eye-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/eye
+        name: Switch to light mode
+
+# Extensions
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - def_list
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
