@@ -30,6 +30,15 @@ nav:
 
   - System Architecture: architecture.md
 
+  - Pierre Notes:
+      - Future Features: "pierre_notes/future_features.md"
+      - Authentication Code flow: "pierre_notes/auth_flow.md"
+      - Microsoft Auth notes: "pierre_notes/ms_auth_notes.md"
+      - Shibboleth Auth notes: "pierre_notes/shib_auth_notes.md"
+      - Tex to PDF notes: "pierre_notes/tex_pdf_notes.md"
+      - LaTeX rendering notes: "pierre_notes/latex_rendering.md"
+      - Deployment notes: "pierre_notes/deployment.md"
+
 # Configuration
 theme:
   name: material

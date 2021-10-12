@@ -11,7 +11,7 @@ pip install mkdocs-material
 
 Navigate to where you have cloned this repository and run
 
-```
+``` 
 mkdocs serve 
 ```
 
