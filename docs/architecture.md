@@ -90,3 +90,66 @@ Each function has an identical resource structure as the Grading Gateway:
 - Lambda function triggered by respective endpoints on the [Grading Functions Gateway](https://eu-west-2.console.aws.amazon.com/apigateway/main/api-detail?api=huwy6j485d&integration=o2mvbao&region=eu-west-2&routes=acde4ib).
 
 **NOTE:** When adding a new grading function to the gateway, make sure to set the `Payload format version` for the integration to `2.0`!!
+
+# `client-backend` Architecture
+
+## Framework
+
+The server is built using [NestJS](https://nestjs.com/), which is a Typescript framework that unifies many popular node libraries to create a powerful server that is simple to develop with.
+
+A GraphQL API is exposed to client, and all interactions, except for Authenticating users, are made through it. This includes:
+
+- retrieving modules
+- retrieving courses
+- logging events
+- submit responses
+
+Environment variables are needed to start the server. Developers should create a `.env` file in the root of the repository based on the `.env.example` file.
+
+## Server
+
+The server is run within a docker container, and can be started locally by running `docker compose up`.
+
+## Deployment
+
+Deployment is managed through `CirecleCI`, which builds a docker image from the source codes and uploads it to ECR. This is then consumed by AWS AppRunner, which exposes a port over the internet.
+
+## Environments
+
+There are two live environments, **staging** and **production**. Staging deployments occur automatically when commits are added to the `main` branch. Production deployments are manual, and should be initiated after changes have been verified in staging. They can be initiated in the CircleCI console.
+
+**Links**:
+
+- [Repo](https://github.com/lambda-feedback/client-backend)
+- [CircleCI](https://app.circleci.com/pipelines/github/lambda-feedback/client-backend?filter=all)
+- [AWS AppRunner Staging Service](https://eu-west-1.console.aws.amazon.com/apprunner/home?region=eu-west-1#/services/dashboard?service_arn=arn%3Aaws%3Aapprunner%3Aeu-west-1%3A172805473475%3Aservice%2Flambda-feedback-staging-bcknd-apprunner%2F4952d6e2f96b4c71949e0d592024937d&active_tab=logs)
+- [AWS AppRunner Production Service](https://eu-west-1.console.aws.amazon.com/apprunner/home?region=eu-west-1#/services/dashboard?service_arn=arn%3Aaws%3Aapprunner%3Aeu-west-1%3A172805473475%3Aservice%2Flambda-feedback-production-bcknd%2Ffa29c5550b9a406ba3d91f3cea5d578e&active_tab=logs)
+
+# `client-web` Architecture
+
+## Framework
+
+The site is built using [NextJS](https://nextjs.org/), which is a server-side framework that gives you the best of server-side performance and SPA flexibility.
+
+[React-query](https://react-query.tanstack.com/) and [graphql-codegen](https://www.graphql-code-generator.com/) are used together to auto-generate a data fetching client based on introspecting the backend graphql schema.
+
+Environment variables are needed to run the site. Developers should create a `.env` file in the root of the repository based on the `.env.example` file.
+
+## Local Server
+
+The site is served locally by running `yarn dev`.
+
+## Deployment
+
+Deployment is managed through `CirecleCI`, using [Serverless-next.js](https://github.com/serverless-nextjs/serverless-next.js). This library will manage the lambda functions, s3 bucket, cloudfront distribution, SQS queue, ACM certificate, and more needed to run NextJS on AWS.
+
+## Environments
+
+There are two live environments, **staging** and **production**. Staging deployments occur automatically when commits are added to the `main` branch. Production deployments are manual, and should be initiated after changes have been verified in staging. They can be initiated in the CircleCI console.
+
+**Links**:
+
+- [Repo](https://github.com/lambda-feedback/client-backend)
+- [CircleCI](https://app.circleci.com/pipelines/github/lambda-feedback/client-backend?filter=all)
+- [Staging Site](https://staging.lambafeedback.com)
+- [Production Site](https://lambafeedback.com)
