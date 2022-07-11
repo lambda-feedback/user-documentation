@@ -25,25 +25,14 @@ nav:
           - MultipleChoice: "authoring_content/response_area_components/MultipleChoice.md"
           - Matrix: "authoring_content/response_area_components/Matrix.md"
 
-      - Grading Functions:
-          - "authoring_content/grading_functions/index.md"
-
-  - System Architecture: architecture.md
-
-  - Pierre Notes:
-      - Future Features: "pierre_notes/future_features.md"
-      - Authentication Code flow: "pierre_notes/auth_flow.md"
-      - Microsoft Auth notes: "pierre_notes/ms_auth_notes.md"
-      - Shibboleth Auth notes: "pierre_notes/shib_auth_notes.md"
-      - Tex to PDF notes: "pierre_notes/tex_pdf_notes.md"
-      - LaTeX rendering notes: "pierre_notes/latex_rendering.md"
-      - Deployment notes: "pierre_notes/deployment.md"
+      - Evaluation Functions:
+          - "authoring_content/evaluation_functions/index.md"
 
 # Configuration
 theme:
   name: material
   features:
-    - navigation.indexes # Attach documents to sections
+    - navigation.indexes
     - navigation.instant
     # - navigation.top
     - navigation.tabs
@@ -75,3 +64,9 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - attr_list
+# Plugins
+# plugins:
+#   - search
+#   - evalfunctionfetcher:
+#       gql_root_url: "http://127.0.0.1:5050/testingfunctions"
+#       add_to_section: ["Authoring Content", "Evaluation Functions"]
