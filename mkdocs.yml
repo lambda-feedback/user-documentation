@@ -1,5 +1,5 @@
 # Project information
-site_name: Documentation
+site_name: LamdaFeedback Documentation
 site_author: Pierre Tharreau, Louis Manestar
 site_description: >-
   Architecture, syntax and usage details for an online learning platform
@@ -28,9 +28,17 @@ nav:
       - Evaluation Functions:
           - "authoring_content/evaluation_functions/index.md"
 
+  - Student/User Help:
+      - "student/index.md"
+
+  - Developer Information:
+      - "developer/index.md"
+
 # Configuration
 theme:
   name: material
+  icon:
+    logo: material/lambda
   features:
     - navigation.indexes
     - navigation.instant
@@ -64,9 +72,10 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - attr_list
+
 # Plugins
-# plugins:
-#   - search
-#   - evalfunctionfetcher:
-#       gql_root_url: "http://127.0.0.1:5050/testingfunctions"
-#       add_to_section: ["Authoring Content", "Evaluation Functions"]
+plugins:
+  - search
+  # - evaldocsloader:
+  #     gql_root_url: "http://127.0.0.1:5050/partial"
+  #     add_to_section: ["Authoring Content", "Evaluation Functions"]
