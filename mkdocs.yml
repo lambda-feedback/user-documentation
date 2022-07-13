@@ -7,31 +7,34 @@ site_description: >-
 
 # Page Tree
 nav:
-  - Welcome: index.md
-  - Authoring Content:
-      - "authoring_content/index.md"
-      - Problem Set Structure:
-          - "authoring_content/problem_set_structure/index.md"
-          - Question: "authoring_content/problem_set_structure/question.md"
-          - Content: "authoring_content/problem_set_structure/content.md"
+  - Home: index.md
+  - Introduction:
+      - "intro/index.md"
+  - Teachers:
+      - "teacher/index.md"
+      - Guides:
+          - "teacher/guides/getting_started.md"
+          - Content Creation: "teacher/guides/content.md"
+          - Analytics: "teacher/guides/analytics.md"
 
-      - Response Area Components:
-          - "authoring_content/response_area_components/index.md"
-          - TextInput: "authoring_content/response_area_components/TextInput.md"
-          - NumberInput: "authoring_content/response_area_components/NumberInput.md"
-          - TrueFalse: "authoring_content/response_area_components/TrueFalse.md"
-          - NumericUnits: "authoring_content/response_area_components/NumericUnits.md"
-          - ExpressionInput: "authoring_content/response_area_components/ExpressionInput.md"
-          - MultipleChoice: "authoring_content/response_area_components/MultipleChoice.md"
-          - Matrix: "authoring_content/response_area_components/Matrix.md"
+      - Reference:
+          - Response Areas:
+              - "teacher/reference/response_area_components/index.md"
+              - TextInput: "teacher/reference/response_area_components/TextInput.md"
+              - NumberInput: "teacher/reference/response_area_components/NumberInput.md"
+              - TrueFalse: "teacher/reference/response_area_components/TrueFalse.md"
+              - NumericUnits: "teacher/reference/response_area_components/NumericUnits.md"
+              - ExpressionInput: "teacher/reference/response_area_components/ExpressionInput.md"
+              - MultipleChoice: "teacher/reference/response_area_components/MultipleChoice.md"
+              - Matrix: "teacher/reference/response_area_components/Matrix.md"
 
-      - Evaluation Functions:
-          - "authoring_content/evaluation_functions/index.md"
+          - Evaluation Functions:
+              - "teacher/reference/evaluation_functions/index.md"
 
-  - Student/User Help:
+  - Students:
       - "student/index.md"
 
-  - Developer Information:
+  - Developers:
       - "developer/index.md"
 
 # Configuration
