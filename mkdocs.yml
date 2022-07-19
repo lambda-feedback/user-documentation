@@ -10,6 +10,7 @@ nav:
   - Home: index.md
   - Introduction:
       - "intro/index.md"
+      - Contacts: "intro/contacts.md"
   - Teachers:
       - "teacher/index.md"
       - Guides:
@@ -36,15 +37,26 @@ nav:
 
   - Developers:
       - "developer/index.md"
+      - Evaluation Functions:
+          - Quickstart Guide: "developer/evaluation_functions/quickstart.md"
+          - General Specification: "developer/evaluation_functions/specification.md"
+          - Testing Functions Locally: "developer/evaluation_functions/local.md"
+          - Evaluation Function Utils: "developer/evaluation_functions/module.md"
+          - Deployed Functions:
+              - "developer/evaluation_functions/index.md"
+      - Response Area Components:
+          - Creation Guide: "developer/placeholder.md"
+          - Specification: "developer/placeholder.md"
 
 # Configuration
 theme:
   name: material
-  icon:
-    logo: material/lambda
+  logo: assets/logo.png
+  favicon: assets/favicon.png
   features:
     - navigation.indexes
     - navigation.instant
+    - navigation.sections
     # - navigation.top
     - navigation.tabs
     - navigation.tabs.sticky
@@ -75,10 +87,12 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - attr_list
+  - meta
 
 # Plugins
 plugins:
   - search
   # - evaldocsloader:
-  #     gql_root_url: "http://127.0.0.1:5050/partial"
-  #     add_to_section: ["Authoring Content", "Evaluation Functions"]
+  # gql_root_url: "http://127.0.0.1:5050/partial"
+  # add_to_section:
+  #   ["Developers", "Evaluation Functions", "Deployed Functions"]
