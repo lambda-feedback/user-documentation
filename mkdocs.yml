@@ -8,16 +8,21 @@ site_description: >-
 # Page Tree
 nav:
   - Home: index.md
+  
   - Introduction:
       - "intro/index.md"
       - Contacts: "intro/contacts.md"
+      
+  - Students:
+      - "student/index.md"
+      
   - Teachers:
       - "teacher/index.md"
       - Guides:
           - "teacher/guides/getting_started.md"
           - Content Creation: "teacher/guides/content.md"
           - Analytics: "teacher/guides/analytics.md"
-
+          
       - Reference:
           - Response Areas:
               - "teacher/reference/response_area_components/index.md"
@@ -31,9 +36,6 @@ nav:
 
           - Evaluation Functions:
               - "teacher/reference/evaluation_functions/index.md"
-
-  - Students:
-      - "student/index.md"
 
   - Developers:
       - "developer/index.md"
