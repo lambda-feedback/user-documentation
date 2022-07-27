@@ -8,8 +8,14 @@ site_description: >-
 # Page Tree
 nav:
   - Home: index.md
+
   - Introduction:
       - "intro/index.md"
+      - Contacts: "intro/contacts.md"
+
+  - Students:
+      - "student/index.md"
+
   - Teachers:
       - "teacher/index.md"
       - Guides:
@@ -20,31 +26,40 @@ nav:
       - Reference:
           - Response Areas:
               - "teacher/reference/response_area_components/index.md"
-              - TextInput: "teacher/reference/response_area_components/TextInput.md"
-              - NumberInput: "teacher/reference/response_area_components/NumberInput.md"
-              - TrueFalse: "teacher/reference/response_area_components/TrueFalse.md"
+              - Text: "teacher/reference/response_area_components/Text.md"
+              - Number: "teacher/reference/response_area_components/Number.md"
+              - Boolean: "teacher/reference/response_area_components/Boolean.md"
               - NumericUnits: "teacher/reference/response_area_components/NumericUnits.md"
-              - ExpressionInput: "teacher/reference/response_area_components/ExpressionInput.md"
+              - Expression: "teacher/reference/response_area_components/Expression.md"
               - MultipleChoice: "teacher/reference/response_area_components/MultipleChoice.md"
               - Matrix: "teacher/reference/response_area_components/Matrix.md"
+              - Table: "teacher/reference/response_area_components/Table.md"
 
           - Evaluation Functions:
               - "teacher/reference/evaluation_functions/index.md"
 
-  - Students:
-      - "student/index.md"
-
   - Developers:
       - "developer/index.md"
+      - Evaluation Functions:
+          - Quickstart Guide: "developer/evaluation_functions/quickstart.md"
+          - General Specification: "developer/evaluation_functions/specification.md"
+          - Testing Functions Locally: "developer/evaluation_functions/local.md"
+          - Evaluation Function Utils: "developer/evaluation_functions/module.md"
+          - Deployed Functions:
+              - "developer/evaluation_functions/index.md"
+      - Response Area Components:
+          - Creation Guide: "developer/placeholder.md"
+          - Specification: "developer/placeholder.md"
 
 # Configuration
 theme:
   name: material
-  icon:
-    logo: material/lambda
+  logo: assets/logo.png
+  favicon: assets/favicon.png
   features:
     - navigation.indexes
     - navigation.instant
+    - navigation.sections
     # - navigation.top
     - navigation.tabs
     - navigation.tabs.sticky
@@ -76,10 +91,13 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - attr_list
   - md_in_html
+  - meta
 
 # Plugins
 plugins:
   - search
-  # - evaldocsloader:
-  #     gql_root_url: "http://127.0.0.1:5050/partial"
-  #     add_to_section: ["Authoring Content", "Evaluation Functions"]
+  - evaldocsloader:
+      functions_announce_endpoint: "https://staging-alpha-api.lambdafeedback.com/evaluation-functions/registered"
+      api_key: !ENV [API_KEY, "disable"]
+      add_to_section:
+        ["Developers", "Evaluation Functions", "Deployed Functions"]
