@@ -15,6 +15,17 @@
 - Response area components
   - Guide to create more
 
+## Boolean Response Structure
+*This is how the react component will structure the user's input to the Grading Gateway, when they press the check button.* 
+
+The response is an integer equal to `1` if the `true` option was selected, and `0` if the `false` option was selected.
+
+!!! example 
+
+    ```json 
+    "response": 1
+    ```
+
 - System Architecture
   - Technologies
   - Deployment pipelines
