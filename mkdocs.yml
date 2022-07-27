@@ -12,6 +12,7 @@ nav:
   - Introduction:
       - "intro/index.md"
       - Contacts: "intro/contacts.md"
+      - Terminology: "intro/terminology.md"
 
   - Students:
       - "student/index.md"
