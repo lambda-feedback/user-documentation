@@ -28,13 +28,14 @@ nav:
       - Reference:
           - Response Areas:
               - "teacher/reference/response_area_components/index.md"
-              - TextInput: "teacher/reference/response_area_components/TextInput.md"
-              - NumberInput: "teacher/reference/response_area_components/NumberInput.md"
-              - TrueFalse: "teacher/reference/response_area_components/TrueFalse.md"
+              - Text: "teacher/reference/response_area_components/Text.md"
+              - Number: "teacher/reference/response_area_components/Number.md"
+              - Boolean: "teacher/reference/response_area_components/Boolean.md"
               - NumericUnits: "teacher/reference/response_area_components/NumericUnits.md"
-              - ExpressionInput: "teacher/reference/response_area_components/ExpressionInput.md"
+              - Expression: "teacher/reference/response_area_components/Expression.md"
               - MultipleChoice: "teacher/reference/response_area_components/MultipleChoice.md"
               - Matrix: "teacher/reference/response_area_components/Matrix.md"
+              - Table: "teacher/reference/response_area_components/Table.md"
 
           - Evaluation Functions:
               - "teacher/reference/evaluation_functions/index.md"
@@ -91,6 +92,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - attr_list
+  - md_in_html
   - meta
 
 # Plugins

@@ -1,6 +1,7 @@
-# Matrix
+# Table
 
-Matrix response area. Will populate the component with a grid of text input fields, in order to facilitate inputing matrices.
+Table response area. Will populate the component with a grid of text input fields, in order to facilitate inputing elements of a table. The number of rows and columns can be specified, along with their corresponding names.
+
 
 ## Evaluation Function Options
 
@@ -13,13 +14,14 @@ Very similar to the SymbolicEqual grading function, but grading any list of expr
 
 
 ## Component Parameters 
-### `rows and cols` (required)
-Required paramter, describes the shape of the Matrix to be displayed. 
 
-In the 'Response area answer' section, the number of rows and columns can either be typed directly into the corresponding boxes, or adjusted using the up and down arrows, which appear once the mouse hovers over the input box.
+### `rows` 
+The number of rows required for the table can be entered into this input field, either through typing directly, or using thr up and down arrows located inside the box.
 
-![Screenshot](screenshots/MatrixSize.jpg)
+### `cols` 
+The number of columns required for the table can be entered into this input field, either through typing directly, or using thr up and down arrows located inside the box.
 
+![Screenshot](screenshots/TableRowsCols.jpg)
 
 ### `post_response_text` (optional)
 Text block to be displayed to the left of the input field. Markdown and LaTeX are allowed following the usual syntax.
@@ -28,12 +30,18 @@ Text block to be displayed to the left of the input field. Markdown and LaTeX ar
 Text block to be displayed to the left of the input field. Markdown and LaTeX are allowed following the usual syntax.
 
 ## Setting The Answer
-Once the required number of rows and cols has been selected, Each element of the matrix can be entered by clicking the individual input boxes and typing in the correct numbers.
 
-![Screenshot](screenshots/MatrixResponseAreaAnswer.jpg)
+Once the required number of rows and cols has been inputted, The names of each row and column should be changed depending on their corresponding variables. The value of each grid element can then be entered into individual input fields. 
+
+If the row or column names are not changed, these will appear blank in the student response area.
+
+![Screenshot](screenshots/TableResponseAreaAnswer.jpg)
+
 
 ## Example Student Response
-Correct response given
-![Screenshot](screenshots/ArrayCorrect.jpg)
-Incorrect response given
-![Screenshot](screenshots/ArrayIncorrect.jpg)
+
+Correct response:
+![Screenshot](screenshots/TableCorrect.jpg)
+
+Incorrect response:
+![Screenshot](screenshots/TableIncorrect.jpg)

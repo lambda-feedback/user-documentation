@@ -4,6 +4,21 @@ Welcome to LambdaFeedback's developer docs.
 ## Evaluation functions
 Evaluation functions are responsible for taking in a user's response, comparing it with a correct answer, and providing feedback to the frontend application. Living as containserized Lambda functions on the cloud, they are infinitely customisable and language-agnostic. Content authors should be able to create their own at will. However, we are aware that in a lot of cases, this grading logic will be similar, which is why a few functions have already been created. 
 
+## Boolean Response Structure
+*This is how the react component will structure the user's input to the Grading Gateway, when they press the check button.* 
+
+The response is an integer equal to `1` if the `true` option was selected, and `0` if the `false` option was selected.
+
+!!! example 
+
+    ```json 
+    "response": 1
+    ```
+
+- System Architecture
+  - Technologies
+  - Deployment pipelines
+  - Hierarchy 
 [Check out our Quickstart Guide](evaluation_functions/quickstart.md){ .md-button .md-button--primary }
 
 
