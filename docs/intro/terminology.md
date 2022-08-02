@@ -7,6 +7,11 @@ Here, the fundamental structure and terminology will be laid out.
 ### Evaluation Functions
 An evaluation function is an algorithm that is applied to a response area, whereby the student's response is evaluated and checked. The types of evaluation functions correspond to the types of response areas.
 
+### Final Answer
+This section lies within the "Help" panel which appears upon clicking on the "Help" button. It serves as a simple container for the final answer, so that the student may have a simple means of comparing results.
+
+This is an optional section, and so does not have to be included in any question.
+
 ### Modules
 A module is a set programme of taught material. In a university setting, this would correspond to a course module.
 
@@ -24,3 +29,13 @@ From the perspective of LambdaFeedback, a student is someone who responds to pro
 
 ### Teacher
 From the perspective of LambdaFeedback, a teacher is someone who creates and manages problem sets. And so, a teacher's account has permissions to create, edit, and delete specific sets, questions, or parts. A teacher also holds all permissions that a student has.
+
+### Tutorial
+This section lies within the "Help" panel which appears upon clicking on the "Help" button. It is encouraged to be the first piece of guidance for the student before they look at the "Worked Solution", or "Final Answer". Thus, this section aims only to state the steps required to arrive at each stage of working within the solution.
+
+This is an optional section, and so does not have to be included in any question.
+
+### Worked Solution
+This section lies within the "Help" panel which appears upon clicking on the "Help" button. It serves as the container for the working out of a question, where there is a clear distinction between the working, and the final answer. Furthermore, this section may be split into several steps which the student can navigate, where further steps can be hidden until reached.
+
+This is an optional section, and so does not have to be included in any question.
