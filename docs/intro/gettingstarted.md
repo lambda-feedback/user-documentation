@@ -6,9 +6,6 @@
 
 Use your Imperial Microsoft account to sign in and access your modules.  
 
-### ? What else do they need to know?
-
-
 ## Adding content 
 
 ### Accessing your modules
@@ -28,10 +25,10 @@ Each question has a heading ("add part content") and can have multiple parts, wh
 The heading can be used to introduce the question, while each part has several areas. 
 
 #### Part area 1: Part content
-This is used to specify the question that is being asked in that part. ? add example?
+This is used to specify the question that is being asked in that part. 
 
 #### Part area 2: Response area
-Where the student types in their reponse. ? Inlcude link to more detailed response area tutorial? 
+Where the student types in their reponse. Inlcude link to more detailed response area tutorial 
 
 #### Part area 3: Tutorial
 This area can have several parts, and can be used however the teacher sees fit. A common usage is to provide a series of successive hints to help students who are stuck on a question find the answer.
