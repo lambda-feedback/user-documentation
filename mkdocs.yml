@@ -97,6 +97,7 @@ markdown_extensions:
 # Plugins
 plugins:
   - search
+  - macros
   - evaldocsloader:
       functions_announce_endpoint: "https://staging-alpha-api.lambdafeedback.com/evaluation-functions/registered"
       api_key: !ENV [API_KEY, "disable"]
