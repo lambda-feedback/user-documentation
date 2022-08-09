@@ -7,6 +7,7 @@ To serve locally, download [mkdocs](https://www.mkdocs.org/getting-started/), an
 ```bash
 pip install mkdocs
 pip install mkdocs-material
+pip install evaldocsloader
 ```
 
 Navigate to where you have cloned this repository and run
