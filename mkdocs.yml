@@ -23,6 +23,7 @@ nav:
           - Getting Started: "teacher/guides/gettingstarted.md"
           - Content Creation: "teacher/guides/content.md"
           - Analytics: "teacher/guides/analytics.md"
+          - FAQ: "teacher/guides/faq.md"
 
       - Reference:
           - Response Areas:
@@ -103,3 +104,8 @@ plugins:
       api_key: !ENV [API_KEY, "disable"]
       add_to_section:
         ["Developers", "Evaluation Functions", "Deployed Functions"]
+
+# Extra variables, accessible within markdown pages
+extra:
+  urls:
+    client: https://alpha.lambdafeedback.com
