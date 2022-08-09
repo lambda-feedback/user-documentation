@@ -13,7 +13,6 @@ nav:
       - "intro/index.md"
       - Contacts: "intro/contacts.md"
       - Terminology: "intro/terminology.md"
-      - Getting Started: "intro/gettingstarted.md"
 
   - Students:
       - "student/index.md"
@@ -21,7 +20,7 @@ nav:
   - Teachers:
       - "teacher/index.md"
       - Guides:
-          - "teacher/guides/getting_started.md"
+          - Getting Started: "teacher/guides/gettingstarted.md"
           - Content Creation: "teacher/guides/content.md"
           - Analytics: "teacher/guides/analytics.md"
 
