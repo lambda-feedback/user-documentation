@@ -22,13 +22,13 @@ The name of the question can be edited by clicking on it directly (the default i
 ### Structure of questions
 Each question has a heading ("add part content") and can have multiple parts, which can be added or deleted as needed using the "add part" or "delete part" buttons. 
 
-The heading can be used to introduce the question, while each part has several areas within it. Definitions of these parts are also given [here.](/docs/intro/terminology)
+The heading can be used to introduce the question, while each part has several areas within it. Definitions of these parts are also given [here.](../../intro/terminology.md)
 
 #### Part area 1: Part content
 This is used to specify the question that is being asked in that part. 
 
 #### Part area 2: Response area
-Where the student types in their reponse. For a more complete overview of the different response area functionalities see the [dedicated page](/docs/teacher/reference/response_area_components), as well as the page on [evaluation functions](/docs/teacher/reference/evaluation_functions)
+Where the student types in their reponse. For a more complete overview of the different response area functionalities see the [dedicated page](../reference/response_area_components/index.md), as well as the page on [evaluation functions](../reference/evaluation_functions/index.md)
 
 #### Part area 3: Tutorial
 This area can have several parts, and can be used however the teacher sees fit. A common usage is to provide a series of successive hints to help students who are stuck on a question to find the answer.
