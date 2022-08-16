@@ -102,8 +102,8 @@ plugins:
   - evaldocsloader:
       functions_announce_endpoint: "https://staging-alpha-api.lambdafeedback.com/evaluation-functions/registered"
       api_key: !ENV [API_KEY, "disable"]
-      add_to_section:
-        ["Developers", "Evaluation Functions", "Deployed Functions"]
+      dev_section: ["Developers", "Evaluation Functions", "Deployed Functions"]
+      user_section: ["Teachers", "Reference", "Evaluation Functions"]
 
 # Extra variables, accessible within markdown pages
 extra:
