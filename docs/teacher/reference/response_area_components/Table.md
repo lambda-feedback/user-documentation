@@ -21,7 +21,7 @@ The number of rows required for the table can be entered into this input field, 
 ### `cols` 
 The number of columns required for the table can be entered into this input field, either through typing directly, or using thr up and down arrows located inside the box.
 
-![Screenshot](screenshots/TableRowsCols.jpg)
+![Screenshot](screenshots/TableRowsCols.JPG)
 
 ### `post_response_text` (optional)
 Text block to be displayed to the left of the input field. Markdown and LaTeX are allowed following the usual syntax.
@@ -35,13 +35,13 @@ Once the required number of rows and cols has been inputted, The names of each r
 
 If the row or column names are not changed, these will appear blank in the student response area.
 
-![Screenshot](screenshots/TableResponseAreaAnswer.jpg)
+![Screenshot](screenshots/TableResponseAreaAnswer.JPG)
 
 
 ## Example Student Response
 
 Correct response:
-![Screenshot](screenshots/TableCorrect.jpg)
+![Screenshot](screenshots/TableCorrect.JPG)
 
 Incorrect response:
-![Screenshot](screenshots/TableIncorrect.jpg)
+![Screenshot](screenshots/TableIncorrect.JPG)

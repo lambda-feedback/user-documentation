@@ -1,6 +1,6 @@
 # Number
 
-Very similar to the [TextInput](TextInput.md) response area, except the user response is parsed as a float.
+Very similar to the [Text](Text.md) response area, except the user response is parsed as a float.
 
 ## Evaluation Function Options
 
@@ -14,7 +14,7 @@ A strict comparison in Python using '=='. This function is a basic utility but o
 
 In the 'Response Area Answer' section, enter the required float into the input field. To test this, try typing correct and incorrect answers into the 'Response Area Preview' section.
 
-![Screenshot](screenshots/NumberResponseAreaAnswer.jpg)
+![Screenshot](screenshots/NumberResponseAreaAnswer.JPG)
 
 
 
@@ -51,7 +51,7 @@ The response is simply sent as a float, parsed from the input field using the Ja
 ## Example Student Response
 
 Correct response:
-![Screenshot](screenshots/NumberCorrect.jpg)
+![Screenshot](screenshots/NumberCorrect.JPG)
 
 Incorrect response:
-![Screenshot](screenshots/NumberIncorrect.jpg)
+![Screenshot](screenshots/NumberIncorrect.JPG)

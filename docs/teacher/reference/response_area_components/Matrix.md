@@ -18,7 +18,7 @@ Required paramter, describes the shape of the Matrix to be displayed.
 
 In the 'Response area answer' section, the number of rows and columns can either be typed directly into the corresponding boxes, or adjusted using the up and down arrows, which appear once the mouse hovers over the input box.
 
-![Screenshot](screenshots/MatrixSize.jpg)
+![Screenshot](screenshots/MatrixSize.JPG)
 
 
 ### `post_response_text` (optional)
@@ -30,10 +30,10 @@ Text block to be displayed to the left of the input field. Markdown and LaTeX ar
 ## Setting The Answer
 Once the required number of rows and cols has been selected, Each element of the matrix can be entered by clicking the individual input boxes and typing in the correct numbers.
 
-![Screenshot](screenshots/MatrixResponseAreaAnswer.jpg)
+![Screenshot](screenshots/MatrixResponseAreaAnswer.JPG)
 
 ## Example Student Response
 Correct response given
-![Screenshot](screenshots/ArrayCorrect.jpg)
+![Screenshot](screenshots/ArrayCorrect.JPG)
 Incorrect response given
-![Screenshot](screenshots/ArrayIncorrect.jpg)
+![Screenshot](screenshots/ArrayIncorrect.JPG)

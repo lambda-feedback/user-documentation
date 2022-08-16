@@ -1,6 +1,6 @@
 # Expression
 
-This response area is very similar to [TextInput](TextInput.md), differing in that it can display how the user's response was interpreted back to them through the 'live preview' feature. This works using the grading function, providing a `feedback.response_latex` field, which gets rendered.
+This response area is very similar to [Text](Text.md), differing in that it can display how the user's response was interpreted back to them through the 'live preview' feature. This works using the grading function, providing a `feedback.response_latex` field, which gets rendered.
 
 ## Evaluation Function Options
 ### `isSimilar`
@@ -23,11 +23,11 @@ Type the correct answer into the 'Response Area Answer' using standard syntax. A
 
 Use the 'Response Area Preview' to check the answer has been set correctly. 
 
-![Screenshot](screenshots/ExpressionResponseAreaAnswer.jpg)
+![Screenshot](screenshots/ExpressionResponseAreaAnswer.JPG)
 
 ## Example Student Response area
 Correct response given
-![Screenshot](screenshots/ExpressionCorrect.jpg)
+![Screenshot](screenshots/ExpressionCorrect.JPG)
 
 Incorrect response given
-![Screenshot](screenshots/ExpressionIncorrect.jpg)
+![Screenshot](screenshots/ExpressionIncorrect.JPG)

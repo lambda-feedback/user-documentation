@@ -17,8 +17,8 @@ Compares two symbolic expressions for mathematical equivalence, using SymPy. See
 
 Type the correct answer into the 'Response Area Answer' section, replacing the work 'Text', which initially occupies the input field.
 
-![Screenshot](screenshots/TextResponseAreaAnswer2.jpg)
-![Screenshot](screenshots/TextResponseAreaAnswer.jpg)
+![Screenshot](screenshots/TextResponseAreaAnswer2.JPG)
+![Screenshot](screenshots/TextResponseAreaAnswer.JPG)
 
 
 ## Component Parameters 
@@ -51,7 +51,7 @@ The response is a string containing the user's response, exactly as they typed i
     ```
 
 ## Example Student Response
-![Screenshot](screenshots/TextStudentResponse.jpg)
+![Screenshot](screenshots/TextStudentResponse.JPG)
 
 Correct response:
-![Screenshot](screenshots/TextCorrect.jpg)
+![Screenshot](screenshots/TextCorrect.JPG)
