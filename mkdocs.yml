@@ -1,6 +1,7 @@
 # Project information
 site_name: LamdaFeedback Documentation
 site_author: Pierre Tharreau, Louis Manestar
+site_url: https://lambda-feedback.github.io/Documentation/
 site_description: >-
   Architecture, syntax and usage details for an online learning platform
   focused on providing rich feedback to the user.
