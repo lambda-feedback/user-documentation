@@ -5,7 +5,7 @@ It's a cloud function which performs some computation given some user input (the
 ## Getting Setup for Development
 
 1. Get the code on your local machine (Using github desktop or the `git` cli)
-	- For new functions: create and clone a new repository using the [boilerplate template](https://github.com/lambda-feedback/Evaluation-Function-Boilerplate)
+	- For new functions: create and clone a new repository using the [boilerplate template](https://github.com/lambda-feedback/Evaluation-Function-Boilerplate). **Make sure the new repository is set to public (it needs access to organisation secrets)**.
 	- For existing functions: please make your changes on a new separate branch 
 2. *If you are creating a new function*, you'll need to set it's name (as it will be deployed) in the `config.json` file, available in the root directory.
 	- The name must be unique. To view existing grading functions, go to:
@@ -20,7 +20,10 @@ It's a cloud function which performs some computation given some user input (the
 
 		[`evaluation_tests.py` Specification](specification.md#evaluation_testspy){ .md-button }
 
-	3. **`app/docs.md`**: This file should be edited to reflect any changes/features implemented. It is baked into the function's image to be pulled by this documentation website under the [deployed functions](index.md) section.
+	3. Documentation files:
+		- **`app/docs/dev.md`**: This file should be edited to reflect any changes/features implemented, following a developer perspective. It is baked into the function's image to be pulled by this documentation website under the [deployed functions](index.md) section.
+    
+		- **`app/docs/user.md`**: This file documents how the function can be used by a teacher user, from the perspective of editing content on the [LambdaFeedback]({{ urls.client }}) platform. This time, files are collated and displayed in the [Teacher](../../teacher/index.md) section.
 
 4. Changes can be tested locally by running the tests you've written using:
 ```bash
@@ -29,6 +32,20 @@ python -m unittest app/evaluation_tests.py
 [Running and Testing Functions Locally](local.md){ .md-button }
 
 5. Merge commits into the default branch will trigger the `test-and-deploy.yml` workflow, which will build the docker image, push it to a shared ECR repository, then call the backend `grading-function/ensure` route to build the necessary infrastructure to make the function available from the client app.
+
+6. You can now test the deployed evaluation function using your prefered request client (such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) or simply `curl` from a terminal). Functions are made available at:
+```url
+https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/<function name as defined in config.json>
+```
+
+!!! example "Example Request to SymbolicEqual"
+		``` 
+		curl --request GET \
+			--url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/symbolicEqual \
+			--header 'Content-Type: application/json' \
+			--header 'command: eval' \
+			--data '{"response": "x + x", "answer": "2*x"}'
+		```
 
 ## More Info
 

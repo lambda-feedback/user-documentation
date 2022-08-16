@@ -4,6 +4,20 @@
 
 ## Base Layer 
 
+### Commands
+
+`eval`
+:   This is the default command, used to compare a student's `response` and correct `answer`, given certain `params`
+
+`healthcheck`
+:   This command runs and returns a summary three testing suites: requests, responses and evaluation. Request and response tests check that inputs and outputs to the function work correctly, and follow the correct syntax. Evaluation tests are unique to each evaluation function and test the actual comparison logic.
+
+`docs-user`
+:   Command returns the `docs/user.md` file (base64 encoded)
+
+`docs-dev`
+:   Command returns the `docs/dev.md` file (base64 encoded)
+
 
 ## File Structures
 A standard evaluation function repository based on the provided [boilerplate](https://github.com/lambda-feedback/Evaluation-Function-Boilerplate) will have the following file structure:
@@ -15,6 +29,10 @@ app/
     evaluation_tests.py # Unittests for the main evaluation_function
     requirements.txt # list of packages needed for algorithm.py
     Dockerfile # for building whole image to deploy to AWS
+
+    docs/ # Documentation pages for this function (required)
+        dev.md # Developer-oriented documentation
+        user.md # LambdaFeedback content author documentation
 
 .github/
     workflows/
@@ -96,4 +114,9 @@ Error reporting should follow a specific approach for all evaluation functions. 
 ## `evaluation_tests.py`
 
 
-## `docs.md` 
+## Documentation
+Two essential and required documentation files are copied over during the creation of the evaluation function docker image. These are subsequently served by the function under the `docs-dev` and `docs-user` commands, to be accessed by this documentation website, as well as for embedding on LambdaFeedback. 
+
+### `docs/dev.md`
+
+### `docs/user.md`
