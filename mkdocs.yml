@@ -46,6 +46,7 @@ nav:
       - Evaluation Functions:
           - Quickstart Guide: "developer/evaluation_functions/quickstart.md"
           - General Specification: "developer/evaluation_functions/specification.md"
+          - Feedback: "developer/evaluation_functions/feedback.md"
           - Testing Functions Locally: "developer/evaluation_functions/local.md"
           - Evaluation Function Utils: "developer/evaluation_functions/module.md"
           - Deployed Functions:
