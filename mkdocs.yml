@@ -22,7 +22,7 @@ nav:
       - "teacher/index.md"
       - Guides:
           - Getting Started: "teacher/guides/gettingstarted.md"
-          - Content Creation: "teacher/guides/content.md"
+          - Content Creation - Sets and Questions: "teacher/guides/content-sets-questions.md"
           - Analytics: "teacher/guides/analytics.md"
           - FAQ: "teacher/guides/faq.md"
 
