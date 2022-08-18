@@ -19,13 +19,12 @@
 :   Command returns the `docs/dev.md` file (base64 encoded)
 
 
-## File Structures
+## File Structure
 A standard evaluation function repository based on the provided [boilerplate](https://github.com/lambda-feedback/Evaluation-Function-Boilerplate) will have the following file structure:
 ```bash
 app/
     __init__.py
     evaluation.py # Script containing the main evaluation_function
-    docs.md # Documentation page for this function (required)
     evaluation_tests.py # Unittests for the main evaluation_function
     requirements.txt # list of packages needed for algorithm.py
     Dockerfile # for building whole image to deploy to AWS
@@ -39,8 +38,27 @@ app/
         test-and-deploy.yml # Testing and deployment pipeline
 
 config.json # Specify the name of the evaluation function in this file
+README.md
 .gitignore
 ```
+
+!!! warning
+    
+    If you want to split up function logic into different files, these must be added to the `Dockerfile`. This is so they are packaged with the built image when deployed. For example, if `evaluation.py` imports functionality from an `app/utils.py` file, then the following line must be added: 
+
+    ```dockerfile linenums="9" hl_lines="7 8"
+    RUN pip3 install -r requirements.txt
+
+    # Copy the evaluation and testing scripts
+    COPY evaluation.py ./app/
+    COPY evaluation_tests.py ./app/
+
+    # Copy additional files
+    COPY utils.py ./app/
+
+    # Copy Documentation
+    COPY docs/dev.md ./app/docs/dev.md
+    ```
 
 
 ## `evaluation.py`
@@ -115,8 +133,12 @@ Error reporting should follow a specific approach for all evaluation functions. 
 
 
 ## Documentation
-Two essential and required documentation files are copied over during the creation of the evaluation function docker image. These are subsequently served by the function under the `docs-dev` and `docs-user` commands, to be accessed by this documentation website, as well as for embedding on LambdaFeedback. 
+Two essential and required documentation files are copied over during the creation of the evaluation function docker image. These are subsequently served by the function under the `docs-dev` and `docs-user` commands, to be accessed by this documentation website, as well as for embedding on LambdaFeedback. For more information about the markdown syntax, please refer to the following sources:
+
+- [MkDocs Documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-your-docs)
+- [MkDocs-Material Documentation](https://squidfunk.github.io/mkdocs-material/reference/)
 
 ### `docs/dev.md`
+
 
 ### `docs/user.md`

@@ -34,18 +34,20 @@ python -m unittest app/evaluation_tests.py
 5. Merge commits into the default branch will trigger the `test-and-deploy.yml` workflow, which will build the docker image, push it to a shared ECR repository, then call the backend `grading-function/ensure` route to build the necessary infrastructure to make the function available from the client app.
 
 6. You can now test the deployed evaluation function using your prefered request client (such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) or simply `curl` from a terminal). Functions are made available at:
-```url
-https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/<function name as defined in config.json>
-```
+	```url
+	https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/<function name as defined in config.json>
+	```
 
-!!! example "Example Request to SymbolicEqual"
-		``` 
-		curl --request GET \
-			--url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/symbolicEqual \
-			--header 'Content-Type: application/json' \
-			--header 'command: eval' \
-			--data '{"response": "x + x", "answer": "2*x"}'
-		```
+	!!! example "Example Request to SymbolicEqual"
+			``` 
+			curl --request GET \
+				--url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/symbolicEqual \
+				--header 'Content-Type: application/json' \
+				--header 'command: eval' \
+				--data '{"response": "x + x", "answer": "2*x"}'
+			```
+
+7. In order to make your new function available on the LambdaFeedback platform, you have to register it via the [Admin Panel]({{ urls.client }}admin/functions). This is done by supplying its name, url (the same as the one above) and supported response types. 
 
 ## More Info
 
