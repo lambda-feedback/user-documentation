@@ -2,21 +2,61 @@
 
 *Philosophy*
 
+## Commands
+### `eval`
+This is the default command, used to compare a student's `response` and correct `answer`, given certain `params`. Outputs for this command depend on the success of the execution of the user-defined [`evaluation_function`](#the-evaluation_function). If an error was thrown during execution, it is caught by the main handler and an error block is returned - otherwise, successful execution outputs are supplied under a `result` field. 
+
+!!! success "Output Structure: Successful evaluation"
+
+    ``` { .python .annotate }
+    {
+        "command": "eval",
+        "result": {
+            "is_correct": "<bool>",
+
+            # Optional fields added by feedback generation (1)
+            "feedback": "<string>",
+            "warnings": "<array>"
+
+            # This output can also contain any number of fields given by `evaluation_function`
+        }
+    }
+    ```
+
+    1. See the [Feedback Page](feedback.md) for more information
+
+
+!!! fail "Output Structure: Error thrown during Execution"
+
+    ``` { .python .annotate }
+    {
+        "command": "eval",
+        "error": {
+            "message": "<string>", # Always present
+
+            # This object can contain other number of additional fields
+            # passed through by the EvaluationException (1) for debugging e.g.:
+            "serialization_errors": [],
+            "culprit": "user",
+            "detail": "..."
+        }
+    }
+    ```
+
+    1.    This is a custom error class from the [evaluation-function-utils](module.md) package, which developers are encouraged to use in order to output richer errors. See the [Error handling](#error-handling) section for more information.
+
+
+### `healthcheck`
+This command runs and returns a summary three testing suites: requests, responses and evaluation. Request and response tests check that inputs and outputs to the function work correctly, and follow the correct syntax. Evaluation tests are unique to each evaluation function and test the actual comparison logic.
+
+### `docs-user`
+Command returns the `docs/user.md` file (base64 encoded)
+
+### `docs-dev`
+Command returns the `docs/dev.md` file (base64 encoded)
+
+
 ## Base Layer 
-
-### Commands
-
-`eval`
-:   This is the default command, used to compare a student's `response` and correct `answer`, given certain `params`
-
-`healthcheck`
-:   This command runs and returns a summary three testing suites: requests, responses and evaluation. Request and response tests check that inputs and outputs to the function work correctly, and follow the correct syntax. Evaluation tests are unique to each evaluation function and test the actual comparison logic.
-
-`docs-user`
-:   Command returns the `docs/user.md` file (base64 encoded)
-
-`docs-dev`
-:   Command returns the `docs/dev.md` file (base64 encoded)
 
 
 ## File Structure
@@ -81,7 +121,7 @@ The function should output a single JSON-encodable dictionary. Although a large 
 ### Error Handling
 Error reporting should follow a specific approach for all evaluation functions. **If the `evaluation_function` you've written doesn't throw any errors, then it's output is returned under the `result` field - and assumed to have worked properly**. This means that if you catch an error in your code manually, and simply return it - the frontend will assume everything went fine. Instead, errors can be handled in two ways:
 
-**Letting `evaluation_function` fail**: On the backend, the call to evaluation_function is wrapped in a try/except which catches any exception. This causes the evaluation to stop completely, returning a standard message, and a repr of the exception thrown in the `error.detail` field.
+**Letting `evaluation_function` fail**: On the request handler in the [Base Layer](#base-layer), the call to evaluation_function is wrapped in a try/except which catches any exception. This causes the evaluation to stop completely, returning a standard message, and a repr of the exception thrown in the `error.detail` field.
 
 **Custom errors**: If you want to report more detailed errors from your function, use the `EvaluationException` class provided in the [evaluation-function-utils](module.md#errors) package. These are caught before all other standard exceptions, and are dealt with in a different way. These provide a way for your function to throw errors and stop executing safely, while supplying more accurate feedback to the front-end. 
 
