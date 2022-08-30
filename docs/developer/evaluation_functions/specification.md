@@ -1,8 +1,30 @@
 # Evaluation Function Specification
 
-*Philosophy*
+## Introduction and Philosophy
+Functionality for each evaluation function is split up as follows: 
+
+!!! note ""
+    Universal function behaviour applicable to *every* function, such as the ability to run tests, return documentation and execute the evaluation is handled by the [**Base Layer**](#base-layer). This is the docker image which is extended by every developed evaluation function.
+
+!!! abstract ""
+    Functionality that may be required in more than one function (but not necessarily all), such as the ability to call already deployed functions and error reporting is handled by the [**evaluation_function_utils**](module.md) python package. This package comes pre-installed in the base layer, and can optionally be imported and called from the *evaluation_function*.
+
+!!! info ""
+    Finally, specific comparison logic and handling of bespoke evaluation parameters is done in the custom [**evaluation_function**](#the-evaluation_function), unique to each deployed instance. This is the logic that differenciates each function (comparing numbers, matrices, images, equations, graphs, text, tables, etc ...).
+ 
 
 ## Commands
+Commands are handled by the [base layer](#base-layer). They define a unified interface for interacting with all deployed evaluation functions on the web. Practically, these are specified in the "command" request header.
+
+!!! example 
+    To execute the `docs-user` command for a function, the following header would be specified alonside the http request made to the endpoint on which the function is made available: 
+
+    ```bash 
+    curl --request GET \
+    --url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/isExactEqual \
+    --header 'command: docs-user' 
+    ```
+
 ### `eval`
 This is the default command, used to compare a student's `response` and correct `answer`, given certain `params`. Outputs for this command depend on the success of the execution of the user-defined [`evaluation_function`](#the-evaluation_function). If an error was thrown during execution, it is caught by the main handler and an error block is returned - otherwise, successful execution outputs are supplied under a `result` field. 
 
