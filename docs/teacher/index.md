@@ -8,3 +8,5 @@ Guides/Specs for how to author content on the LambdaFeedback Platform
 * Response Areas 
 * Evaluation Functions 
 
+We will populate this area more soon.
+
