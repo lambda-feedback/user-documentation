@@ -1,40 +1,51 @@
-# Getting started with Lambda Feedback as a teacher
+# Get started as a teacher
 
-## Basics
+## Access a module
 
-### Logging in
+Use your Imperial Microsoft account to sign in and access your modules. By default you are logged in as a student. If you have teacher priviliges then you will see a teacher button at the top.
 
-Use your Imperial Microsoft account to sign in and access your modules.  
+![Buttons](images/teacher_modules_signout_buttons.png){: style="height:50px"}<br />
+![Teacher button](images/content-sets-questions-1.png){: style="height:150px"}
 
-## Adding content 
+To enter teacher mode, <ins>click on the Teacher button</ins>.
 
-### Accessing your modules
-Select the module you wish to edit (the full list of your modules can be found by clicking on the "modules" button in the upper right-hand corner). 
+To find the module you want, you can sort ASCENDING as per the image below:<br />
+![Sort](images/module_sort.png){: style="height:200px"}
+![Filter](images/module_filter.png){: style="height:200px"}<br />
+_Image: quick sort (left) or filtering (right)_
 
-### Creating a new problem set
-Click on "view sets" (upper left-hand corner), then "create set" (upper right-hand corner). Once a new set has been created, the name can be changed under "edit set metadata". 
+As of 31/8/22 the filtering/sorting only works on the content visible on the current page (other pages are ignored). We aim to fix this by sorting at the backend.
 
-### Adding a new question to your problem set
-Select "add question", on the left-hand side of the display. 
+Select the module you wish to edit.<br />
+![Select module](images/content-sets-questions-2.png){: style="height:150px"}
 
-The name of the question can be edited by clicking on it directly (the default is "Unamed Question"). 
 
-### Structure of questions
-Each question has a heading ("add part content") and can have multiple parts, which can be added or deleted as needed using the "add part" or "delete part" buttons. 
+## Create a new problem set
 
-The heading can be used to introduce the question, while each part has several areas within it. Definitions of these parts are also given [here.](../../intro/terminology.md)
+<ins>Click on your module</ins> and then <ins>click on "view sets"</ins> (upper left-hand corner)<br />
+![View sets](images/view_sets.png){: style="height:50px"}
 
-#### Part area 1: Part content
-This is used to specify the question that is being asked in that part. 
+If necessary, create a new set - this will automatically appear with a default name which you can edit by clicking 'edit metadata':<br />
+![Create set](images/create_set.png){: style="height:50px"}
 
-#### Part area 2: Response area
-Where the student types in their reponse. For a more complete overview of the different response area functionalities see the [dedicated page](../reference/response_area_components/index.md), as well as the page on [evaluation functions](../reference/evaluation_functions/index.md)
+To edit the content, <ins>click on the set</ins>. This will open the Set in a ['WYSIWYG'](https://en.wikipedia.org/wiki/WYSIWYG) editor. The first question is automatically created with a default name.
 
-#### Part area 3: Tutorial
-This area can have several parts, and can be used however the teacher sees fit. A common usage is to provide a series of successive hints to help students who are stuck on a question to find the answer.
+The question structure is described [here](../../student/index.md).
 
-#### Part area 4: Final answer
-The student may choose to see the final answer, without workings, in this section. 
+## Below the line
 
-#### Part area 5: Worked solutions
-This area is where the full worked solution is provided
+Below the main question content you can provide high quality support material for students. 
+
+![Below the line buttons screenshot](../../student/images/below_the_line.png)
+
+A [student guide is here](../../student/index.md) and teachers use the content as follows:
+
+- 'My solutions' is a milkdown component for students to use to store their own solutions
+- 'Structured tutorial' is a canvas to provide scaffolding to students struggling with the question
+- 'Final answer' is self explanatory
+- 'Worked solutions' provides detailed, step-by-step solutions.
+
+All content below the line uses milkdown functionality. Worked solutions can be branched. Future developments will add branching and response areas to structured tutorials.
+ 
+ 
+For general terminology, see [here.](../../intro/terminology.md)

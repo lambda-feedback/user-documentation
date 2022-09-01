@@ -17,12 +17,14 @@ nav:
 
   - Students:
       - "student/index.md"
+      - "student/milkdown_student.md"
 
   - Teachers:
       - "teacher/index.md"
       - Guides:
           - Getting Started: "teacher/guides/gettingstarted.md"
-          - Content Creation - Sets and Questions: "teacher/guides/content-sets-questions.md"
+          - Editing questions: "teacher/guides/content-sets-questions.md"
+          - Milkdown: "teacher/guides/milkdown.md"
           - Analytics: "teacher/guides/analytics.md"
           - FAQ: "teacher/guides/faq.md"
 
