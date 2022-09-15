@@ -2,19 +2,19 @@
 In this guide, we will walk through how to create [sets](https://lambda-feedback.github.io/Documentation/intro/terminology/#sets) and [questions](https://lambda-feedback.github.io/Documentation/intro/terminology/#questions).
 
 
-1. Once we have successfully created the sets we want, we want to click on it in order to edit or add questions.
+1. <ins>Click on a Set</ins> in order to edit or add questions.
 
     ![set panel entry](./images/content-sets-questions-8.png)
 
-2. When we select a set, we are taken to the question dashboard, where we can access the questions of the set and edit them. There are many options, and so they are shown and listed below.
+2. A guide to the editor:
 
     ![set panel entry](./images/content-sets-questions-9.png)
 
     | Label | Name | Description |
     | --- | --- | --- |
     | 1 | Question Name | Here we can edit the name given to the question |
-    | 2 | Question Content | It is worth noting that all questions are governed by the framework 'Question + Part'. And so, this question content box is the main content (if more than one part), or the whole content of the question (if only one part, where the part content is empty). |
-    | 3 | Part Editing Options | Here we can select/edit, create, or delete a part. |
+    | 2 | Master content | Always visible. Uses a milkdown component. |
+    | 3 | Part Editing Options | Select, create, or delete a part. |
     | 4 | Part Content | Here we can edit the specific content of the part (the sub question). |
     | 5 | Response Area | This is the means by which the student answers a given question. It is optional to include a response area. |
     | 6 | Question Help Options | Here we may add a [Structured Tutorial](https://lambda-feedback.github.io/Documentation/intro/terminology/#structured-tutorial), a [Final Answer](https://lambda-feedback.github.io/Documentation/intro/terminology/#final-answer) ("Show Answer"), or [Worked Solutions](https://lambda-feedback.github.io/Documentation/intro/terminology/#worked-solution). These buttons are also how the student will see them, hence the name of "Show Answer". |
