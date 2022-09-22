@@ -53,6 +53,7 @@ nav:
           - Evaluation Function Utils: "developer/evaluation_functions/module.md"
           - Deployed Functions:
               - "developer/evaluation_functions/index.md"
+          - Alternate Function Languages: "developer/evaluation_functions/alternate_languages.md"
       - Response Area Components:
           - Creation Guide: "developer/placeholder.md"
           - Specification: "developer/placeholder.md"
