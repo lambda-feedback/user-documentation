@@ -18,6 +18,7 @@ nav:
   - Students:
       - "student/index.md"
       - "student/milkdown_student.md"
+      - FAQ: "student/faq.md"
 
   - Teachers:
       - "teacher/index.md"
