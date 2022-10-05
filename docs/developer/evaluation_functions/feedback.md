@@ -8,7 +8,7 @@ Input structure:
 		"cases": [
 			{
 				"answer": "same shape as original answer",
-				"feeddback": "feedback string",
+				"feedback": "feedback string",
 				"params": {...} # Any parameters to set or override
 			},
 			...
