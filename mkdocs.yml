@@ -55,9 +55,8 @@ nav:
           - Deployed Functions:
               - "developer/evaluation_functions/index.md"
           - Alternate Function Languages: "developer/evaluation_functions/alternate_languages.md"
-          - Response Area:
-              - Creation Guide: "developer/placeholder.md"
-              - Specification: "developer/placeholder.md"
+      - Response Areas:
+          - Overview: "developer/response_areas/overview.md"
 # Configuration
 theme:
   name: material
@@ -110,6 +109,7 @@ extra_javascript:
 # Plugins
 plugins:
   - search
+  - git-revision-date
   - macros
   - evaldocsloader:
       functions_announce_endpoint: "http://localhost:5000/partial"

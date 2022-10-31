@@ -4,29 +4,16 @@ Welcome to LambdaFeedback's developer docs.
 ## Evaluation functions
 Evaluation functions are responsible for taking in a user's response, comparing it with a correct answer, and providing feedback to the frontend application. Living as containserized Lambda functions on the cloud, they are infinitely customisable and language-agnostic. Content authors should be able to create their own at will. However, we are aware that in a lot of cases, this grading logic will be similar, which is why a few functions have already been created. 
 
-[Check out our Quickstart Guide](evaluation_functions/quickstart.md){ .md-button .md-button--primary }
+[Evaluation functions - Quickstart Guide](evaluation_functions/quickstart.md){ .md-button .md-button--primary }
 
 
 
-## Response area components
+## Response areas
 
-### Default Answers
+Response areas are components in the frontend where student users can enter a response. The response is sent to the evaluation function, which returns feedback to the response area. In the alpha version response areas are built into the software (rather than being modular) so are not straightforward to redevelop. This website catalogues the basic behaviour of response areas, to inform developers of evaluation functions.
 
-Here is the list of default answer values (this is the case when a student or a teacher opens a question and clicks Check without inputing any value):
+[Response areas - overview](response_areas/overview.md){ .md-button .md-button--primary}
 
-| Input Value Type | Default Value | Comment                   |
-| :---             | :---          | :---                      |
-| nuber            | undefined     |                           |
-| string           | undefined     |                           |
-| MATRIX           | ''            | empty string in all cells |
-| TABLE            | ''            | empty string in all cells |
-| MULTIPLE CHOICE  | false         | all choices set to false  |
-
-
-
-# Guide to create more
-
-TBA
 
 ## System Architecture
 - Technologies
@@ -35,3 +22,4 @@ TBA
 
 
 ## Future Features
+
