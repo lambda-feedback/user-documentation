@@ -10,11 +10,11 @@ Evaluation functions are responsible for taking in a user's response, comparing 
 
 ## Response area components
 
-# Default Answers
+### Default Answers
 
-Here is the list of default value answers (this is the case when a student or a teacher opens a question and clicks Check without inputing any value):
+Here is the list of default answer values (this is the case when a student or a teacher opens a question and clicks Check without inputing any value):
 
-| Input Value Type | Default value | Comment                   |
+| Input Value Type | Default Value | Comment                   |
 | :---             | :---          | :---                      |
 | nuber            | undefined     |                           |
 | string           | undefined     |                           |
