@@ -55,25 +55,9 @@ nav:
           - Deployed Functions:
               - "developer/evaluation_functions/index.md"
           - Alternate Function Languages: "developer/evaluation_functions/alternate_languages.md"
-      - Response Area:
-          - Creation Guide: "developer/placeholder.md"
-          - Specification:
-              - "developer/response_area/index.md"
-              - Response Area Setup Panel:
-                  - Layout: "developer/response_area/response_area_setup_panel_layout.md"
-                  - Structure: "developer/response_area/response_area_setup_panel_structure.md"
-                  - Architecture: "developer/response_area/response_area_setup_panel_architecture.md"
-              - Student Response Area:
-                  - Layout: "developer/response_area/response_area_for_student_layout.md"
-                  - Architecture: "developer/response_area/response_area_for_student_architecture.md"
-      - Question Menus:
-          - "developer/question_menus/index.md"
-          - Add Question Menu:
-              - Layout: "developer/question_menus/add_question_menu_layout.md"
-              - Architecture: "developer/question_menus/add_question_menu_architecture.md"
-          - Edit Question Menu:
-              - Layout: "developer/question_menus/edit_question_menu_layout.md"
-              - Architecture: "developer/question_menus/edit_question_menu_architecture.md"
+          - Response Area:
+              - Creation Guide: "developer/placeholder.md"
+              - Specification: "developer/placeholder.md"
 # Configuration
 theme:
   name: material

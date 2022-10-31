@@ -9,8 +9,24 @@ Evaluation functions are responsible for taking in a user's response, comparing 
 
 
 ## Response area components
-- Guide to create more
 
+# Default Answers
+
+Here is the list of default value answers (this is the case when a student or a teacher opens a question and clicks Check without inputing any value):
+
+| Input Value Type | Default value | Comment                   |
+| :---             | :---          | :---                      |
+| nuber            | undefined     |                           |
+| string           | undefined     |                           |
+| MATRIX           | ''            | empty string in all cells |
+| TABLE            | ''            | empty string in all cells |
+| MULTIPLE CHOICE  | false         | all choices set to false  |
+
+
+
+# Guide to create more
+
+TBA
 
 ## System Architecture
 - Technologies
