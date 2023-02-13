@@ -2,7 +2,7 @@
 
 ### List of response areas
 
-The list of response areas is maintained in the Teacher section [here](../../../teacher/reference/response_area_components). In the Developer area, the behaviour of the response areas is documented.
+The list of response areas is maintained in the Teacher section [here](../../../teacher/reference/response_area_components). In the Developer area (here), the behaviour of the response areas is documented.
 
 ### Data types when submitting empty responses (default behaviour)
 
