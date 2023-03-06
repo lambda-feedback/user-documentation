@@ -19,6 +19,7 @@ nav:
       - "releases/index.md"
       - List of Releases:
           - Release 10/02/2023: "releases/release_2023_02_10.md"
+          - Release 06/03/2023: "releases/release_2023_03_06.md"
   - Students:
       - "student/index.md"
       - "student/milkdown_student.md"
