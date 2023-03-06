@@ -8,17 +8,13 @@ site_description: >-
 
 # Page Tree
 nav:
-  - Home: index.md
-
-  - Introduction:
-      - "intro/index.md"
-      - Contacts: "intro/contacts.md"
-      - Terminology: "intro/terminology.md"
-
-  - Releases:
-      - "releases/index.md"
-      - Release 2023/03/06: "releases/release_2023_03_06.md"
-      - Release 2023/02/10: "releases/release_2023_02_10.md"
+  - Home:
+      - "index.md"
+      - Terminology: "terminology.md"
+      - Opportunities: "opportunities"
+      - Releases:
+          - Release 2023/03/06: "releases/release_2023_03_06.md"
+          - Release 2023/02/10: "releases/release_2023_02_10.md"
 
   - Students:
       - "student/index.md"
@@ -49,19 +45,19 @@ nav:
           - Evaluation Functions:
               - "teacher/reference/evaluation_functions/index.md"
 
-  - Developers:
-      - "developer/index.md"
+  - Advanced:
+      - "advanced/index.md"
       - Evaluation Functions:
-          - Quickstart Guide: "developer/evaluation_functions/quickstart.md"
-          - General Specification: "developer/evaluation_functions/specification.md"
-          - Feedback: "developer/evaluation_functions/feedback.md"
-          - Testing Functions Locally: "developer/evaluation_functions/local.md"
-          - Evaluation Function Utils: "developer/evaluation_functions/module.md"
+          - Quickstart Guide: "advanced/evaluation_functions/quickstart.md"
+          - General Specification: "advanced/evaluation_functions/specification.md"
+          - Feedback: "advanced/evaluation_functions/feedback.md"
+          - Testing Functions Locally: "advanced/evaluation_functions/local.md"
+          - Evaluation Function Utils: "advanced/evaluation_functions/module.md"
           - Deployed Functions:
-              - "developer/evaluation_functions/index.md"
-          - Alternate Function Languages: "developer/evaluation_functions/alternate_languages.md"
+              - "advanced/evaluation_functions/index.md"
+          - Alternate Function Languages: "advanced/evaluation_functions/alternate_languages.md"
       - Response Areas:
-          - Overview: "developer/response_areas/overview.md"
+          - Overview: "advanced/response_areas/overview.md"
 # Configuration
 theme:
   name: material

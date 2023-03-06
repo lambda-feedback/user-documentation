@@ -1,6 +1,5 @@
 ---
 hide:
-  - navigation
   - toc
   - releases
 ---
@@ -16,3 +15,9 @@ The value proposition is given briefly here:
 
 A demonstration of the software can be found on the homepage under 'try the demo':
 [https://lambdafeedback.com/](https://lambdafeedback.com/)
+
+What's in these docs:
+
+- [Student guide](../student/index.md)
+- [Teacher guide](../teacer/index.md)
+- [Advanced teachers](../)
