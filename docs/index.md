@@ -1,7 +1,6 @@
 ---
 hide:
   - toc
-  - releases
 ---
 
 # Welcome to Lambda Feedback
