@@ -27,9 +27,9 @@ If you are interested, please enquire by email with peter [dot] johnson [at] ic.
 Bursary: 8 positions, 8 weeks each (flexible), full-time. Bursary: £365 per week.
 
 Who should apply:  
-Students from any cohort who study in the following subjects: Aeronautics, Chemical Engineering, Computing, Design Engineering, Materials Science, Mathematics, Mechanical Engineering, Physics.
+Students from Imperial College London from any cohort who study in the following subjects: Aeronautics, Chemical Engineering, Computing, Design Engineering, Materials Science, Mathematics, Mechanical Engineering, Physics.
 
-Campus/Location: South Kensington, with opportunities to be remote later in the project
+Campus/Location: South Kensington, with opportunities to be remote later in the project.
 
 How to apply:
 
@@ -42,8 +42,6 @@ Deadline: 31st March
 Contact details: Peter [dot] Johnson [at] ic.ac.uk
 
 More details on the project:
-
-
 
 ### Lambda Feedback software, a place to do homework
 
