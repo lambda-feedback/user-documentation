@@ -31,11 +31,7 @@ Students from Imperial College London from any cohort who study in the following
 
 Campus/Location: South Kensington, with opportunities to be remote later in the project.
 
-How to apply:
-
-This links to an ‘expression of interest’ - 300-500 words on why a student wishes to engage with the project. Informal interviews or meetings can be used for selection if appropriate. (Delete this text, or add to the text below if you wish)
-
-Applications (300-500 words) should be made via the ‘Student Expression of Interest’ form on the StudentShapers website (here) or accessed using the above QR code. This will then be distributed directly to the appropriate staff partner.
+How to apply: [apply here](https://forms.office.com/r/MYJNST1uEJ). Applications should be 300-500 words.
 
 Deadline: 31st March
 
