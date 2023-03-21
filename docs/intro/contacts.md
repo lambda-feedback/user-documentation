@@ -1,3 +1,0 @@
-# Contacts 
-
-*Who to contact*
