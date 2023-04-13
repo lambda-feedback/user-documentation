@@ -17,6 +17,6 @@ A demonstration of the software can be found on the homepage under 'try the demo
 
 What's in these docs:
 
-- [Student guide](../student/index.md)
-- [Teacher guide](../teacer/index.md)
-- [Advanced teachers](../)
+- [Student guide](student/index.md)
+- [Teacher guide](teacher/index.md)
+- [Advanced teachers](advanced/index.md)
