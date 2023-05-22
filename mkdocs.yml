@@ -36,14 +36,14 @@ nav:
       - Reference:
           - Response Areas:
               - "teacher/reference/response_area_components/index.md"
-              - Text: "teacher/reference/response_areas/response_area_components/Text.md"
-              - Number: "teacher/reference/response_area/response_area_components/Number.md"
-              - Boolean: "teacher/reference/response_area/response_area_components/Boolean.md"
-              - NumericUnits: "teacher/reference/response_area/response_area_components/NumericUnits.md"
-              - Expression: "teacher/reference/response_area/response_area_components/Expression.md"
-              - MultipleChoice: "teacher/reference/response_area/response_area_components/MultipleChoice.md"
-              - Matrix: "teacher/reference/response_area/response_area_components/Matrix.md"
-              - Table: "teacher/reference/response_area/response_area_components/Table.md"
+              - Text: "teacher/reference/response_area_components/Text.md"
+              - Number: "teacher/reference/response_area_components/Number.md"
+              - Boolean: "teacher/reference/response_area_components/Boolean.md"
+              - NumericUnits: "teacher/reference/response_area_components/NumericUnits.md"
+              - Expression: "teacher/reference/response_area_components/Expression.md"
+              - MultipleChoice: "teacher/reference/response_area_components/MultipleChoice.md"
+              - Matrix: "teacher/reference/response_area_components/Matrix.md"
+              - Table: "teacher/reference/response_area_components/Table.md"
           - Evaluation Functions:
               - "teacher/reference/evaluation_functions/index.md"
 
