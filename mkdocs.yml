@@ -122,7 +122,7 @@ plugins:
           API_KEY,
           "WiOS1vMpQyTuGL06ZJxjG1eZd2P0SPvuVzHpr6zjkTIJ33U2t5O5NWaZboWBv8aV",
         ]
-      dev_section: ["Developers", "Evaluation Functions", "Deployed Functions"]
+      dev_section: ["Advanced", "Evaluation Functions", "Deployed Functions"]
       user_section: ["Teachers", "Reference", "Evaluation Functions"]
 
 # Extra variables, accessible within markdown pages
