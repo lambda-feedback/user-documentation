@@ -20,28 +20,26 @@ See more information about analytics against deleted response areas in [Analytic
 
 ### Edit Response Area
 
-The user can edit any response area attributes without any restrictions except switching the Response Area (see below).
+The user can edit any response area attributes without any restrictions except changing the input type (see below).
 
-### Switching Response Area
+### Changing the input type
 
-It is possible to switch the response area (e.g. from Text to Number), but only until the question is saved (with or without publishing to students).
-
-#### Restriction
+It is possible to change the input type (e.g. from Text to Number), but only until the question is saved (with or without publishing to students).
 
 The reason for this restriction is compatibility with student submissions (as explained in the following example). 
 
 #### An Example of a Prohibited Scenario
 
-- A question with response area Number is created and it is saved without publishing to students
-- The response area is changed to Table (if the restriction would not be in place) and it is saved with publishing to students
-- Students submit their answer (in table format)
+- A question with input type *Number* is created and it is saved without publishing to students
+- The input type is changed to *Table* (if the restriction were not in place) and is saved and published to students
+- Students submit their answer (in *Table* format)
 - The teacher reverts the question to the previous version with response area Number
 
- => The submissions are in format Table, while the response area is Number, therefore they are incompatible.
+ => The submissions are in format Table, while the response area is Number, therefore the data are incompatible.
 
 #### Workaround
 
-Instead of changing the response area, it is possible to duplicate it and then delete the orignal one.
+Instead of changing the input type, it is possible to duplicate the response area and then delete the orignal one. This approach ensures that data associated with the different input types remain separate.
 
-However, the existing submissions and statistic will not be linked to the newly created response area, they will remain linked to the "deleted" response area (the response area still exists on the previous version of the question).
+The data for the new response area will be independent of the old one - the old one will only exist in a previously saved version of the question.
 
