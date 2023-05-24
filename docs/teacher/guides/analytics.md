@@ -1,7 +1,11 @@
 # Analytics Guide
 
-Analytics begin when a question is _published_. After publishing a question for the first time it becomes available to students and their usage is logged and fed back to the student and the teacher. To ensure consistent data logging, changes to the question after publication are restricted. For example, response areas cannot changed in major ways, because the data logging would become inconsistent. 
+Analytics begin when a question is _published_. After publishing a question for the first time it becomes available to students and their usage is logged and fed back to the student and the teacher. 
 
-The only way to make major changes after publication is to recreate the question (e.g. to clone it) which means losing all logging data from before that point --- including progress updates to the student.
+## Analytics History
 
-Ensure you are ready to release your question before publishing it. 
+Analytics are linked to response areas. Each question can have more response areas and they can be added or removed. When a response area is removed, then it is removed only from the "current version" of the question (the version that the teacher is editing) and it persists on the previous version(s) of the question. It means that all submissions and analytics remain, but they are now linked to the response area which only exists on a previous version(s) of the question.
+
+Currently it is possible to see only analytics against the published version of the question.
+
+We are now working on the improvement so that it is possible to see analytics against all reponse areas (including those that exist only on previous versions of the question).
