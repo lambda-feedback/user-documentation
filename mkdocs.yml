@@ -61,6 +61,7 @@ nav:
           - Alternate Function Languages: "advanced/evaluation_functions/alternate_languages.md"
       - Response Areas:
           - Overview: "advanced/response_areas/overview.md"
+          - Adding a new Response Area: "advanced/response_areas/adding.md"
 # Configuration
 theme:
   name: material
