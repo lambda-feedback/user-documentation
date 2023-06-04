@@ -1,5 +1,7 @@
 # Base Layer Feedback Implementation
-Input structure: 
+
+Input structure:
+
 ```json
 {
 	"response": "user input",

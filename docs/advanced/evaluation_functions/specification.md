@@ -70,6 +70,10 @@ This is the default command, used to compare a student's `response` and correct 
 
 ### `preview`
 
+This command is similar to `eval`, except it doesn't return whether an answer is correct or provide feedback. Instead, `preview` provides a way for students view their response after some pre-processing, e.g. as rendered LaTeX when using Sympy for symbolic algebra.
+
+This should be faster to compute than `eval`, allowing students to get live preview of their response.
+
 ### `healthcheck`
 
 This command runs and returns a summary three testing suites: requests, responses and evaluation. Request and response tests check that inputs and outputs to the function work correctly, and follow the correct syntax. Evaluation tests are unique to each evaluation function and test the actual comparison logic.
