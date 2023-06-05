@@ -2,10 +2,9 @@
 
 ## Release 2023/06/05
 
-- 598-published-questions-change-of-approach - published questions are now editable with the exception of changing the input type. It is also now possible to duplicate a Response Area and to reorder Response Areas using drag and drop (in a similar way as reordering Parts)
-- 613-enable-publish-whole-set - the previous release disable the 'Publish Whole Set' button to prevent statistics 'disappearing'. An enhancement was provided to make sure that all statistics remain linked and the 'Publish Whole Set' button is now enabled.
-- 614-error-with-stats-on-dev - this is an enhancement to make sure that statistics in teacher mode are still displayed correctly after implementing the new handwriting and publishable questions features.
-
+- 598-published-questions-change-of-approach - questions are now fully editable after publishing. All data from student responses persists through these changes. One exception is that the input type of a response area cannot be changed after publication, because this would change the format of the data that is recorded (you can, however, delete the response area and create a new one instead). Other new features: duplicate a Response Area; reorder Response Areas using drag and drop (in a similar way as reordering Parts).
+- 613-enable-publish-whole-set - see 606 below ([2023/05/26](#release-20230526)). The 'Publish Whole Set' button is now enabled.
+- 614-error-with-stats-on-dev - ensures statistics still work with the new handwriting input (see 555 below).
 
 ## Release 2023/05/26
 
@@ -13,7 +12,6 @@
 - 606-publish-whole-set-causing-stats-to-disappear - The 'Publish Whole Set' button in Teacher Edit mode has been disabled because it was causing data to become unlikned in the DB, giving the effect of data like number of completed parts 'disappearing'. Existing data has now been relinked and is all visible to users. The feature that caused the problem has been disabled while we prepare a replacement to be pushed shortly.
 - 612-whole-part-marked-as-done-with-more-response-areas - Student functionality. If a question part has multiple Response Areas, the logic is now that only if all Response Areas are correctly answered will the 'Mark as done' feature be automatically checked. Previously only one correct answer was required to trigger this effect.
 - 585-question-simple-import-and-export - Teacher functionality. The import/export functionality has been enhanced so that it Response Area parameters, cases, and tests are now all included.
-
 
 ## Release 2023/03/21
 
@@ -23,7 +21,6 @@
 - 582-empty-structured-tutorial-shouldnt-display - Technical debt. When a tutorial is deleted, it is not displayed at all to students (as opposed to being blank).
 - 585-question-simple-import-and-export - Teacher functionality. Export a question to a file in JSON format. Import a question from a file in JSON format. Images are not imported/exported - these need to be handled manually until a new feature is ready. This feature opens the door to file imports if content can be converted into the correct format.
 - 586-question-import-add-schema-validation - Teacher functionality. When importing a question from a file, the data structure and format is validated. If the validation fails then relevant error messages displayed to the user.
-
 
 ## Release 2023/03/06
 
@@ -42,7 +39,6 @@
       | Expression and Text | symbolicEqual               |
       | Table and Matrix    | arraySymbolicEqual          |
       | NUMERIC_UNITS       | comparePhysicalQuantities   |
-
 
 ## Release 2023/02/10
 
