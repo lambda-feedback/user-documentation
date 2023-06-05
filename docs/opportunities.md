@@ -1,5 +1,7 @@
 # Opportunities
 
+2023/06/05: there are no vacancees at the moment. The positions below are now filled.
+
 ## Principal Full Stack Developer
 
 We are recruiting a _Principal Full Stack Developer_ to work on the [Lambda Feedback project](https://teachingengineers.wordpress.com/2022/07/18/computers-make-us-human/).
