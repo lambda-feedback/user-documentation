@@ -12,13 +12,7 @@ nav:
       - "index.md"
       - Terminology: "terminology.md"
       - Opportunities: "opportunities.md"
-      - Releases:
-          - Release notes:
-              - "releases/index.md"
-              - 2023/05/26: "releases/release_2023_05_26.md"
-              - 2023/03/21: "releases/release_2023_03_21.md"
-              - 2023/03/06: "releases/release_2023_03_06.md"
-              - 2023/02/10: "releases/release_2023_02_10.md"
+      - Releases: "releases/index.md"
 
   - Students:
       - "student/index.md"

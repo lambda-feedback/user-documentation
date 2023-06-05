@@ -10,6 +10,10 @@ The user can add, delete, edit or switch response area.
 
 The user can add a response area without any restrictions.
 
+### Duplicate
+
+The user can duplicate the response area within the same part using the duplicate icon. When a response area is duplicated, then only data entered in the teacher edit mode are copied (such as input type, evaluation function, input symbols, pre and post text, answer, tests, cases, ...). Data entered in the teacher preview mode (such as comments) and student mode (comments, flags, likes, student solutions, ...) are not copied.
+
 ### Delete Response Area
 
 The user can delete a response area without any restrictions. A popup message appears to confirm the deletion.
