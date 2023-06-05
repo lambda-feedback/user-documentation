@@ -14,6 +14,12 @@ The user can add a response area without any restrictions.
 
 The user can duplicate the response area within the same part using the duplicate icon. When a response area is duplicated, then only data entered in the teacher edit mode are copied (such as input type, evaluation function, input symbols, pre and post text, answer, tests, cases, ...). Data entered in the teacher preview mode (such as comments) and student mode (comments, flags, likes, student solutions, ...) are not copied.
 
+### Reorder
+
+It is possible to reorder response areas within the part using the "drag and drop" feature. It works in the same way a reordering of parts:
+
+Move your mouse cursor over the response are you want to move. Then, press and hold down the left mouse button, move the object to the location you desire, and release the mouse button to set it down.
+
 ### Delete Response Area
 
 The user can delete a response area without any restrictions. A popup message appears to confirm the deletion.
