@@ -65,7 +65,7 @@ Essential skills and experience that we are looking for: 
 • A vision for digital education where software serves the needs of today’s students
 
 Additional ways you can add value to the project if you have the skills: 
-• Mathematical computing skills, e.g. in Python, to help develop our evaluation functions (more info here: https://lambda-feedback.github.io/Documentation/advanced/) 
+• Mathematical computing skills, e.g. in Python, to help develop our evaluation functions (more info here: https://lambda-feedback.github.io/user-documentation/advanced/) 
 • Data science skills to analyse our growing data set, for example skills in SQL queries, data analysis e.g. in Pandas, data visualisation, machine learning. 
 • Graphic design, UI/UX design, vision development for online products 
 • Web development skills in any part of the following stack: AWS / Postgres / Prisma / GraphQL / Nest.js / Next.js (React.js) / Typescript / CircleCI
