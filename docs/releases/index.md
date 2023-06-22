@@ -2,7 +2,7 @@
 
 ## Release 2023/06/22
 
-- b39-new-editor-menus - question editor area menus have been converted into tabs. Other improvements have also been made to the editor layout. ![image of tabs](../assets/releases/b39.png)
+- b39-new-editor-menus - question editor area menus have been converted into tabs. Other improvements have also been made to the editor layout inlcuding switching between teacher and student mode and staying on the same question. ![image of tabs](../assets/releases/b39.png)
 - b62-add-tabs-to-reponse-area-panel - the Response Area panel is grouped into tabs that aid navigation and encourage a workflow that matches the way teachers think. Other layout improvements were also made within the tabs. ![image of tabs](../assets/releases/b62.png)
 - b79-input-type-on-published-ra-should-not-be-editable - input type cannot be changed after publishing (see 598 here [2023/06/05](#release-20230605)).
 - b85-incorrect-required-error-message - enhanced validation for number 0 in numeric response area.
