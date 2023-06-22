@@ -1,5 +1,17 @@
 # Releases
 
+## Release 2023/06/22
+- B39-new-editor-menus - the question editor area menus have been converted into tabs.
+- B62-add-tabs-to-reponse-area-panel - the response are panel has been re-designed to make the configuration of a simple response area straight-forward. Special response area attributes have been split into tabs to make them easier to find.
+- B79-input-type-on-published-ra-should-not-be-editable - it must not be possible to change the response area input type once the response area is published (to make sure that all submissions are compatible with the input type).
+- B85-incorrect-required-error-message - number 0 is handled as a valid number and it is not causing anymore the "Required" validation message to appear.
+- 588-question-import-export-handle-images - any question, including questions with images, can be now exported and then imported. The question content is exported into json format and all images into "media" folder and all these files are zipped before the download.
+- 601-parameter-defaults-for-an-eval-function-cpq - the presentation of boolean evaluation function parameters in the response area panel was changed so that the tick/untick is projected into the json format and vice versa.
+- 603-user-docs-updates - the repository storing the user documentation was renamed from "documentation" was renamed to "user_documentation". Also, the documentation from evaluation functions is now uploading and it is displayed in the user documentation.
+- 608-link-word-sign-in-to-sign-in-on-homepage - on the home page it says ‘sign in to access’. The ‘sign in’ is now a link to sign in.
+- 619-mcq-check-button-should-be-vertically-central - the Check button for multi-choice questions in the response area panel is now vertically centred.
+
+
 ## Release 2023/06/05
 
 - 598-published-questions-change-of-approach - questions are now fully editable after publishing. All data from student responses persists through these changes. One exception is that the input type of a response area cannot be changed after publication, because this would change the format of the data that is recorded (you can, however, delete the response area and create a new one instead). Other new features: duplicate a Response Area; reorder Response Areas using drag and drop (in a similar way as reordering Parts).
