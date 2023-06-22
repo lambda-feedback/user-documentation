@@ -1,16 +1,16 @@
 # Releases
 
 ## Release 2023/06/22
-- B39-new-editor-menus - the question editor area menus have been converted into tabs.
-- B62-add-tabs-to-reponse-area-panel - the response are panel has been re-designed to make the configuration of a simple response area straight-forward. Special response area attributes have been split into tabs to make them easier to find.
-- B79-input-type-on-published-ra-should-not-be-editable - it must not be possible to change the response area input type once the response area is published (to make sure that all submissions are compatible with the input type).
-- B85-incorrect-required-error-message - number 0 is handled as a valid number and it is not causing anymore the "Required" validation message to appear.
-- 588-question-import-export-handle-images - any question, including questions with images, can be now exported and then imported. The question content is exported into json format and all images into "media" folder and all these files are zipped before the download.
-- 601-parameter-defaults-for-an-eval-function-cpq - the presentation of boolean evaluation function parameters in the response area panel was changed so that the tick/untick is projected into the json format and vice versa.
-- 603-user-docs-updates - the repository storing the user documentation was renamed from "documentation" was renamed to "user_documentation". Also, the documentation from evaluation functions is now uploading and it is displayed in the user documentation.
-- 608-link-word-sign-in-to-sign-in-on-homepage - on the home page it says ‘sign in to access’. The ‘sign in’ is now a link to sign in.
-- 619-mcq-check-button-should-be-vertically-central - the Check button for multi-choice questions in the response area panel is now vertically centred.
 
+- b39-new-editor-menus - question editor area menus have been converted into tabs. Other improvements have also been made to the editor layout. ![image of tabs](../assets/releases/b39.png)
+- b62-add-tabs-to-reponse-area-panel - the Response Area panel is grouped into tabs that aid navigation and encourage a workflow that matches the way teachers think. Other layout improvements were also made within the tabs. ![image of tabs](../assets/releases/b62.png)
+- b79-input-type-on-published-ra-should-not-be-editable - input type cannot be changed after publishing (see 598 here [2023/06/05](#release-20230605)).
+- b85-incorrect-required-error-message - enhanced validation for number 0 in numeric response area.
+- 588-question-import-export-handle-images - import export includes images; a zip file is used to combine the JSON and the images.
+- 601-parameter-defaults-for-an-eval-function-cpq - improved the appearance of boolean evaluation function parameters.
+- 603-user-docs-updates - user documentation repo renamed from "documentation" to "user_documentation".
+- 608-link-word-sign-in-to-sign-in-on-homepage - on the home page 'sign in' text is now a link to sign in.
+- 619-mcq-check-button-should-be-vertically-central - the Check button for multi-choice questions in the response area panel is now vertically centred.
 
 ## Release 2023/06/05
 
