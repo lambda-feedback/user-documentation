@@ -17,3 +17,31 @@ When creating a new question the teacher can choose to "clone" from an existing 
 2. From the dropdown menu, select **Clone From Question**
 3. Select the title of the question you wish clone from the list that appear
 4. If you wish, go back and delete the question from its original location
+
+## How can I set parameters for evaluation functions?
+
+The most common parameters will be visible uder the **EVALUATE** tab in the configure panel.
+
+If there is a parameter that is not already visible it can be set using the **Advanced - raw parameters** (also under the **EVALUATE** tab) by doing the following:
+
+![Image showing the locations of parameters in the EVALUATE tab.](images/set_parameter_1.png)
+
+1. Hover over the list of parameters in the **Advanced - raw parameters** area. Click the green plus-symbol that appears.
+
+![Image showing the green plus that appears when hovering over the list of parameters.](images/set_parameter_2.png)
+
+2. Type the name of the parameter (without quotation marks).
+
+![Image showing input dialog for parameter names.](images/set_parameter_3.png)
+
+3. Hover over the box that says `NULL` next to the newly added parameter. Click the green pen symbol that appears to the right of it.
+
+![Image showing symbols that appear when hovering over the parameter value input box.](images/set_parameter_4.png)
+
+4. Type in the desired value in box that appears. By default it will be assumed that the parameter value is a string. The webclient will infer other possible types based on the written input. If the setting should be a string, click the green checkmark to the top right, and if you want the inferred type click the green checkmark at the bottom right.
+
+![Image showing the two checkmarks locations that determine the type of the parameter value.](images/set_parameter_5.png)
+
+5. The parameter is now set.
+
+![Image showing the final result of setting a parameter.](images/set_parameter_6.png)
