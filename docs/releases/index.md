@@ -1,12 +1,12 @@
 # Releases
 
 ## Release 2023/07/14
-- B91-prevent-multiple-blank-questions - @tim, please add your description
-- B112-bug-the-tab-navigation-bar-at-the-top-disappears - @tim, please add your description
-- B81-show-preview-of-ra-in-input-type-select - @tim, please add your description
-- B116-pdf-display-between-ras - @peter, please add your description
-- B81-show-preview-of-ra-in-input-type-select @tim, please add your description
-- B72-multi-year-module-instances-introduction - all existing modules were migrated so that each of them has one module instance. Also, all children previously linked to the module (such as teachers, students and sets) are now linked to the Module Instance. Also, all navigation in the application has been changed to handle Module Instance.
+
+- B91-prevent-multiple-blank-questions - {When a question is added, the 'add quesiton' button is temporarily disabled while the application updates.} @tim, please add your description
+- B112-bug-the-tab-navigation-bar-at-the-top-disappears - {Editor tabs are pesistent including during keyboard navigation} @tim, please add your description
+- B81-show-preview-of-ra-in-input-type-select - {Selecting an Input Type for a Response Area: a searchable preview of Input Types improves the UX: users see the preview while selecting.} @tim, please add your description
+- B116-pdf-display-between-ras - PDF generation: for multiple Response Areas in a Part, the order is now always correct
+- B72-multi-year-module-instances-introduction - all Modules now exist as an 'Instance' of a Module, in preparation for allowing multiple Instances. The UI navigation is updated to handle Module Instances.
 
 ## Release 2023/06/22
 
