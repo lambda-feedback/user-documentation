@@ -1,5 +1,13 @@
 # Releases
 
+## Release 2023/07/14
+- B91-prevent-multiple-blank-questions - @tim, please add your description
+- B112-bug-the-tab-navigation-bar-at-the-top-disappears - @tim, please add your description
+- B81-show-preview-of-ra-in-input-type-select - @tim, please add your description
+- B116-pdf-display-between-ras - @peter, please add your description
+- B81-show-preview-of-ra-in-input-type-select @tim, please add your description
+- B72-multi-year-module-instances-introduction - all existing modules were migrated so that each of them has one module instance. Also, all children previously linked to the module (such as teachers, students and sets) are now linked to the Module Instance. Also, all navigation in the application has been changed to handle Module Instance.
+
 ## Release 2023/06/22
 
 - b39-new-editor-menus - question editor area menus have been converted into tabs. Other improvements have also been made to the editor layout inlcuding switching between teacher and student mode and staying on the same question. ![image of tabs](../assets/releases/b39.png)
