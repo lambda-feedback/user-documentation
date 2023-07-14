@@ -45,3 +45,15 @@ If there is a parameter that is not already visible it can be set using the **Ad
 5. The parameter is now set.
 
 ![Image showing the final result of setting a parameter.](images/set_parameter_6.png)
+
+
+## How do I reorder questions?
+
+It is only possible to reorder published questions in a set. This prevents inadvertently inserting new questions between two published ones. This ensures consistency to the student when viewing a published set as existing questions will remain in an unchanged order, with new questions being added to the bottom (unless manually changed by the teacher). 
+
+To reorder questions:
+
+1. Publish the questions you wish to reorder (alternatively click on the 'PUBLISH WHOLE SET' button)
+2. Refresh the page
+3. Drag and drop the questions into the new order - there is no need to republish the set
+4. Ensure the green box pops up saying: 'questions reordered successfully'
