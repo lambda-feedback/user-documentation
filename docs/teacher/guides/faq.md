@@ -49,11 +49,11 @@ If there is a parameter that is not already visible it can be set using the **Ad
 
 ## How do I reorder questions?
 
-It is only possible to reorder published questions in a set. This prevents inadvertently inserting new questions between two published ones. This ensures consistency to the student when viewing a published set as existing questions will remain in an unchanged order, with new questions being added to the bottom (unless manually changed by the teacher). 
+It is only possible to reorder published questions in a set. This prevents inadvertently inserting new questions between two published ones. This ensures consistency to the student when viewing a published set as existing questions will remain in an unchanged order, with new questions being added to the bottom (unless manually changed by the teacher). You can tell a question is unpublished as it will take the '**1.X**' numbering format
 
 To reorder questions:
 
-1. Publish the questions you wish to reorder (alternatively click on the 'PUBLISH WHOLE SET' button)
+1. Publish the questions you wish to reorder using **FILE** > **SAVE AND PUBLISH** (alternatively click on the **PUBLISH WHOLE SET** button)
 2. Refresh the page
-3. Drag and drop the questions into the new order - there is no need to republish the set
-4. Ensure the green box pops up saying: 'questions reordered successfully'
+3. Drag and drop the questions into the new order
+4. Ensure the green box pops up saying: 'questions reordered successfully' - there is no need to republish the set
