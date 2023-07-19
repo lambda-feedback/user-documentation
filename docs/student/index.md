@@ -23,7 +23,9 @@ The image above shows an example question, with numbers to indicate:
 
 ## Below the line
 
-![Below the line screenshot](images/below_the_line.png)
+
+![Below the line buttons screenshot](images/Traffic_Light_Only.png){: style="height:50px"}
+
 
 - _My solutions_ - create your own content. Drag and drop images or type content. Use standard markdown.
 - _Structured tutorial_ - teachers use this in different ways. It is generally a way to provide scaffolding if you're struggling.
