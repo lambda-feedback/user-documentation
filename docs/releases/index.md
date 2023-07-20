@@ -1,5 +1,10 @@
 # Releases
 
+## Release 2023/07/19
+- B82-multi-year-duplicate-module-instance-and-link-entities - new feature to clone module instances
+![image of tabs](../assets/releases/b82.png)
+- B118-multi-year-tidy-up - multi module feature enhancements such as sorting and filtering module instances on the admin Module page
+
 ## Release 2023/07/14
 
 - b72-multi-year-module-instances-introduction - All Modules now exist as an 'Instance' of a Module, in preparation for allowing multiple Instances. The UI navigation is updated to handle Module Instances.
