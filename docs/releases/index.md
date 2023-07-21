@@ -2,6 +2,7 @@
 
 ## Release 2023/07/21
 - b101-tests-run-from-the-configure-panel-have-the-islatex-parameter-set-to-true - A correction to the settings on the new _Expression_ input (see 555 in [2023/05/26](#release-20230526)). When calling an evaluation function, the `is_latex` parameter dependends on the type of input (type/draw/scan).
+- b120-PDF-skill-time-info - PDFs now include information on skill level, time estimates, and guidance below the question title and above the question content.
 - b122-multi-year-carry-on - extended UI features referring to module instances (see b82 below).
 
 ## Release 2023/07/19
