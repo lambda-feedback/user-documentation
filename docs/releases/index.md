@@ -1,13 +1,13 @@
 # Releases
 
 ## Release 2023/07/21
-- B101-tests-run-from-the-configure-panel-have-the-islatex-parameter-set-to-true - Technical dept. Setting is_latex parameter value (when calling an evaluation function) dependently on the type of input (type/draw/scan)
-- B122-multi-year-carry-on - more features added to the multi-yead module instances feature, such as enahnced teacher home page and page titles
+- b101-tests-run-from-the-configure-panel-have-the-islatex-parameter-set-to-true - A correction to the settings on the new _Expression_ input (see 555 in [2023/05/26](#release-20230526)). When calling an evaluation function, the `is_latex` parameter dependends on the type of input (type/draw/scan).
+- b122-multi-year-carry-on - extended UI features referring to module instances (see b82 below).
 
 ## Release 2023/07/19
-- B82-multi-year-duplicate-module-instance-and-link-entities - new feature to clone module instances
+- b82-multi-year-duplicate-module-instance-and-link-entities - new feature to clone module instances
 ![image of tabs](../assets/releases/b82.png)
-- B118-multi-year-tidy-up - multi module feature enhancements such as sorting and filtering module instances on the admin Module page
+- b118-multi-year-tidy-up - multi module feature enhancements such as sorting and filtering module instances on the admin Module page
 
 ## Release 2023/07/14
 
