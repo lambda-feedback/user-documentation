@@ -1,5 +1,8 @@
 # Releases
 
+## Release 2023/07/21
+- 101-tests-run-from-the-configure-panel-have-the-islatex-parameter-set-to-true - Technical dept. Setting is_latex parameter value (when calling an evaluation function) dependently on the type of input (type/draw/scan)
+
 ## Release 2023/07/19
 - B82-multi-year-duplicate-module-instance-and-link-entities - new feature to clone module instances
 ![image of tabs](../assets/releases/b82.png)
