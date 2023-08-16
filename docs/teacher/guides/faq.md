@@ -1,7 +1,8 @@
 # Frequently Asked Questions
 
-## How can I enroll students on my new [Module](../../intro/terminology.md#modules)
-Students and users are given access to a module using their college email address (from microsoft). 
+## How can I enroll students on my new [Module](../../terminology.md#modules)
+
+Students and users are given access to a module using their college email address (from microsoft).
 
 1. Login and navigate to your [**Teacher**]({{ urls.client }}/teacher/modules) dashboard
 2. Select the module on which you want to enroll students
@@ -11,7 +12,7 @@ Students and users are given access to a module using their college email addres
 
 ## How can I move questions between problem sets?
 
-When creating a new question the teacher can choose to "clone" from an existing question. The teacher can then delete the original version. 
+When creating a new question the teacher can choose to "clone" from an existing question. The teacher can then delete the original version.
 
 1. In the problem set you wish to move the question to, select the **v** symbol to the right of the **Add Question** button
 2. From the dropdown menu, select **Clone From Question**
@@ -45,7 +46,6 @@ If there is a parameter that is not already visible it can be set using the **Ad
 5. The parameter is now set.
 
 ![Image showing the final result of setting a parameter.](images/set_parameter_6.png)
-
 
 ## How do I reorder questions?
 
