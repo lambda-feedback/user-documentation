@@ -1,5 +1,24 @@
 # Releases
 
+## Release 2023/08/16
+- b127-cloned-instances-are-missing-tutorials-and-worked-solutions - An enhancement of the module cloning functionality to include worked solutions and tutorials.
+- b125-when-publishing-question-update-the-student-view - An enhacement so that when a teacher publishes a question then, this question is visible in the student view without having to refresh the browser or log out and back in again.
+- b83-revisit-set-archiving - This is a technical improvement of the existing functionality to archive sets so that it is done in the same way as archiving of other entities. It has no visible any impacts to a user.
+- b111-archive-module-instance-option - A new feature to allow to archive a module instance. This feature is only available to an administrator.
+- b126-archive-module-option - A new feature to allow to archive a module. This feature is only available to an administrator.
+- b108-error-when-clicking-add-question-button-while-inside-part-content-box - Technical improvement. Upgrade of some libraries (Material UI) to prevent errors caused by issues in the older library version.
+
+
+## Release 2023/07/21
+- b101-tests-run-from-the-configure-panel-have-the-islatex-parameter-set-to-true - A correction to the settings on the new _Expression_ input (see 555 in [2023/05/26](#release-20230526)). When calling an evaluation function, the `is_latex` parameter dependends on the type of input (type/draw/scan).
+- b120-PDF-skill-time-info - PDFs now include information on skill level, time estimates, and guidance below the question title and above the question content.
+- b122-multi-year-carry-on - extended UI features referring to module instances (see b82 below).
+
+## Release 2023/07/19
+- b82-multi-year-duplicate-module-instance-and-link-entities - new feature to clone module instances
+![image of tabs](../assets/releases/b82.png)
+- b118-multi-year-tidy-up - multi module feature enhancements such as sorting and filtering module instances on the admin Module page
+
 ## Release 2023/07/14
 
 - b72-multi-year-module-instances-introduction - All Modules now exist as an 'Instance' of a Module, in preparation for allowing multiple Instances. The UI navigation is updated to handle Module Instances.
