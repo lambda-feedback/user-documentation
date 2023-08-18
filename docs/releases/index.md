@@ -1,5 +1,9 @@
 # Releases
 
+## Release 2023/08/18
+- 114-matrix-input-centering-in-teacher-mode-but-not-in-student-mode - The Check button for multi-choice questions in the response area panel is now vertically centred in the student view.
+- 140-response-area-pre-text-doubled - The legacy response are pre-text was removed from the student view.
+
 ## Release 2023/08/16
 - b127-cloned-instances-are-missing-tutorials-and-worked-solutions - An enhancement of the module cloning functionality to include worked solutions and tutorials.
 - b125-when-publishing-question-update-the-student-view - An enhacement so that when a teacher publishes a question then, this question is visible in the student view without having to refresh the browser or log out and back in again.
