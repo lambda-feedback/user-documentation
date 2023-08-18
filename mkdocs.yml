@@ -67,21 +67,21 @@ theme:
     - navigation.indexes
     - navigation.instant
     - navigation.sections
-    # - navigation.top
+    #- navigation.top
     - navigation.tabs
     - navigation.tabs.sticky
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
-        icon: material/eye-outline
+        icon: material/weather-sunny
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: red
-      accent: red
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/eye
+        icon: material/weather-night
         name: Switch to light mode
 
 # Extensions
