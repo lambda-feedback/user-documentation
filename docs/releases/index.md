@@ -1,5 +1,10 @@
 # Releases
 
+## Release 2023/08/22
+- 147-time-guidance-is-currently-very-small - An adjustment after upgrading one of the libraries which caused the time guidance to shrink.
+- 142-module-clone-enhancements - An enhancemnt to include links to already generated PDF files for all sets in the cloned module instance.
+- 138-503-error - An enhancement to navigate to the teacher module / module instance after clicking Cancel button in the Set Metadata page.
+
 ## Release 2023/08/18
 - 114-matrix-input-centering-in-teacher-mode-but-not-in-student-mode - The Check button for multi-choice questions in the response area panel is now vertically centred in the student view.
 - 140-response-area-pre-text-doubled - The legacy response are pre-text was removed from the student view.
