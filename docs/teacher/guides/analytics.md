@@ -9,3 +9,13 @@ Analytics are linked to response areas. Each question can have more response are
 Currently it is possible to see only analytics against the published version of the question.
 
 We are now working on the improvement so that it is possible to see analytics against all reponse areas (including those that exist only on previous versions of the question).
+
+## Tracking students' response
+To improve the feedback that students receive and to better understand which areas they need help with, it is possible to check the different student responses and the frequency of each response for each response area. 
+
+To see these statistics:
+
+1. Click on the **Stats** tab in teacher mode 
+2. Then click on **Explore** in the top right corner of each response area.
+
+You can even export these statistics as csv file!
