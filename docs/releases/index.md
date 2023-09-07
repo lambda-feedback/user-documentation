@@ -1,5 +1,13 @@
 # Releases
 
+## Release 2023/09/07
+- 155-aws-ending-support-for-nodejs-14-in-aws-lambda - A clear-up of an outdated library.
+- 153-pressing-enter-in-a-number-response-adds-new-line-to-the-response - handle Enter in the response area as a submission of the answer.
+- 139-archive-feature-enhancements - Enancements of module as module instance archiving.
+- 68-cleaning-up-the-editor - manu ui enhancements in the question editing page
+- 33-add-an-audio-sound-clip-to-each-stage-of-a-solution - Enhancements of the audio functionality to make easier for teachers to create audios and for students to play them.
+- 115-case-color-under-feedback-tab-for-response-area-is-not-functional - The custom colour for feedbacks is now displayed correctly.
+
 ## Release 2023/08/30
 
 - b33-audio-clips - in the content editor, drag-and-drop an audio file, and it will add a sound (e.g. narration) to the content.
