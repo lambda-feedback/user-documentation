@@ -8,7 +8,6 @@ Use romanised operators such as $\sin$, $\frac{\mathrm{d}}{\mathrm{dx}}$ instead
 
 Using empty lines can improve the readability and neatness of your content. Empty lines are often useful before and after an equation, and between paragraphs of text.
 
-
 ## Space between numbers & units
 
 Put appropriate space between a number and its unit, such as `5 m` or `3 kg`, according to the SI conventions. 
@@ -35,9 +34,11 @@ Branching is a feature for `worked solutions`. It allows you to have different s
 
 ## Use pre-response area text to be clear what should be entered
 
-Pre-response area text is found under `condigure` - `INPUT` in the evaluation function.
+Pre-response area text is found under `configure` - `INPUT` in the evaluation function.
 
 You can use LaTeX in the pre-response area text.
+
+![Image showing a pre-response area](images/Pre-response-area.png)
 
 ## Use `\dfrac` for bigger fractions when needed.
 
