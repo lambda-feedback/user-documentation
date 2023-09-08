@@ -14,13 +14,13 @@ Put appropriate space between a number and its unit, such as `5 m` or `3 kg`, ac
 
 ## Romanise units and check their case
 
-Use romanised units such as $\text{m}$, $\text{kN}$ instead of $m$, $kN$. Ensure that the case of the unit is corrcet.
+Use romanised units such as $\text{m}$, $\text{kN}$ instead of $m$, $kN$. Ensure that the case of the unit is correct.
 
 ## Add tests to response areas
 
 In a response area, press `configure` then `tests`. 
 
-Tests allow you to enter potential student responses, define whether they are correct or not, then run the evaluation function on those student reponses. This allows you to quickly test whether or not the evaluation function works as expected.
+Tests allow you to enter potential student responses, define whether they are correct or not, then run the evaluation function on those student responses. This allows you to quickly test whether or not the evaluation function works as expected.
 
 ## Save and publish as you go
 
@@ -30,7 +30,7 @@ Saving and publishing work regularly is recommended to prevent accidental data l
 
 Branching is a feature for `worked solutions`. It allows you to have different solution pathways Usage examples:
 
-- When a question can be solved in multiple different methods, branching can be used for each method.
+- When a question can be solved via multiple different methods, branching can be used for each method.
 - When a question has multiple parts, where each part involves substitution of different values, branching can be used for each part.
 
 ![gif showing the branching feature](images/branching.gif)
