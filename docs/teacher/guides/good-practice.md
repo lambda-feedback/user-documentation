@@ -38,7 +38,7 @@ Pre-response area text is found under `configure` - `INPUT` in the evaluation fu
 
 You can use LaTeX in the pre-response area text.
 
-![Image showing a pre-response area](images/Pre-response-area.png)
+![Image showing a pre-response area](images/pre_response_area.png)
 
 ## Use `\dfrac` for bigger fractions when needed.
 
