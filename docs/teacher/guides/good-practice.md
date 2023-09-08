@@ -57,3 +57,5 @@ Just drag + drop an audio file into the milkdown editor.
 Live preview and input types are found in an evaluation function under `configure` - `INPUT`.
 
 Live preview instantly renders a student's input. This is very useful for long/complicated equations, as it allows students to ensure their input is correct.
+
+![Image showing a live-preview to a student's response](images/live_preview.png)
