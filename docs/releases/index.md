@@ -1,8 +1,11 @@
 # Releases
 
+## Release 2023/09/08
+- 128-feedback-area-does-not-support-latex-rendering - Feedbacks returned by the evaluation function are displayed using latex editor.
+
 ## Release 2023/09/07
 - b155-aws-ending-support-for-nodejs-14-in-aws-lambda - A clear-up of an outdated library.
-- b153-pressing-enter-in-a-number-response-adds-new-line-to-the-response - handle Enter in the response area as a submission of the answer.
+- b153-pressing-enter-in-a-number-response-adds-new-line-to-the-response - Handle Enter in the response area as a submission of the answer.
 - b139-archive-feature-enhancements - Enancements of module as module instance archiving.
 - b68-cleaning-up-the-editor - many ui enhancements in the question editing page
 - b115-case-color-under-feedback-tab-for-response-area-is-not-functional - The custom colour for feedbacks is now displayed correctly.
