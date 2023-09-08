@@ -29,8 +29,11 @@ Saving and publishing work regularly is recommended to prevent accidental data l
 ## Use branching when relevant
 
 Branching is a feature for `worked solutions`. It allows you to have different solution pathways Usage examples:
+
 - When a question can be solved in multiple different methods, branching can be used for each method.
 - When a question has multiple parts, where each part involves substitution of different values, branching can be used for each part.
+
+![gif showing the branching feature](images/branching.gif)
 
 ## Use pre-response area text to be clear what should be entered
 
