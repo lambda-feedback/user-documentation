@@ -39,11 +39,11 @@ Pre-response area text is found under `condigure` - `INPUT` in the evaluation fu
 
 You can use LaTeX in the pre-response area text.
 
-## Use $\dfrac$ for bigger fractions when needed.
+## Use `\dfrac` for bigger fractions when needed.
 
 Use `$\dfrac{numerator}{denominator}$` for bigger fractions when you need to display them more clearly or emphasize them. For example, `$\dfrac{3}{4}$` will produce a bigger fraction than `$\frac{3}{4}$`.
 
-## Use $\small$ when smaller fonts or fractions are needed
+## Use `\small` when smaller fonts or fractions are needed
 
 Use `$\small{text}$` when you need to display smaller fonts or fractions in your LaTeX expressions. For example, `$\small{\frac{1}{2}}$` will produce a smaller fraction than `$\frac{1}{2}$`.
 
