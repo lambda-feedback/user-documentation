@@ -1,4 +1,4 @@
-# Good practice 
+# Good practice
 
 ## Romanised operators
 
@@ -6,11 +6,11 @@ Use romanised operators such as $\sin$, $\frac{\mathrm{d}}{\mathrm{dx}}$ instead
 
 ## Use empty lines
 
-Using empty lines can improve the readability and neatness of your content. Empty lines are often useful before and after an equation, and between paragraphs of text.
+Using empty lines can improve the readability and neatness of your content. Empty lines are often useful before and after an equation, and between paragraphs of text. An empty line in markdown requires _two spaces_ on the line, otherwise the line is ignored.
 
-## Space between numbers & units
+## Space between numbers and units
 
-Put appropriate space between a number and its unit, such as `5 m` or `3 kg`, according to the SI conventions. 
+Put appropriate space between a number and its unit, such as `5 m` or `3 kg`, according to the SI conventions.
 
 ## Romanise units and check their case
 
@@ -18,13 +18,13 @@ Use romanised units such as $\text{m}$, $\text{kN}$ instead of $m$, $kN$. Ensure
 
 ## Add tests to response areas
 
-In a response area, press `configure` then `tests`. 
+In a response area, press `configure` then `tests`.
 
 Tests allow you to enter potential student responses, define whether they are correct or not, then run the evaluation function on those student responses. This allows you to quickly test whether or not the evaluation function works as expected.
 
 ## Save and publish as you go
 
-Saving and publishing work regularly is recommended to prevent accidental data loss.    
+Saving and publishing work regularly is recommended to prevent accidental data loss.
 
 ## Use branching when relevant
 
@@ -51,7 +51,7 @@ Use `$\dfrac{numerator}{denominator}$` for bigger fractions when you need to dis
 
 Use `$\small{text}$` when you need to display smaller fonts or fractions in your LaTeX expressions. For example, `$\small{\frac{1}{2}}$` will produce a smaller fraction than `$\frac{1}{2}$`.
 
-## Use audio clips 
+## Use audio clips
 
 Just drag + drop an audio file into the milkdown editor.
 

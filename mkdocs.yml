@@ -32,6 +32,7 @@ nav:
           - FAQ: "teacher/guides/faq.md"
 
       - Reference:
+          - Latex functionality: "teacher/reference/latex_functionality.md"
           - Response Areas:
               - "teacher/reference/response_area_components/index.md"
               - Text: "teacher/reference/response_area_components/Text.md"
