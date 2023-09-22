@@ -26,13 +26,13 @@ nav:
       - Guides:
           - Getting Started: "teacher/guides/gettingstarted.md"
           - Editing questions: "teacher/guides/content-sets-questions.md"
-          - Support material: "teacher/guides/support-material.md"
           - Milkdown: "teacher/guides/milkdown.md"
           - Analytics: "teacher/guides/analytics.md"
           - Good practice: "teacher/guides/good-practice.md"
           - FAQ: "teacher/guides/faq.md"
 
       - Reference:
+          - Access control: "teacher/reference/access_control.md"
           - Latex functionality: "teacher/reference/latex_functionality.md"
           - Response Areas:
               - "teacher/reference/response_area_components/index.md"
