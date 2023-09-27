@@ -1,5 +1,13 @@
 # Releases
 
+## Release 2023/09/27
+- b157-new-eval-function-reset-parameters - improvement in the response area panel, when the evaluation function is changed, then the default evaluation function parameters are re-set.
+- b167-teachers-are-sent-to-the-most-recent-instance-on-the-module-homepage-even-when-they-dont-have-access-they-should-be-sent-to-the-most-recent-one-that-they-have-access-to
+- b163-failed-fetching-your-problem-set-displayed-on-every-page-load - an improvement so that the warning message only appears when the fetch returns an error.
+- b149-restrict-access-to-worked-solutions - restrict student access to support materials on set level and on question level.
+![image of set level support documentation access setting](../assets/releases/b149.png)
+- b165-preview-not-the-same-as-student-view - an improvement to displaye pre-text, value and post-text aligned horizontally in the response area student view
+
 ## Release 2023/09/08
 - 128-feedback-area-does-not-support-latex-rendering - Feedbacks returned by the evaluation function are displayed using latex editor.
 
