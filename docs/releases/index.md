@@ -2,7 +2,7 @@
 
 ## Release 2023/09/29
 - b148-problem-adding-new-question-after-changing-name-of-current-question - an improvement so that a user cannot start changing newly added question (e.g. changing name) until all processes are finished and therefore preventing these changes to be wiped out.
-- b161-renaming-question-straight-after-making-it - this is the same problem as above
+- b161-renaming-question-straight-after-making-it - this is the same problem as b148
 - b151-quote-marks-can-break-flags - an improvement so that double-quote marks, if used in a text, are displayed correctly in the generated csv file
 - b164-grade-param-type-changed-reverts-to-string-when-value-is-empty - an improvment to identify a number as a number in the grade parameters, so that the type is displayed number and not as string
 - b166-no-template-questions-in-the-list - an improvement to display all existing template questions in the list (when adding a new question from a template) 
