@@ -6,6 +6,7 @@
 - b151-quote-marks-can-break-flags - an improvement so that double-quote marks, if used in a text, are displayed correctly in the generated csv file
 - b164-grade-param-type-changed-reverts-to-string-when-value-is-empty - an improvment to identify a number as a number in the grade parameters, so that the type is displayed number and not as string
 - b166-no-template-questions-in-the-list - an improvement to display all existing template questions in the list (when adding a new question from a template) 
+- b190-draw-area-width-keeps-changing - an improvement to stop the drawing area changing its width when a warning message is displayed that the writting cannot be interpreted
 
 
 ## Release 2023/09/27
