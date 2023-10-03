@@ -2,7 +2,7 @@
 
 ## Release 2023/10/03
 - b191-expression-response-area-defaults - an improvement so that when creating a new response area of type EXPRESSION, the default values are set to:
-  - TRUE for the Live previe
+  - TRUE for Live preview
   - FALSE for Display input symbols
   - FALSE for Include in PDF
   - TRUE for Enable handwriting input
