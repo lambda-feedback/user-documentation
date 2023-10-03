@@ -1,5 +1,17 @@
 # Releases
 
+## Release 2023/10/03
+- b191-expression-response-area-defaults - an improvement so that when creating a new response area of type EXPRESSION, the default values are set to:
+  - TRUE for the Live previe
+  - FALSE for Display input symbols
+  - FALSE for Include in PDF
+  - TRUE for Enable handwriting input
+  - TRUE for Enable photo upload
+- b187-support-materials-access-enhancements - enhancements to the support materals student access configuration:
+  - A new button event was added to record whether students proceeded or cancelled after a warning message appeared when a student tried to open a support material
+  - Labels were renamed to make their meaning clearer (e.g. 'Open' was changed to 'Available' and 'Hidden' to 'Unavailable')
+  - When a question part is marked as done, then no warning is displayed to a student when opening a support material (even if marked as Open with warnings)
+
 ## Release 2023/09/29
 - b148-problem-adding-new-question-after-changing-name-of-current-question - an improvement so that a user cannot start changing newly added question (e.g. changing name) until all processes are finished and therefore preventing these changes to be wiped out.
 - b161-renaming-question-straight-after-making-it - this is the same problem as b148
