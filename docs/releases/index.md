@@ -1,5 +1,11 @@
 # Releases
 
+## Release 2023/10/05
+- b136-change-to-breadcrumbs - an improvement to remove module instances from teachers and students breadcrumbs as they do not link to any pages
+- b188-add-information-when-rendering-a-new-question - adding information that a question is being created when adding a new question
+- b189-failed-fetching-your-problem-set-message-appearing-when-it-should-not - a warning message 'Failed fetching your problem set' is to be displayed only if there is an error
+
+
 ## Release 2023/10/03
 - b191-expression-response-area-defaults - an improvement so that when creating a new response area of type EXPRESSION, the default values are set to:
   - TRUE for Live preview
