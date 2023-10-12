@@ -1,5 +1,18 @@
 # Releases
 
+## Release 2023/10/12
+- b180-prod-freesing-and-restarting - increasing allocated memory to try to prevent the server crashing and restarting when generating big PDFs
+- b193-implement-auto-scaling-on-infrastructure - implementing auto scaling in AWS so that more tasks are started when the amount of CPU and Memory used are above 60%
+- b124-question-export-with-pictures-fails-sometimes-on-cors-error - forcing Chrome to refresh media retriaval from S3 bucket to make sure correct headers are attached to the response
+- b199-migration-script-for-physics-expression-ra - a script to provided to correct configuration for some expression response areas in physics module
+- b194-create-set-and-first-question-improvement - creating first default question when creating a new set to improve performance and robutstnes
+- b197-not-possible-to-delete-a-question - increasing prisma timeout when deleting a question so that there is enough time to delete all question dependencies
+- b143-more-info-in-modal-when-publish-whole-set - displaying list of questions that will be published in a modal before publishing
+- b144-modal-to-check-before-removing-branches - a warning message is displayed before a branch from worked solutions is deleted
+
+
+
+
 ## Release 2023/10/05
 - b136-change-to-breadcrumbs - an improvement to remove module instances from teachers and students breadcrumbs as they do not link to any pages
 - b188-add-information-when-rendering-a-new-question - adding information that a question is being created when adding a new question
