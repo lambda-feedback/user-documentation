@@ -1,25 +1,24 @@
 # Releases
 
 ## Release 2023/10/12
-- b180-prod-freesing-and-restarting - increasing allocated memory to try to prevent the server crashing and restarting when generating big PDFs
-- b193-implement-auto-scaling-on-infrastructure - implementing auto scaling in AWS so that more tasks are started when the amount of CPU and Memory used are above 60%
+
+- b180-prod-freezing-and-restarting - increasing allocated memory to accommodate multiple users triggering heavy processes (PDF compilation)
+- b193-implement-auto-scaling-on-infrastructure - Infrastructure upgrades for larger scale usage.
 - b124-question-export-with-pictures-fails-sometimes-on-cors-error - forcing Chrome to refresh media retriaval from S3 bucket to make sure correct headers are attached to the response
-- b199-migration-script-for-physics-expression-ra - a script to provided to correct configuration for some expression response areas in physics module
-- b194-create-set-and-first-question-improvement - creating first default question when creating a new set to improve performance and robutstnes
-- b197-not-possible-to-delete-a-question - increasing prisma timeout when deleting a question so that there is enough time to delete all question dependencies
-- b143-more-info-in-modal-when-publish-whole-set - displaying list of questions that will be published in a modal before publishing
+- b199-migration-script-for-physics-expression-ra - DB migration for legacy content.
+- b194-create-set-and-first-question-improvement - new set automatically has a blank question ready.
+- b197-not-possible-to-delete-a-question - increase timeout when deleting a question
+- b143-more-info-in-modal-when-publish-whole-set - displaying list of questions that will be published in a modal before publishing whole set.
 - b144-modal-to-check-before-removing-branches - a warning message is displayed before a branch from worked solutions is deleted
 
-
-
-
 ## Release 2023/10/05
+
 - b136-change-to-breadcrumbs - an improvement to remove module instances from teachers and students breadcrumbs as they do not link to any pages
 - b188-add-information-when-rendering-a-new-question - adding information that a question is being created when adding a new question
 - b189-failed-fetching-your-problem-set-message-appearing-when-it-should-not - a warning message 'Failed fetching your problem set' is to be displayed only if there is an error
 
-
 ## Release 2023/10/03
+
 - b191-expression-response-area-defaults - an improvement so that when creating a new response area of type EXPRESSION, the default values are set to:
   - TRUE for Live preview
   - FALSE for Display input symbols
@@ -32,26 +31,29 @@
   - When a question part is marked as done, then no warning is displayed to a student when opening a support material (even if marked as Open with warnings)
 
 ## Release 2023/09/29
+
 - b148-problem-adding-new-question-after-changing-name-of-current-question - an improvement so that a user cannot start changing newly added question (e.g. changing name) until all processes are finished and therefore preventing these changes to be wiped out.
 - b161-renaming-question-straight-after-making-it - this is the same problem as b148
 - b151-quote-marks-can-break-flags - an improvement so that double-quote marks, if used in a text, are displayed correctly in the generated csv file
 - b164-grade-param-type-changed-reverts-to-string-when-value-is-empty - an improvment to identify a number as a number in the grade parameters, so that the type is displayed number and not as string
-- b166-no-template-questions-in-the-list - an improvement to display all existing template questions in the list (when adding a new question from a template) 
+- b166-no-template-questions-in-the-list - an improvement to display all existing template questions in the list (when adding a new question from a template)
 - b190-draw-area-width-keeps-changing - an improvement to stop the drawing area changing its width when a warning message is displayed that the writting cannot be interpreted
 
-
 ## Release 2023/09/27
+
 - b157-new-eval-function-reset-parameters - improvement in the response area panel, when the evaluation function is changed, then the default evaluation function parameters are re-set.
 - b167-teachers-are-sent-to-the-most-recent-instance-on-the-module-homepage-even-when-they-dont-have-access-they-should-be-sent-to-the-most-recent-one-that-they-have-access-to
 - b163-failed-fetching-your-problem-set-displayed-on-every-page-load - an improvement so that the warning message only appears when the fetch returns an error.
 - b149-restrict-access-to-worked-solutions - restrict student access to support materials on set level and on question level.
-![image of set level support documentation access setting](../assets/releases/b149.png)
+  ![image of set level support documentation access setting](../assets/releases/b149.png)
 - b165-preview-not-the-same-as-student-view - an improvement to displaye pre-text, value and post-text aligned horizontally in the response area student view
 
 ## Release 2023/09/08
+
 - 128-feedback-area-does-not-support-latex-rendering - Feedbacks returned by the evaluation function are displayed using latex editor.
 
 ## Release 2023/09/07
+
 - b155-aws-ending-support-for-nodejs-14-in-aws-lambda - A clear-up of an outdated library.
 - b153-pressing-enter-in-a-number-response-adds-new-line-to-the-response - Handle Enter in the response area as a submission of the answer.
 - b139-archive-feature-enhancements - Enancements of module as module instance archiving.
