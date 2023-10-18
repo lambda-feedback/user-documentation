@@ -26,4 +26,4 @@ It is possible to e.g. export 2 questions, then unzip the exported zip files and
 
 ![import multiple questions](images/question_import_multiple.png)
 
-The name of the folder and names of json files are not important. However, the name of media files must correspond with the names used in the json files when refering the media.
+The name of the folder and names of json files are not important. However, the name of media files must correspond with the names used in the json files when referring the media.
