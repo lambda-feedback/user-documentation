@@ -26,6 +26,7 @@ nav:
       - Guides:
           - Getting Started: "teacher/guides/gettingstarted.md"
           - Editing questions: "teacher/guides/content-sets-questions.md"
+          - Exporting and importing questions: "teacher/guides/question-export-import.md"
           - Milkdown: "teacher/guides/milkdown.md"
           - Analytics: "teacher/guides/analytics.md"
           - Good practice: "teacher/guides/good-practice.md"
