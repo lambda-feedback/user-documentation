@@ -2,19 +2,18 @@
 
 ## Release 2023/20/12
 - b202-ensure-eval-function-defaults-for-new-response-areas - an improvement so that evaluation function parameters are set to default values when creating a new response area
-- b71-analytics-tweaks-teacher-view - the View students page was modified:
-    - Filters were added to make possible to filter students by email and/or by access
-    - A click on a student email opens a new page which displays the same analytics as the student can see in their view
+- b71-analytics-tweaks-teacher-view - the students list, view and contact pages were merged into a single page:
+    - Filters by email and/or by access are available to filter the single list of students
+    - A click on a student email opens a view which displays the same analytics the student can see
 ![student analytics in teacher mode](../assets/releases/b71.png)
 - b162-analytics-tweaks-stats-modal - improvements in the analytics view:
-    - Colour is indicating if the feedback marked the answer as correct or incorrect
-    - Checkmark is indicating if there was no error, cross indicating an error was returned by a feedback
-    - Radiobuttons added to allow the user to agregate student answers
+    - Colour is indicating the answer's case colour, if any, or the correct/incorrect default colour
+    - Checkmark is indicating that the answer was correct
+    - More options added to allow the user to agregate student answers
 ![analytics tweeaks](../assets/releases/b162.png)
 - b67-simplify-stats-interaction - few changes to response area statistics in the teacher mode:
-    - The case is imported straight into the relevant response area without any verification step
+    - The case is imported straight into the relevant response area
     - The response area menu has a new button EXPLORE so that the teacher can see the statistics per response area
-
     ![statistics per response area](../assets/releases/b67.png){ width="400" }
 
 - b192-reaction-count-one-hour-challenge - users can see the individual count of each type of reaction
