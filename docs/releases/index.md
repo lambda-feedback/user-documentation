@@ -2,23 +2,29 @@
 
 ## Release 2023/20/12
 - b202-ensure-eval-function-defaults-for-new-response-areas - an improvement so that evaluation function parameters are set to default values when creating a new response area
+- b71-analytics-tweaks-teacher-view - the View students page was modified:
+    - Filters were added to make possible to filter students by email and/or by access
+    - A click on a student email opens a new page which displays the same analytics as the student can see in their view
+![student analytics in teacher mode](../assets/releases/b71.png)
 - b162-analytics-tweaks-stats-modal - improvements in the analytics view:
     - Colour is indicating if the feedback marked the answer as correct or incorrect
     - Checkmark is indicating if there was no error, cross indicating an error was returned by a feedback
     - Radiobuttons added to allow the user to agregate student answers
 ![analytics tweeaks](../assets/releases/b162.png)
-- b71-analytics-tweaks-teacher-view - the View students page was modified:
-    - Filters were added to make possible to filter students by email and/or by access
-    - A click on a student email opens a new page which displays the same analytics as the student can see in their view
-![student analytics in teacher mode](../assets/releases/b71.png)
 - b67-simplify-stats-interaction - few changes to response area statistics in the teacher mode:
-    - The response area menu has a new button EXPLORE so that the teacher can see the statistics per response area
-![statistics per response area](../assets/releases/b67.png)
     - The case is imported straight into the relevant response area without any verification step
+    - The response area menu has a new button EXPLORE so that the teacher can see the statistics per response area
+
+    ![statistics per response area](../assets/releases/b67.png){ width="400" }
+
 - b192-reaction-count-one-hour-challenge - users can see the individual count of each type of reaction
-![reaction count](../assets/releases/b192.png)
+
+    ![reaction count](../assets/releases/b192.png){ width="300" }
+
 - b183-activity-feed-make-clear-there-are-more-flags-than-5 - make clear to the user how many flags and comments there are in total as there might be more than 5 displayed on the teacher dashboard
-![number of activities](../assets/releases/b183.png)
+
+    ![number of activities](../assets/releases/b183.png){ width="400" }
+
 - b110-import-multiple-jsons-from-a-single-zip - allows to import more questions from one zip file. This includes questions with attached pictures. Import of questions with attached audio files is yet to come.
 - b205-admin-analytics-initial-work - first version of the admin dashboard is now provided. It includes information about number of current users, questions and user access events
 
