@@ -1,5 +1,27 @@
 # Releases
 
+## Release 2023/20/12
+- b202-ensure-eval-function-defaults-for-new-response-areas - an improvement so that evaluation function parameters are set to default values when creating a new response area
+- b162-analytics-tweaks-stats-modal - improvements in the analytics view:
+    - Colour is indicating if the feedback marked the answer as correct or incorrect
+    - Checkmark is indicating if there was no error, cross indicating an error was returned by a feedback
+    - Radiobuttons added to allow the user to agregate student answers
+![analytics tweeaks](../assets/releases/b162.png)
+- b71-analytics-tweaks-teacher-view - the View students page was modified:
+    - Filters were added to make possible to filter students by email and/or by access
+    - A click on a student email opens a new page which displays the same analytics as the student can see in their view
+![student analytics in teacher mode](../assets/releases/b71.png)
+- b67-simplify-stats-interaction - few changes to response area statistics in the teacher mode:
+    - The response area menu has a new button EXPLORE so that the teacher can see the statistics per response area
+![statistics per response area](../assets/releases/b67.png)
+    - The case is imported straight into the relevant response area without any verification step
+- b192-reaction-count-one-hour-challenge - users can see the individual count of each type of reaction
+![reaction count](../assets/releases/b192.png)
+- b183-activity-feed-make-clear-there-are-more-flags-than-5 - make clear to the user how many flags and comments there are in total as there might be more than 5 displayed on the teacher dashboard
+![number of activities](../assets/releases/b183.png)
+- b110-import-multiple-jsons-from-a-single-zip - allows to import more questions from one zip file. This includes questions with attached pictures. Import of questions with attached audio files is yet to come.
+- b205-admin-analytics-initial-work - first version of the admin dashboard is now provided. It includes information about number of current users, questions and user access events
+
 ## Release 2023/10/12
 
 - b180-prod-freezing-and-restarting - increasing allocated memory to accommodate multiple users triggering heavy processes (PDF compilation)
@@ -20,15 +42,15 @@
 ## Release 2023/10/03
 
 - b191-expression-response-area-defaults - an improvement so that when creating a new response area of type EXPRESSION, the default values are set to:
-  - TRUE for Live preview
-  - FALSE for Display input symbols
-  - FALSE for Include in PDF
-  - TRUE for Enable handwriting input
-  - TRUE for Enable photo upload
+    - TRUE for Live preview
+    - FALSE for Display input symbols
+    - FALSE for Include in PDF
+    - TRUE for Enable handwriting input
+    - TRUE for Enable photo upload
 - b187-support-materials-access-enhancements - enhancements to the support materals student access configuration:
-  - A new button event was added to record whether students proceeded or cancelled after a warning message appeared when a student tried to open a support material
-  - Labels were renamed to make their meaning clearer (e.g. 'Open' was changed to 'Available' and 'Hidden' to 'Unavailable')
-  - When a question part is marked as done, then no warning is displayed to a student when opening a support material (even if marked as Open with warnings)
+    - A new button event was added to record whether students proceeded or cancelled after a warning message appeared when a student tried to open a support material
+    - Labels were renamed to make their meaning clearer (e.g. 'Open' was changed to 'Available' and 'Hidden' to 'Unavailable')
+    - When a question part is marked as done, then no warning is displayed to a student when opening a support material (even if marked as Open with warnings)
 
 ## Release 2023/09/29
 
