@@ -41,6 +41,22 @@ $$
 
 Here the suffix `-ed` in `aligned` implies a subordinate environment; likewise `gathered`, `alignedat` etc. are all valid within an equation environment.
 
+#### Warning: No blank lines allowed in `aligned` subordinate environment
+
+If a blank line is present within a subordinate environment `\begin{aligned}` then Pandoc will fail to compile the PDF. For example:
+
+```Faulty code example:
+$$
+\begin{aligned}
+a & b\\
+c & d
+
+\end{aligned}
+$$
+```
+
+The above will fail to compile the PDF. But removing the blank line will solve the problem.
+
 For further reading search for the AMS math package and related literature.
 
 ## Numbering equations
