@@ -1,6 +1,15 @@
 # Releases
 
-## Release 2023/20/12
+## Release 2023/11/01
+- b207-pressing-enter-in-the-flag-textbox - an improvement so that when a user is an expression response area and he attempts to submit a comment (or flag a problem) at the same time by clicking the enter, then only the comment (or the problem message) is submitted (and not the answer in the response area)
+- b213-question-export-import-to-handle-mp3 - an improvement to allow to export and import questions containing an audio (or more audios)
+- b217-remove-header-text-on-module-page-for-students - removed the header on the student module page as it is not needed
+- b215-do-not-update-or-delete-notes-in-teacher-preview - an improvement to prevent submitting student solutions in the teacher preview mode
+- b208-unposted-comments - an imrpvement to handle the scenario when a user entered a comment and then, withouth submitting it, selected different question (the comment was copied to the newly selected question which is not a desired feature)
+- b209-zero-comments-invite-comments - an improvement to open comments when there are no comments to invite users to comment
+
+
+## Release 2023/10/20
 - b202-ensure-eval-function-defaults-for-new-response-areas - an improvement so that evaluation function parameters are set to default values when creating a new response area
 - b71-analytics-tweaks-teacher-view - the students list, view and contact pages were merged into a single page:
     - Filters by email and/or by access are available to filter the single list of students
