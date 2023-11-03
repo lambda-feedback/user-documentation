@@ -1,5 +1,10 @@
 # Releases
 
+## Release 2023/11/03
+- b214-admin-dashboard-carry-on - admin dashboard improvements:
+    - A drop down list to select the time period for the user access events graph
+    - The last part of the graph lines are dotted to make clear that last values are subject to change
+
 ## Release 2023/11/01
 - b207-pressing-enter-in-the-flag-textbox - an improvement so that when a user is using an expression response area and he attempts to submit a comment (or flag a problem) at the same time by clicking the enter, then only the comment (or the problem message) is submitted (and not the answer in the response area)
 - b213-question-export-import-to-handle-mp3 - an improvement to allow to export and import questions containing an audio (or more audios)
