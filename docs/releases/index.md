@@ -1,5 +1,13 @@
 # Releases
 
+## Release 2023/11/09
+- b186-add-time-estimates-for-each-set-in-teacher-mode - added set estimates which is calculated as summary of estimates of all questions
+    ![set estimates](../assets/releases/b186.png)
+- b204-input-symbols-empty-row-should-not-be-validated - an improvement to prevent validation of input symbols when a new row to enter input symbols is added
+- b206-input-symbols-with-spaces - an improvement to remove potential spaces entered into the input symbol alternatives (the values must be seaparated by comma without spaces to make sure they work correctly)
+- b226-update-question-split-prisma-transaction - extended Prisma timeout when a question is being saved or publish
+
+
 ## Release 2023/11/03
 - b214-admin-dashboard-carry-on - admin dashboard improvements:
     - A drop down list to select the time period for the user access events graph
