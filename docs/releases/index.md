@@ -1,5 +1,8 @@
 # Releases
 
+- b227-correct-set-estimates - displaying time estimate for each set in the list of set format improvements
+
+
 ## Release 2023/11/09
 - b186-add-time-estimates-for-each-set-in-teacher-mode - added set estimates which is calculated as summary of estimates of all questions
 - b204-input-symbols-empty-row-should-not-be-validated - an improvement to prevent validation of input symbols when a new row to enter input symbols is added
