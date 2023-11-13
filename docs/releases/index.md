@@ -5,6 +5,7 @@
 - b204-input-symbols-empty-row-should-not-be-validated - an improvement to prevent validation of input symbols when a new row to enter input symbols is added
 - b206-input-symbols-with-spaces - an improvement to remove potential spaces entered into the input symbol alternatives (the values must be seaparated by comma without spaces to make sure they work correctly)
 - b226-update-question-split-prisma-transaction - extended Prisma timeout when a question is being saved or publish
+- b225-bug-in-timed-release-for-pm-times - a change to display hours in 24 hour format when displaying time
 
 
 ## Release 2023/11/03
