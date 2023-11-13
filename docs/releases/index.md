@@ -1,7 +1,7 @@
 # Releases
 
 ## Release 2023/11/13
-- b227-correct-set-estimates - displaying time estimate for each set in the list of set format improvementsb
+- b227-correct-set-estimates - time format improvement for displaying time estimate for each set in the list of set 
 - b233-publish-set-pdf-generation - an adjustment to the Publish whole set functionality to generate PDF after the confirmation button is clicked
 ![set estimate](../assets/releases/b227.png)
 
