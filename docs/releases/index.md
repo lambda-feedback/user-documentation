@@ -1,5 +1,16 @@
 # Releases
 
+## Release 2023/12/04
+- b224-add-guidance-to-help - the existing guidance feature (to edit and displayed minimum and maximum question duration and the skill) was added into the support material tabs
+    ![set estimate](../assets/releases/b224.png)
+- b228-legacy-content-db-tables-master-content - first of the set of technical approvements to convert the legacy content tables into "normal" columns. This change converted the master question content.
+- b109-expression-input-tweaks - few improvements in the expression response area:
+    - Icons changed (to be more relevant to the feature they representing)
+    - Placeholder added (to make clear it is possible to upload files by drag and drop)
+    - The size of image that can be upload was increased to 10MB
+- b249-selected-question-index-lost - an improvements so that when a question is added, then the added question is presented to the user. Also, when a question is published, then the current question remains in the focus.
+- b241-link-from-feed-needs-updating - an improvement so that when a user clicks on a question in the list of comments (on the teacher dashboard), the relevant question is opened
+
 ## Release 2023/11/13
 - b227-correct-set-estimates - time format improvement for displaying time estimate for each set in the list of set 
 - b233-publish-set-pdf-generation - an adjustment to the Publish whole set functionality to generate PDF after the confirmation button is clicked
