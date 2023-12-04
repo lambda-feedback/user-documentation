@@ -1,15 +1,12 @@
 # Releases
 
 ## Release 2023/12/04
-- b224-add-guidance-to-help - the existing guidance feature (to edit and displayed minimum and maximum question duration and the skill) was added into the support material tabs
+- b224-add-guidance-to-help - guidance on a question, already visible to users in a widget on top-right, is now also visible with the support material below the question
     ![set estimate](../assets/releases/b224.png)
-- b228-legacy-content-db-tables-master-content - first of the set of technical approvements to convert the legacy content tables into "normal" columns. This change converted the master question content.
-- b109-expression-input-tweaks - few improvements in the expression response area:
-    - Icons changed (to be more relevant to the feature they representing)
-    - Placeholder added (to make clear it is possible to upload files by drag and drop)
-    - The size of image that can be upload was increased to 10MB
-- b249-selected-question-index-lost - an improvements so that when a question is added, then the added question is presented to the user. Also, when a question is published, then the current question remains in the focus.
-- b241-link-from-feed-needs-updating - an improvement so that when a user clicks on a question in the list of comments (on the teacher dashboard), the relevant question is opened
+- b228-legacy-content-db-tables-master-content - refactoring the database. No change to UX. 
+- b109-expression-input-tweaks - tweaks to the few improvements in the expression response area (555 in [2023/05/26](#release-20230526)): icons, placeholder, upload size limit.
+- b249-selected-question-index-lost - editor UX, improve the robustness of: when a question is added or published, ensure that question remains in focus to the user.
+- b241-link-from-feed-needs-updating - corrected a URL linking from the teacher feed to a question.
 
 ## Release 2023/11/13
 - b227-correct-set-estimates - time format improvement for displaying time estimate for each set in the list of set 
