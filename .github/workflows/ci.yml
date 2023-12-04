@@ -14,8 +14,11 @@ jobs:
       API_KEY: ${{ secrets.API_KEY }}
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install -r requirements.txt
-      - run: mkdocs gh-deploy --force
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Deploy
+        run: mkdocs gh-deploy --force
