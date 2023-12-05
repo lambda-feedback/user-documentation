@@ -1,35 +1,40 @@
 # Releases
 
 ## Release 2023/12/05
-- b242-mark-as-done-copied-across-questions - corrected links between submissions and questions and part marked as done and questions for questions imported from json files
+
+- b242-mark-as-done-copied-across-questions - correction to DB submissions for questions imported from JSON between 13/10/23 and 5/12/24, which were linked together incorrectly.
 
 ## Release 2023/12/04
+
 - b224-add-guidance-to-help - guidance on a question, already visible to users in a widget on top-right, is now also visible with the support material below the question
-    ![set estimate](../assets/releases/b224.png)
-- b228-legacy-content-db-tables-master-content - refactoring the database. No change to UX. 
+  ![set estimate](../assets/releases/b224.png)
+- b228-legacy-content-db-tables-master-content - refactoring the database. No change to UX.
 - b109-expression-input-tweaks - tweaks to the few improvements in the expression response area (555 in [2023/05/26](#release-20230526)): icons, placeholder, upload size limit.
 - b249-selected-question-index-lost - editor UX, improve the robustness of: when a question is added or published, ensure that question remains in focus to the user.
 - b241-link-from-feed-needs-updating - corrected a URL linking from the teacher feed to a question.
 
 ## Release 2023/11/13
-- b227-correct-set-estimates - time format improvement for displaying time estimate for each set in the list of set 
+
+- b227-correct-set-estimates - time format improvement for displaying time estimate for each set in the list of set
 - b233-publish-set-pdf-generation - an adjustment to the Publish whole set functionality to generate PDF after the confirmation button is clicked
-![set estimate](../assets/releases/b227.png)
+  ![set estimate](../assets/releases/b227.png)
 
 ## Release 2023/11/09
+
 - b186-add-time-estimates-for-each-set-in-teacher-mode - added set estimates which is calculated as summary of estimates of all questions
 - b204-input-symbols-empty-row-should-not-be-validated - an improvement to prevent validation of input symbols when a new row to enter input symbols is added
 - b206-input-symbols-with-spaces - an improvement to remove potential spaces entered into the input symbol alternatives (the values must be seaparated by comma without spaces to make sure they work correctly)
 - b226-update-question-split-prisma-transaction - extended Prisma timeout when a question is being saved or publish
 - b225-bug-in-timed-release-for-pm-times - a change to display hours in 24 hour format when displaying time
 
-
 ## Release 2023/11/03
+
 - b214-admin-dashboard-carry-on - admin dashboard improvements:
-    - A drop down list to select the time period for the user access events graph
-    - The last part of the graph lines are dotted to make clear that last values are subject to change
+  - A drop down list to select the time period for the user access events graph
+  - The last part of the graph lines are dotted to make clear that last values are subject to change
 
 ## Release 2023/11/01
+
 - b207-pressing-enter-in-the-flag-textbox - an improvement so that when a user is using an expression response area and he attempts to submit a comment (or flag a problem) at the same time by clicking the enter, then only the comment (or the problem message) is submitted (and not the answer in the response area)
 - b213-question-export-import-to-handle-mp3 - an improvement to allow to export and import questions containing an audio (or more audios)
 - b217-remove-header-text-on-module-page-for-students - removed the header on the student module page as it is not needed
@@ -37,30 +42,26 @@
 - b208-unposted-comments - an imrovement to handle the scenario when a user enters a comment and then, withouth submitting it, selects different question (the comment was copied to the newly selected question which is not a desired feature)
 - b209-zero-comments-invite-comments - an improvement to open comments when there are no comments to invite users to comment
 
-
 ## Release 2023/10/20
+
 - b202-ensure-eval-function-defaults-for-new-response-areas - an improvement so that evaluation function parameters are set to default values when creating a new response area
-- b71-analytics-tweaks-teacher-view - the students list, view and contact pages were merged into a single page:
-    - Filters by email and/or by access are available to filter the single list of students
-    - A click on a student email opens a view which displays the same analytics the student can see
-![student analytics in teacher mode](../assets/releases/b71.png)
-- b162-analytics-tweaks-stats-modal - improvements in the analytics view:
-    - Colour is indicating the answer's case colour, if any, or the correct/incorrect default colour
-    - Checkmark is indicating that the answer was correct
-    - More options added to allow the user to agregate student answers
-![analytics tweeaks](../assets/releases/b162.png)
+- b71-analytics-tweaks-teacher-view - the students list, view and contact pages were merged into a single page: - Filters by email and/or by access are available to filter the single list of students - A click on a student email opens a view which displays the same analytics the student can see
+  ![student analytics in teacher mode](../assets/releases/b71.png)
+- b162-analytics-tweaks-stats-modal - improvements in the analytics view: - Colour is indicating the answer's case colour, if any, or the correct/incorrect default colour - Checkmark is indicating that the answer was correct - More options added to allow the user to agregate student answers
+  ![analytics tweeaks](../assets/releases/b162.png)
 - b67-simplify-stats-interaction - few changes to response area statistics in the teacher mode:
-    - The case is imported straight into the relevant response area
-    - The response area menu has a new button EXPLORE so that the teacher can see the statistics per response area
+
+  - The case is imported straight into the relevant response area
+  - The response area menu has a new button EXPLORE so that the teacher can see the statistics per response area
     ![statistics per response area](../assets/releases/b67.png){ width="400" }
 
 - b192-reaction-count-one-hour-challenge - users can see the individual count of each type of reaction
 
-    ![reaction count](../assets/releases/b192.png){ width="300" }
+  ![reaction count](../assets/releases/b192.png){ width="300" }
 
 - b183-activity-feed-make-clear-there-are-more-flags-than-5 - make clear to the user how many flags and comments there are in total as there might be more than 5 displayed on the teacher dashboard
 
-    ![number of activities](../assets/releases/b183.png){ width="400" }
+  ![number of activities](../assets/releases/b183.png){ width="400" }
 
 - b110-import-multiple-jsons-from-a-single-zip - allows to import more questions from one zip file. This includes questions with attached pictures. Import of questions with attached audio files is yet to come.
 - b205-admin-analytics-initial-work - first version of the admin dashboard is now provided. It includes information about number of current users, questions and user access events
@@ -85,15 +86,15 @@
 ## Release 2023/10/03
 
 - b191-expression-response-area-defaults - an improvement so that when creating a new response area of type EXPRESSION, the default values are set to:
-    - TRUE for Live preview
-    - FALSE for Display input symbols
-    - FALSE for Include in PDF
-    - TRUE for Enable handwriting input
-    - TRUE for Enable photo upload
+  - TRUE for Live preview
+  - FALSE for Display input symbols
+  - FALSE for Include in PDF
+  - TRUE for Enable handwriting input
+  - TRUE for Enable photo upload
 - b187-support-materials-access-enhancements - enhancements to the support materals student access configuration:
-    - A new button event was added to record whether students proceeded or cancelled after a warning message appeared when a student tried to open a support material
-    - Labels were renamed to make their meaning clearer (e.g. 'Open' was changed to 'Available' and 'Hidden' to 'Unavailable')
-    - When a question part is marked as done, then no warning is displayed to a student when opening a support material (even if marked as Open with warnings)
+  - A new button event was added to record whether students proceeded or cancelled after a warning message appeared when a student tried to open a support material
+  - Labels were renamed to make their meaning clearer (e.g. 'Open' was changed to 'Available' and 'Hidden' to 'Unavailable')
+  - When a question part is marked as done, then no warning is displayed to a student when opening a support material (even if marked as Open with warnings)
 
 ## Release 2023/09/29
 
