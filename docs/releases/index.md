@@ -1,5 +1,8 @@
 # Releases
 
+## Release 2023/12/05
+- b242-mark-as-done-copied-across-questions - corrected links between submissions and questions and part marked as done and questions for questions imported from json files
+
 ## Release 2023/12/04
 - b224-add-guidance-to-help - guidance on a question, already visible to users in a widget on top-right, is now also visible with the support material below the question
     ![set estimate](../assets/releases/b224.png)
