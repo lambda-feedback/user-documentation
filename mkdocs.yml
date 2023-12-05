@@ -6,7 +6,7 @@ site_description: >-
   Architecture, syntax and usage details for an online learning platform
   focused on providing rich feedback to the user.
 
-# Project Tree
+# Navigation
 nav:
   - Home:
       - "index.md"
