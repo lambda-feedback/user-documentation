@@ -1,6 +1,10 @@
 # Releases
 
 ## Release 2023/12/05
+- b246-rendering-of-list-of-sets-in-teacher-mode-takes-long-time - an improvement to render list of sets in teacher mode quicker
+- b255-recover-lost-marked-parts - further corrections to DB. Some question parts were not marked correctly as done for questions imported from JSON between 13/10/23 and 5/12/24.
+
+## Release 2023/12/05
 
 - b242-mark-as-done-copied-across-questions - correction to DB submissions for questions imported from JSON between 13/10/23 and 5/12/24, which were linked together incorrectly.
 
