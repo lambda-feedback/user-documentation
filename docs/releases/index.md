@@ -1,14 +1,14 @@
 # Releases
 
 ## Release 2023/12/15
-- b244-fix-notes-saving-in-the-student-mode - a change to make sure that student notes are visible even when switching from the teacher to the student mode
-- b235-content-with-hash-copied-across - an improvement to prevent milkdown to copy a content with hash to be copied across from one question to another
-- b261-master-content-sometimes-not-saved - a change to make sure that master convent entered by the user is saved after publishing a question (instead of being copied from the published version)
-- b103-milkdown-slow-rendering - an improvement allowing developers to set a flag in their local environment to make rendering of pages with milkdown quicker
-- b260-number-and-unit-ra-do-not-align-with-pre-text-in-student-mode - aligning pre-text in the response area with number and units in the student mode
-- b251-post-a-reply-in-one-click - an approvement so that when the user enters a reply to a comment, it is possible to post it by one click on the Reply button (previously the user needed to click outside of the editor and then onto the Reply button)
-- b256-include-frequency-data-when-downloading-csv - a correction to the csv file generation to make sure that statistic contain question numbers and frequency
-- b248-remove-unwanted-content-from-pdf - removed legacy response area pre-text and post-text from the set PDF generation
+- b103-milkdown-slow-rendering - developers can set a flag in local environment to speed up rendering pages with milkdown
+- b235-content-with-hash-copied-across - prevent milkdown copying content with hash from one question to another
+- b244-fix-notes-saving-in-the-student-mode - ensure student notes are visible including when switching from teacher to student mode
+- b248-remove-unwanted-content-from-pdf - removed legacy response area pre-text and post-text from PDFs
+- b251-post-a-reply-in-one-click - post a reply to a comment with one click
+- b256-include-frequency-data-when-downloading-csv - correction to csv file generation for question stats, to include question numbers and frequency
+- b260-number-and-unit-ra-do-not-align-with-pre-text-in-student-mode - align pre-text in the response area with number and units in student mode
+- b261-master-content-sometimes-not-saved - ensure master content entered by the user is saved after publishing a question (not copied from the published version)
 
 ## Release 2023/12/08
 - b246-rendering-of-list-of-sets-in-teacher-mode-takes-long-time - an improvement to render list of sets in teacher mode quicker
