@@ -63,11 +63,13 @@ Each stage is in a separate tab. Teachers are recommended to be mindful of this 
 
 ## Restrictions on changes: the input type
 
-It is possible to change the input type (e.g. from Text to Number), but only up to the point in time where question is first saved (with or without publishing to students).
+It is possible to change the input type (e.g. from _Text_ to _Number_) without any restrictions until the first version of the question is saved or published to students.
 
-The reason for this restriction is to preserve high quality data analytics as explained below.
+After the response area is saved or published to students, it is still possible to change the input type, but it will result into replacing the response area by a new one. The previous response area will still exist, but only on the previous version of the question. When replacing the response area, all response area content data (those entered by teachers including tutorials, final answer and worked solutions) are copied, but any existing response area event data (student answers, click events and statistics) will remain linked only to the previous response area.
 
-### An Example of a Prohibited Scenario
+The reason for this restriction is to preserve high quality data analytics as explained in the example below.
+
+### An Example of an input type change on published response area
 
 - A question with input type _Number_ is created and it is saved without publishing to students.
 - A student submits an answer in the format of a single number.
@@ -75,10 +77,7 @@ The reason for this restriction is to preserve high quality data analytics as ex
 - Students submit their answer (in _Table_ format)
 - The teacher reverts the question to the previous version with response area Number
 
-=> Different student submissions are in different formats (number, or Table) at different times. The data are incompatible. This is therefore restricted.
+=> If the same response area would be used, then different student submissions would be in different formats (number, or Table) at different times. The data would be incompatible.
 
-#### Workaround
+=> For this reason, if the response area has been saved or published to students, if the input type is changed, then a new response area is created and the original response area is deleted from the current version (as described above)
 
-Instead of changing the input type, it is possible to duplicate the response area and then delete the orignal one. This approach ensures that data associated with the different input types remain separate.
-
-The data for the new response area will be independent of the old one - the old one will only exist in a previously saved version of the question.
