@@ -63,21 +63,21 @@ Each stage is in a separate tab. Teachers are recommended to be mindful of this 
 
 ## Restrictions on changes: the input type
 
-It is possible to change the input type (e.g. from _Text_ to _Number_) without any restrictions until the first version of the question is saved or published to students.
+It is possible to change the input type (e.g. from _Text_ to _Number_) without any restrictions until the response area is saved (with or without publishing) to students.
 
-After the response area is saved or published to students, it is still possible to change the input type, but it will result into replacing the response area by a new one. The previous response area will still exist, but only on the previous version of the question. When replacing the response area, all response area content data (those entered by teachers including tutorials, final answer and worked solutions) are copied, but any existing response area event data (student answers, click events and statistics) will remain linked only to the previous response area.
+After the response area is saved, it is still possible to change the input type, but it will result into replacing the response area by a new one. The previous response area will still exist, but only on the previous version of the question. When replacing the response area, all response area content data (those entered by teachers including tutorials, final answer and worked solutions) are copied, but any existing response area event data (student answers, click events and statistics) will remain linked only to the previous response area.
 
 The reason for this restriction is to preserve high quality data analytics as explained in the example below.
 
 ### An Example of an input type change on published response area
 
-- A question with input type _Number_ is created and it is saved without publishing to students.
-- A student submits an answer in the format of a single number.
+- A question with input type _Number_ is created and it is published to students.
+- A student submits their answer in the single _Number_ format.
 - The input type is changed (if the restriction were not in place) by the teacher to _Table_ and is saved and published to students. The format of an answer is now an array of numbers or strings.
 - Students submit their answer (in _Table_ format)
-- The teacher reverts the question to the previous version with response area Number
+- The teacher reverts the question to the previous version with response area with input type _Number_
 
-=> If the same response area would be used, then different student submissions would be in different formats (number, or Table) at different times. The data would be incompatible.
+=> If the same response area would be used, then different student submissions would be in different formats (_Number_, or _Table_) at different times. The data would be incompatible.
 
-=> For this reason, if the response area has been saved or published to students, if the input type is changed, then a new response area is created and the original response area is deleted from the current version (as described above).
+=> For this reason, after the response area has been saved or published to students, if the input type is changed, then a new response area is created and the original response area is deleted from the current version of the question (as described above).
 
