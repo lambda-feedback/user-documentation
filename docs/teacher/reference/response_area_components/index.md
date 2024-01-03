@@ -79,5 +79,5 @@ The reason for this restriction is to preserve high quality data analytics as ex
 
 => If the same response area would be used, then different student submissions would be in different formats (number, or Table) at different times. The data would be incompatible.
 
-=> For this reason, if the response area has been saved or published to students, if the input type is changed, then a new response area is created and the original response area is deleted from the current version (as described above)
+=> For this reason, if the response area has been saved or published to students, if the input type is changed, then a new response area is created and the original response area is deleted from the current version (as described above).
 
