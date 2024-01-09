@@ -65,9 +65,11 @@ Each stage is in a separate tab. Teachers are recommended to be mindful of this 
 
 It is possible to change the input type (e.g. from _Text_ to _Number_) without any restrictions until the response area is saved (with or without publishing) to students.
 
-After the response area is saved, it is still possible to change the input type, but it will result into replacing the response area by a new one. The previous response area will still exist, but only on the previous version of the question. When replacing the response area, all response area content data (those entered by teachers including tutorials, final answer and worked solutions) are copied, but any existing response area event data (student answers, click events and statistics) will remain linked only to the previous response area.
+After the response area is saved, it is still possible to change the input type, but it will result into replacing the response area by a new one. The previous response area will still exist, but only on the previous version of the question. When replacing the response area, all response area content data (those entered by teachers including tutorials, final answer and worked solutions) are copied, but any existing response area event data (student answers, click events and statistics) will remain linked only to the previous response area
 
-The reason for this restriction is to preserve high quality data analytics as explained in the examples below.
+Student answers, click events and statisticsthose data are never lost they are always preserved. It is important to understand, that once a question is saved (with or without publishing), then any new changes are saved into a new (draft) version of the question. So, if e.g. a response area is deleted after a question was published, then it is deleted from the draft version only. And if this draft version is later published, then the previously published version is preserved (and with it the "deleted" response area and linked submissions).
+
+The reason why the input type change is restricted is to preserve high quality data analytics as explained in the examples below.
 
 ### An Example 1 - changing input type on PUBLISHED response area
 
