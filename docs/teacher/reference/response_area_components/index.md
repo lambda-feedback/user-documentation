@@ -116,5 +116,5 @@ The reason for this restriction is to preserve high quality data analytics as ex
 
 => At this point the teacher is making changes in the question version QV2 (DRAFT) in which:
 
-  - The input types of RA1 and RA2 are locked, because they exist on a saved version QV1. It does not matter if QV1 is (only) saved or published or if there are  or there are not existing submissions. The reason why it is locked is that the teacher can revert into this version later after submissions are created. By locking it we are making sure that the "unlock" process will be triggered which will preserve the original response area and it will create a new response area and it will make sure that the submissions are linked to response area with compatible input type.
-  - The input type of RA3 is not locked at this point, because RA3 does not (yet) exist on any saved question version.
+- The input types of RA1 and RA2 are locked, because they exist on a saved version QV1. It does not matter if QV1 is (only) saved or published or if there are  or there are not existing submissions. The reason why it is locked is that the teacher can revert into this version later after submissions are created. By locking it we are making sure that the "unlock" process will be triggered which will preserve the original response area and it will create a new response area and it will make sure that the submissions are linked to response area with compatible input type.
+- The input type of RA3 is not locked at this point, because RA3 does not (yet) exist on any saved question version.
