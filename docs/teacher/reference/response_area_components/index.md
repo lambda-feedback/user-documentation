@@ -106,7 +106,7 @@ The reason for this restriction is to preserve high quality data analytics as ex
 - The teacher decides to REVERT to the question version QV1 -> a new question version QV3 is created and the content of the QV1 is copied to QV3 -> QV3 is DRAFT version which contains RA1 (input type _Number_) and RA2 (input type _Number_)
 - The teacher performs PUBLISH action -> the QV3 is published and the teacher can now see submissions against RA1. There are no submissions against RA2 as it has not been (until now) published. Submissions against RA3 are not visible, but they are preserver against the question version QV2.
 
-### An Example 3 - adding new response area to published question
+### An Example 3 - adding new response area to a published question
 
 - The teacher creates a new question with Response Areas RA1 and RA2. -> The version of the question is QV1 with status DRAFT.
 - The teacher is making changes (including the change of the input type if needed). -> The changes are being saved into QV1 with no restrictions
