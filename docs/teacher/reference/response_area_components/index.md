@@ -83,13 +83,13 @@ The reason for this restriction is to preserve high quality data analytics as ex
 - The teacher performs PUBLISH action -> the QV2 is published (with response area RA1 with input type _Number_ and response area RA3 with input type _Table_)
 - Students are submitting their answers -> submissions are recorder against Response Area RA1 (in the single _Number_ format) and against Response Area RA3 (in the _Table_ format)
 
-=> No submissions are lost. The original submissions (in the _Number_ format) are linked to the RA2, which is preserved on the question version QV1. New submissions (in the _table_ format) are linked to the RA3 which is recorded on the question version QV2.
+  => No submissions are lost. The original submissions (in the _Number_ format) are linked to the RA2, which is preserved on the question version QV1. New submissions (in the _table_ format) are linked to the RA3 which is recorded on the question version QV2.
 
 **Please note:** All statistics and submissions are currently displayed against the published question version only. So, though the submissions against RA2 are preserved, it is not currently possible to see them. We are working on the improvement to make this possible.
 
 #### SECOND Part - this is an extension of the FIRST Part
 - The teacher decides to REVERT (the question created in the FIRST Part) to the question version QV1 -> a new question version QV3 is created and the content of the QV1 is copied to QV3 -> QV3 is DRAFT version which contains RA1 (input type _Number_) and RA2 (input type _Number_)
-- The teacher performs PUBLISH action -> the QV3 is published and the teacher can now see submissions against RA1 and RA2, but he cannot see anymore submissions against RA3 (these are preserver against the QV2 version)
+- The teacher performs PUBLISH action -> the QV3 is published and the teacher can now see submissions against RA1 and RA2, but he cannot see anymore submissions against RA3 (these are preserved against the QV2 version)
 
 
 ### An Example 2 - changing input type on SAVED response area
@@ -104,7 +104,7 @@ The reason for this restriction is to preserve high quality data analytics as ex
 - The teacher performs PUBLISH action -> the QV2 is published (with response area RA1 with input type _Number_ and response area RA3 with input type _Table_)
 - Students are submitting their answers -> submissions are recorder against Response Area RA1 (in the single _Number_ format) and against Response Area RA3 (in the _Table_ format)
 - The teacher decides to REVERT to the question version QV1 -> a new question version QV3 is created and the content of the QV1 is copied to QV3 -> QV3 is DRAFT version which contains RA1 (input type _Number_) and RA2 (input type _Number_)
-- The teacher performs PUBLISH action -> the QV3 is published and the teacher can now see submissions against RA1. There are no submissions against RA2 as it has not been (until now) published. Submissions against RA3 are not visible, but they are preserver against the question version QV2.
+- The teacher performs PUBLISH action -> the QV3 is published and the teacher can now see submissions against RA1. There are no submissions against RA2 as it has not been (until now) published. Submissions against RA3 are not visible, but they are preserved against the question version QV2.
 
 ### An Example 3 - adding new response area to a published question
 
@@ -114,7 +114,7 @@ The reason for this restriction is to preserve high quality data analytics as ex
 - The teacher clicks on a question to edit it -> with the first click a new question version QV2 is created with status DRAFT
 - The teacher adds a new response area RA3
 
-=> At this point the teacher is making changes in the question version QV2 (DRAFT) in which:
+  => At this point the teacher is making changes in the question version QV2 (DRAFT) in which:
 
-- The input types of RA1 and RA2 are locked, because they exist on a saved version QV1. It does not matter if QV1 is (only) saved or published or if there are  or there are not existing submissions. The reason why it is locked is that the teacher can revert into this version later after submissions are created. By locking it we are making sure that the "unlock" process will be triggered which will preserve the original response area and it will create a new response area and it will make sure that the submissions are linked to response area with compatible input type.
-- The input type of RA3 is not locked at this point, because RA3 does not (yet) exist on any saved question version.
+    - The input types of RA1 and RA2 are locked, because they exist on a saved version QV1. It does not matter if QV1 is (only) saved or published or if there are  or there are not existing submissions. The reason why it is locked is that the teacher can revert into this version later after submissions are created. By locking it we are making sure that the "unlock" process will be triggered which will preserve the original response area and it will create a new response area and it will make sure that the submissions are linked to response area with compatible input type.
+    - The input type of RA3 is not locked at this point, because RA3 does not (yet) exist on any saved question version.
