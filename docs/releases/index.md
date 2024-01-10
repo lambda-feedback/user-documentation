@@ -1,5 +1,17 @@
 # Releases
 
+## Release 2024/01/10
+- b264-untangle-changes - a technical improvement to make the milkdown wrapper code clearer.
+- b247-re-generate-pdf-after-deleting-a-question - an improvement so that the PDF is automatically re-generated when a published question is deleted
+- b158-change-prod-bucket-to-prod-not-staging - a technical change so that imported images and generated PDF files are saved in the correct AWS bucket dependently on the environment (production, staging or development)
+- b232-ra-analytics-visual-alignment - a change to display response area analytics correctly aligned with labels
+- b77-published-question-change-of-input-type - an improvement to allow changing of the input type on the response area that was already published.
+- b262-legacy-content-db-tables-part-contents - refactoring the database. No change to UX.
+- b245-question-numbering-is-sometimes-wrong-on-the-student-module-home-page - a correction so that question numbers are reconciled after a question is deleted
+- b141-update-link-in-modal - a correction of the link from the modal (which appears when deleting a response area) to the user documentation
+- b211-response-area-preview-remove-border - a change in the question preview in the teacher mode so that it is displayed in the same way as in the student mode
+- b103-milkdown-slow-rendering - a technical change to speed up testing in local development environments 
+
 ## Release 2023/12/15
 - b103-milkdown-slow-rendering - developers can set a flag in local environment to speed up rendering pages with milkdown
 - b235-content-with-hash-copied-across - prevent milkdown copying content with hash from one question to another
