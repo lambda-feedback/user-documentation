@@ -1,5 +1,8 @@
 # Releases
 
+## Release 2024/01/16
+- b272-legacy-db-tables-tutorial-sections - refactoring the database. No change to UX.
+
 ## Release 2024/01/10
 - b264-untangle-changes - a technical improvement to make the milkdown wrapper code clearer.
 - b247-re-generate-pdf-after-deleting-a-question - an improvement so that the PDF is automatically re-generated when a published question is deleted
