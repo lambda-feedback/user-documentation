@@ -1,5 +1,12 @@
 # Releases
 
+## Release 2024/01/24
+- b280-change-response-colour-to-white - a change for risk assessment evaluation function to display feedback for incorrect answer in white colour
+- b281-tweaks-to-ra-analytics - several ui changes for response area analytics, mainly adjusting column widths
+- b273-limit-access-to-unpublished-sets - a change to prevent access to sets in student mode through url if the sets are marked as hidden
+- b277-milkdown-first-non-markdown-update-is-ignored - a change in the code wrapping milkdown editor to make sure it works correctly with first update changes. E.g when only 1 character was typed or a text selected and deleted by one click, then the change was ignored and not saved
+- b279-table-with-1-column - making column wider if the table in the response area contains only 1 column
+
 ## Release 2024/01/16
 - b272-legacy-db-tables-tutorial-sections - refactoring the database. No change to UX.
 
