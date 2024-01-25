@@ -1,5 +1,8 @@
 # Releases
 
+## Release 2024/01/25
+- b240-structured-tutorial-component-upgrade - converted structured tutorial to use the same structure and logic as worked solutions
+
 ## Release 2024/01/24
 - b273-limit-access-to-unpublished-sets - ensure no student access to hidden sets via a url
 - b277-milkdown-first-non-markdown-update-is-ignored - milkdown fix to for edge cases that were not saved (single character; deleting selection).
