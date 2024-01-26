@@ -1,5 +1,8 @@
 # Releases
 
+## Release 2024/01/26
+- b263-milkdown-beautifulisation - rework Milkdown controlled value logic to improve maintenance and portability
+
 ## Release 2024/01/25
 - b240-structured-tutorial-component-upgrade - converted structured tutorial to use the same structure and logic as worked solutions
 
