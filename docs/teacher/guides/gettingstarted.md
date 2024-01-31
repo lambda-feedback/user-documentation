@@ -53,3 +53,24 @@ It is not necessary to include all three methods of help, if only one of the tab
 For general terminology, see [here.](../../terminology.md)
 
 To see further details on how to edit your questions, see [here.](content-sets-questions.md)
+
+## Enrolling students
+
+In TEACHER mode, open your module home page and click 'VIEW STUDENTS' then 'ENROL STUDENTS'
+
+![View students button](../../teacher/guides/images/view_students.png)![Enrol students button](../../teacher/guides/images/enrol_students.png)
+
+Enter a comma-separated list of email addresses. Press 'Enter' to confirm the addresses, and then 'SUBMIT' to enrol the students
+
+### Imperial College London email addresses
+
+You must use the long form email address:
+|Valid:|Invalid:|
+|---|---|
+|first.nameYY@imperial.ac.uk (student)|abc123@ic.ac.uk|
+|j.doe@imperial.ac.uk (staff)|abc123@imperial.ac.uk|
+|first.name@imperial.ac.uk (staff)|user@ic.ac.uk|
+||user@imperial.ac.uk|
+||first.nameYY@ic.ac.uk|
+
+The reason for the above is because we use Azure Active Directory - i.e. Microsoft - to authorise users.
