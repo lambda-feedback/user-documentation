@@ -1,14 +1,17 @@
 # Releases
 
 ## Release 2024/02/13
-- b271-unify-modals - unification of modals to use the same style
-- b300-delete-ra-add-warning-into-the-modal-that-the-text-below-the-ra-will-be-deleted-as-well - when deleting a response area a warning is added into the modal that the text below the response area will be deleted as well
-- b294-check-imports-from-material-ui - a technical improvement to the imports from mui material so that we prevent importing the the whole library each time when we import an icon
+
+- b271-unify-modals - unified modals to use same style
+- b294-check-imports-from-material-ui - prevent importing whole library when importing an icon
+- b300-delete-ra-add-warning-into-the-modal-that-the-text-below-the-ra-will-be-deleted-as-well - when deleting a response area (RA), warning modal that text below RA will also be deleted
 
 ## Release 2024/01/25
+
 - b240-structured-tutorial-component-upgrade - converted structured tutorial to use the same structure and logic as worked solutions
 
 ## Release 2024/01/24
+
 - b273-limit-access-to-unpublished-sets - ensure no student access to hidden sets via a url
 - b277-milkdown-first-non-markdown-update-is-ignored - milkdown fix to for edge cases that were not saved (single character; deleting selection).
 - b279-table-with-1-column - wider columns for table response areas with one column
@@ -16,9 +19,11 @@
 - b281-tweaks-to-ra-analytics - tweaks to response area analytics
 
 ## Release 2024/01/16
+
 - b272-legacy-db-tables-tutorial-sections - refactoring the database. No change to UX.
 
 ## Release 2024/01/10
+
 - b264-untangle-changes - a technical improvement to make the milkdown wrapper code clearer.
 - b247-re-generate-pdf-after-deleting-a-question - an improvement so that the PDF is automatically re-generated when a published question is deleted
 - b158-change-prod-bucket-to-prod-not-staging - a technical change so that imported images and generated PDF files are saved in the correct AWS bucket dependently on the environment (production, staging or development)
@@ -28,9 +33,10 @@
 - b245-question-numbering-is-sometimes-wrong-on-the-student-module-home-page - a correction so that question numbers are reconciled after a question is deleted
 - b141-update-link-in-modal - a correction of the link from the modal (which appears when deleting a response area) to the user documentation
 - b211-response-area-preview-remove-border - a change in the question preview in the teacher mode so that it is displayed in the same way as in the student mode
-- b103-milkdown-slow-rendering - a technical change to speed up testing in local development environments 
+- b103-milkdown-slow-rendering - a technical change to speed up testing in local development environments
 
 ## Release 2023/12/15
+
 - b103-milkdown-slow-rendering - developers can set a flag in local environment to speed up rendering pages with milkdown
 - b235-content-with-hash-copied-across - prevent milkdown copying content with hash from one question to another
 - b244-fix-notes-saving-in-the-student-mode - ensure student notes are visible including when switching from teacher to student mode
@@ -41,6 +47,7 @@
 - b261-master-content-sometimes-not-saved - ensure master content entered by the user is saved after publishing a question (not copied from the published version)
 
 ## Release 2023/12/08
+
 - b246-rendering-of-list-of-sets-in-teacher-mode-takes-long-time - an improvement to render list of sets in teacher mode quicker
 - b255-recover-lost-marked-parts - further corrections to DB. Some question parts were not marked correctly as DONE for questions imported from JSON between 13/10/23 and 5/12/24.
 
