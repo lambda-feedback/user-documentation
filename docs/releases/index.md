@@ -1,5 +1,10 @@
 # Releases
 
+## Release 2024/02/13
+- b271-unify-modals - unification of modals to use the same style
+- b300-delete-ra-add-warning-into-the-modal-that-the-text-below-the-ra-will-be-deleted-as-well - when deleting a response area a warning is added into the modal that the text below the response area will be deleted as well
+- b294-check-imports-from-material-ui - a technical improvement to the imports from mui material so that we prevent importing the the whole library each time when we import an icon
+
 ## Release 2024/01/25
 - b240-structured-tutorial-component-upgrade - converted structured tutorial to use the same structure and logic as worked solutions
 
