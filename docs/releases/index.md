@@ -1,5 +1,9 @@
 # Releases
 
+## Release 2024/02/15
+
+- b295-modular-response-areas-phase-1-switchless-frontend - a technical improvement to the response area building blocks in the code, so that it is easier, more intuitive and more straight forward to add new response areas
+
 ## Release 2024/02/13
 
 - b271-unify-modals - unified modals to use same style
