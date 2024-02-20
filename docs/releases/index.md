@@ -1,5 +1,13 @@
 # Releases
 
+## Release 2024/02/20
+
+- b297-give-error-if-creating-module-with-same-name-as-deleted-module - make sure that all messages returned by an api are displayed and also they are displayed in a readable format
+- b299-legacy-content-db-tables-ra-contents - refactoring the database. No change to UX.
+- b302-modal-warning-before-disabling-branching - display a warning message that all content will be deleted when disabling branching in worked solutions and structured tutorials
+- b290-the-final-answer-button-is-displayed-even-if-there-is-no-final-answer - do not display the final answer menu in the student mode under the help option when there is no final answer
+
+
 ## Release 2024/02/15
 
 - b295-modular-response-areas-phase-1-switchless-frontend - a technical improvement to the response area building blocks in the code, so that it is easier, more intuitive and more straight forward to add new response areas
