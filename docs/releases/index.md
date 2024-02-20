@@ -6,6 +6,7 @@
 - b299-legacy-content-db-tables-ra-contents - refactoring the database. No change to UX.
 - b302-modal-warning-before-disabling-branching - display a warning message that all content will be deleted when disabling branching in worked solutions and structured tutorials
 - b290-the-final-answer-button-is-displayed-even-if-there-is-no-final-answer - do not display the final answer menu in the student mode under the help option when there is no final answer
+- b35-modular-response-type - paving the way to modular response types, which will make it easier to create new response types
 
 
 ## Release 2024/02/15
