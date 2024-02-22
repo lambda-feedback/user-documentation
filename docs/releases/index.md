@@ -2,12 +2,11 @@
 
 ## Release 2024/02/20
 
-- b297-give-error-if-creating-module-with-same-name-as-deleted-module - make sure that all messages returned by an api are displayed and also they are displayed in a readable format
-- b299-legacy-content-db-tables-ra-contents - refactoring the database. No change to UX.
-- b302-modal-warning-before-disabling-branching - display a warning message that all content will be deleted when disabling branching in worked solutions and structured tutorials
-- b290-the-final-answer-button-is-displayed-even-if-there-is-no-final-answer - do not display the final answer menu in the student mode under the help option when there is no final answer
-- b35-modular-response-type - paving the way to modular response types, which will make it easier to create new response types
-
+- b290-the-final-answer-button-is-displayed-even-if-there-is-no-final-answer - fix: only display 'final answer' button when there is content to show
+- b297-give-error-if-creating-module-with-same-name-as-deleted-module - improved formatting of error messages
+- b299-legacy-content-db-tables-ra-contents - DB updates. No change to UX.
+- b302-modal-warning-before-disabling-branching - warning modal when disabling branching in worked solutions and structured tutorials
+- b306-modular-response-areas-phase-2-new-modular-type - backend updates for modular response areas.
 
 ## Release 2024/02/15
 
