@@ -1,5 +1,12 @@
 # Releases
 
+## Release 2024/02/26
+
+- b35-number-input-nan - fix handling of non-number input in the number answer wizard
+- b317-no-header-refetch-on-mount - avoid unwanted refetch when resizing browser window on a set page
+- b35-all-writes - start writting new and edited Response Area's Response to the new modular table
+- b274-when-deleting-a-question-display-loading-message - display "loading" message when deleting a question
+
 ## Release 2024/02/20
 
 - b290-the-final-answer-button-is-displayed-even-if-there-is-no-final-answer - fix: only display 'final answer' button when there is content to show
