@@ -1,5 +1,10 @@
 # Releases
 
+## Release 2024/02/29
+
+- b35-migration - migrate all existing response types to the new modular type
+- b35-custom-response-types - allow admin to dynamically create and manage new response types
+
 ## Release 2024/02/26
 
 - b35-number-input-nan - fix handling of non-number input in the number answer wizard
