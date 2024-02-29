@@ -4,6 +4,7 @@
 
 - b35-migration - migrate all existing response types to the new modular type
 - b35-custom-response-types - allow admin to dynamically create and manage new response types
+- 313-always-display-post-ra-text-in-pdf-but-not-in-stats-mode - include the text after each response area in the PDF even if the response area is not included 
 
 ## Release 2024/02/26
 
