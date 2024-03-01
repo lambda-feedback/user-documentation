@@ -1,5 +1,11 @@
 # Releases
 
+## Release 2024/03/01
+- b303-redirect-help-to-userdocs - redirect lambdafeedback.com/help to the user documentation and lambdafeedback.com/[module slug] to the page with list of sets
+- b318-url-for-survey - redirect lambdafeedback.com/survey to a survey page 
+- b287-limit-access-to-sets-published-outside-of-current-date - prevent access to the Sets page in the student mode if today's date is not after the set Publish At date and before the Hide At date
+
+
 ## Release 2024/02/29
 
 - b35-migration - migrate all existing response types to the new modular type
