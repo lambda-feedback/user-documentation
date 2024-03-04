@@ -1,5 +1,8 @@
 # Releases
 
+## Release 2024/03/04
+- b319-survey-promotion-banner-on-home-page - add a banner onto the landing page advertising a survey with a link
+
 ## Release 2024/03/01
 - b303-redirect-help-to-userdocs - redirect lambdafeedback.com/help to the user documentation and lambdafeedback.com/[module slug] to the page with list of sets
 - b318-url-for-survey - redirect lambdafeedback.com/survey to a survey page 
