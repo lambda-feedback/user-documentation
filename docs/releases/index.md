@@ -1,4 +1,4 @@
-# Release 2024/03/05
+## Release 2024/03/05
 
 - b310-modular-response-areas-phase-6-cleanup - a technical improvement to the response area building blocks. Tidying up previous changes so that the code is clearer and easier to read. Removing legacy tables.
 - b323-delete-empty-answer-in-ra-panel - a change to prevent an error occuring when user used the delete button in an empty answer field for the number response
