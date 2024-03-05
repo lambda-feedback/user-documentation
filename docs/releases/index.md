@@ -1,4 +1,8 @@
-# Releases
+# Release 2024/03/05
+
+- b310-modular-response-areas-phase-6-cleanup - a technical improvement to the response area building blocks. Tidying up previous changes so that the code is clearer and easier to read. Removing legacy tables.
+- b323-delete-empty-answer-in-ra-panel - a change to prevent an error occuring when user used the delete button in an empty answer field for the number response
+- b301-redesign-part-response-areas-and-text-between-them - a change so that the text between response areas behaves as an indipendent entity and when the response area is moved to a different position or is deleted, the text gets merged with the text above.
 
 ## Release 2024/03/04
 - b319-survey-promotion-banner-on-home-page - add a banner onto the landing page advertising a survey with a link
