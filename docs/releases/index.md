@@ -1,29 +1,29 @@
 ## Release 2024/03/05
 
-- b310-modular-response-areas-phase-6-cleanup - a technical improvement to the response area building blocks. Tidying up previous changes so that the code is clearer and easier to read. Removing legacy tables.
-- b323-delete-empty-answer-in-ra-panel - a change to prevent an error occuring when user used the delete button in an empty answer field for the number response
-- b301-redesign-part-response-areas-and-text-between-them - a change so that the text between response areas behaves as an indipendent entity and when the response area is moved to a different position or is deleted, the text gets merged with the text above.
+- b301-redesign-part-response-areas-and-text-between-them - teachers can drag response areas while surrounding text stays in place, and merges where necessary.
+- b35/b310-modular-response-areas-phase-6-cleanup - completes modular response areas. Code improvements and removing legacy tables.
+- b323-delete-empty-answer-in-ra-panel - ensure delete works in answer box in response area panel
+
 
 ## Release 2024/03/04
 - b319-survey-promotion-banner-on-home-page - add a banner onto the landing page advertising a survey with a link
 
 ## Release 2024/03/01
-- b303-redirect-help-to-userdocs - redirect lambdafeedback.com/help to the user documentation and lambdafeedback.com/[module slug] to the page with list of sets
-- b318-url-for-survey - redirect lambdafeedback.com/survey to a survey page 
-- b287-limit-access-to-sets-published-outside-of-current-date - prevent access to the Sets page in the student mode if today's date is not after the set Publish At date and before the Hide At date
-
+- b287-limit-access-to-sets-published-outside-of-current-date - ensure access to Sets follows release rules, including via URL
+- b303-redirect-help-to-userdocs - redirect lambdafeedback.com/help to user documentation and lambdafeedback.com/[module slug] to the module page
+- b318-url-for-survey - redirect lambdafeedback.com/survey
 
 ## Release 2024/02/29
 
-- b35-migration - migrate all existing response types to the new modular type
-- b35-custom-response-types - allow admin to dynamically create and manage new response types
-- 313-always-display-post-ra-text-in-pdf-but-not-in-stats-mode - include the text after each response area in the PDF even if the response area is not included 
+- b35/b308-modular-response-areas-phase-4-custom-response-types - allow admin to dynamically create and manage new response types
+- b35/b309-modular-response-areas-phase-5-migration - migrate all existing response types to the new modular type
+- b313-always-display-post-ra-text-in-pdf-but-not-in-stats-mode - include all text in PDF (including after first response area)
 
 ## Release 2024/02/26
 
 - b35-number-input-nan - fix handling of non-number input in the number answer wizard
 - b317-no-header-refetch-on-mount - avoid unwanted refetch when resizing browser window on a set page
-- b35-all-writes - start writting new and edited Response Area's Response to the new modular table
+- b35/b307-modular-response-areas-phase-3-all-writes - start writting new and edited Response Area's Response to the new modular table
 - b274-when-deleting-a-question-display-loading-message - display "loading" message when deleting a question
 
 ## Release 2024/02/20
@@ -32,11 +32,11 @@
 - b297-give-error-if-creating-module-with-same-name-as-deleted-module - improved formatting of error messages
 - b299-legacy-content-db-tables-ra-contents - DB updates. No change to UX.
 - b302-modal-warning-before-disabling-branching - warning modal when disabling branching in worked solutions and structured tutorials
-- b306-modular-response-areas-phase-2-new-modular-type - backend updates for modular response areas.
+- b35/b306-modular-response-areas-phase-2-new-modular-type - backend updates for modular response areas.
 
 ## Release 2024/02/15
 
-- b295-modular-response-areas-phase-1-switchless-frontend - a technical improvement to the response area building blocks in the code, so that it is easier, more intuitive and more straight forward to add new response areas
+- b35/b295-modular-response-areas-phase-1-switchless-frontend - a technical improvement to the response area building blocks in the code, so that it is easier, more intuitive and more straight forward to add new response areas
 
 ## Release 2024/02/13
 
