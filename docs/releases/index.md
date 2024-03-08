@@ -1,9 +1,13 @@
+## Release 2024/03/08
+
+- b283-table-with-1-column-layout - improves table layout
+- b324-show-required-error-on-number-input-wizard - improves number input validations
+
 ## Release 2024/03/05
 
 - b301-redesign-part-response-areas-and-text-between-them - teachers can drag response areas while surrounding text stays in place, and merges where necessary.
 - b35/b310-modular-response-areas-phase-6-cleanup - completes modular response areas. Code improvements and removing legacy tables.
 - b323-delete-empty-answer-in-ra-panel - ensure delete works in answer box in response area panel
-
 
 ## Release 2024/03/04
 - b319-survey-promotion-banner-on-home-page - add a banner onto the landing page advertising a survey with a link
