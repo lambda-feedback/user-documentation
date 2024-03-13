@@ -1,3 +1,11 @@
+## Release 2024/03/13
+
+- b84-legacy-content-db-tables - DB updates. No change to UX
+- b315-include-answer-when-importing-case - ensure the answer value is included when importing a case from stats
+- b320-response-type-allowlist - improves modular response areas
+- b325-populate-new-tests-with-the-answer - prepopulate the answer by the correct answer when creating a new test
+- b326-question-alignments - imroves alignments on the edit question page
+
 ## Release 2024/03/08
 
 - b283-table-with-1-column-layout - improves table layout
