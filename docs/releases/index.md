@@ -1,3 +1,11 @@
+## Release 2024/03/19
+
+- b286-ra-analytics-when-config-is-changed - Fix aggregates in stats
+- b311-expression-area-layout-issues - Improve expression RA layout
+- b325-populate-new-tests-with-the-answer - Populate new tests with the answer
+- b322-enable-live-preview-in-teacher-mode - Attempt to enable live preview in teacher mode
+- b35/b329-simplify-response-components - Simplificaton of Response Type components code
+
 ## Release 2024/03/13
 
 - b84-legacy-content-db-tables - DB updates. No change to UX
