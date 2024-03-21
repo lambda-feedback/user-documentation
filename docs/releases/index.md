@@ -1,3 +1,7 @@
+## Release 2024/03/21
+
+- b332-table-smart-resizing - resize table width based on the screen size
+
 ## Release 2024/03/19
 
 - b286-ra-analytics-when-config-is-changed - Fix aggregates in stats
