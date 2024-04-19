@@ -1,3 +1,8 @@
+## Release 2024/04/19
+
+- 337-individual-tests-always-fail - fix individual reponse area test runs
+- 327-consolidate-response-area-components - improvements for better response area consistency
+
 ## Release 2024/03/21
 
 - b332-table-smart-resizing - resize table width based on the screen size
