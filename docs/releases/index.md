@@ -1,3 +1,11 @@
+## Release 2024/04/26
+
+- b230-pdf-generation-in-a-separate-lambda-function - PDF generation is faster, more secure, and frees up bandwidth on the main server.
+- b328-improve-expression-ui-in-tests - fix expression response area preview in tests tab
+- b331-work-solutions-empty-content-not-handled-as-no-work-solutions - work solutions and structured tutorials buttons not to be displayed if the content is empty
+- b339-accessible-response-area-feedback - displaying error returned by evaluation functions in a user-friendly format
+- b340-remove-input-type-changed-warning-on-new-ra - do not display warning about response area type change for new response areas
+
 ## Release 2024/04/19
 
 - 337-individual-tests-always-fail - fix individual reponse area test runs
