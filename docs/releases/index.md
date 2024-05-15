@@ -1,3 +1,11 @@
+## Release 2024/05/15
+
+- b250-expression-ra-scan-mode-copy-and-paste - allow copy and paste and other improvements in the scan mode functionality
+- b314-remove-experimental-from-ra-panel - "experimental" from the photo upload and handwritting labels removed
+- b338-create-a-new-set-when-creating-a-module - a default set automatically creating when a new module is created
+- b342-do-not-generate-pdf-when-creating-new-question - prevent PDF generation when a new question is added
+- b345-after-pdf-generation-extraction-cleanup - a technical improvements into the PDF generation
+
 ## Release 2024/04/26
 
 - b230-pdf-generation-in-a-separate-lambda-function - PDF generation is faster, more secure, and frees up bandwidth on the main server.
