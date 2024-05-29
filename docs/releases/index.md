@@ -1,3 +1,10 @@
+## Release 2024/05/29
+
+- b352-support-to-eval-function-20-get-all-routes-by-getroutes - an improvement in the evaluation lambda function deployment functionality (checking all existing routes)
+- b353-question-import-filter-out-unicode-characters - improvements in the question json import and the question pdf generation to remove a problematic character (U-2006)
+- b354-double-confirm-on-confirmation-pop-ups - a fix to incorrect double confirm button on confirmation pop-ups in the teacher question context
+
+
 ## Release 2024/05/24
 
 - b97-remove-all-references-to-mongodb - a technical improvement to remove legacy code linking to legacy databases
