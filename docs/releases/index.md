@@ -1,18 +1,18 @@
 ## Release 2024/05/29
 
-- b352-support-to-eval-function-20-get-all-routes-by-getroutes - an improvement in the evaluation lambda function deployment functionality (checking all existing routes)
-- b353-question-import-filter-out-unicode-characters - improvements in the question json import and the question pdf generation to remove a problematic character (U-2006)
-- b354-double-confirm-on-confirmation-pop-ups - a fix to incorrect double confirm button on confirmation pop-ups in the teacher question context
+- b352-support-to-eval-function-20-get-all-routes-by-getroutes - evaluation function deployment  (check existing routes)
+- b353-question-import-filter-out-unicode-characters - question json import remove character (U-2006)
+- b354-double-confirm-on-confirmation-pop-ups -  fix confirm button on models in teacher mode
 
 
 ## Release 2024/05/24
 
-- b97-remove-all-references-to-mongodb - a technical improvement to remove legacy code linking to legacy databases
-- b243-add-question-id-to-the-url - adding question identifier to the url when a question is selected
-- b285-move-module-instance-drop-down-to-left-to-replace-the-instance-label - more user-friendly module instance selection feature
-- b304-milkdown-element-in-admin-that-will-display-on-home-page - added an administratore page to configure a home page banner
-- b330-modal-update - an improvement in the question version switch functionality allowing the teacher either to save or discard the existing draft
-- b349-support-to-eval-function-20-ensure-deployments - improvements in the deployment functionality for evaluation lambda functions to create a production and non-production versions
+- b97-remove-all-references-to-mongodb - remove code linking to legacy databases
+- b243-add-question-id-to-the-url - add question identifier to the url
+- b285-move-module-instance-drop-down-to-left-to-replace-the-instance-label - more user-friendly module instance selection
+- b304-milkdown-element-in-admin-that-will-display-on-home-page - add an administrator page to configure a home page banner
+- b330-modal-update - question version switch: allow teacher either to save or discard existing draft
+- b349-support-to-eval-function-20-ensure-deployments - evaluation functions: production and non-production versions
 
 
 ## Release 2024/05/15
