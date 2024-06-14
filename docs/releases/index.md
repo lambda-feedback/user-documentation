@@ -1,7 +1,7 @@
 ## Release 2024/06/14
 
-- b305-export-whole-set - new functionality to allow teachers to export and import sets
-- b334-upgrade-node-next-nest - a technical improvement to bring used librares up to date
+- b305-export-whole-set - import/export whole sets
+- b334-upgrade-node-next-nest - library updates
 
 ## Release 2024/05/29
 
