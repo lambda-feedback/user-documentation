@@ -6,8 +6,8 @@
 ## Release 2024/05/29
 
 - b352-support-to-eval-function-20-get-all-routes-by-getroutes - evaluation function deployment  (check existing routes)
-- b353-question-import-filter-out-unicode-characters - question json import remove character (U-2006)
-- b354-double-confirm-on-confirmation-pop-ups -  fix confirm button on models in teacher mode
+- b353-question-import-filter-out-unicode-characters - remove character (U-2006) on json import 
+- b354-double-confirm-on-confirmation-pop-ups -  fix confirm button on modals in teacher mode
 
 
 ## Release 2024/05/24
