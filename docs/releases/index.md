@@ -1,3 +1,8 @@
+## Release 2024/06/14
+
+- b305-export-whole-set - new functionality to allow teachers to export and import sets
+- b334-upgrade-node-next-nest - a technical improvement to bring used librares up to date
+
 ## Release 2024/05/29
 
 - b352-support-to-eval-function-20-get-all-routes-by-getroutes - evaluation function deployment  (check existing routes)
