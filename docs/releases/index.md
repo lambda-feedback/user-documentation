@@ -1,10 +1,10 @@
 ## Release 2024/06/28
 
-- b258-performance-analyse-db - improved performance
-- b343-canvas - canvas added for students to work on
-- b351-teacher-module-page-ui-upgrades - redesigned teacher home page
-- b357-upgrade-aws-sdk-v2-to-v3 - library updates
-- b359-generate-tex-file - upload/download whole sets as TEX files
+- b258-performance-analyse-db - faster response from DB queries
+- b343-canvas - student canvas in beta mode (hidden by default)
+- b351-teacher-module-page-ui-upgrades - Teacher module home page UI upgrades (tabs added)
+- b357-upgrade-aws-sdk-v2-to-v3 - software library updates
+- b359-generate-tex-file - upload/download whole Sets as LaTeX files
 
 ## Release 2024/06/14
 
@@ -13,10 +13,9 @@
 
 ## Release 2024/05/29
 
-- b352-support-to-eval-function-20-get-all-routes-by-getroutes - evaluation function deployment  (check existing routes)
-- b353-question-import-filter-out-unicode-characters - remove character (U-2006) on json import 
-- b354-double-confirm-on-confirmation-pop-ups -  fix confirm button on modals in teacher mode
-
+- b352-support-to-eval-function-20-get-all-routes-by-getroutes - evaluation function deployment (check existing routes)
+- b353-question-import-filter-out-unicode-characters - remove character (U-2006) on json import
+- b354-double-confirm-on-confirmation-pop-ups - fix confirm button on modals in teacher mode
 
 ## Release 2024/05/24
 
@@ -26,7 +25,6 @@
 - b304-milkdown-element-in-admin-that-will-display-on-home-page - add an administrator page to configure a home page banner
 - b330-modal-update - question version switch: allow teacher either to save or discard existing draft
 - b349-support-to-eval-function-20-ensure-deployments - evaluation functions: production and non-production versions
-
 
 ## Release 2024/05/15
 
@@ -81,9 +79,11 @@
 - b323-delete-empty-answer-in-ra-panel - ensure delete works in answer box in response area panel
 
 ## Release 2024/03/04
+
 - b319-survey-promotion-banner-on-home-page - add a banner onto the landing page advertising a survey with a link
 
 ## Release 2024/03/01
+
 - b287-limit-access-to-sets-published-outside-of-current-date - ensure access to Sets follows release rules, including via URL
 - b303-redirect-help-to-userdocs - redirect lambdafeedback.com/help to user documentation and lambdafeedback.com/[module slug] to the module page
 - b318-url-for-survey - redirect lambdafeedback.com/survey
