@@ -1,3 +1,11 @@
+## Release 2024/06/28
+
+- b258-performance-analyse-db - improved performance
+- b343-canvas - canvas added for students to work on
+- b351-teacher-module-page-ui-upgrades - redesigned teacher home page
+- b357-upgrade-aws-sdk-v2-to-v3 - library updates
+- b359-generate-tex-file - upload/download whole sets as TEX files
+
 ## Release 2024/06/14
 
 - b305-export-whole-set - import/export whole sets
