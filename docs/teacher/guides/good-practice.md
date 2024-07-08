@@ -2,7 +2,7 @@
 
 ## Romanised operators
 
-Use romanised operators such as $\sin$, $\frac{\mathrm{d}}{\mathrm{dx}}$ instead of $sin$, $\frac{d}{dx}$, etc.
+Use romanised operators such as $\sin$, $\frac{\mathrm{d}}{\mathrm{d}x}$ instead of $sin$, $\frac{d}{dx}$, etc.
 
 ## Use empty lines
 
