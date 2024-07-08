@@ -18,7 +18,7 @@ nav:
       - "student/index.md"
       - Getting Started: "student/getting_started_student.md"
       - Response Areas: "student/response_areas.md"
-      - "student/milkdown_student.md"
+      - Text Editing: "student/milkdown_student.md"
       - FAQ: "student/faq.md"
 
   - Teachers:

@@ -1,4 +1,4 @@
-# Get started as a teacher using Lambda Feedback
+# Get started as a student using Lambda Feedback
 
 ## Accessing content
 
