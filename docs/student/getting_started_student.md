@@ -29,7 +29,7 @@ If you prefer to work on a PDF version of the problem set, you can generate a PD
 ### Answering questions
 You can make progress on the problem by entering correct answers or clicking the **'Mark as done'** button on the bottom right of each question page. This can be useful to track progress if working on the PDF version, or for questions which do not have a response box, e.g., show that questions.
 
-See the *question input* page for help with answering questions.
+See the [Answering Questions](answering_questions.md) page for more help with answering questions.
 
 ![The "Mark as done" box on the question page](images/mark_as_done.png)
 
