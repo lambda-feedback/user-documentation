@@ -1,7 +1,19 @@
 # Response Areas
 
-## How to enter maths expressions
-Entering mathematical expressions on Lambda is very similar to if you was doing it on matlab, for example. 
+## Numerical answers
+![A numerical answer box](images/number_box.png)
+
+This type of response area expects a numerical answer. Usually, a tolerance is allowed, so you will still be marked as correct
+if your response differs from the answer by a small amount. 
+
+![A numerical answer box, with units](images/number_units.png)
+
+Some questions will also require you to enter the units of the answer. In this case, any form of the same unit, with any SI prefix,
+should be accepted. For example, if the answer to a question is `10 MPa`, `0.01 GPa` and `10 MNm^-2` should both be marked correct. 
+
+
+## Entering mathematical expressions
+Entering mathematical expressions on Lambda is very similar to if you was doing it on Matlab, for example. 
 
 ### Examples
 |  Expression  | Lambda Feedback input
@@ -9,7 +21,7 @@ Entering mathematical expressions on Lambda is very similar to if you was doing 
    | $x^2 - x - 2$ | x^2 - x - 2 
    |  |                                                                                                         |
 
-## Reference
+### Reference
 | Operator       | Symbol        | Lambda Feedback input |
 |----------------|---------------|-----------------------|
 | Addition       | $a + b$       | a+b                   |
