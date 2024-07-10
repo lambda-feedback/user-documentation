@@ -10,7 +10,7 @@ It accepts:
 - Images (paste or drag and drop)
 - Videos (paste a URL)
 
-## $\LaTeX$
+## LaTeX
 LaTeX is a typesetting system widely used in academia to produce well-formatted documents. It is mostly used in Lambda Feedback for its
 capability to render complex mathematical expressions clearly and accurately. 
   
@@ -25,7 +25,7 @@ Produces the following output:
 In the Milkdown editor, anything surrounded by dollar signs (like `$ x^2 $`) will be interpreted as LaTeX. 
 Only the subset supported by [KaTeX](https://katex.org/docs/supported), which includes most common LaTeX functions, can be used.
 
-### $\LaTeX$ equations in 5 minutes
+### LaTeX equations in 5 minutes
 #### Numbers and letters
 Numbers and Latin letters can be entered as you would expect:
 ```
