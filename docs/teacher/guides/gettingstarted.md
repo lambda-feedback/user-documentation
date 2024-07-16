@@ -25,7 +25,7 @@ Select the module you wish to edit.<br />
 ## Create a new problem set
 
 <ins>Click on your module</ins> and then <ins>click on "content"</ins> (upper left-hand corner).<br />
-![View sets](images/Teacher_View_Sets.png)
+![View sets](images/Teacher_View_Sets2.png)
 
 Create a new set by pressing the button seen below and this will automatically appear with a default name which you can edit by clicking 'edit set metadata':<br />
 ![Create set](images/create_set.png){: style="height:50px"}
