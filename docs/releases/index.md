@@ -1,3 +1,6 @@
+## Release 2024/07/16
+- b395-vertical-text-align - remove excess margin from top part of question
+
 ## Release 2024/06/28
 
 - b258-performance-analyse-db - faster response from DB queries
