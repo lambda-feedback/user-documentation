@@ -430,8 +430,8 @@ ujson = "^5.10.0"
 [package.source]
 type = "git"
 url = "https://github.com/lambda-feedback/EvalDocsLoader.git"
-reference = "feature/github-loader"
-resolved_reference = "b7c35e536152dcfe5842da27560f918c05003b43"
+reference = "main"
+resolved_reference = "244d1abb434a7e92aba19b0cbb5a77996f4944e9"
 
 [[package]]
 name = "frozenlist"
@@ -1669,4 +1669,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "64aecb5a4a2ef04e4b2d527a8acfa9d53e0c8461711470ac00b40b88e82a82e5"
+content-hash = "b5c651b23ba1d2222ae9ac7acd340c4e393a3264947cb842f1404aa824098f37"
