@@ -65,6 +65,8 @@ jobs:
       - name: Build docs
         id: build-docs
         if: github.event_name != 'push' || github.ref_name != github.event.repository.default_branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: poetry run mkdocs build
 
       - name: Upload docs
