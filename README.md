@@ -1,15 +1,17 @@
-# Documentation
+# Lambda Feedback User Documentation
 
-Documentation build using mkdocs
+This repository contains the user documentation for the Lambda Feedback platform. The documentation is built using [MkDocs](https://www.mkdocs.org/) and the [Material theme](https://squidfunk.github.io/mkdocs-material/) and is hosted on [GitHub Pages](https://lambda-feedback.github.io/user-documentation/).
 
 ## Usage
 
-### Installation
+This section guides you through the installation of the necessary dependencies and how to serve and build the documentation locally.
 
-#### Pre-requisites
+### Pre-requisites
 
 - [Python 3.11](https://www.python.org/downloads/) or higher
 - [Poetry](https://python-poetry.org/docs/#installation)
+
+### Installation
 
 To serve or build the documentation locally, you have to install its dependencies. The documentation mainly builds on the following libraries:
 
