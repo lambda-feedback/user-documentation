@@ -20,6 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       API_KEY: ${{ secrets.API_KEY }}
+    permissions:
+      contents: read
+      id-token: write
+      packages: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
