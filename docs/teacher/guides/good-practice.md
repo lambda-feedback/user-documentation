@@ -79,7 +79,7 @@ i.e
 \end{array}
 ```
 
-![Image showing a example of a table](images/table.png)
+![Image showing a example of a table](images/images.png)
 
 2. Use `\begin{aligned}` to keep your working formatted nicely
 ```
