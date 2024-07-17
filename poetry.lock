@@ -431,7 +431,7 @@ description = "Mkdocs plugin for fetching, building and consolidating evaluation
 optional = false
 python-versions = "^3.9"
 files = []
-develop = true
+develop = false
 
 [package.dependencies]
 aiohttp = "^3.9.5"
@@ -440,8 +440,10 @@ PyGithub = "^2.3.0"
 ujson = "^5.10.0"
 
 [package.source]
-type = "directory"
-url = "../evaluation-docs-loader"
+type = "git"
+url = "https://github.com/lambda-feedback/EvalDocsLoader.git"
+reference = "feature/github-loader"
+resolved_reference = "dc56bcf5d5674e3b816b88fce10026a9644855a5"
 
 [[package]]
 name = "frozenlist"
@@ -1718,4 +1720,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "dbe3ef543d36c3c03c2551f3d143ef2601f8047901b060b2c18126c2ffa54437"
+content-hash = "d0a1be56b0e0bd884e55838f2f36216c7f539ccf72aaf692ad0ec6acda1c4b4e"
