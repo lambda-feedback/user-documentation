@@ -1,0 +1,2699 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Architecture, syntax and usage details for an online learning platform focused on providing rich feedback to the user.">
+      
+      
+        <meta name="author" content="Pierre Tharreau, Louis Manestar">
+      
+      
+        <link rel="canonical" href="https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/comparePhysicalQuantities/">
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>comparePhysicalQuantities - Lambda Feedback Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#comparephysicalquantities" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lambda Feedback Documentation" class="md-header__button md-logo" aria-label="Lambda Feedback Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lambda Feedback Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              comparePhysicalQuantities
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../student/" class="md-tabs__link">
+        Students
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../teacher/" class="md-tabs__link">
+        Teachers
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../advanced/" class="md-tabs__link md-tabs__link--active">
+        Advanced
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lambda Feedback Documentation" class="md-nav__button md-logo" aria-label="Lambda Feedback Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Lambda Feedback Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">Home</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opportunities/" class="md-nav__link">
+        Opportunities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../student/">Students</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Students" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Students
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/getting_started_student/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/answering_questions/" class="md-nav__link">
+        Answering Questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/response_areas/" class="md-nav__link">
+        Response Areas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/milkdown_student/" class="md-nav__link">
+        Text Editing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../teacher/">Teachers</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Teachers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Teachers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Guides" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/gettingstarted/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/content-sets-questions/" class="md-nav__link">
+        Editing questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/question-export-import/" class="md-nav__link">
+        Exporting and importing questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/milkdown/" class="md-nav__link">
+        Milkdown
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/analytics/" class="md-nav__link">
+        Analytics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/good-practice/" class="md-nav__link">
+        Good practice
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/access_control/" class="md-nav__link">
+        Access control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/latex_functionality/" class="md-nav__link">
+        Latex functionality
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_3" type="checkbox" id="__nav_3_3_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../teacher/reference/response_area_components/">Response Areas</a>
+          
+            <label for="__nav_3_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Response Areas" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Response Areas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Text/" class="md-nav__link">
+        Text
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Number/" class="md-nav__link">
+        Number
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Boolean/" class="md-nav__link">
+        Boolean
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/NumericUnits/" class="md-nav__link">
+        NumericUnits
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Expression/" class="md-nav__link">
+        Expression
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/MultipleChoice/" class="md-nav__link">
+        MultipleChoice
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Matrix/" class="md-nav__link">
+        Matrix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Table/" class="md-nav__link">
+        Table
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_4" type="checkbox" id="__nav_3_3_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../teacher/reference/evaluation_functions/">Evaluation Functions</a>
+          
+            <label for="__nav_3_3_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Evaluation Functions" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Evaluation Functions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_eval_function_docs/isExactEqual/" class="md-nav__link">
+        isExactEqual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+        comparePhysicalQuantities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_eval_function_docs/symbolicEqual/" class="md-nav__link">
+        symbolicEqual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_eval_function_docs/isSimilar/" class="md-nav__link">
+        isSimilar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
+        arrayEqual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
+        arraySymbolicEqual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+        shortTextAnswer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_eval_function_docs/chatGPT%20%28experimental%29/" class="md-nav__link">
+        chatGPT (experimental)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_eval_function_docs/riskAssessment/" class="md-nav__link">
+        riskAssessment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_eval_function_docs/compareExpressions/" class="md-nav__link">
+        compareExpressions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../advanced/">Advanced</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Advanced" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Evaluation Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Evaluation Functions" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Evaluation Functions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/quickstart/" class="md-nav__link">
+        Quickstart Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/specification/" class="md-nav__link">
+        General Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/feedback/" class="md-nav__link">
+        Feedback
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/local/" class="md-nav__link">
+        Testing Functions Locally
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/module/" class="md-nav__link">
+        Evaluation Function Utils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_6" type="checkbox" id="__nav_4_2_6" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../advanced/evaluation_functions/">Deployed Functions</a>
+          
+            <label for="__nav_4_2_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Deployed Functions" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Deployed Functions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isExactEqual/" class="md-nav__link">
+        isExactEqual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          comparePhysicalQuantities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        comparePhysicalQuantities
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changing-default-feedback-messages" class="md-nav__link">
+    Changing default feedback messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom_feedback" class="md-nav__link">
+    custom_feedback
+  </a>
+  
+    <nav class="md-nav" aria-label="custom_feedback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feedback-tags-for-all-comparisons" class="md-nav__link">
+    Feedback tags for all comparisons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedback-tags-for-buckinghampi-comparison" class="md-nav__link">
+    Feedback tags for buckinghamPi comparison
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementary_functions" class="md-nav__link">
+    elementary_functions
+  </a>
+  
+    <nav class="md-nav" aria-label="elementary_functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#substitutions" class="md-nav__link">
+    substitutions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantities" class="md-nav__link">
+    quantities
+  </a>
+  
+    <nav class="md-nav" aria-label="quantities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-base-si-units" class="md-nav__link">
+    Table: Base SI units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-si-prefixes" class="md-nav__link">
+    Table: SI prefixes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-derived-si-units" class="md-nav__link">
+    Table: Derived SI units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-common-non-si-units" class="md-nav__link">
+    Table: Common non-SI units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-imperial-units" class="md-nav__link">
+    Table: Imperial units
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strict_syntax" class="md-nav__link">
+    strict_syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rtol" class="md-nav__link">
+    rtol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atol" class="md-nav__link">
+    atol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    comparison
+  </a>
+  
+    <nav class="md-nav" aria-label="comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expression" class="md-nav__link">
+    expression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressionexact" class="md-nav__link">
+    expressionExact
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions" class="md-nav__link">
+    dimensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buckinghampi" class="md-nav__link">
+    buckinghamPi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../symbolicEqual/" class="md-nav__link">
+        symbolicEqual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isSimilar/" class="md-nav__link">
+        isSimilar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arrayEqual/" class="md-nav__link">
+        arrayEqual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arraySymbolicEqual/" class="md-nav__link">
+        arraySymbolicEqual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shortTextAnswer/" class="md-nav__link">
+        shortTextAnswer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatGPT%20%28experimental%29/" class="md-nav__link">
+        chatGPT (experimental)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../riskAssessment/" class="md-nav__link">
+        riskAssessment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compareExpressions/" class="md-nav__link">
+        compareExpressions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/alternate_languages/" class="md-nav__link">
+        Alternate Function Languages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Response Areas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Response Areas" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Response Areas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/response_areas/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changing-default-feedback-messages" class="md-nav__link">
+    Changing default feedback messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom_feedback" class="md-nav__link">
+    custom_feedback
+  </a>
+  
+    <nav class="md-nav" aria-label="custom_feedback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feedback-tags-for-all-comparisons" class="md-nav__link">
+    Feedback tags for all comparisons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedback-tags-for-buckinghampi-comparison" class="md-nav__link">
+    Feedback tags for buckinghamPi comparison
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementary_functions" class="md-nav__link">
+    elementary_functions
+  </a>
+  
+    <nav class="md-nav" aria-label="elementary_functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#substitutions" class="md-nav__link">
+    substitutions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantities" class="md-nav__link">
+    quantities
+  </a>
+  
+    <nav class="md-nav" aria-label="quantities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-base-si-units" class="md-nav__link">
+    Table: Base SI units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-si-prefixes" class="md-nav__link">
+    Table: SI prefixes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-derived-si-units" class="md-nav__link">
+    Table: Derived SI units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-common-non-si-units" class="md-nav__link">
+    Table: Common non-SI units
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-imperial-units" class="md-nav__link">
+    Table: Imperial units
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strict_syntax" class="md-nav__link">
+    strict_syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rtol" class="md-nav__link">
+    rtol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atol" class="md-nav__link">
+    atol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    comparison
+  </a>
+  
+    <nav class="md-nav" aria-label="comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expression" class="md-nav__link">
+    expression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressionexact" class="md-nav__link">
+    expressionExact
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions" class="md-nav__link">
+    dimensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buckinghampi" class="md-nav__link">
+    buckinghamPi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="comparephysicalquantities">ComparePhysicalQuantities<a class="headerlink" href="#comparephysicalquantities" title="Permanent link">&para;</a></h1>
+<p>Evaluation function which proveds some basic some dimensional analysis functionality.</p>
+<ul>
+<li><strong>DEPRECATED</strong> Comparing physical quantities <strong>RECOMMENDED ALTERNATIVE:</strong> CompareExpressions with the <code>physical_quantity</code> parameter set to <code>true</code></li>
+<li>Substitutions of symbols before comparison of expressions is done</li>
+<li>Checking if a comma separated list of expressions can be interpreted as a set groups that satisfies the Buckingham Pi theorem</li>
+</ul>
+<p><strong>Note:</strong> When the <code>quantities</code> grading parameter is set, this function cannot handle short form symbols for units. Thus when defining quantities all units must be given with full names in lower-case letters. For example <code>Nm/s</code> or <code>Newton*metre/SECOND</code> will not be handled correctly, but <code>newton*metre/second</code> will.</p>
+<p><strong>Note:</strong> Prefixes have lower precedence than exponentiation, e.g. <code>10*cm**2</code> will be interpreted as <span class="arithmatex">\(10 \cdot 10^{-2} \mathrm{metre}^2\)</span> rather than <span class="arithmatex">\(10 (10^(-2)\mathrm{metre})^2\)</span>.</p>
+<p><strong>Note:</strong> This function allows omitting <code>*</code> and using <code>^</code> instead of <code>**</code> if the grading parameter <code>strict_syntax</code> is set to false. In this case it is also recommended to list any multicharacter symbols (that are not part of the default list of SI units) expected to appear in the response as input symbols.</p>
+<p><strong>Note:</strong> Only the short forms listed in the tables below are accepted. Not all units that are supported have short forms (since this leads to ambiguities).</p>
+<p><strong>Note:</strong> When using the short forms the following convention is assumed:
+- Long form names takes precedence over sequences of short forms, e.g.  e.g. <code>mN</code> will be interpreted as <code>milli newton</code>, <code>Nm</code> as <code>newton metre</code>, <code>mmN</code> as <code>milli metre newton</code>, <code>mNm</code> as <code>milli newton metre</code> and <code>Nmm</code> as <code>newton milli metre</code>.
+- Short form symbols of prefixes will take precedence over short form symbols of units from the left, e.g. 
+- If there is a short form symbol for a prefix that collides with the short form for a unit (i.e. <code>m</code>) then it is assumed the that unit will always be placed to the right of another unit in compound units, e.g. <code>mN</code> will be interpreted as <code>milli newton</code>, <code>Nm</code> as <code>newton metre</code>, <code>mmN</code> as <code>milli metre newton</code>, <code>mNm</code> as <code>milli newton metre</code> and <code>Nmm</code> as <code>newton milli metre</code>.
+- Longer short form symbols take precedence over shorter short forms, e.g. <code>sr</code> will be interpreted as <code>steradian</code> instead of <code>second radian</code>.</p>
+<p><strong>Note:</strong> setting <code>elementary_functions</code> to true will disable using short forms symbols for units.</p>
+<p><strong>Note:</strong> When running the unit test some tests are expected to take much longer than the other. These tests can be skipped by adding <code>skip_resource_intensive_tests</code> as a command line argument to improve iteration times.</p>
+<h2 id="changing-default-feedback-messages">Changing default feedback messages<a class="headerlink" href="#changing-default-feedback-messages" title="Permanent link">&para;</a></h2>
+<p>The feedback messages can be set on a per-task basis (see description of the <code>custom_feedback</code> input parameter).</p>
+<p>The default feedback messages are defined in <code>feedback_responses_list</code> defined near the top of <code>evaulation.py</code>, which contains a list of dictionaries of feedback responses that are used througout the code. All feedback messages visible to learners are defined in these dictionaries. The entries in the dictionaries are either be string of functions that return strings.</p>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
+<p>All input parameters need to be supplied via the <strong>Grading parameters</strong> panel.</p>
+<p>There are seven optional parameters that can be set: <code>elementary_functions</code>, <code>substitutions</code>, <code>quantities</code>, <code>strict_syntax</code>, <code>rtol</code>, <code>atol</code> and <code>comparison</code>.</p>
+<h2 id="custom_feedback"><code>custom_feedback</code><a class="headerlink" href="#custom_feedback" title="Permanent link">&para;</a></h2>
+<p>Custom feedback can be set on a per-task basis. <strong>Note:</strong> Custom feedback only supports fixed strings, this means that for some situations the custom feedback cannot be as detailed as the default feedback.</p>
+<p>The parameter must be set as a dictionary with keys from the feedback tags listed below. The value for each key can be any string.</p>
+<h3 id="feedback-tags-for-all-comparisons">Feedback tags for all comparisons<a class="headerlink" href="#feedback-tags-for-all-comparisons" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>PARSE_ERROR_WARNING</code> Response cannot be parsed as an expression or physical quantity.</li>
+<li><code>PER_FOR_DIVISION</code> Warns about risk of ambiguity when using <code>per</code> instead <code>/</code> for division.</li>
+<li><code>STRICT_SYNTAX_EXPONENTIATION</code> Warns that <code>^</code> cannot be used for exponentiation when <code>strict_syntax</code> is set to <code>true</code>.</li>
+<li><code>QUANTITIES_NOT_WRITTEN_CORRECTLY</code> Text in error message that appears if list of quantities could not be parsed.</li>
+<li><code>SUBSTITUTIONS_NOT_WRITTEN_CORRECTLY</code> Text in error message that appears if list of substitutions could not be parsed.</li>
+</ul>
+<h3 id="feedback-tags-for-buckinghampi-comparison">Feedback tags for <code>buckinghamPi</code> comparison<a class="headerlink" href="#feedback-tags-for-buckinghampi-comparison" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>VALID_CANDIDATE_SET</code> Message that is displayed when a response is found to be a valid set of groups. <strong>Note:</strong> setting this will not affect the Correct/Incorrect message, it will only add further text.</li>
+<li><code>NOT_DIMENSIONLESS</code> Message displayed when at least one groups is not dimensionless.</li>
+<li><code>MORE_GROUPS_THAN_REFERENCE_SET</code> Message displayed when the response contains more groups than necessary.</li>
+<li><code>CANDIDATE_GROUPS_NOT_INDEPENDENT</code> Message displayed when the groups in the response are not independent.</li>
+<li><code>TOO_FEW_INDEPENDENT_GROUPS</code> Message displayed when the response contains fewer groups than necessary.</li>
+<li><code>UNKNOWN_SYMBOL</code> Message displayed when the response contains some undefined symbol.</li>
+<li><code>SUM_WITH_INDEPENDENT_TERMS</code>  Message displayed when the response has too few groups but one (or more) of the groups is a sum with independent terms.</li>
+</ul>
+<h2 id="elementary_functions"><code>elementary_functions</code><a class="headerlink" href="#elementary_functions" title="Permanent link">&para;</a></h2>
+<p>When using implicit multiplication function names with mulitple characters are sometimes split and not interpreted properly. Setting <code>elementary_functions</code> to true will reserve the function names listed below and prevent them from being split. If a name is said to have one or more alternatives this means that it will accept the alternative names but the reserved name is what will be shown in the preview.</p>
+<p><code>sin</code>, <code>sinc</code>, <code>csc</code> (alternative <code>cosec</code>), <code>cos</code>, <code>sec</code>, <code>tan</code>, <code>cot</code> (alternative <code>cotan</code>), <code>asin</code> (alternative <code>arcsin</code>), <code>acsc</code> (alternatives <code>arccsc</code>, <code>arccosec</code>), <code>acos</code> (alternative <code>arccos</code>), <code>asec</code> (alternative <code>arcsec</code>), <code>atan</code> (alternative <code>arctan</code>), <code>acot</code> (alternatives <code>arccot</code>, <code>arccotan</code>), <code>atan2</code> (alternative <code>arctan2</code>), <code>sinh</code>, <code>cosh</code>, <code>tanh</code>, <code>csch</code> (alternative <code>cosech</code>), <code>sech</code>, <code>asinh</code> (alternative <code>arcsinh</code>), <code>acosh</code> (alternative <code>arccosh</code>), <code>atanh</code> (alternative <code>arctanh</code>), <code>acsch</code> (alternatives <code>arccsch</code>, <code>arcosech</code>), <code>asech</code> (alternative <code>arcsech</code>), <code>exp</code> (alternative <code>Exp</code>), <code>E</code> (equivalent to <code>exp(1)</code>, alternative <code>e</code>), <code>log</code>, <code>sqrt</code>, <code>sign</code>, <code>Abs</code> (alternative <code>abs</code>), <code>Max</code> (alternative <code>max</code>), <code>Min</code> (alternative <code>min</code>), <code>arg</code>, <code>ceiling</code> (alternative <code>ceil</code>), <code>floor</code></p>
+<p><strong>Note:</strong> setting <code>elementary_functions</code> to true will disable using short forms symbols for units.</p>
+<h3 id="substitutions"><code>substitutions</code><a class="headerlink" href="#substitutions" title="Permanent link">&para;</a></h3>
+<p>String that lists all substitutions that should be done to the answer and response inputs before processing.</p>
+<p>Each substitution should be written in the form <code>('original string','substitution string')</code> and all pairs concatenated into a single string. Substitutions can be grouped by adding <code>|</code> between two substitutions. Then all substitutions before <code>|</code> will be performed before the substitutions after <code>|</code>.</p>
+<p>The input can contain an arbitrary number of substitutions and <code>|</code> symbols.</p>
+<p>Note that using substitutions will replace all default definitions of quantities and dimensions.</p>
+<h3 id="quantities"><code>quantities</code><a class="headerlink" href="#quantities" title="Permanent link">&para;</a></h3>
+<p>String that lists all quantities that can be used in the answer and response.</p>
+<p>Each quantity should be written in the form <code>('quantity name','(units)')</code> and all pairs concatenated into a single string. See tables below for available default units.</p>
+<p>Whenever units are used they must be written exactly as in the left columns of the tables given below (no short forms or single-character symbols) and units must be multiplied (or divided) by each other, as well as any accompanying quantities. </p>
+<p><strong>NOTE:</strong> Using units and predefined quantities at the same time in an answer or response can cause problems (especially if quantities are denoted using single characters). Ideally it should be clear that either predefined quantities, or units should only be used from the question.</p>
+<p>If the <code>comparison</code> parameter is set to <code>dimensions</code>, it is not necessary to give exact units for each quantity, but the dimensions must be given instead. See tables below for available default dimensions.</p>
+<p>If the <code>comparison</code> parameter is set to <code>buckinghamPi</code>, then <code>quantities</code> should be set in a different way. See the detailed description of <code>buckinghamPi</code> further down.</p>
+<h4 id="table-base-si-units">Table: Base SI units<a class="headerlink" href="#table-base-si-units" title="Permanent link">&para;</a></h4>
+<p>SI base units taken from Table 1 of https://physics.nist.gov/cuu/Units/units.html</p>
+<p>Note that gram is used as a base unit instead of kilogram.</p>
+<table>
+<thead>
+<tr>
+<th>SI base unit</th>
+<th align="left">Symbol</th>
+<th align="left">Dimension name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metre</td>
+<td align="left">m</td>
+<td align="left">length</td>
+</tr>
+<tr>
+<td>gram</td>
+<td align="left">g</td>
+<td align="left">mass</td>
+</tr>
+<tr>
+<td>second</td>
+<td align="left">s</td>
+<td align="left">time</td>
+</tr>
+<tr>
+<td>ampere</td>
+<td align="left">A</td>
+<td align="left">electriccurrent</td>
+</tr>
+<tr>
+<td>kelvin</td>
+<td align="left">k</td>
+<td align="left">temperature</td>
+</tr>
+<tr>
+<td>mole</td>
+<td align="left">mol</td>
+<td align="left">amountofsubstance</td>
+</tr>
+<tr>
+<td>candela</td>
+<td align="left">cd</td>
+<td align="left">luminousintensity</td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-si-prefixes">Table: SI prefixes<a class="headerlink" href="#table-si-prefixes" title="Permanent link">&para;</a></h4>
+<p>SI base units taken from Table 5 of https://physics.nist.gov/cuu/Units/prefixes.html</p>
+<table>
+<thead>
+<tr>
+<th>SI Prefix</th>
+<th align="left">Symbol</th>
+<th align="left">Factor</th>
+<th></th>
+<th>SI Prefix</th>
+<th align="left">Symbol</th>
+<th align="left">Factor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>yotta</td>
+<td align="left">Y</td>
+<td align="left"><span class="arithmatex">\(10^{24}\)</span></td>
+<td></td>
+<td>deci</td>
+<td align="left">d</td>
+<td align="left"><span class="arithmatex">\(10^{-1}\)</span></td>
+</tr>
+<tr>
+<td>zetta</td>
+<td align="left">Z</td>
+<td align="left"><span class="arithmatex">\(10^{21}\)</span></td>
+<td></td>
+<td>centi</td>
+<td align="left">c</td>
+<td align="left"><span class="arithmatex">\(10^{-2}\)</span></td>
+</tr>
+<tr>
+<td>exa'</td>
+<td align="left">E</td>
+<td align="left"><span class="arithmatex">\(10^{18}\)</span></td>
+<td></td>
+<td>milli</td>
+<td align="left">m</td>
+<td align="left"><span class="arithmatex">\(10^{-3}\)</span></td>
+</tr>
+<tr>
+<td>peta</td>
+<td align="left">P</td>
+<td align="left"><span class="arithmatex">\(10^{15}\)</span></td>
+<td></td>
+<td>micro</td>
+<td align="left">mu</td>
+<td align="left"><span class="arithmatex">\(10^{-6}\)</span></td>
+</tr>
+<tr>
+<td>tera</td>
+<td align="left">T</td>
+<td align="left"><span class="arithmatex">\(10^{12}\)</span></td>
+<td></td>
+<td>nano</td>
+<td align="left">n</td>
+<td align="left"><span class="arithmatex">\(10^{-9}\)</span></td>
+</tr>
+<tr>
+<td>giga</td>
+<td align="left">G</td>
+<td align="left"><span class="arithmatex">\(10^{9}\)</span></td>
+<td></td>
+<td>pico</td>
+<td align="left">p</td>
+<td align="left"><span class="arithmatex">\(10^{-12}\)</span></td>
+</tr>
+<tr>
+<td>mega</td>
+<td align="left">M</td>
+<td align="left"><span class="arithmatex">\(10^{6}\)</span></td>
+<td></td>
+<td>femto</td>
+<td align="left">f</td>
+<td align="left"><span class="arithmatex">\(10^{-15}\)</span></td>
+</tr>
+<tr>
+<td>kilo</td>
+<td align="left">k</td>
+<td align="left"><span class="arithmatex">\(10^{3}\)</span></td>
+<td></td>
+<td>atto</td>
+<td align="left">a</td>
+<td align="left"><span class="arithmatex">\(10^{-18}\)</span></td>
+</tr>
+<tr>
+<td>hecto</td>
+<td align="left">h</td>
+<td align="left"><span class="arithmatex">\(10^{2}\)</span></td>
+<td></td>
+<td>zepto</td>
+<td align="left">z</td>
+<td align="left"><span class="arithmatex">\(10^{-21}\)</span></td>
+</tr>
+<tr>
+<td>deka</td>
+<td align="left">da</td>
+<td align="left"><span class="arithmatex">\(10^{1}\)</span></td>
+<td></td>
+<td>yocto</td>
+<td align="left">y</td>
+<td align="left"><span class="arithmatex">\(10^{-24}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-derived-si-units">Table: Derived SI units<a class="headerlink" href="#table-derived-si-units" title="Permanent link">&para;</a></h4>
+<p>Derived SI units taken from Table 3 of https://physics.nist.gov/cuu/Units/units.html</p>
+<p>Note that degrees Celsius is omitted.</p>
+<p>Note that the function treats radians and steradians as dimensionless values.</p>
+<table>
+<thead>
+<tr>
+<th>Unit name</th>
+<th align="left">Symbol</th>
+<th align="left">Expressed in base SI units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>radian</td>
+<td align="left">r</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td>steradian</td>
+<td align="left">sr</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td>hertz</td>
+<td align="left">Hz</td>
+<td align="left"><span class="arithmatex">\(\mathrm{second}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>newton</td>
+<td align="left">N</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}~\mathrm{kilogram}~\mathrm{second}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>pascal</td>
+<td align="left">Pa</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^{-1}~\mathrm{kilogram}~\mathrm{second}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>joule</td>
+<td align="left">J</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram~second}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>watt</td>
+<td align="left">W</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram~second}^{-3}\)</span></td>
+</tr>
+<tr>
+<td>coulomb</td>
+<td align="left">C</td>
+<td align="left"><span class="arithmatex">\(\mathrm{second~ampere}\)</span></td>
+</tr>
+<tr>
+<td>volt</td>
+<td align="left">V</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram second}^{-3}~\mathrm{ampere}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>farad</td>
+<td align="left">F</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^{-2}~\mathrm{kilogram}^{-1}~\mathrm{second}^4~\mathrm{ampere}^2\)</span></td>
+</tr>
+<tr>
+<td>ohm</td>
+<td align="left">O</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram second}^{-3}~\mathrm{ampere}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>siemens</td>
+<td align="left">S</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^{-2}~\mathrm{kilogram}^{-1}~\mathrm{second}^3~\mathrm{ampere}^2\)</span></td>
+</tr>
+<tr>
+<td>weber</td>
+<td align="left">Wb</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram~second}^{-2}~\mathrm{ampere}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>tesla</td>
+<td align="left">T</td>
+<td align="left"><span class="arithmatex">\(\mathrm{kilogram~second}^{-2} \mathrm{ampere}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>henry</td>
+<td align="left">H</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram~second}^{-2}~\mathrm{ampere}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>lumen</td>
+<td align="left">lm</td>
+<td align="left"><span class="arithmatex">\(\mathrm{candela}\)</span></td>
+</tr>
+<tr>
+<td>lux</td>
+<td align="left">lx</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^{-2}~\mathrm{candela}\)</span></td>
+</tr>
+<tr>
+<td>becquerel</td>
+<td align="left">Bq</td>
+<td align="left"><span class="arithmatex">\(\mathrm{second}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>gray</td>
+<td align="left">Gy</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{second}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>sievert</td>
+<td align="left">Sv</td>
+<td align="left"><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{second}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>katal</td>
+<td align="left">kat</td>
+<td align="left"><span class="arithmatex">\(\mathrm{mole~second}^{-1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-common-non-si-units">Table: Common non-SI units<a class="headerlink" href="#table-common-non-si-units" title="Permanent link">&para;</a></h4>
+<p>Commonly used non-SI units taken from Table 6 and 7 of https://physics.nist.gov/cuu/Units/outside.html</p>
+<p>Note that the function treats angles, neper and bel as dimensionless values.</p>
+<p>Note that only the first table in this section has short form symbols defined, the second table does not.</p>
+<table>
+<thead>
+<tr>
+<th>Unit name</th>
+<th align="left">Symbol</th>
+<th align="left">Expressed in SI units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>minute</td>
+<td align="left">min</td>
+<td align="left"><span class="arithmatex">\(60~\mathrm{second}\)</span></td>
+</tr>
+<tr>
+<td>hour</td>
+<td align="left">h</td>
+<td align="left"><span class="arithmatex">\(3600~\mathrm{second}\)</span></td>
+</tr>
+<tr>
+<td>degree</td>
+<td align="left">deg</td>
+<td align="left"><span class="arithmatex">\(\frac{\pi}{180}\)</span></td>
+</tr>
+<tr>
+<td>liter</td>
+<td align="left">l</td>
+<td align="left"><span class="arithmatex">\(10^{-3}~\mathrm{metre}^3\)</span></td>
+</tr>
+<tr>
+<td>metric_ton</td>
+<td align="left">t</td>
+<td align="left"><span class="arithmatex">\(10^3~\mathrm{kilogram}\)</span></td>
+</tr>
+<tr>
+<td>neper</td>
+<td align="left">Np</td>
+<td align="left"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td>bel</td>
+<td align="left">B</td>
+<td align="left"><span class="arithmatex">\(\frac{1}{2}~\ln(10)\)</span></td>
+</tr>
+<tr>
+<td>electronvolt</td>
+<td align="left">eV</td>
+<td align="left"><span class="arithmatex">\(1.60218 \cdot 10^{-19}~\mathrm{joule}\)</span></td>
+</tr>
+<tr>
+<td>atomic_mass_unit</td>
+<td align="left">u</td>
+<td align="left"><span class="arithmatex">\(1.66054 \cdot 10^{-27}~\mathrm{kilogram}\)</span></td>
+</tr>
+<tr>
+<td>angstrom</td>
+<td align="left">å</td>
+<td align="left"><span class="arithmatex">\(10^{-10}~\mathrm{metre}\)</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Unit name</th>
+<th align="left">Expressed in SI units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>day</td>
+<td align="left"><span class="arithmatex">\(86400~\mathrm{second}\)</span></td>
+</tr>
+<tr>
+<td>angleminute</td>
+<td align="left"><span class="arithmatex">\(\frac{\pi}{10800}\)</span></td>
+</tr>
+<tr>
+<td>anglesecond</td>
+<td align="left"><span class="arithmatex">\(\frac{\pi}{648000}\)</span></td>
+</tr>
+<tr>
+<td>astronomicalunit</td>
+<td align="left"><span class="arithmatex">\(149597870700~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>nauticalmile</td>
+<td align="left"><span class="arithmatex">\(1852~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>knot</td>
+<td align="left"><span class="arithmatex">\(\frac{1852}{3600}~\mathrm{metre~second}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>are</td>
+<td align="left"><span class="arithmatex">\(10^2~\mathrm{metre}^2\)</span></td>
+</tr>
+<tr>
+<td>hectare</td>
+<td align="left"><span class="arithmatex">\(10^4~\mathrm{metre}^2\)</span></td>
+</tr>
+<tr>
+<td>bar</td>
+<td align="left"><span class="arithmatex">\(10^5~\mathrm{pascal}\)</span></td>
+</tr>
+<tr>
+<td>barn</td>
+<td align="left"><span class="arithmatex">\(10^{-28}~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>curie</td>
+<td align="left">$3.7 \cdot 10^{10}~\mathrm{becquerel}</td>
+</tr>
+<tr>
+<td>roentgen</td>
+<td align="left"><span class="arithmatex">\(2.58 \cdot 10^{-4}~\mathrm{kelvin~(kilogram)}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>rad</td>
+<td align="left"><span class="arithmatex">\(10^{-2}~\mathrm{gray}\)</span></td>
+</tr>
+<tr>
+<td>rem</td>
+<td align="left"><span class="arithmatex">\(10^{-2}~\mathrm{sievert}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-imperial-units">Table: Imperial units<a class="headerlink" href="#table-imperial-units" title="Permanent link">&para;</a></h4>
+<p>Commonly imperial units taken from https://en.wikipedia.org/wiki/Imperial_units</p>
+<table>
+<thead>
+<tr>
+<th>Unit name</th>
+<th align="left">Symbol</th>
+<th align="left">Expressed in SI units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inch</td>
+<td align="left">in</td>
+<td align="left"><span class="arithmatex">\(0.0254~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>foot</td>
+<td align="left">ft</td>
+<td align="left"><span class="arithmatex">\(0.3048~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>yard</td>
+<td align="left">yd</td>
+<td align="left"><span class="arithmatex">\(0.9144~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>mile</td>
+<td align="left">mi</td>
+<td align="left"><span class="arithmatex">\(1609.344~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>fluid ounce</td>
+<td align="left">fl oz</td>
+<td align="left"><span class="arithmatex">\(28.4130625~\mathrm{millilitre}\)</span></td>
+</tr>
+<tr>
+<td>gill</td>
+<td align="left">gi</td>
+<td align="left"><span class="arithmatex">\(142.0653125~\mathrm{millilitre}\)</span></td>
+</tr>
+<tr>
+<td>pint</td>
+<td align="left">pt</td>
+<td align="left"><span class="arithmatex">\(568.26125~\mathrm{millilitre}\)</span></td>
+</tr>
+<tr>
+<td>quart</td>
+<td align="left">qt</td>
+<td align="left"><span class="arithmatex">\(1.1365225~\mathrm{litre}\)</span></td>
+</tr>
+<tr>
+<td>gallon</td>
+<td align="left">gal</td>
+<td align="left"><span class="arithmatex">\(4546.09~\mathrm{litre}\)</span></td>
+</tr>
+<tr>
+<td>ounce</td>
+<td align="left">oz</td>
+<td align="left"><span class="arithmatex">\(28.349523125~\mathrm{gram}\)</span></td>
+</tr>
+<tr>
+<td>pound</td>
+<td align="left">lb</td>
+<td align="left"><span class="arithmatex">\(0.45359237~\mathrm{kilogram}\)</span></td>
+</tr>
+<tr>
+<td>stone</td>
+<td align="left">st</td>
+<td align="left"><span class="arithmatex">\(6.35029318~\mathrm{kilogram}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="strict_syntax"><code>strict_syntax</code><a class="headerlink" href="#strict_syntax" title="Permanent link">&para;</a></h3>
+<p>If <code>strict_syntax</code> is set to true then the answer and response must have <code>*</code> or <code>/</code> between each part of the expressions and exponentiation must be done using <code>**</code>, e.g. <code>10*kilo*metre/second**2</code> is accepted but <code>10 kilometre/second^2</code> is not.</p>
+<p>If <code>strict_syntax</code> is set to false, then <code>*</code> can be omitted and <code>^</code> used instead of <code>**</code>. In this case it is also recommended to list any multicharacter symbols (that are not part of the default list of SI units) expected to appear in the response as input symbols.</p>
+<p>By default <code>strict_syntax</code> is set to true.</p>
+<h3 id="rtol"><code>rtol</code><a class="headerlink" href="#rtol" title="Permanent link">&para;</a></h3>
+<p>Maximum relative error allowed when comparing expressions.</p>
+<h3 id="atol"><code>atol</code><a class="headerlink" href="#atol" title="Permanent link">&para;</a></h3>
+<p>Maximum absolute error allowed when comparing expressions.</p>
+<h3 id="comparison"><code>comparison</code><a class="headerlink" href="#comparison" title="Permanent link">&para;</a></h3>
+<p>Parameter that determines what kind of comparison is done. There are four possible options:</p>
+<ul>
+<li><code>expression</code> Converts the expression to base SI units and checks that the units are the same and that the value of the answer and response is sufficienty close (as specified by the <code>atol</code> and <code>rtol</code> parameters).</li>
+<li><code>expressionExact</code> Converts the expression to base SI units and checks that the units are the same and that the value of the answer and response is identical to as high precision as possible.</li>
+<li><code>dimensions</code> Checks that the answer and response have the same dimensions, does not compare the values of the physical quantities.</li>
+<li><code>buckinghamPi</code> Checks that the set of quantities in the response matches the set of quantities in the sense given by the Buckingham Pi theorem.</li>
+</ul>
+<p>For more details on each options see the description below and the corresponding examples.</p>
+<p>If <code>comparison</code> is not specified it defaults to <code>expression</code>.</p>
+<h4 id="expression"><code>expression</code><a class="headerlink" href="#expression" title="Permanent link">&para;</a></h4>
+<p>Converts the expression to base SI units and checks that the units are the same and that the value of the answer and response is sufficienty close.</p>
+<p>How big the difference is between the value of the answer and the value of the response is decided by the <code>rtol</code> and <code>atol</code> parameters. If neither <code>atol</code> nor <code>rtol</code> is specified the function will allow a relative error of <span class="arithmatex">\(10^{-12}\)</span>. If <code>atol</code> is specified its value will be interpreted as the maximum allowed absolute error. If <code>rtol</code> is specified its value will be interpreted as the maximum allowed relative error. If both <code>atol</code> and <code>rtol</code> the function will check both the absolute and relative error.</p>
+<h4 id="expressionexact"><code>expressionExact</code><a class="headerlink" href="#expressionexact" title="Permanent link">&para;</a></h4>
+<p>Converts the expression to base SI units and checks that the answer and response are identical to the highest precision possible (note that some unit conversions are not exact and that using decimal numbers in the answer or response limits this to floating point precision).</p>
+<h4 id="dimensions"><code>dimensions</code><a class="headerlink" href="#dimensions" title="Permanent link">&para;</a></h4>
+<p>Checks that the answer and response have the same dimensions, but does not compare the values of the physical quantities.</p>
+<p>With this option the quantities (specified by the <code>quantities</code> parameter) can be given either dimension only, or units.</p>
+<h4 id="buckinghampi"><code>buckinghamPi</code><a class="headerlink" href="#buckinghampi" title="Permanent link">&para;</a></h4>
+<p>Checks that the set of quantities in the response matches the set of quantities in the sense given by the Buckingham Pi theorem.</p>
+<p>There are three different ways of supplying this function with the necessary information.
+- In the answer, provide an example set of groups as a comma seprated list. When used this way the function assumes that the given list is correct and contains at least the minimum number of groups.
+- In the <code>quantities</code> parameter, supply a list of what the dimensions for each quantity is and set answer to <code>-</code>. The function will then compute a list of sufficiently many independen dimensionless quantities and compare to the response.
+- In the <code>quantities</code> parameter, supply a list of what the dimensions for each quantity is and in the answer, supply a list of groups as in the first option. The function will then check that the supplied answer is dimensionless and has a sufficient number of independent groups before comparing it to the response.</p>
+<p>Note that in lists of groups the items should ideally be written on the form <span class="arithmatex">\(q_1^{c_1} \cdot q_2^{c_2} \cdots q_n^{c_n}\)</span> where <span class="arithmatex">\(q_1, q_2 \ldots q_n\)</span> are quantities and <span class="arithmatex">\(c_1, c_2 \ldots c_n\)</span> are integers, but the function can also handle item that are sums with terms written on the form <span class="arithmatex">\(a \cdot q_1^{c_1} \cdot q_2^{c_2} \cdots q_n^{c_n}\)</span> where <span class="arithmatex">\(q_1, q_2 \ldots q_n\)</span> are quantities, <span class="arithmatex">\(c_1, c_2 \ldots c_n\)</span> rational numbers and <span class="arithmatex">\(a\)</span> a constant. If the total number of groups is less than required the set of groups is considered invalid, even if there is a sufficient number of terms with independent power products in the response.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 17, 2024</span>
+      
+    
+  </small>
+</div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../isExactEqual/" class="md-footer__link md-footer__link--prev" aria-label="Previous: isExactEqual" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              isExactEqual
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../symbolicEqual/" class="md-footer__link md-footer__link--next" aria-label="Next: symbolicEqual" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              symbolicEqual
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../../scripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
