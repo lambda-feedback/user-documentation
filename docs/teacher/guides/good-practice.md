@@ -63,11 +63,11 @@ Live preview instantly renders a student's input. This is very useful for long/c
 
 ![Image showing a live-preview to a student's response](images/live_preview.png)
 
-$$Latex help
+## Latex help
 
 1. Use \begin{array} to generate compact table
 i.e 
-'''
+```
 \begin{array}{|c|c|}
 \hline
 \theta_{2,0} & \theta_{1,L}\\
@@ -77,25 +77,26 @@ i.e
 -6600 & 161.6086\\
 \hline
 \end{array}
-'''
+```
 
 ![Image showing a example of a table](images/table.png)
 
 2. Use \begin{aligned} to keep your working formatted nicely
-'''
+```
 \begin{array}{ll}
 M_{d e f} &=\dfrac{1}{2}(M+M^T)\\
 & =\dfrac{1}{2} \begin{pmatrix} 4 & 14\\ -6 & -11 \end{pmatrix}+\begin{pmatrix} 4 & -6\\ 14 & -11 \end{pmatrix}\\
 & =\begin{pmatrix} 4 & 4\\ 4 & -11 \end{pmatrix}
 \end{array}
+```
 
 ![Image showing a example of a algined working](images/aligned.png)
 
 3. Use '\left' and '\right' for equations with multiple brackets
 
-'''
+```
 f(x)=\left (\frac{(\cos (x) -x) + i(\sin (x) - x)}{wi} \right)
-'''
+```
 
 ![Image showing a example of a brackets](images/bracket.png)
 
