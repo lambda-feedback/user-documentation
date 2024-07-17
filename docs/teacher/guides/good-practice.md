@@ -101,3 +101,5 @@ f(x)=\left (\frac{(\cos (x) -x) + i(\sin (x) - x)}{wi} \right)
 ![Image showing a example of a brackets](images/bracket.png)
 
 This also works for '[]' and '{}'
+
+4. Use '\sin', '\cos' etc... if you are too lazy to write out '\text{sin }' everytime in equation mode.
