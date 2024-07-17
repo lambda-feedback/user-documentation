@@ -81,7 +81,7 @@ i.e
 
 ![Image showing a example of a table](images/table.png)
 
-2. Use \begin{aligned} to keep your working formatted nicely
+2. Use `\begin{aligned}` to keep your working formatted nicely
 ```
 \begin{array}{ll}
 M_{d e f} &=\dfrac{1}{2}(M+M^T)\\
@@ -92,7 +92,7 @@ M_{d e f} &=\dfrac{1}{2}(M+M^T)\\
 
 ![Image showing a example of a algined working](images/aligned.png)
 
-3. Use '\left' and '\right' for equations with multiple brackets
+3. Use `\left` and `\right` for equations with multiple brackets
 
 ```
 f(x)=\left (\frac{(\cos (x) -x) + i(\sin (x) - x)}{wi} \right)
@@ -100,6 +100,6 @@ f(x)=\left (\frac{(\cos (x) -x) + i(\sin (x) - x)}{wi} \right)
 
 ![Image showing a example of a brackets](images/bracket.png)
 
-This also works for '[ ]' and '\{ \}'
+This also works for `[ ]` and `\{ \}`
 
-4. Use '\sin', '\cos' etc... if you are too lazy to write out '\text{sin }' everytime in equation mode.
+4. Use `\sin`, `\cos` etc... if you are too lazy to write out `\text{sin }` everytime in equation mode.
