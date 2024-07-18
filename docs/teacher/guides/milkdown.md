@@ -54,3 +54,9 @@ When viewing the worked solutions, this is how it looks:
 This is the process to create the solution steps:
 
 ![Gif of entering worked solution steps](images/Entering_worked_solution_steps.gif)
+
+### Images
+
+You can add images to a textbox by copying and parting the image i. Hoowever, milkdown is currently not able to resize images and the only way to resize images is by editing the file to a lower resolution outside of the platform.
+
+![Image showing resized images on lambda feedback](images/resize_images.png)
