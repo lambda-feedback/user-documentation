@@ -1,3 +1,7 @@
+## Release 2024/07/18
+- b396-better-feedback-box - improve the feedback box UIand accessibility
+- b392-essay-code-ras - add two new response area types: code and essay
+
 ## Release 2024/07/16
 - b395-vertical-text-align - remove excess margin from top part of question
 
