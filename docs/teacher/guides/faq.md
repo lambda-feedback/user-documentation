@@ -71,6 +71,8 @@ The Pandoc library that lambdafeedback use to generate a pdf does not support `\
 ## What to do if the pdf is not compiling my inline math equation?
 
 Please check if there is an additional space at the start or a the end of the equation. This is usually the cause for inline math blocks not compiling.
+  
+Sometimes if you are copy-pasting text into equations you may end up with certain characters that look normal but actually have different ASCII codes than what you intended. This may also cause a PDF not to compile.
 
 ## How can I have the same font for the unit and for the number in the math block?
 
