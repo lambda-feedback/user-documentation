@@ -13,13 +13,14 @@ should be accepted. For example, if the answer to a question is `10 MPa`, `0.01 
 
 
 ## Entering mathematical expressions
-Entering mathematical expressions on Lambda is very similar to if you was doing it on Matlab, for example. 
+Entering mathematical expressions on Lambda is very similar to if you were doing it in Matlab, for example. 
 
 ### Examples
-|  Expression  | Lambda Feedback input
-   | -----------------------------------|-------------------------------------|
-   | $x^2 - x - 2$ | x^2 - x - 2 
-   |  |                                                                                                         |
+|              Expression              | Lambda Feedback input|
+|--------------------------------------|----------------------|
+|$x^2 - x - 2$                         |`x^2 - x - 2`         |
+|$\sqrt{\sin(x) + \frac{\pi}{2}}$      |`sqrt(sin(x) + pi/2)` |
+|$e^{\frac{\pi x}{2} + 1}              |`exp((pi*x)/2 + 1)`   |
 
 ### Reference
 | Operator       | Symbol        | Lambda Feedback input |
@@ -29,11 +30,7 @@ Entering mathematical expressions on Lambda is very similar to if you was doing 
 | Multiplication | $a \times b$  | a*b                   |
 | Division       | $\frac{a}{b}$ | a/b                   |
 | Exponentiation | $a^b$         | a^b                   |
-| Square root    | $\sqrt{a}$     | sqrt(a)               |
-|                |               |                       |
+| Square root    | $\sqrt{a}$    | sqrt(a)               |
 |                |               |                       |
 
-## Types of response area
-|  Name                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                      |
-   | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | Question Name               | Here we can edit the name given to the question                                                                                                                                                                                                                                                                                                                                                                                  |
+Common elementary functions such as $\sin$, $\cos$, $\arcsin$, $\ln$ etc. are also supported.
