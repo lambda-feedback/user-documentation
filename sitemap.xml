@@ -201,22 +201,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arrayEqual/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arrayEqual/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareBoolean/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareBoolean/</loc>
+         <lastmod>2024-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arrayEqual/</loc>
+         <lastmod>2024-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arrayEqual/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
