@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareBoolean/">
       
       
-        <link rel="prev" href="../../teacher/reference/evaluation_functions/">
+        <link rel="prev" href="../arrayEqual/">
       
       
-        <link rel="next" href="../arrayEqual/">
+        <link rel="next" href="../isExactEqual/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -1363,6 +1363,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../arrayEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    arrayEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1421,6 +1442,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#inputs" class="md-nav__link">
     <span class="md-ellipsis">
       Inputs
@@ -1457,27 +1487,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../arrayEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arrayEqual
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1574,6 +1583,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../comparePhysicalQuantities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    comparePhysicalQuantities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../latexEqual/" class="md-nav__link">
         
   
@@ -1621,27 +1651,6 @@
   
   <span class="md-ellipsis">
     compareSets
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../comparePhysicalQuantities/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    comparePhysicalQuantities
   </span>
   
 
@@ -2024,11 +2033,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev_eval_function_docs/compareBoolean/" class="md-nav__link">
+      <a href="../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareBoolean
+    arrayEqual
   </span>
   
 
@@ -2045,11 +2054,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
+      <a href="../../dev_eval_function_docs/compareBoolean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    arrayEqual
+    compareBoolean
   </span>
   
 
@@ -2150,6 +2159,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    comparePhysicalQuantities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../dev_eval_function_docs/latexEqual/" class="md-nav__link">
         
   
@@ -2197,27 +2227,6 @@
   
   <span class="md-ellipsis">
     compareSets
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    comparePhysicalQuantities
   </span>
   
 
@@ -2422,6 +2431,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#inputs" class="md-nav__link">
     <span class="md-ellipsis">
       Inputs
@@ -2481,6 +2499,9 @@
 </div>
 <p>This function uses <a href="https://docs.sympy.org/latest/index.html">SymPy</a> to test two Boolean expressions for equivalence.
 Expressions are considered equal if they result in the same truth table.</p>
+<p>When answering questions on Booleans, it is easy for students to come up with equivalent expressions but in a different form (e.g. 
+if using a Karnaugh map versus by inspection). compareBoolean aims to alleviate some of the frustration that may arise by accepting
+any response that is equivalent to the correct answer.</p>
 <h2 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
 <p>The current syntax expected by this function is based on the bitwise Boolean syntax used in C, Matlab and many other programming languages.</p>
 <table>
@@ -2522,6 +2543,35 @@ Expressions are considered equal if they result in the same truth table.</p>
 </ol>
 <p>Brackets can be used to group terms and specify the order of evaluation.
 For example, <code>A &amp; B | C &amp; D</code> is interpreted as <code>(A &amp; B) | (C &amp; D)</code>.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<p>The function can understand a wide variety of complex boolean expressions. Here are some examples to illustrate its capabilities.
+Each pair of expressions is equivalent, and would be marked as "correct" by compareBoolean.</p>
+<table>
+<thead>
+<tr>
+<th>Response</th>
+<th>Answer</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x &amp; y</code></td>
+<td><code>y &amp; x</code></td>
+<td>A trivial example, but probably the most common way student responses will differ from the answer</td>
+</tr>
+<tr>
+<td><code>(x &amp; ~y) | (y &amp; ~z)</code></td>
+<td><code>x ^ y</code></td>
+<td>Both expressions are equivalent to a logical exclusive or.</td>
+</tr>
+<tr>
+<td><code>~(~x &amp; ~y)</code></td>
+<td><code>x | y</code></td>
+<td>In this example de Morgan's laws have been used to find an equivalent representation of the OR operator.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <h3 id="optional-parameters">Optional parameters<a class="headerlink" href="#optional-parameters" title="Permanent link">&para;</a></h3>
 <p>There is currently one optional parameter that can be set: <code>enforce_expression_equality</code>.</p>

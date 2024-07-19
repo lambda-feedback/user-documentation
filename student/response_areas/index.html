@@ -682,15 +682,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#types-of-response-area" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of response area
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1447,11 +1438,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_eval_function_docs/compareBoolean/" class="md-nav__link">
+      <a href="../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareBoolean
+    arrayEqual
   </span>
   
 
@@ -1468,11 +1459,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
+      <a href="../../user_eval_function_docs/compareBoolean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    arrayEqual
+    compareBoolean
   </span>
   
 
@@ -1573,6 +1564,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    comparePhysicalQuantities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../user_eval_function_docs/latexEqual/" class="md-nav__link">
         
   
@@ -1620,27 +1632,6 @@
   
   <span class="md-ellipsis">
     compareSets
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    comparePhysicalQuantities
   </span>
   
 
@@ -2023,11 +2014,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev_eval_function_docs/compareBoolean/" class="md-nav__link">
+      <a href="../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareBoolean
+    arrayEqual
   </span>
   
 
@@ -2044,11 +2035,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
+      <a href="../../dev_eval_function_docs/compareBoolean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    arrayEqual
+    compareBoolean
   </span>
   
 
@@ -2149,6 +2140,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    comparePhysicalQuantities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../dev_eval_function_docs/latexEqual/" class="md-nav__link">
         
   
@@ -2196,27 +2208,6 @@
   
   <span class="md-ellipsis">
     compareSets
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    comparePhysicalQuantities
   </span>
   
 
@@ -2453,15 +2444,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#types-of-response-area" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of response area
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2494,7 +2476,7 @@ if your response differs from the answer by a small amount. </p>
 <p>Some questions will also require you to enter the units of the answer. In this case, any form of the same unit, with any SI prefix,
 should be accepted. For example, if the answer to a question is <code>10 MPa</code>, <code>0.01 GPa</code> and <code>10 MNm^-2</code> should both be marked correct. </p>
 <h2 id="entering-mathematical-expressions">Entering mathematical expressions<a class="headerlink" href="#entering-mathematical-expressions" title="Permanent link">&para;</a></h2>
-<p>Entering mathematical expressions on Lambda is very similar to if you was doing it on Matlab, for example. </p>
+<p>Entering mathematical expressions on Lambda is very similar to if you were doing it in Matlab, for example. </p>
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2506,11 +2488,15 @@ should be accepted. For example, if the answer to a question is <code>10 MPa</co
 <tbody>
 <tr>
 <td><span class="arithmatex">\(x^2 - x - 2\)</span></td>
-<td>x^2 - x - 2</td>
+<td><code>x^2 - x - 2</code></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td><span class="arithmatex">\(\sqrt{\sin(x) + \frac{\pi}{2}}\)</span></td>
+<td><code>sqrt(sin(x) + pi/2)</code></td>
+</tr>
+<tr>
+<td>$e^{\frac{\pi x}{2} + 1}</td>
+<td><code>exp((pi*x)/2 + 1)</code></td>
 </tr>
 </tbody>
 </table>
@@ -2559,28 +2545,9 @@ should be accepted. For example, if the answer to a question is <code>10 MPa</co
 <td></td>
 <td></td>
 </tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 </tbody>
 </table>
-<h2 id="types-of-response-area">Types of response area<a class="headerlink" href="#types-of-response-area" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Question Name</td>
-<td>Here we can edit the name given to the question</td>
-</tr>
-</tbody>
-</table>
+<p>Common elementary functions such as <span class="arithmatex">\(\sin\)</span>, <span class="arithmatex">\(\cos\)</span>, <span class="arithmatex">\(\arcsin\)</span>, <span class="arithmatex">\(\ln\)</span> etc. are also supported.</p>
 
 
 
@@ -2601,7 +2568,7 @@ should be accepted. For example, if the answer to a question is <code>10 MPa</co
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 8, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 19, 2024</span>
   </span>
 
     
