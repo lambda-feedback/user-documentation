@@ -3,26 +3,26 @@
 ## Accessing content
 
 ### Log in
-Use your Imperial Microsoft account to sign in and access your modules. Once you sign in you should see a list of the modules you are enrolled in:
+Use your Imperial Microsoft account to sign in and access your modules. Once you sign in, you should see a list of the modules you are enrolled in:
  
- You can see in this view the current progress of each module.
+ You can see the current progress of each module in this view.
   
 ![The student homepage](images/homepage.png)
   
 ### Select a module
-Click on the module name to select it. You should now see a list of available problem sets. If none are available your teacher may not have assigned any yet.
+Click on the module name to select it. You should now see a list of available problem sets. If none are available, your teacher may not have assigned any yet.
 
-You can see on this view the current progress of each problem set.
+You can see the current progress of each problem set in this view.
   
 ![Problem sets](images/problem_sets.png)
   
 ### Select a problem set
-Select the problem set you wish to work on and you should see a list of questions on the left-hand side, with the selected question on the right. If a question has sub-parts, you can select them on the right.
+Select the problem set you wish to work on, and you should see a list of questions on the left-hand side, with the selected question on the right. If a question has sub-parts, you can select them on the right.
 
 ![The question interface](images/question_interface.png)
   
 ### Accessing the PDF version of a problem set
-If you prefer to work on a PDF version of the problem set, you can generate a PDF by clicking the 'pdf' button underneath the problem set title
+If you prefer to work on a PDF version of the problem set, you can generate a PDF by clicking the 'pdf' button underneath the problem set title.
   
 ![The button to download a PDF](images/pdf_button.png)
   
