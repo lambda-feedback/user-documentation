@@ -261,6 +261,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/comparePhysicalQuantities/</loc>
+         <lastmod>2024-07-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/comparePhysicalQuantities/</loc>
+         <lastmod>2024-07-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/latexEqual/</loc>
          <lastmod>2024-07-21</lastmod>
          <changefreq>daily</changefreq>
@@ -287,16 +297,6 @@
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareSets/</loc>
-         <lastmod>2024-07-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/comparePhysicalQuantities/</loc>
-         <lastmod>2024-07-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/comparePhysicalQuantities/</loc>
          <lastmod>2024-07-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
