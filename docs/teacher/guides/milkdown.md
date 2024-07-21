@@ -37,6 +37,8 @@ For example, type the following after typing `$$ [space]` into a fresh line:
 
 If you begin a fresh line with `---` (three dashes) then a horizontal rule appears. Alternatively click the button on the toolbar to insert a horizontal rule.
 
+![Image showing the button of the step breaker line](images/StepBreaker.png)
+
 If you are editing a worked solution, then Lambda Feedback will split the worked solution into steps according to the location of horizontal rules. You can delete and add the rules and the solution steps will update.
 
 For example:
