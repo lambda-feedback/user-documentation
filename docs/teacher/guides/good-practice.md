@@ -46,6 +46,7 @@ You can use LaTeX in the pre-response area text.
 ## Use `\dfrac` for bigger fractions when needed.
 
 Use `$\dfrac{numerator}{denominator}$` for bigger fractions when you need to display them more clearly or emphasize them. For example, `$\dfrac{3}{4}$` will produce a bigger fraction than `$\frac{3}{4}$`.
+Alternatively, you can use `$\displaystyle$` at the start of an inline equation to render everything afterwards full-size (as in display maths mode), this is especially helpful for integrals.
 
 ## Use `\small` when smaller fonts or fractions are needed
 
