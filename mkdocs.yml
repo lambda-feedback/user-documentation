@@ -6,7 +6,7 @@ site_description: >-
   Architecture, syntax and usage details for an online learning platform
   focused on providing rich feedback to the user.
 repo_url: https://github.com/lambda-feedback/user-documentation
-edit_uri: edit/main/docs/
+edit_uri: blob/main/docs/
 
 # Project tree
 nav:
@@ -71,8 +71,8 @@ theme:
   logo: assets/logo.png
   favicon: assets/favicon.png
   icon:
-    repo: fontawesome/brands/github-alt
-    edit: material/pencil
+    repo: fontawesome/brands/github
+    edit: fontawesome/brands/github
   features:
     - navigation.indexes
     - navigation.instant

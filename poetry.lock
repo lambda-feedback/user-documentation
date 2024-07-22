@@ -414,7 +414,7 @@ description = "Mkdocs plugin for fetching, building and consolidating evaluation
 optional = false
 python-versions = "^3.9"
 files = []
-develop = false
+develop = true
 
 [package.dependencies]
 aiohttp = "^3.9.5"
@@ -423,10 +423,8 @@ PyGithub = "^2.3.0"
 ujson = "^5.10.0"
 
 [package.source]
-type = "git"
-url = "https://github.com/lambda-feedback/EvalDocsLoader.git"
-reference = "main"
-resolved_reference = "7f9a165acac3fde1d1d42a95444d2a66e6fad732"
+type = "directory"
+url = "../evaluation-docs-loader"
 
 [[package]]
 name = "frozenlist"
@@ -1664,4 +1662,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "b5c651b23ba1d2222ae9ac7acd340c4e393a3264947cb842f1404aa824098f37"
+content-hash = "c6632645b6d83706ec784ffb315189bfac7ca48d033e211013990f855c636e7e"
