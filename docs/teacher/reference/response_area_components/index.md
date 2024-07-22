@@ -1,18 +1,20 @@
 # Response Area Components
 
-These are what the user interacts with on the front-end. As React components, they admit a certain number of parameters which are described in this section.
+These are what the user interacts with on the front-end. They check an input given by the student, and provide feedback. As React components, they admit a certain number of parameters which are described in this section.
+
+![Screenshot](screenshots/Responsearea.png)
 
 ## Response Area creation
 
-The user can add, delete, edit or switch response area.
+Response areas are added to the question field, and are configured for each question in the set.
 
 ### Add Response Area
 
-The user can add a response area without any restrictions.
+The user can add any number of response areas to a question part. These may be separated by text fields. If desired, adding a double space in the field will space out response areas.
 
 ### Duplicate
 
-The user can duplicate the response area within the same part using the duplicate icon. When a response area is duplicated, then only data entered in the teacher edit mode are copied (such as input type, evaluation function, input symbols, pre and post text, answer, tests, cases, ...). Data entered in the teacher preview mode (such as comments) and student mode (comments, flags, likes, student solutions, ...) are not copied.
+The user can duplicate the response area within the same part using the duplicate icon. When a response area is duplicated, data entered in the teacher edit mode is copied (such as input type, evaluation function, input symbols, pre and post text, answer, tests, cases, ...). Data entered in the teacher preview mode (such as comments) and student mode (comments, flags, likes, student solutions, ...) is not copied.
 
 ### Reorder
 
@@ -42,22 +44,38 @@ which opens the 'Response Area Panel'. The panel follows a workflow designed aro
 Each stage is in a separate tab. Teachers are recommended to be mindful of this process when creating a response area.
 
 ### Input
+![Screenshot](screenshots/Inputfield.png)
 
-- Select an input style for the student by scrolling or filtering. Most needs are met by 'MCQ', 'NUMERIC' and 'EXPRESSION'.
-- INPUT: configure the _Student facing_ options for the input:
+- Select an input style for the student by scrolling or filtering. These consist of the following:
+  - Matrix
+  - Number
+  - Boolean (True/false)
+  - Text (Suitable for short text answers)
+  - Table
+  - Multiple-choice
+  - Expression (Gives a preview for the typed symbolic expression)
+  - Numeric units (Two fields, allowing for units to be assessed)
+  - Code
+  - Essay (Suitable for long text answers)
+- Each field has suitable evaluation functions. For example, a simple numerical answer is best suited to number, as this supports isSimilar, while assessing an equation is best suited to the expression foeld, as this supports compareExpressions.
+- Each input field may be configured with a series of options:
   - Enable live preview. Default TRUE for the EXPRESSION input type, to validate student input before submitting for feedback.
-  - Display input symbols. Default FALSE. Enable it to give students guidance on how to express themselves. Teachers configure the input symbols in the 'Evaluate' tab
+  - Display input symbols. Default FALSE. When TRUE, the symbols and associated shortcut codes that may be required for a problem are displayed beneath the input field. These are configured in the 'Evaluate' tab. 
   - Include in PDF. Default FALSE except for MCQ. Only affects the PDF version. Includes pre/post response text in the PDF, with a blank space between.
-  - Pre/post response text (optional). To clarify to students what to input in the response area. Accepts plain text, including single-dollar-delimited latex. E.g. `Estimate $f(x)=$` is acceptable.
-  - Answer. Enter a reference answer. Configure the answer where relevant (e.g. number of rows and columns).
+  - Pre/post response text (optional). To clarify to students what to input in the response area. Accepts plain text, including single-dollar-delimited latex. E.g. `Estimate $f(x)=$` is acceptable. When using fractions in this field, use `$\dfrac{}{}$` as this is more legible.
+  - Answer. Enter a reference answer. This will typically be the absolute solution to a problem. When requesting a symbolic answer, it must be given in terms of the chosen symbol shortcuts.  Configure the answer where relevant (e.g. number of rows and columns).
   - Response Area Preview: for teachers to verify the configuration
 - EVALUATE: configure how student expressions are evaluated. This is a 'no code' parametric configuration. Settings will be upgraded as the system improves.
 
-  - [Evaluation Function](https://lambda-feedback.github.io/user-documentation/teacher/reference/evaluation_functions/) - select from the list.
+  - [Evaluation Function](https://lambda-feedback.github.io/user-documentation/teacher/reference/evaluation_functions/) - select an evaluation function from the list. For example:
+    - isSimilar will perform a basic numerical comparison between the reference answer and         student input, with a configurable level of absolute and relative uncertainty.
+    - compareExpressions is typically used where a symbolic answer is requested.
   - Parameters - configure as provided, and add new parameters as required. Details depend on the Evaluation Function.
-  - Input symbols - define a dictionary of symbols and their equialevnt in code form. These symbols are used even if they are not displayed to students. All inputs are plain text. For example, the symbol `$f(x)$` may have code `fx` and alternatives `f_x`, `f(x)`, `f`. This dictionary will be provided to the evaluation function, even if the teacher has not displayed it to the student. Input Symbols allows teachers to pickup on multiple acceptable ways to express concepts, including less-rigorous methods that are not encouraged but will still be dealt with as well as possible. The configuration of input symbols is a very important part of providing high quality feedback. Note that the 'visibility' Boolean applies if input symbols are displayed to students, otherwise it is irrelevant. It allows Teachers to communicate some symbols to students, while keeping others hidden but still effective.
+  - Input symbols - define a dictionary of symbols and their equivalent in code form. This essentially associates a LaTeX-rendered symbol with a machine-readable variable label, with the LaTeX render returned to the student through the preview. These symbols may also be hiddent to students. All inputs are plain text. For example, the symbol `$f(x)$` may have code `fx` and alternatives `f_x`, `f(x)`, `f`. This dictionary will be provided to the evaluation function, even if the teacher has not displayed it to the student. This allow teachers to accept several alternative symbols, such as those with different cases or conventional expressions. The configuration of input symbols is a very important part of providing high quality feedback. Note that the 'visibility' Boolean applies if input symbols are displayed to students, otherwise it is irrelevant. It allows Teachers to communicate some symbols to students, while keeping others hidden to the student but visible to the evaluation function.
 
-- FEEDBACK: add 'cases'. Each case is an alternative reference answer, with customised parameters, so that multiple cases can be dealt with independently. Cases can be used to capture multiple correct approaches that are not equivalent. Cases can also be used to identify common incorrect approaches and to provide customised feedback. The FEEDBACK tab is typically populated after students start using the system, and when data is available to point to common expressions. Configuring a case works similarly to setting up the default answer in the INPUT tab, with added options for changing the colour of the given feedback, give costum feedback and toggling whether the case answer should be considered correct or not. Adding costum feedback will overwrite the feedback produced by the evaluation function. The exceptiong When a response is submitted it is evaluated for all cases and feedback for the first case that matches will be displayed. When determining which matched case is first, the default answer described in the INPUT tab will take precedence over all other cases, otherwise the feedback for the matched case with the lowest number will be displayed (i.e. the answer given in the INPUT tab can be considered to be Case 0).
+- FEEDBACK: add 'cases'. Each case is an alternative reference answer, with customised parameters, so that multiple cases can be dealt with independently. Cases can be used to capture multiple correct approaches that are not equivalent. Cases can also be used to identify common incorrect approaches and to provide customised feedback. The FEEDBACK tab is typically populated after students start using the system, and when data is available to point to common expressions. Configuring a case works similarly to setting up the default answer in the INPUT tab, with added options for changing the colour of the given feedback, give custom feedback and toggling whether the case answer should be considered correct or not. Adding custom feedback will overwrite the feedback produced by the evaluation function. When a response is submitted, it is evaluated for all cases and feedback for the first case that matches will be displayed. When determining which matched case is first, the default answer described in the INPUT tab will take precedence over all other cases, otherwise the feedback for the matched case with the lowest number will be displayed (i.e. the answer given in the INPUT tab can be considered to be Case 0). <br> Feedback fields also support LaTeX equations in both `$f(x)$` and `$$f(x)$$` formats, and Markdown inputs such as line breaks. Make sure to follow good typesetting practice in this field.
+
+![Screenshot](screenshots/Feedback.gif)
 
 - TESTS: tests provide a systematic way to log what behaviour the teacher expects. It provides a useful record and an efficient way to retest the bevhaiour of a response area over time (e.g. as evaluation functions evolve, or as the subject matter itself changes).
 
