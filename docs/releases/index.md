@@ -1,5 +1,14 @@
+## Release 2024/07/23
+
+- b132-lf-vulnerability-preventing-markdown-xss - improved security
+- b366-non-imperial-users-to-be-able-to-log-in - a change to allow external users to log in
+- b374-admin-analytics-evaluation-functions - added analytics for lambda function errors
+- b387-import-question-does-not-import-worked-solutions - corrected question export with solutions
+- b388-tutorials-and-solutions-steps-messed-up - corrected sorting of solution branches
+- b395-align-text-between-ras - corrected indenting of text between response areas
+
 ## Release 2024/07/18
-- b396-better-feedback-box - improve the feedback box UIand accessibility
+- b396-better-feedback-box - improve the feedback box UI and accessibility
 - b392-essay-code-ras - add two new response area types: code and essay
 
 ## Release 2024/07/16
