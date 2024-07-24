@@ -1,3 +1,7 @@
+## Release 2024/07/24
+
+- b378-admin-module-instance-breadcrumbs-incorrect - corrected the application header (for Admin module instance page)
+
 ## Release 2024/07/23
 
 - b132 - security update for milkdown
