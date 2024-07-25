@@ -59,6 +59,6 @@ This is the process to create the solution steps:
 
 ### Images
 
-You can add images to a textbox by copying and parting the image i. Hoowever, milkdown is currently not able to resize images and the only way to resize images is by editing the file to a lower resolution outside of the platform.
+You can add images with drag-and-drop or copy-and-paste. Currently (July '24) there is no way to resize images other than lowering the resolution - see below. 
 
 ![Image showing resized images on lambda feedback](images/resize_images.png)
