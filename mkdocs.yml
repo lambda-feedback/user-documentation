@@ -72,7 +72,7 @@ theme:
   favicon: assets/favicon.png
   icon:
     repo: fontawesome/brands/github
-    edit: fontawesome/brands/github
+    edit: fontawesome/solid/pen-to-square
   features:
     - navigation.indexes
     - navigation.instant
