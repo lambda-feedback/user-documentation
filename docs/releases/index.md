@@ -1,3 +1,10 @@
+## Release 2024/07/26
+
+- b369-guidance-text-on-enrollment - add a guidance text when adding students or teachers
+- b381-not-possible-to-add-multiple-teachers - allow to add multiple teachers
+- b410-open-doc-links-in-new-tab - open external links in a new tab
+- b413-authentication-failures - fixed problems with application logouts
+
 ## Release 2024/07/24
 
 - b378-admin-module-instance-breadcrumbs-incorrect - corrected the application header (for Admin module instance page)
