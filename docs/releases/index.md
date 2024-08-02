@@ -1,3 +1,8 @@
+## Release 2024/08/02
+
+- b391-milkdown-fault-if-latex-on-last-line - a fix to for latex (e.g. $\alpha<1$) to be displayed as a latex (and not as \$alpha<1\$) if not followed by a non-latex
+- b415-guidance-time-suggestion-feature-by-colin - a new feature using AI to suggest guideance time
+
 ## Release 2024/07/26
 
 - b369-guidance-text-on-enrollment - add a guidance text when adding students or teachers
