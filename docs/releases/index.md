@@ -1,3 +1,10 @@
+## Release 2024/08/07
+
+- b375-correct-tex-and-pdf-for-solutions - improvements in pdf generation
+- b412-export-import-wrong-order-of-parts - correction to make sure parts and response areas are created in the correct order when imported
+- b413-authentication-failures - part 2 - more fixes to prevent application logouts
+- b416-download-set-as-json-downloads-wrong-set - correction to make sure the JSON file is generated for the selected set
+
 ## Release 2024/08/02
 
 - b391-milkdown-fault-if-latex-on-last-line - a fix to for latex (e.g. $\alpha<1$) to be displayed as a latex (and not as \$alpha<1\$) if not followed by a non-latex
