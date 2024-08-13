@@ -1,14 +1,14 @@
 ## Release 2024/08/07
 
-- b375-correct-tex-and-pdf-for-solutions - improvements in pdf generation
-- b412-export-import-wrong-order-of-parts - correction to make sure parts and response areas are created in the correct order when imported
-- b413-authentication-failures - part 2 - more fixes to prevent application logouts
-- b416-download-set-as-json-downloads-wrong-set - correction to make sure the JSON file is generated for the selected set
+- b375-correct-tex-and-pdf-for-solutions - PDF generation improvements
+- b412-export-import-wrong-order-of-parts - ensure correct part and response-area order when importing
+- b413-authentication-failures - part 2 - prevent application logouts
+- b416-download-set-as-json-downloads-wrong-set - ensure correct set when exporting JSON
 
 ## Release 2024/08/02
 
-- b391-milkdown-fault-if-latex-on-last-line - a fix to for latex (e.g. $\alpha<1$) to be displayed as a latex (and not as \$alpha<1\$) if not followed by a non-latex
-- b415-guidance-time-suggestion-feature-by-colin - a new feature using AI to suggest guideance time
+- b391-milkdown-fault-if-latex-on-last-line - fixed milkdown bug - if text ends with latex, it rendered raw but now renders properly.
+- b415-guidance-time-suggestion-feature-by-colin - guidance time suggestion (using Machine Learning based on our database of content)
 
 ## Release 2024/07/26
 
