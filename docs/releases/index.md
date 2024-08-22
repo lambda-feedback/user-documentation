@@ -1,3 +1,11 @@
+## Release 2024/08/22
+
+- b356-delete-all-questions-in-set-not-handled-gracefully - fixed a problem which occured after deleting all questions in the set
+- b409-module-bulk-rollover - new functionality to allow rollovers of more modules at the same time
+- b17-set-part-to-a-when-switching-question - in teacher mode, when switching a question, always display part (a)
+- b419-deleting-case-is-causing-feedbacks-to-shift-incorrectly - display correct remaining cases after deleting one
+- b423-pdf-generation-displays-different-error-first-time - prevent first PDF generation message to be different from the follow up messages
+
 ## Release 2024/08/07
 
 - b375-correct-tex-and-pdf-for-solutions - PDF generation improvements
