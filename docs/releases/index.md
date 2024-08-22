@@ -2,7 +2,7 @@
 
 - b356-delete-all-questions-in-set-not-handled-gracefully - create blank question when all others are deleted
 - b409-module-bulk-rollover - bulk creation of new module instances (for admins)
-- b17-set-part-to-a-when-switching-question - in teacher mode, when switching a question, always display part (a)
+- b417-set-part-to-a-when-switching-question - in teacher mode, when switching a question, always display part (a)
 - b419-deleting-case-is-causing-feedbacks-to-shift-incorrectly - display correct remaining cases after deleting one
 - b423-pdf-generation-displays-different-error-first-time - first PDF generation message consistent with follow up messages
 
