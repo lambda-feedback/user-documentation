@@ -1,3 +1,8 @@
+## Release 2024/08/22 - part 2
+
+- b402-create-table-view - table view added to the teacher module view
+- b406-prepare-ui-update - changes in the user interface
+
 ## Release 2024/08/22
 
 - b356-delete-all-questions-in-set-not-handled-gracefully - create blank question when all others are deleted
