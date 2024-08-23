@@ -1,3 +1,10 @@
+## Release 2024/08/23 - 2
+
+- b413-force-renew - force renewal of id tokens before they expire
+- b429_deleting_cases_and_tests_qa - Change the index to random to force re-render
+- b380-fix-tables - Table paging fix
+- 379-disappearing-r-at-beginning-of-line-milkdown - fix disappearing 'R' at beginning of line milkdown
+
 ## Release 2024/08/23
 
 - b413-grounded - updates to the authentication flow
