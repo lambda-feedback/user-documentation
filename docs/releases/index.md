@@ -1,3 +1,7 @@
+## Release 2024/08/23
+
+- b413-grounded - updates to the authentication flow
+
 ## Release 2024/08/22 - part 2
 
 - b402-create-table-view - table view added to the teacher module view
