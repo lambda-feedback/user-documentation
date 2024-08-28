@@ -38,6 +38,7 @@ nav:
       - Reference:
           - Access control: "teacher/reference/access_control.md"
           - Latex functionality: "teacher/reference/latex_functionality.md"
+          - PDF generation: "teacher/reference/pdf_generation.md"
           - Response Areas:
               - "teacher/reference/response_area_components/index.md"
               - Text: "teacher/reference/response_area_components/Text.md"
