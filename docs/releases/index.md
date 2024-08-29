@@ -1,3 +1,15 @@
+## Release 2024/08/28
+
+- b427_display_pdf_errors_after_set_publish - Display PDF error message when publishing whole set
+- b425-studentmodule-and-studentmodules-api-retrieve-hidden-sets - Do not retrieve hidden sets for students
+- b393-canvas-stored - Store canvas in database
+- b383-check-for-existing-module-name - Check if module with this name already exists
+- b428-bulk-rollover-qa-comments - bulk rollover fixes
+- b431-add-sentry - Add Sentry errors monitoring
+- b433-not-possible-to-enrol-students - Fixed enrolling students
+- b383_do_not_query_without_module_id - Do not run query from header without module id 
+- b436-fix-instance-swapper - Fix instance swapper
+
 ## Release 2024/08/23 - 2
 
 - b413-force-renew - force renewal of id tokens before they expire
