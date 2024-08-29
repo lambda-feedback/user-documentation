@@ -3,7 +3,7 @@
 - b383-check-for-existing-module-name - Check if module name already exists when creating new module
 - b383_do_not_query_without_module_id - do not run query from header without module id 
 - b393-canvas-stored - Store canvas in database
-- b425-studentmodule-and-studentmodules-api-retrieve-hidden-sets - Do not retrieve hidden sets for students
+- b425-studentmodule-and-studentmodules-api-retrieve-hidden-sets - do not retrieve hidden sets for students
 - b427_display_pdf_errors_after_set_publish - Display PDF error message when publishing whole set
 - b428-bulk-rollover-qa-comments - updates to bulk rollover feature
 - b431-add-sentry - Add Sentry error monitoring
@@ -14,8 +14,8 @@
 
 - b380-fix-tables - Table paging fix
 - b379-disappearing-r-at-beginning-of-line-milkdown - fix disappearing 'R' at beginning of line milkdown
-- b413-force-renew - force renewal of id tokens before they expire
-- b429_deleting_cases_and_tests_qa - Change the index to random to force re-render
+- b413-force-renew - authentication update to avoid logging out
+- b429_deleting_cases_and_tests_qa - ensure feedback case order is maintained
   
 ## Release 2024/08/23
 
