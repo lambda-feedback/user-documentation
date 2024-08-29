@@ -1,27 +1,27 @@
 ## Release 2024/08/28
 
-- b427_display_pdf_errors_after_set_publish - Display PDF error message when publishing whole set
-- b425-studentmodule-and-studentmodules-api-retrieve-hidden-sets - Do not retrieve hidden sets for students
+- b383-check-for-existing-module-name - Check if module name already exists when creating new module
+- b383_do_not_query_without_module_id - do not run query from header without module id 
 - b393-canvas-stored - Store canvas in database
-- b383-check-for-existing-module-name - Check if module with this name already exists
-- b428-bulk-rollover-qa-comments - bulk rollover fixes
-- b431-add-sentry - Add Sentry errors monitoring
-- b433-not-possible-to-enrol-students - Fixed enrolling students
-- b383_do_not_query_without_module_id - Do not run query from header without module id 
-- b436-fix-instance-swapper - Fix instance swapper
+- b425-studentmodule-and-studentmodules-api-retrieve-hidden-sets - Do not retrieve hidden sets for students
+- b427_display_pdf_errors_after_set_publish - Display PDF error message when publishing whole set
+- b428-bulk-rollover-qa-comments - updates to bulk rollover feature
+- b431-add-sentry - Add Sentry error monitoring
+- b433-not-possible-to-enrol-students - fix to student enrollment
+- b436-fix-instance-swapper - fix instance swapper
 
 ## Release 2024/08/23 - 2
 
+- b380-fix-tables - Table paging fix
+- b379-disappearing-r-at-beginning-of-line-milkdown - fix disappearing 'R' at beginning of line milkdown
 - b413-force-renew - force renewal of id tokens before they expire
 - b429_deleting_cases_and_tests_qa - Change the index to random to force re-render
-- b380-fix-tables - Table paging fix
-- 379-disappearing-r-at-beginning-of-line-milkdown - fix disappearing 'R' at beginning of line milkdown
-
+  
 ## Release 2024/08/23
 
 - b413-grounded - updates to the authentication flow
 
-## Release 2024/08/22 - part 2
+## Release 2024/08/22 - 2
 
 - b402-create-table-view - table view added to the teacher module view
 - b406-prepare-ui-update - changes in the user interface
