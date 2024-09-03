@@ -56,6 +56,12 @@ Use `$\small{text}$` when you need to display smaller fonts or fractions in your
 
 Just drag + drop an audio file into the milkdown editor.
 
+## Issue with input symbols
+
+For the `code` of input symbols in the response areas, the system cannot accept brackets (i.e `dot(x)` for $\dot{x}$) and response must be formatted in different ways (i.e `dot_x`). 
+
+`a_b` will render as $a_b$ without adding an input symbol, but note that `dot_x` overrides the `_` input (in this example, will render as $\dot{x}$ instead of $dot_x$)
+
 ## Use live preview and permit all types of input
 
 Live preview and input types are found in an evaluation function under `configure` - `INPUT`.
