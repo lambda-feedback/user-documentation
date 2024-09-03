@@ -216,16 +216,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/shortTextAnswer/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/shortTextAnswer/</loc>
-         <lastmod>2024-09-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/isExactEqual/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
@@ -236,12 +226,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arrayEqual/</loc>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/shortTextAnswer/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arrayEqual/</loc>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/shortTextAnswer/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -252,6 +242,16 @@
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/wolframAlphaEqual/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arrayEqual/</loc>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arrayEqual/</loc>
          <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
