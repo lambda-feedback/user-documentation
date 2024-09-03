@@ -82,10 +82,10 @@ You can use the code `\mathrm{}` or `{\rm}`. Both code will give you your units 
 
 If you want to use `I` for the imaginary constant, add the parameter `complexNumbers` to "advanced - raw parameters" by clicking the green (+). Type in `complexNumbers` and press enter. Click the green edit button, type in "True" and a pop-up `bool - true` will appear. Click the green tick.
 
-![Sreenshot of button to add criteria](complexNumbersv2.png)
+![Sreenshot of button to add criteria](images/complexNumbersv2.png)
 
 You can denote `i` and `j` as `I` by using the input symbols below. 
 
-![Sreenshot of button to add criteria](complexNumbersv3.png)
+![Sreenshot of button to add criteria](images/complexNumbersv3.png)
 
 Furthermore, the system can equate `exp(Ix)` to `cos(x)+Isin(x)`.
