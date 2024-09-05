@@ -168,6 +168,24 @@ tests = ["cloudpickle", "hypothesis", "mypy (>=1.11.1)", "pympler", "pytest (>=4
 tests-mypy = ["mypy (>=1.11.1)", "pytest-mypy-plugins"]
 
 [[package]]
+name = "autotests"
+version = "0.0.1"
+description = ""
+optional = false
+python-versions = "^3.9"
+files = []
+develop = false
+
+[package.dependencies]
+pyyaml = "^6.0"
+
+[package.source]
+type = "git"
+url = "https://github.com/m-hurlow/autotests.git"
+reference = "main"
+resolved_reference = "9c1418862d70dbb635a2554f24ac1e1f8ccb9cdb"
+
+[[package]]
 name = "babel"
 version = "2.16.0"
 description = "Internationalization utilities"
@@ -472,6 +490,7 @@ develop = false
 
 [package.dependencies]
 aiohttp = "^3.9.5"
+autotests = {git = "https://github.com/m-hurlow/autotests.git", branch = "main"}
 mistletoe = "^1.4.0"
 PyGithub = "^2.3.0"
 ujson = "^5.10.0"
@@ -480,7 +499,7 @@ ujson = "^5.10.0"
 type = "git"
 url = "https://github.com/lambda-feedback/EvalDocsLoader.git"
 reference = "autotests"
-resolved_reference = "cd48c4797feba1cf8ae7769942b5acc9c4f82317"
+resolved_reference = "8b81e8c8fab003d671739114d140f5c58b5a012c"
 
 [[package]]
 name = "frozenlist"
