@@ -181,9 +181,9 @@ pyyaml = "^6.0"
 
 [package.source]
 type = "git"
-url = "https://github.com/m-hurlow/autotests.git"
+url = "https://github.com/lambda-feedback/evaluation-function-auto-tests"
 reference = "main"
-resolved_reference = "9c1418862d70dbb635a2554f24ac1e1f8ccb9cdb"
+resolved_reference = "1dfcf6c11dc442160fcd4a6ab3084d3c036a04ee"
 
 [[package]]
 name = "babel"
@@ -490,7 +490,7 @@ develop = false
 
 [package.dependencies]
 aiohttp = "^3.9.5"
-autotests = {git = "https://github.com/m-hurlow/autotests.git", branch = "main"}
+autotests = {git = "https://github.com/lambda-feedback/evaluation-function-auto-tests", branch = "main"}
 mistletoe = "^1.4.0"
 PyGithub = "^2.3.0"
 ujson = "^5.10.0"
@@ -498,8 +498,8 @@ ujson = "^5.10.0"
 [package.source]
 type = "git"
 url = "https://github.com/lambda-feedback/EvalDocsLoader.git"
-reference = "autotests"
-resolved_reference = "8b81e8c8fab003d671739114d140f5c58b5a012c"
+reference = "main"
+resolved_reference = "c52ff00714be572287e4d4a87a3ac5378b090cce"
 
 [[package]]
 name = "frozenlist"
@@ -1744,4 +1744,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "e308d5a407960a75cbf16cf0dd552e6917277d8ada33eba945715dd3528495cf"
+content-hash = "a1a685095056cf887fc21e9244af98ad68262c0094b364a6baad2372eeca17e5"
