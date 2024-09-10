@@ -1,4 +1,5 @@
 ## Release 2024/09/10
+- b413-authentication-failures - updated authentication to avoid logging out
 - b438-enable-canvas-for-all-users - enabled canvas for all users (see b343 in [2024/06/28](#release-20240628))
 - b441-custom-milkdown-theme-bug - adjusted the new Milkdown theme to improve compatibility with math mode
 
