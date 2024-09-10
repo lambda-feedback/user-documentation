@@ -1,5 +1,15 @@
-## Release 2024/08/28
+## Release 2024/09/04
+- b441-revert-to-nord-theme - undo milkdown theme switch until math block is fixed
 
+## Release 2024/09/03
+- b386-provide-drop-down-list-for-ra-default-lambda-function
+
+## Release 2024/09/02
+- b398-upgrade-student-module-list - add new card view to module list student page
+- b430-fix-redesign-bugs - add proper error handling to teacher pages when not a teacher
+- b435-remove-env-from-git - remove .env file from git as it shouldn't be checked into vcs
+
+## Release 2024/08/28
 - b383-check-for-existing-module-name - Check if module name already exists when creating new module
 - b383_do_not_query_without_module_id - do not run query from header without module id 
 - b393-canvas-stored - Store canvas in database
