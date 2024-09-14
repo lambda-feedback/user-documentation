@@ -1,20 +1,35 @@
+## Release 2024/09/14
+
+-	b134-ipados-ios-safari-like-flag-problem-help-off-the-page - fixed scrolling of problem sets when using iPadOS or iOS Safari
+-	b439-disable-download-when-no-pdf-available - improved behavior of the “Download set” drop-down button
+- b407-all-questions-published-when-publishing-one - corrected version history page to display accurate data when viewing past question versions
+- b434-ui-redesign-tweaks - additional tweaks to the user interface
+- b442-bring-back-sets-download-options - restored “Set Download” drop-down button that was removed during the UI redesign
+- b447-aws-db-backups-stopped - fixed the database backup issue
+- b451-display-modules-even-if-sets-are-hidden - updated the system so students can view their modules, even if no sets are available 
+
 ## Release 2024/09/10
+
 - b413-authentication-failures - code cleanup for updated authentication to avoid logging out (see b413 in [2024/08/23](#release-20240823))
 - b438-enable-canvas-for-all-users - enabled canvas for all users (see b343 in [2024/06/28](#release-20240628))
 - b441-custom-milkdown-theme-bug - adjusted the new Milkdown theme to improve compatibility with math mode
 
 ## Release 2024/09/04
+
 - b441-revert-to-nord-theme - undo milkdown theme switch until math block is fixed
 
 ## Release 2024/09/03
+
 - b386-provide-drop-down-list-for-ra-default-lambda-function
 
 ## Release 2024/09/02
+
 - b398-upgrade-student-module-list - add new card view to module list student page
 - b430-fix-redesign-bugs - add proper error handling to teacher pages when not a teacher
 - b435-remove-env-from-git - remove .env file from git as it shouldn't be checked into vcs
 
 ## Release 2024/08/28
+
 - b383-check-for-existing-module-name - Check if module name already exists when creating new module
 - b383_do_not_query_without_module_id - do not run query from header without module id 
 - b393-canvas-stored - Store canvas in database
