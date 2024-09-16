@@ -1376,27 +1376,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arrayEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../user_eval_function_docs/compareBoolean/" class="md-nav__link">
         
   
@@ -1439,27 +1418,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arraySymbolicEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../user_eval_function_docs/isExactEqual/" class="md-nav__link">
         
   
@@ -1481,11 +1439,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/compareConstructs/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareConstructs
+    arrayEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    arraySymbolicEqual
   </span>
   
 
@@ -1528,6 +1507,27 @@
   
   <span class="md-ellipsis">
     shortTextAnswer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/compareConstructs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareConstructs
   </span>
   
 
@@ -2226,27 +2226,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arrayEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../dev_eval_function_docs/compareBoolean/" class="md-nav__link">
         
   
@@ -2289,27 +2268,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arraySymbolicEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../dev_eval_function_docs/isExactEqual/" class="md-nav__link">
         
   
@@ -2331,11 +2289,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/compareConstructs/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareConstructs
+    arrayEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    arraySymbolicEqual
   </span>
   
 
@@ -2378,6 +2357,27 @@
   
   <span class="md-ellipsis">
     shortTextAnswer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_eval_function_docs/compareConstructs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareConstructs
   </span>
   
 
@@ -3108,14 +3108,24 @@ for more information.</p>
 (<a href="https://github.com/lambda-feedback/EvalDocsLoader">EvalDocsLoader</a>) can read this file and
 auto-generate examples of correct and incorrect responses. This can help new users understand
 the capabilities of your evaluation function.</p>
+<p>For an example of how this looks, see the user docs for <a href="https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareBoolean/#examples-from-integration-tests">compareBoolean</a>.</p>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
-<p>Two essential and required documentation files are copied over during the creation of the evaluation function docker image. These are subsequently served by the function under the <code>docs-dev</code> and <code>docs-user</code> commands, to be accessed by this documentation website, as well as for embedding on LambdaFeedback. For more information about the markdown syntax, please refer to the following sources:</p>
-<ul>
-<li><a href="https://www.mkdocs.org/user-guide/writing-your-docs/#writing-your-docs">MkDocs Documentation</a></li>
-<li><a href="https://squidfunk.github.io/mkdocs-material/reference/">MkDocs-Material Documentation</a></li>
-</ul>
+<p>Evaluation function documentation is stored in two files, which contain documentation for
+developers and users respectively. These files are fetched by 
+<a href="https://github.com/lambda-feedback/EvalDocsLoader">EvalDocsLoader</a>, which integrates them
+into this documentation site. </p>
+<p>In order for EvalDocsLoader to find your docs, your evaluation function must:</p>
+<ol>
+<li>be deployed to the production site;</li>
+<li>belong to the lambda-feedback organisation on Github;</li>
+<li>have a <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics">topic</a> called <code>evaluation-function</code>.</li>
+</ol>
+<p>Once these requirements are met, the docs you write should appear on the documentation site.</p>
 <h3 id="docsdevmd"><code>docs/dev.md</code><a class="headerlink" href="#docsdevmd" title="Permanent link">&para;</a></h3>
+<p>This should contain documentation that would be useful for new developers working on your function.</p>
 <h3 id="docsusermd"><code>docs/user.md</code><a class="headerlink" href="#docsusermd" title="Permanent link">&para;</a></h3>
+<p>This should contain information for non-technical users, such as an overview of capabilities,
+examples, and a description of parameters.</p>
 
 
 

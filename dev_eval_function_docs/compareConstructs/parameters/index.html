@@ -1370,27 +1370,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arrayEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../user_eval_function_docs/compareBoolean/" class="md-nav__link">
         
   
@@ -1433,27 +1412,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arraySymbolicEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../user_eval_function_docs/isExactEqual/" class="md-nav__link">
         
   
@@ -1475,11 +1433,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/compareConstructs/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareConstructs
+    arrayEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    arraySymbolicEqual
   </span>
   
 
@@ -1522,6 +1501,27 @@
   
   <span class="md-ellipsis">
     shortTextAnswer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/compareConstructs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareConstructs
   </span>
   
 
@@ -1969,27 +1969,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arrayEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arrayEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../compareBoolean/" class="md-nav__link">
         
   
@@ -2032,27 +2011,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arraySymbolicEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arraySymbolicEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../isExactEqual/" class="md-nav__link">
         
   
@@ -2074,11 +2032,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareConstructs
+    arrayEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arraySymbolicEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    arraySymbolicEqual
   </span>
   
 
@@ -2121,6 +2100,27 @@
   
   <span class="md-ellipsis">
     shortTextAnswer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareConstructs
   </span>
   
 
@@ -2391,19 +2391,21 @@
 <hr />
 <p>Parameters are communicated from the web application to the evaluation function in JSON format,
 which are passed to <code>evaluation_function()</code> as a dictionary.</p>
-<p>This dictionary has several fields:
-- <code>global_variables_check_list</code>: This is either a list of strings, or a comma-delimited string
+<p>This dictionary has several fields:</p>
+<ul>
+<li><code>global_variables_check_list</code>: This is either a list of strings, or a comma-delimited string
   containing a list of variable names to check. If this list is present, a
   <a href="compareConstructs/variable_content.md">global variable check</a> is performed, and the given variables are compared
-  between the response and the answer.
-- <code>check_func</code>: This is a string containing the name of a function. If this is present,
-  a <a href="compareConstructs/functions.md">function check</a> is performed on this function
-- <code>check_names</code>: A boolean. If this is true, all functions and classes in the response must
-  match with the answer exactly.
-- <code>output_inexact</code>: A boolean. If this is true, a tolerance is applied to values printed to the
+  between the response and the answer.</li>
+<li><code>check_func</code>: This is a string containing the name of a function. If this is present,
+  a <a href="compareConstructs/functions.md">function check</a> is performed on this function</li>
+<li><code>check_names</code>: A boolean. If this is true, all functions and classes in the response must
+  match with the answer exactly.</li>
+<li><code>output_inexact</code>: A boolean. If this is true, a tolerance is applied to values printed to the
   console. This is useful for comparing numbers, where for example <code>0</code>, <code>0.0</code> and <code>0.000000005</code>
   should be considered the same due to floating point precision. Otherwise, string comparisons
-  are used.</p>
+  are used.</li>
+</ul>
 <p>This parameter format is simple, but flawed. It is not possible to specify exactly which checks
 are run. For example, currently, if <code>check_func</code> is set, the specified function will be tested
 but the global variables will not be checked, even if <code>global_variables_check_list</code> is given.
