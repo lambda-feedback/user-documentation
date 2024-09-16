@@ -284,6 +284,8 @@ Another benefit of this approach is that the tool that collects evaluation funct
 auto-generate examples of correct and incorrect responses. This can help new users understand
 the capabilities of your evaluation function.
 
+For an example of how this looks, see the user docs for [compareBoolean](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareBoolean/#examples-from-integration-tests).
+
 ## Documentation
 
 Evaluation function documentation is stored in two files, which contain documentation for
