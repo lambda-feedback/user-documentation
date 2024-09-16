@@ -286,11 +286,24 @@ the capabilities of your evaluation function.
 
 ## Documentation
 
-Two essential and required documentation files are copied over during the creation of the evaluation function docker image. These are subsequently served by the function under the `docs-dev` and `docs-user` commands, to be accessed by this documentation website, as well as for embedding on LambdaFeedback. For more information about the markdown syntax, please refer to the following sources:
+Evaluation function documentation is stored in two files, which contain documentation for
+developers and users respectively. These files are fetched by 
+[EvalDocsLoader](https://github.com/lambda-feedback/EvalDocsLoader), which integrates them
+into this documentation site. 
 
-- [MkDocs Documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-your-docs)
-- [MkDocs-Material Documentation](https://squidfunk.github.io/mkdocs-material/reference/)
+In order for EvalDocsLoader to find your docs, your evaluation function must:
+
+1. be deployed to the production site;
+2. belong to the lambda-feedback organisation on Github;
+3. have a [topic](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) called `evaluation-function`.
+
+Once these requirements are met, the docs you write should appear on the documentation site.
 
 ### `docs/dev.md`
 
+This should contain documentation that would be useful for new developers working on your function.
+
 ### `docs/user.md`
+
+This should contain information for non-technical users, such as an overview of capabilities,
+examples, and a description of parameters.
