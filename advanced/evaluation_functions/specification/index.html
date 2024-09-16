@@ -1324,6 +1324,8 @@
       
         
       
+        
+      
     
     
       
@@ -1374,11 +1376,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/compareBoolean/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareBoolean
+    arrayEqual
   </span>
   
 
@@ -1395,11 +1397,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/compareBoolean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    arrayEqual
+    compareBoolean
   </span>
   
 
@@ -1479,11 +1481,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/compareConstructs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    shortTextAnswer
+    compareConstructs
   </span>
   
 
@@ -1505,6 +1507,27 @@
   
   <span class="md-ellipsis">
     comparePhysicalQuantities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shortTextAnswer
   </span>
   
 
@@ -1992,6 +2015,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="evaluation_tests.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autotests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autotests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2136,6 +2174,8 @@
       
         
       
+        
+      
     
     
       
@@ -2186,11 +2226,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/compareBoolean/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareBoolean
+    arrayEqual
   </span>
   
 
@@ -2207,11 +2247,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/compareBoolean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    arrayEqual
+    compareBoolean
   </span>
   
 
@@ -2291,11 +2331,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/compareConstructs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    shortTextAnswer
+    compareConstructs
   </span>
   
 
@@ -2317,6 +2357,27 @@
   
   <span class="md-ellipsis">
     comparePhysicalQuantities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shortTextAnswer
   </span>
   
 
@@ -2728,6 +2789,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="evaluation_tests.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autotests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autotests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3001,6 +3077,37 @@ As the actual function output will look like:
 This immediately indicates to the frontend client that something has gone wrong, allowing for proper feedback to be displayed.
 </code></pre></div>
 <h2 id="evaluation_testspy"><code>evaluation_tests.py</code><a class="headerlink" href="#evaluation_testspy" title="Permanent link">&para;</a></h2>
+<p>This file is intended to contain unit tests for the <code>evaluation_function</code>. Python's built-in
+<a href="https://docs.python.org/3/library/unittest.html"><code>unittest</code></a> framework is used.
+These tests are run by Github Actions whenever changes are pushed to the main branch, and
+the evaluation function is not deployed unless all the tests pass.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+</div>
+<p>A minimal example of a test:
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">from</span> <span class="nn">.evaluation</span> <span class="kn">import</span> <span class="n">evaluation_function</span>
+
+<span class="c1"># Tests are functions beginning with &quot;test_&quot; in </span>
+<span class="c1"># a class that inherits from unittest.TestCase</span>
+<span class="k">class</span> <span class="nc">TestEvaluationFunction</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_trivial</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">evaluation_function</span><span class="p">(</span><span class="s2">&quot;a + b&quot;</span><span class="p">,</span> <span class="s2">&quot;a + b&quot;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;is_correct&quot;</span><span class="p">])</span>
+</code></pre></div>
+Tests can be run locally using 
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>app.evaluation_tests
+</code></pre></div></p>
+<h3 id="autotests">Autotests<a class="headerlink" href="#autotests" title="Permanent link">&para;</a></h3>
+<p>For writing simple tests, it may be easier to write the tests in a config file and have them
+run on the evaluation function automatically. This can be achieved using the autotests library,
+which can easily be integrated into an existing project by adding a decorator to the test class.
+See the autotests <a href="https://github.com/lambda-feedback/evaluation-function-auto-tests">README</a>
+for more information.</p>
+<p>Another benefit of this approach is that the tool that collects evaluation function documentation
+(<a href="https://github.com/lambda-feedback/EvalDocsLoader">EvalDocsLoader</a>) can read this file and
+auto-generate examples of correct and incorrect responses. This can help new users understand
+the capabilities of your evaluation function.</p>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
 <p>Two essential and required documentation files are copied over during the creation of the evaluation function docker image. These are subsequently served by the function under the <code>docs-dev</code> and <code>docs-user</code> commands, to be accessed by this documentation website, as well as for embedding on LambdaFeedback. For more information about the markdown syntax, please refer to the following sources:</p>
 <ul>
@@ -3029,7 +3136,7 @@ This immediately indicates to the frontend client that something has gone wrong,
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 4, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 16, 2024</span>
   </span>
 
     
