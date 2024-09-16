@@ -248,6 +248,42 @@ It is discouraged to do the following in the evaluation code:
 
 ## `evaluation_tests.py`
 
+This file is intended to contain unit tests for the `evaluation_function`. Python's built-in
+[`unittest`](https://docs.python.org/3/library/unittest.html) framework is used.
+These tests are run by Github Actions whenever changes are pushed to the main branch, and
+the evaluation function is not deployed unless all the tests pass.
+
+!!! Example
+A minimal example of a test:
+```python
+import unittest
+from .evaluation import evaluation_function
+
+# Tests are functions beginning with "test_" in 
+# a class that inherits from unittest.TestCase
+class TestEvaluationFunction(unittest.TestCase):
+    def test_trivial(self):
+        result = evaluation_function("a + b", "a + b", {})
+        self.assertTrue(result["is_correct"])
+```
+Tests can be run locally using 
+```bash
+$ python -m unittest app.evaluation_tests
+```
+
+### Autotests
+
+For writing simple tests, it may be easier to write the tests in a config file and have them
+run on the evaluation function automatically. This can be achieved using the autotests library,
+which can easily be integrated into an existing project by adding a decorator to the test class.
+See the autotests [README](https://github.com/lambda-feedback/evaluation-function-auto-tests)
+for more information.
+
+Another benefit of this approach is that the tool that collects evaluation function documentation
+([EvalDocsLoader](https://github.com/lambda-feedback/EvalDocsLoader)) can read this file and
+auto-generate examples of correct and incorrect responses. This can help new users understand
+the capabilities of your evaluation function.
+
 ## Documentation
 
 Two essential and required documentation files are copied over during the creation of the evaluation function docker image. These are subsequently served by the function under the `docs-dev` and `docs-user` commands, to be accessed by this documentation website, as well as for embedding on LambdaFeedback. For more information about the markdown syntax, please refer to the following sources:
