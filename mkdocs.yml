@@ -34,6 +34,8 @@ nav:
           - Analytics: "teacher/guides/analytics.md"
           - Good practice: "teacher/guides/good-practice.md"
           - FAQ: "teacher/guides/faq.md"
+          - Guidance:
+              - Guidance Time Suggestion: "teacher/guides/guidance/guidance-time-suggestion.md"
 
       - Reference:
           - Access control: "teacher/reference/access_control.md"
