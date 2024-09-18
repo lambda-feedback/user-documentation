@@ -248,13 +248,64 @@ It is discouraged to do the following in the evaluation code:
 
 ## `evaluation_tests.py`
 
+This file is intended to contain unit tests for the `evaluation_function`. Python's built-in
+[`unittest`](https://docs.python.org/3/library/unittest.html) framework is used.
+These tests are run by Github Actions whenever changes are pushed to the main branch, and
+the evaluation function is not deployed unless all the tests pass.
+
+!!! Example
+A minimal example of a test:
+```python
+import unittest
+from .evaluation import evaluation_function
+
+# Tests are functions beginning with "test_" in 
+# a class that inherits from unittest.TestCase
+class TestEvaluationFunction(unittest.TestCase):
+    def test_trivial(self):
+        result = evaluation_function("a + b", "a + b", {})
+        self.assertTrue(result["is_correct"])
+```
+Tests can be run locally using 
+```bash
+$ python -m unittest app.evaluation_tests
+```
+
+### Autotests
+
+For writing simple tests, it may be easier to write the tests in a config file and have them
+run on the evaluation function automatically. This can be achieved using the autotests library,
+which can easily be integrated into an existing project by adding a decorator to the test class.
+See the autotests [README](https://github.com/lambda-feedback/evaluation-function-auto-tests)
+for more information.
+
+Another benefit of this approach is that the tool that collects evaluation function documentation
+([EvalDocsLoader](https://github.com/lambda-feedback/EvalDocsLoader)) can read this file and
+auto-generate examples of correct and incorrect responses. This can help new users understand
+the capabilities of your evaluation function.
+
+For an example of how this looks, see the user docs for [compareBoolean](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareBoolean/#examples-from-integration-tests).
+
 ## Documentation
 
-Two essential and required documentation files are copied over during the creation of the evaluation function docker image. These are subsequently served by the function under the `docs-dev` and `docs-user` commands, to be accessed by this documentation website, as well as for embedding on LambdaFeedback. For more information about the markdown syntax, please refer to the following sources:
+Evaluation function documentation is stored in two files, which contain documentation for
+developers and users respectively. These files are fetched by 
+[EvalDocsLoader](https://github.com/lambda-feedback/EvalDocsLoader), which integrates them
+into this documentation site. 
 
-- [MkDocs Documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-your-docs)
-- [MkDocs-Material Documentation](https://squidfunk.github.io/mkdocs-material/reference/)
+In order for EvalDocsLoader to find your docs, your evaluation function must:
+
+1. be deployed to the production site;
+2. belong to the lambda-feedback organisation on Github;
+3. have a [topic](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) called `evaluation-function`.
+
+Once these requirements are met, the docs you write should appear on the documentation site.
 
 ### `docs/dev.md`
 
+This should contain documentation that would be useful for new developers working on your function.
+
 ### `docs/user.md`
+
+This should contain information for non-technical users, such as an overview of capabilities,
+examples, and a description of parameters.

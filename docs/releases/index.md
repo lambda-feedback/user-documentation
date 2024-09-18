@@ -1,3 +1,10 @@
+## Release 2024/09/18
+
+- b444-bulk-rollover-follow-up - updates to bulk rollover feature
+- b452-ui-tweaks-ii - additional ui enhacements
+- b453-config-panel-disabled-feedback-tab-is-still-accessible-by-next-and-previous-buttons - fixed an issue where disabled tabs in the response area configuration panel could still be accessed using navigation buttons
+
+
 ## Release 2024/09/14
 
 -	b134-ipados-ios-safari-like-flag-problem-help-off-the-page - fixed scrolling of problem sets when using iPadOS or iOS Safari
