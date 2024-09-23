@@ -1,3 +1,9 @@
+## Release 2024/09/23
+
+- b449-improve-mobile-navigation - improve mobile UI
+- b462-final-summer-tweaks - ui improvements and fixes
+- b146-follow-up - email notifications tweaks and fixes
+
 ## Release 2024/09/18
 
 - b444-bulk-rollover-follow-up - updates to bulk rollover feature
