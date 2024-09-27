@@ -1,3 +1,8 @@
+## Release 2024/09/27
+
+- b457-option-to-omit-iscorrect-feedback - added the option for teachers to customise the feedback prefix and colour
+- b459-image-on-the-same-line-as-preceding-text - corrected PDF generation to prevent images from appearing on the same line as the preceding text
+
 ## Release 2024/09/23
 
 - b449-improve-mobile-navigation - improve mobile UI
