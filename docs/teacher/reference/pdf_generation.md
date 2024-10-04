@@ -2,8 +2,6 @@
 
 ## Supported packages
 
-Please see [Latex Template](https://github.com/lambda-feedback/pdf-generator/blob/main/src/template.latex) for the up-to-date list.
-
 amsmath: This package is essential for many mathematical features, including aligned equations, matrices, and more advanced math functions. It’s fundamental to most LaTeX documents involving mathematics.
 
 amssymb: Provides additional mathematical symbols not covered by the base LaTeX distribution.
@@ -71,19 +69,6 @@ upquote: Ensures that straight quotes (' and ") are typeset as they appear in co
 xcolor: For coloring text and math expressions, which KaTeX supports natively.
 
 xeCJK: Is specifically designed for typesetting documents that include Chinese, Japanese, and Korean (CJK) characters in XeLaTeX. It provides better handling of CJK fonts, enabling proper spacing, line breaking, and font selection for these languages. The package integrates seamlessly with XeLaTeX’s ability to use system fonts, allowing for high-quality typesetting of multilingual documents that include both CJK and Latin scripts. xeCJK also offers various options for fine-tuning the appearance of CJK text, such as adjusting character spacing and font sizes.
-
-
-## Packages to be considered
-
-amsfonts: Provides additional fonts for mathematical symbols and characters.
-
-mathtools: This is an extension of amsmath and provides additional features and improvements.
-
-array: Used for creating arrays and matrices, which are also supported in KaTeX.
-
-physics: While not directly necessary, this package is often used for simplified physics notation (like easier derivatives and vectors), which KaTeX also supports to a degree.
-
-unicode-math (optional): If you are using XeLaTeX or LuaLaTeX and want better handling of Unicode math symbols, similar to KaTeX's native handling.
 
 
 ## List of LaTex packages emulated by KaTeX
