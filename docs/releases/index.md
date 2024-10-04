@@ -1,4 +1,4 @@
-## Release 2025/10/04
+## Release 2024/10/04
 
 - **b218-teacher-view-modules-students-explore-do-not-limit-next** - Allow teachers to scroll through all students when viewing individual student progress.
 - **b448-question-jumps-to-top-on-mark-as-done** - UI fix: resolved issue where marking student submissions as done caused the page to jump to the top.
