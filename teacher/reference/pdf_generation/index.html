@@ -1948,7 +1948,7 @@
 <h1 id="pdf-generation">PDF Generation<a class="headerlink" href="#pdf-generation" title="Permanent link">&para;</a></h1>
 <p>Lambda Feedback uses a single source to render content both in the browser and by PDF. The browser view uses katex to render LaTeX, which limits the scope of LaTeX that can be used. katex doesn't use traditional LaTeX packages, but emulates many of the popular packages:
 <a href="https://github.com/KaTeX/KaTeX/wiki/Package-Emulation">Package Emulation</a></p>
-<p>When a question is published by a teacher, a PDF copy is also generated. The PDF compilation process uses <code>xelatex</code> and the following list of packages. This list will be updated as we receive more requirements from users.</p>
+<p>When a question is published by a teacher, a PDF copy is also generated. The PDF compilation process uses <code>xelatex</code> and the <a href="https://github.com/lambda-feedback/pdf-generator/blob/main/src/template.latex">Latex Template</a> is public. The template installs relevant packages, and a list of packages is compiled below. This list will be updated as we receive more requirements from users.</p>
 <h2 id="supported-packages-when-generating-a-pdf">Supported packages when generating a PDF<a class="headerlink" href="#supported-packages-when-generating-a-pdf" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
