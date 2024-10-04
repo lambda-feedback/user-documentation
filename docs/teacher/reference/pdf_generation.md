@@ -3,7 +3,7 @@
 Lambda Feedback uses a single source to render content both in the browser and by PDF. The browser view uses katex to render LaTeX, which limits the scope of LaTeX that can be used. katex doesn't use traditional LaTeX packages, but emulates many of the popular packages:
 [Package Emulation](https://github.com/KaTeX/KaTeX/wiki/Package-Emulation)
 
-When a question is published by a teacher, a PDF copy is also generated. The PDF compilation process uses `xelatex` and the following list of packages. This list will be updated as we receive more requirements from users.
+When a question is published by a teacher, a PDF copy is also generated. The PDF compilation process uses `xelatex` and the [Latex Template](https://github.com/lambda-feedback/pdf-generator/blob/main/src/template.latex) is public. The template installs relevant packages, and a list of packages is compiled below. This list will be updated as we receive more requirements from users.
 
 ## Supported packages when generating a PDF
 
