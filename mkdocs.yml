@@ -15,6 +15,7 @@ nav:
       - Terminology: "terminology.md"
       - Opportunities: "opportunities.md"
       - Releases: "releases/index.md"
+          - 2023-24: "releases/relases_2023_24.md"
 
   - Students:
       - "student/index.md"
