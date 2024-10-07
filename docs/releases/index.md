@@ -1,3 +1,11 @@
+## Release 2024/10/07
+
+- **b218-teacher-view-modules-students-explore-do-not-limit-next** - Enabled the “Next” button to view progress of all students, not just those listed on the current table page.
+- **b220-download-one-student-progress** - Added a new feature allowing download of an individual student’s progress in CSV format.
+- **b471-admin-teacher-enrolment-should-accept-comma-separated-lists** - Updated teacher enrolment to accept comma-separated lists, allowing multiple teachers to be added at once.
+- **b480-draw-mode-proceed-button-almost-invisible-update-to-match-the-design-on-scan-mode** - Added the “Proceed” button in draw mode to match the design on scan mode.
+
+
 ## Release 2024/10/04
 
 - **b218-teacher-view-modules-students-explore-do-not-limit-next** - Allow teachers to scroll through all students when viewing individual student progress.
