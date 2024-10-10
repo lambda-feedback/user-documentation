@@ -1,3 +1,7 @@
+## Release 2024/10/09
+
+- **b486-cloning-parts-in-wrong-order** - Provided scripts to correct the part order in cloned module instances and updated the code to ensure that future clones maintain the correct part order.
+
 ## Release 2024/10/07
 
 - **b218-teacher-view-modules-students-explore-do-not-limit-next** - Enabled the “Next” button to view progress of all students, not just those listed on the current table page.
