@@ -1,6 +1,6 @@
 ## Release 2024/10/09
 
-- **b486-cloning-parts-in-wrong-order** - correctd the part order in cloned module instances and updated code to ensure future clones maintain correct part order.
+- **b486-cloning-parts-in-wrong-order** - corrected the part order in cloned module instances and updated code to ensure future clones maintain correct part order.
 
 ## Release 2024/10/07
 
