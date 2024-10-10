@@ -1619,11 +1619,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_eval_function_docs/isExactEqual/" class="md-nav__link">
+      <a href="../user_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isExactEqual
+    arrayEqual
   </span>
   
 
@@ -1640,11 +1640,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_eval_function_docs/arrayEqual/" class="md-nav__link">
+      <a href="../user_eval_function_docs/isExactEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    arrayEqual
+    isExactEqual
   </span>
   
 
@@ -2218,11 +2218,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev_eval_function_docs/isExactEqual/" class="md-nav__link">
+      <a href="../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isExactEqual
+    arrayEqual
   </span>
   
 
@@ -2239,11 +2239,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
+      <a href="../dev_eval_function_docs/isExactEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    arrayEqual
+    isExactEqual
   </span>
   
 
@@ -2637,22 +2637,21 @@
 
 <h2 id="release-20241009">Release 2024/10/09<a class="headerlink" href="#release-20241009" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>b486-cloning-parts-in-wrong-order</strong> - Provided scripts to correct the part order in cloned module instances and updated the code to ensure that future clones maintain the correct part order.</li>
+<li><strong>b486-cloning-parts-in-wrong-order</strong> - correctd the part order in cloned module instances and updated code to ensure future clones maintain correct part order.</li>
 </ul>
 <h2 id="release-20241007">Release 2024/10/07<a class="headerlink" href="#release-20241007" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>b218-teacher-view-modules-students-explore-do-not-limit-next</strong> - Enabled the “Next” button to view progress of all students, not just those listed on the current table page.</li>
-<li><strong>b220-download-one-student-progress</strong> - Added a new feature allowing download of an individual student’s progress in CSV format.</li>
-<li><strong>b471-admin-teacher-enrolment-should-accept-comma-separated-lists</strong> - Updated teacher enrolment to accept comma-separated lists, allowing multiple teachers to be added at once.</li>
-<li><strong>b478-question-not-visible-in-tablet-mode-when-canvas-closed</strong> - Fixed an issue where the question was not visible in tablet mode when the canvas was closed.</li>
-<li><strong>b480-draw-mode-proceed-button-almost-invisible-update-to-match-the-design-on-scan-mode</strong> - Added the “Proceed” button in draw mode to match the design on scan mode.</li>
+<li><strong>b220-download-one-student-progress</strong> - download an individual student’s progress in CSV format.</li>
+<li><strong>b471-admin-teacher-enrolment-should-accept-comma-separated-lists</strong> - admin enrolment of teachers accepts comma-separated lists, allowing multiple teachers to be added at once.</li>
+<li><strong>b478-question-not-visible-in-tablet-mode-when-canvas-closed</strong> - fix: question was not visible in tablet mode when the canvas was closed.</li>
+<li><strong>b480-draw-mode-proceed-button-almost-invisible-update-to-match-the-design-on-scan-mode</strong> - EXPRESSION response area: added the “Proceed” button in draw mode to match the design on scan mode.</li>
 </ul>
 <h2 id="release-20241004">Release 2024/10/04<a class="headerlink" href="#release-20241004" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>b218-teacher-view-modules-students-explore-do-not-limit-next</strong> - Allow teachers to scroll through all students when viewing individual student progress.</li>
+<li><strong>b218-teacher-view-modules-students-explore-do-not-limit-next</strong> - teacher view of student progress: “Next” button progresses to all students, not just those listed on the current table page.</li>
 <li><strong>b448-question-jumps-to-top-on-mark-as-done</strong> - UI fix: resolved issue where marking student submissions as done caused the page to jump to the top.</li>
-<li><strong>b466-limit-number-of-student-submissions</strong> - Added functionality to limit the number of student submissions to prevent cost overruns during evaluation.</li>
-<li><strong>b467-correct-separatefeedbacks-to-separatefeedback</strong> - Corrected <code>separatefeedbacks</code> to <code>separatefeedback</code> in the Augment feedback based on correctness functionality.</li>
+<li><strong>b466-limit-number-of-student-submissions</strong> - eval functions receive the number of student submissions per response area, and can optionally limit submissions e.g. to external services.</li>
+<li><strong>b467-correct-separatefeedbacks-to-separatefeedback</strong> - schema correction: <code>separatefeedbacks</code> to <code>separatefeedback</code> (relates to the 'Augment feedback based on correctness' functionality.)</li>
 <li><strong>b475-set-all-augment-booleans-to-false-in-a-specific-module</strong> - Set all "Augment feedback based on correctness" booleans to <code>false</code> for a selected math module.</li>
 </ul>
 
