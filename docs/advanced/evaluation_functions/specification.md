@@ -185,6 +185,14 @@ Note that in JSON, special characters need to be escaped, so the latex symbol ab
 
 Currently, the backend only supports one LaTeX symbol for multiple Sympy symbols. In future, this will be a many-to-many relationship.
 
+When a student submits a response to a response area the number of previously submitted responses submitted to the same response area byt the same student will be sent to the evaluation function. The following format is used:
+    ``` { .python .annotate }
+    {
+        "submission_context": {
+            "submissions_per_student_per_response_area": # non-negative integer that represent the nubmer of previously processed responses
+        }
+    }
+
 #### Outputs
 
 The function should output a single JSON-encodable dictionary. Although a large amount of freedom is given to what this dict contains, when utilising the function alongside the [lambdafeedback](https://lambdafeedback.com/) web app, a few values are expected/able to be consumed:
