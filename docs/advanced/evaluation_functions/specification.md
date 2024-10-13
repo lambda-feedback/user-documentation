@@ -185,13 +185,16 @@ Note that in JSON, special characters need to be escaped, so the latex symbol ab
 
 Currently, the backend only supports one LaTeX symbol for multiple Sympy symbols. In future, this will be a many-to-many relationship.
 
+#### Context
+
 When a student submits a response to a response area the number of previously submitted responses submitted to the same response area byt the same student will be sent to the evaluation function. The following format is used:
-    ``` { .python .annotate }
+``` { .python .annotate }
     {
         "submission_context": {
             "submissions_per_student_per_response_area": # non-negative integer that represent the nubmer of previously processed responses
         }
     }
+```
 
 #### Outputs
 
