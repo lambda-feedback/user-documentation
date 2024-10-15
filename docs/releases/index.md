@@ -1,3 +1,9 @@
+## Release 2024/10/15
+
+- **b461-bulk-rollover-follow-up-ii** - updates to bulk rollover feature
+- **b479-scan-in-mobile-tablet-doesnt-activate-camera-or-file-selector** - fix: camera did not activate in mobile or tablet when using scan option
+
+
 ## Release 2024/10/09
 
 - **b486-cloning-parts-in-wrong-order** - corrected the part order in cloned module instances and updated code to ensure future clones maintain correct part order.
