@@ -4,6 +4,7 @@
 - **b483-feedback-area-does-not-support-latex-rendering-again** - adjustment to the feedback to support latex
 - **b490-dashboard-high-no-of-students** - improved the dashboard’s calculation of the current number of students.
 - **b494-augment-feedback-if-the-augment-is-true-and-the-returned-feedback-is-empty** - updated the augment feedback functionality to handle cases where the augment flag is true, but the returned feedback is empty.
+- **b496-feedback-to-handle-html-and-latex** - adjustment to the feedback to support html alongside latex
 
 ## Release 2024/10/15
 
