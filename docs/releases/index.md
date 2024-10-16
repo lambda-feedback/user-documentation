@@ -1,3 +1,9 @@
+## Release 2024/10/16
+
+- **b482-question-scrolls-up-when-clicking-check-or-mark-as-done-on-mobile-and-tablet** - fix: resolved issue where marking student submissions as done caused the page to scroll to the top on mobiles and tablets.
+- **b490-dashboard-high-no-of-students** - improved the dashboard’s calculation of the current number of students.
+- **b494-augment-feedback-if-the-augment-is-true-and-the-returned-feedback-is-empty** - updated the augment feedback functionality to handle cases where the augment flag is true, but the returned feedback is empty.
+
 ## Release 2024/10/15
 
 - **b461-bulk-rollover-follow-up-ii** - updates to bulk rollover feature
