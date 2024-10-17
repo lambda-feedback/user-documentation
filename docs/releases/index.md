@@ -1,3 +1,7 @@
+## Release 2024/10/17
+
+- **497-milkdown-response-area** - milkdown response area type added
+
 ## Release 2024/10/16
 
 - **b482-question-scrolls-up-when-clicking-check-or-mark-as-done-on-mobile-and-tablet** - fix: resolved issue where marking student submissions as done caused the page to scroll to the top on mobiles and tablets.
