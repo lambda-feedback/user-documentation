@@ -15,7 +15,6 @@
 - b452-ui-tweaks-ii - additional ui enhacements
 - b453-config-panel-disabled-feedback-tab-is-still-accessible-by-next-and-previous-buttons - fixed an issue where disabled tabs in the response area configuration panel could still be accessed using navigation buttons
 
-
 ## Release 2024/09/14
 
 -	b134-ipados-ios-safari-like-flag-problem-help-off-the-page - fixed scrolling of problem sets when using iPadOS or iOS Safari
@@ -24,7 +23,8 @@
 - b434-ui-redesign-tweaks - additional tweaks to the user interface
 - b442-bring-back-sets-download-options - restored “Set Download” drop-down button that was removed during the UI redesign
 - b447-aws-db-backups-stopped - fixed the database backup issue
-- b451-display-modules-even-if-sets-are-hidden - updated the system so students can view their modules, even if no sets are available 
+- b451-display-modules-even-if-sets-are-hidden - updated the system so students can view their modules, even if no sets are available
+- b146-email-recap - add weekly email recap
 
 ## Release 2024/09/10
 
