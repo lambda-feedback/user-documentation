@@ -1,6 +1,8 @@
 ## Release 2024/10/23
 
-- **b498-feedback-does-not-handle-double-dollars** - feedback string display offers basic support for double-dollars. 
+- **b498-feedback-does-not-handle-double-dollars** - feedback string display offers basic support for double-dollars. (REVERTED)
+- **b505-enable-weekly-recap-by-default-for-new-users** - email notifications tweaks for new users
+
 
 ## Release 2024/10/18
 
