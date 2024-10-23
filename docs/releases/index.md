@@ -5,12 +5,12 @@
 ## Release 2024/10/18
 
 - **b493-one-student-progress-csv-format-change** - adjustment to the CSV format of an individual student’s progress
-- **495-augment-feedback-colour** - updated augment feedback functionality
-- **481-cannot-switch-page-in-the-error-panel-in-the-admin-dashboard** - fix: allowing multiple tables on one page with paging functionality
+- **b495-augment-feedback-colour** - updated augment feedback functionality
+- **b481-cannot-switch-page-in-the-error-panel-in-the-admin-dashboard** - fix: allowing multiple tables on one page with paging functionality
 
 ## Release 2024/10/17
 
-- **497-milkdown-response-area** - milkdown response area type added
+- **b497-milkdown-response-area** - milkdown response area type added
 
 ## Release 2024/10/16
 
