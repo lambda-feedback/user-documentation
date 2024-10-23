@@ -1,3 +1,7 @@
+## Release 2024/10/23
+
+- **b498-feedback-does-not-handle-double-dollars** - an improvement to the feedback to support latex with equations
+
 ## Release 2024/10/18
 
 - **b493-one-student-progress-csv-format-change** - adjustment to the CSV format of an individual student’s progress
