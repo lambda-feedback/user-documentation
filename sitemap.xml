@@ -221,14 +221,6 @@
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/comparePhysicalQuantities/</loc>
-         <lastmod>2024-10-23</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/comparePhysicalQuantities/</loc>
-         <lastmod>2024-10-23</lastmod>
-    </url>
-    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arraySymbolicEqual/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
@@ -261,19 +253,19 @@
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/comparePhysicalQuantities/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/comparePhysicalQuantities/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/isExactEqual/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/isExactEqual/</loc>
-         <lastmod>2024-10-23</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/shortTextAnswer/</loc>
-         <lastmod>2024-10-23</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/shortTextAnswer/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
@@ -298,6 +290,14 @@
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareSets/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/shortTextAnswer/</loc>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/shortTextAnswer/</loc>
          <lastmod>2024-10-23</lastmod>
     </url>
     <url>
