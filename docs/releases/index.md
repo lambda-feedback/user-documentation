@@ -1,3 +1,9 @@
+## Release 2024/10/28
+
+- **473-middle-click-cmdclick-on-links-in-mui-tables** - added “open link” options to table columns with hyperlinks
+- **488-links-on-module-home-page** - enhanced cards on the teacher module home page to allow clicks that navigate to relevant tabs
+- **499-switching-to-canvas-resets-to-part-a** - prevented reset to part A when opening or closing the canvas
+
 ## Release 2024/10/23
 
 - **b498-feedback-does-not-handle-double-dollars** - feedback string display offers basic support for double-dollars. (REVERTED)
