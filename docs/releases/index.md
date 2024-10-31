@@ -1,3 +1,13 @@
+## Release 2024/10/31
+
+- **b465-do-not-remove-whitespace-from-input-symbols** - fix: remove spaces from input symbols only at the beginning and end, preserving spaces in the middle
+- **b477-set-json-generation-returns-403-if-a-media-is-not-accessible** - improvement: PDF generation now returns a clearer error message when media fails to download
+- **b507-module-options-edit-does-not-work-correctly** - fix: refresh module options in the teacher view after they are updated
+- **b511-publish-whole-set-questions-missing-from-list** - fix: ensure the list of unchanged questions in information messages displays all relevant questions
+- **b512-add-eslint-rules-for-imports** - improvement: adjusted import order in code for better readability and logical structure
+- **b513-open-link-choices-for-tab-columns-with-links** - enhancement: added “open link” options to table columns containing hyperlinks, improving navigation across tables
+- **b514-pdf-generation-pandoc-exited-with-code-43-fontconfig-error-no-writable-cache-directories** - adjustment: modified PDF generation to redirect Fontconfig logs to writable directories within the Lambda function
+
 ## Release 2024/10/28
 
 - **473-middle-click-cmdclick-on-links-in-mui-tables** - added “open link” options to table columns with hyperlinks
