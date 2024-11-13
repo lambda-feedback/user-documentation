@@ -18,6 +18,7 @@ nav:
           - "releases/index.md"
           - Previous releases:
               - 2023-24: "releases/relases_2023_24.md"
+          - Status: "status.md"
 
   - Students:
       - "student/index.md"
