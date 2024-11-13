@@ -1,6 +1,6 @@
 ## Release 2024/11/13
 
-- **506-add-authentication-with-google** - replaced MSAL (Microsoft Authentication Library) with Firebase Authentication to allow sign-in using both Microsoft and Google accounts
+- **b506-add-authentication-with-google** - replaced MSAL (Microsoft Authentication Library) with Firebase Authentication to allow sign-in using both Microsoft and Google accounts
 
 ## Release 2024/10/31
 
