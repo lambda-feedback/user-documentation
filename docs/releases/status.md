@@ -28,7 +28,7 @@ Tuesday 5th November
 
 10:45am revert complete after efforts to implement a fix failed.
 
-The issue was related to the auth URL differing from the app URL. A fix was developed to push the next day.
+The issue was related to blocked thrid-party cookies being on some browsers. A fix was developed to push the next day.
 
 Wednesday 6th November
 
@@ -38,7 +38,7 @@ Wednesday 6th November
 
 Thursday 7th November
 
-Throughout the day the problem was analysed and we found that 19 users had logged in during the temporary 'new' login system on Tuesday, and as a result were in the new auth DB, and this caused problems. All users access was restored and they were contacted with information and an apology.
+Throughout the day the problem was analysed and we found that 12 users had logged in during a brief configuration error, and as a result were not stored correctly in the new auth DB, and this caused problems. All users access was restored and they were contacted with information and an apology.
 
 Friday 8th November
 
