@@ -1,11 +1,12 @@
 ## Release 2024/11/15
 
-- **b463-save-button-for-all-response-types** - added a save button for students to save their work before submission. This feature is configurable per response type.
+- **b463-save-button-for-all-response-types** - save button to save work before submission. Configurable per response type at ADMIN level, and per response area at TEACHER.
 - **b468-email-updates-settings** - introduced an admin feature allowing changes to the recap schedule setting for each teacher
 - **b503-the-list-of-errors-and-flags-in-teacher-view-to-contain-info-about-the-part** - enhanced the teacher view by including details about which part each flag and error was created against
 - **b527-numericunits-displays-answers-incorrectly-in-the-configure-panel** - resolved an issue with numeric units that previously displayed incorrectly when spaces were present
+- **b528-upgrade-next-from-1423-to-1424** - updated Next.js library
 - **b529-update-branches-info-in-readmemd** - updated the README.md to provide developers with the latest information about the ticket board and testing processes
-- **/528-upgrade-next-from-1423-to-1424** - updated Next.js library
+
 
 ## Release 2024/11/13
 
