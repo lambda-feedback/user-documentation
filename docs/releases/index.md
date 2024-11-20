@@ -1,3 +1,7 @@
+## Release 2024/11/20
+
+- **526-studentgetmodules-query-is-slow** - optimized data retrieval, sorting, and filtering for the student modules page
+
 ## Release 2024/11/15
 
 - **b463-save-button-for-all-response-types** - save button to save work before submission. Configurable per response type at ADMIN level, and per response area at TEACHER.
