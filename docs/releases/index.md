@@ -1,10 +1,13 @@
 ## Release 2024/11/25
-- **533-firebase-auth-idtoken-is-required** - fix: addressed the "Error: idToken is required" issue caused by a premature query before the token was available
-- **537-a-gap-between-title-and-list-of-modules** - fix: resolved an issue that caused an unintended gap between the page title and content when the canvas feature was opened
+- **b533-firebase-auth-idtoken-is-required** - no change to UX. Fixed issue "Error: idToken is required" caused by a premature query before the token was available
+- **b537-a-gap-between-title-and-list-of-modules** - fix: remove unintended gap between the page title and content when the canvas feature was opened
+
+## Release 2024/11/23
+- **b403-eval-function-schema-403** - evaluation functions base layer: schema included to avoid 403 errors when retrieving
 
 ## Release 2024/11/20
 
-- **526-studentgetmodules-query-is-slow** - optimized data retrieval, sorting, and filtering for the student modules page
+- **b526-studentgetmodules-query-is-slow** - optimized data retrieval, sorting, and filtering for the student modules page
 
 ## Release 2024/11/15
 
