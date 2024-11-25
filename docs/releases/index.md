@@ -1,5 +1,4 @@
-## Release 2024/11/20
-
+## Release 2024/11/25
 - **533-firebase-auth-idtoken-is-required** - fix: addressed the "Error: idToken is required" issue caused by a premature query before the token was available
 - **537-a-gap-between-title-and-list-of-modules** - fix: resolved an issue that caused an unintended gap between the page title and content when the canvas feature was opened
 
