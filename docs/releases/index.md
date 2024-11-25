@@ -3,7 +3,7 @@
 - **b537-a-gap-between-title-and-list-of-modules** - fix: remove unintended gap between the page title and content when the canvas feature was opened
 
 ## Release 2024/11/23
-- **b403-eval-function-schema-403** - evaluation functions base layer: schema included to avoid 403 errors when retrieving
+- **b544-eval-function-schema-403** - evaluation functions base layer: schema included to avoid 403 errors when retrieving
 
 ## Release 2024/11/20
 
