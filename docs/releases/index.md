@@ -1,4 +1,10 @@
+## Release 2024/11/29
+
+- **b460-ui-tweaks-iii** - additional tweaks to the user interface
+- **b541-module-cloning-should-copy-over-support-material-settings** - updated the module cloning functionality to ensure that support material settings (student visibility of structured tutorials, final answers, and worked solutions) are copied over.
+
 ## Release 2024/11/25
+
 - **b533-firebase-auth-idtoken-is-required** - no change to UX. Fixed issue "Error: idToken is required" caused by a premature query before the token was available
 - **b537-a-gap-between-title-and-list-of-modules** - fix: remove unintended gap between the page title and content when the canvas feature was opened
 
