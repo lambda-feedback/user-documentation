@@ -1,7 +1,7 @@
 ## Release 2024/11/29
 
 - **b460-ui-tweaks-iii** - additional tweaks to the user interface
-- **b541-module-cloning-should-copy-over-support-material-settings** - updated the module cloning functionality to ensure that support material settings (student visibility of structured tutorials, final answers, and worked solutions) are copied over.
+- **b541-module-cloning-should-copy-over-support-material-settings** - module cloning carries over settings for visibility of structured tutorials, final answers, and worked solutions.
 
 ## Release 2024/11/25
 
