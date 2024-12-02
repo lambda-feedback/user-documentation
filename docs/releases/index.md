@@ -1,3 +1,8 @@
+## Release 2024/12/02
+
+- **b533-teacher-header-eager-auth** - Prevent header/wrapper requests to module without a user
+- **fix-week-bounds** - Fix weekly recap bounds including Sunday
+
 ## Release 2024/11/29
 
 - **b460-ui-tweaks-iii** - additional tweaks to the user interface
