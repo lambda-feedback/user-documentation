@@ -1,3 +1,6 @@
+## Release 2024/12/06
+- b556-Solutions-PDF---Lambda-step-error - fix to PDF generator to handle steps (e.g. in worked solutions)
+
 ## Release 2024/12/02
 
 - **b533-teacher-header-eager-auth** - Prevent header/wrapper requests to module without a user
