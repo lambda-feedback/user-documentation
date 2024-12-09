@@ -1,3 +1,6 @@
+## Release 2024/12/09
+- b440-notifications-in-ui - add notifications feed for teachers
+
 ## Release 2024/12/06
 - b556-Solutions-PDF---Lambda-step-error - fix to PDF generator to handle steps (e.g. in worked solutions)
 
