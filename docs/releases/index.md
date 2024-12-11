@@ -1,8 +1,11 @@
+## Release 2024/12/06
+- b556-Solutions-PDF---Lambda-step-error - PDF generator in backend - fix inline LaTeX (only in structured tutorial/final answer/worked solutions)
+
 ## Release 2024/12/09
 - b440-notifications-in-ui - add notifications feed for teachers
 
 ## Release 2024/12/06
-- b556-Solutions-PDF---Lambda-step-error - fix to PDF generator to handle steps (e.g. in worked solutions)
+- b556-Solutions-PDF---Lambda-step-error - fix to PDF generator Lambda to handle steps (e.g. in worked solutions)
 
 ## Release 2024/12/02
 
