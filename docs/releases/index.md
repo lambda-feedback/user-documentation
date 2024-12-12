@@ -1,3 +1,6 @@
+## Release 2024/12/12
+- b563-misc-frontend-changes - Small client-side setup improvements
+
 ## Release 2024/12/06
 - b556-Solutions-PDF---Lambda-step-error - PDF generator in backend - fix inline LaTeX (only in structured tutorial/final answer/worked solutions)
 
