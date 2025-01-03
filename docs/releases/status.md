@@ -2,7 +2,33 @@ Lambda Feedback is a cloud-native application that is available with full servic
 
 This page contains information about any known incidents where service was interrupted. The page begain in November 2024 following a significant incident. The purpose is to be informative, transparent, and ensure lessons are always learned so that service improves over time.
 
-## 4-8th November 2024 Incident related to new logins
+## 2024 mid-December to 2025 January 2nd: Imperial College security measures affected logins
+
+During this period the application was 100% available and operational. We were alerted on 2nd January that some users were not given permission by Imperial College London Microsoft 365 to login to third party applications. This was a a severe incident as it affected access to the application for some users.
+
+### Timeline
+
+11:19 GMT We discovered the issue, escalated to Imperial College ICT and put a notice on our home page.
+
+16:51 GMT The application was approved by Imperial College ICT, which resolved the problem.
+
+Monitoring immediately after and the following morning showed that two known users who had issues no longer have issues. Other users continued to login before, during, and after the incident. No further reports of issues received. Case closed.
+
+### Analysis
+
+- Lambda Feedback has been using Imperial College Microsoft 365 logins (Entra / Azure Active directory) since July 2021 without issues until this incident.
+
+- ICT reported on 2nd January: "due to heightened security arrangements put in place in mid December, ICT prevented unauthorised App registrations as these can pose security threats through unwarranted access to user information and the access to other systems. We have now granted access for the Lambda feedback app."
+
+- Although the app was 'registered' on Entra/AAD in July 2021 within the Imperial College tenant, the permissions required for authentication (read the profile of the user) were granted by the user the first time they logged on. The changes imposed by ICT withdrew the privilege from users to grant such permissions, hence the inability to login. Permissions can be bulk granted by admins in the tenant, but this had not been done. On 2nd January, those permissions were given by admin and the problem was resolved.
+
+- Due to the holiday season, this problem only surfaced on 2nd January, despite the cause being in 'mid-December'.
+
+### Lessons learned:
+ 
+- When an organisation uses single sign-on (SSO), ensure that the Lambda Feedback application permissions are granted by the organisation admin, even if the service initially works without those permissions being granted by admins. This action will protect against possible future issues, especially like the incident reported here.
+
+## 2024 November 4-8th: Incident related to new logins
 
 Deployment of a new authentication process caused service interruptions. Login was not possible at certain times, affecting all users. Effects were between Monday 4th and Friday 8th November, all related to release b506.
 
