@@ -1,14 +1,24 @@
+## Release 2025/01/08
+
+- **b75-add-labels-to-users-to-allow-filtering-in-analytics-examples-of-useful-labels-guest-msc-group2-personaltutor-etc-user-type** - implemented student admin categories and student module tags  
+- **b562-single-multiple-choice-toggle-not-clear** - tidied up multiple choice toggle in the response area configuration panel
+
+
 ## Release 2024/12/12
-- b563-misc-frontend-changes - Small client-side setup improvements
+
+- **b563-misc-frontend-changes** - Small client-side setup improvements
 
 ## Release 2024/12/06
-- b556-Solutions-PDF---Lambda-step-error - PDF generator in backend - fix inline LaTeX (only in structured tutorial/final answer/worked solutions)
+
+- **b556-Solutions-PDF---Lambda-step-error** - PDF generator in backend - fix inline LaTeX (only in structured tutorial/final answer/worked solutions)
 
 ## Release 2024/12/09
-- b440-notifications-in-ui - add notifications feed for teachers
+
+- **b440-notifications-in-ui** - add notifications feed for teachers
 
 ## Release 2024/12/06
-- b556-Solutions-PDF---Lambda-step-error - fix to PDF generator Lambda to handle steps (e.g. in worked solutions)
+
+- **b556-Solutions-PDF---Lambda-step-error** - fix to PDF generator Lambda to handle steps (e.g. in worked solutions)
 
 ## Release 2024/12/02
 
