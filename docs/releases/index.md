@@ -1,8 +1,11 @@
+## Release 2025/01/09
+
+- **b75-add-labels-to-users-to-allow-filtering-in-analytics-examples-of-useful-labels-guest-msc-group2-personaltutor-etc-user-type** - added none option to the student filter
+
 ## Release 2025/01/08
 
 - **b75-add-labels-to-users-to-allow-filtering-in-analytics-examples-of-useful-labels-guest-msc-group2-personaltutor-etc-user-type** - implemented student admin categories and student module tags  
 - **b562-single-multiple-choice-toggle-not-clear** - tidied up multiple choice toggle in the response area configuration panel
-
 
 ## Release 2024/12/12
 
