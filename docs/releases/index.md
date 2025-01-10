@@ -1,3 +1,7 @@
+## Release 2025/01/10
+
+- **b584-PDF-tables** - ensure tables compile in PDFs
+
 ## Release 2025/01/09
 
 - **b75-add-labels-to-users-to-allow-filtering-in-analytics-examples-of-useful-labels-guest-msc-group2-personaltutor-etc-user-type** - added none option to the student filter
