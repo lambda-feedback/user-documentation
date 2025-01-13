@@ -53,3 +53,7 @@ From the perspective of Lambda Feedback, a teacher is someone who creates and ma
 The stages of working that lead to a final answer. It may be split into multiple steps which the student can reveal sequentially. This section lies within the "Help" panel which appears upon clicking on the "Help" button.
 
 This is an optional section, and so does not have to be included in any question.
+
+### Workspace
+
+On the Question page, the students has access to their own workspace tab. Here they can find the "Canvas", for handwriting notes, and the "Chat", for conversing with an AI Chatbot on the question materials.

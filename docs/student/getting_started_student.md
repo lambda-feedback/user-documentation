@@ -33,3 +33,17 @@ See the [Answering Questions](answering_questions.md) page for more help with an
 
 ![The "Mark as done" box on the question page](images/mark_as_done.png)
 
+### Using the Workspace
+
+The Workspace provides you with various functionalities to assist you during your learning process:
+1. #### Canvas: 
+A pane where you can write down your thought process and notes for the previewed question (handwriting, sticky notes & text).
+
+![Canvas Interface](images/canvas_interface.png)
+
+2. #### Chat: 
+A chat interface connecting you with helpful AI Chatbots to discuss any questions you have on the current topic you are working on.
+
+![Chat Interface](images/chat_interface.png)
+
+Your edits and progress in the Workspace are saved per each Question you preview. So, you will be able to view your old edits for the Question you are currently on.
