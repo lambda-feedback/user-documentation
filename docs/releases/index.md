@@ -1,3 +1,12 @@
+## Release 2025/01/15
+
+- **b524-modular-chatbot-workspace** - core development for introducing new chatbot functionality
+- **b540-chatbot-switches** - configuration updates to enable toggling chatbot functionality at the module, set, and question levels
+- **b548-chat-mcqs-information-conversion** - added functionality to parse multiple-choice questions (MCQs) into a user-readable format for chatbot interactions
+- **b552-pulumi-chat-infra-dev-staging-prod**  - prepared AWS infrastructure, including new AWS Lambdas, to support chatbot functionality across development, staging, and production environments
+- **b578-inconsistent-lambda-function-number-of-errors** - resolved inconsistencies in the display of Lambda function error statistics on the admin dashboard
+
+
 ## Release 2025/01/10
 
 - **b584-PDF-tables** - ensure tables compile in PDFs
