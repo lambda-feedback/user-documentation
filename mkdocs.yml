@@ -60,6 +60,8 @@ nav:
 
   - Advanced:
       - "advanced/index.md"
+      - Response Areas:
+          - Overview: "advanced/response_areas/overview.md"
       - Evaluation Functions:
           - Quickstart Guide: "advanced/evaluation_functions/quickstart.md"
           - General Specification: "advanced/evaluation_functions/specification.md"
@@ -69,8 +71,9 @@ nav:
           - Deployed Functions:
               - "advanced/evaluation_functions/index.md"
           - Alternate Function Languages: "advanced/evaluation_functions/alternate_languages.md"
-      - Response Areas:
-          - Overview: "advanced/response_areas/overview.md"
+      - Chat agents:
+          - Quickstart: "advanced/chatbot_agents/quickstart.md"
+          - Testing Functions Locally: "advanced/chatbot_agents/local.md"
 
 # Configuration
 theme:
@@ -88,6 +91,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - content.action.edit
+    - content.code.copy
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -132,16 +136,16 @@ plugins:
   - git-revision-date-localized:
       fallback_to_build_date: true
   - macros
-  - evaldocsloader:
-      functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
-      api_key:
-        !ENV [
-          API_KEY,
-          "WiOS1vMpQyTuGL06ZJxjG1eZd2P0SPvuVzHpr6zjkTIJ33U2t5O5NWaZboWBv8aV",
-        ]
-      dev_section: ["Advanced", "Evaluation Functions", "Deployed Functions"]
-      user_section: ["Teachers", "Reference", "Evaluation Functions"]
-      github_token: !ENV [GITHUB_TOKEN, ""]
+  # - evaldocsloader:
+  #     functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
+  #     api_key:
+  #       !ENV [
+  #         API_KEY,
+  #         "WiOS1vMpQyTuGL06ZJxjG1eZd2P0SPvuVzHpr6zjkTIJ33U2t5O5NWaZboWBv8aV",
+  #       ]
+  #     dev_section: ["Advanced", "Evaluation Functions", "Deployed Functions"]
+  #     user_section: ["Teachers", "Reference", "Evaluation Functions"]
+  #     github_token: !ENV [GITHUB_TOKEN, ""]
 
 # Extra variables, accessible within markdown pages
 extra:

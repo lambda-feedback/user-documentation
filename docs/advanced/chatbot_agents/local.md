@@ -11,7 +11,7 @@ You can also use the `test_prompts.py` script to test the agents with example in
 python src/agents/utils/test_prompts.py
 ```
 
-## Testing using the Docker Image
+## Testing using the Docker Image [:material-docker:](https://www.docker.com/)
 
 You can also build and run the docker pipeline for the agents. The chatbot agents are deployed onto a AWS Lambda serverless cloud function using the docker image. Hence, for final testing of your chatbots, we recommend completing those steps.
 
