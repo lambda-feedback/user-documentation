@@ -1,3 +1,9 @@
+## Release 2025/01/21
+
+- **b65-enhanced-stats** - added set stats into the question stats
+- **b590-chat-canvas-documentation** - added sections about chatbots into the user documentation and the technical documentation
+- **/598-query-for-admin-dashboard-evaluation-functions-needs-optimisation - part 1** - prevented a query for evaluation function error statistics to be run as it caused the appliction to crash. There will be a follow-up work to optimise the query.
+
 ## Release 2025/01/15
 
 - **b524-modular-chatbot-workspace** - core development for introducing new chatbot functionality
