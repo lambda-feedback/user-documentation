@@ -60,6 +60,8 @@ nav:
 
   - Advanced:
       - "advanced/index.md"
+      - Response Areas:
+          - Overview: "advanced/response_areas/overview.md"
       - Evaluation Functions:
           - Quickstart Guide: "advanced/evaluation_functions/quickstart.md"
           - General Specification: "advanced/evaluation_functions/specification.md"
@@ -69,8 +71,9 @@ nav:
           - Deployed Functions:
               - "advanced/evaluation_functions/index.md"
           - Alternate Function Languages: "advanced/evaluation_functions/alternate_languages.md"
-      - Response Areas:
-          - Overview: "advanced/response_areas/overview.md"
+      - Chat agents:
+          - Quickstart: "advanced/chatbot_agents/quickstart.md"
+          - Testing Functions Locally: "advanced/chatbot_agents/local.md"
 
 # Configuration
 theme:
@@ -88,6 +91,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - content.action.edit
+    - content.code.copy
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default

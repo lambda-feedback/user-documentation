@@ -12,7 +12,7 @@ If there is no response area (e.g. for a "show that..." question), you can manua
 
 If you are stuck, you can view worked solutions using the "Worked Solutions" option on the bottom ribbon. The steps in the solution are
 revealed step-by-step, so you should avoid the temptation to look at the whole solution at once, and try to complete as much as possible
-independantly. 
+independently. 
 
 ![The worked solutions area](images/worked_solutions.png)
 

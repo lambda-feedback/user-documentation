@@ -14,6 +14,12 @@ Response areas are components in the frontend where student users can enter a re
 
 [Response areas - overview](response_areas/overview.md){ .md-button .md-button--primary}
 
+## AI Chatbot Agents
+
+Chatbot agents are AI Assistants that students can chat with to ask for help or further explanations regarding the Question that they are working on. Each Agent has its own personality and approach to assisting the students.
+
+[Chatbot Agents - Quickstart guide](chatbot_agents/quickstart.md){ .md-button .md-button--primary}
+
 ## System Architecture
 
 - Technologies
