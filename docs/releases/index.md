@@ -1,21 +1,21 @@
 ## Release 2025/01/23
 
-- **b543-lost-canvas-snapshot** - added a change to prevent the canvas content to disappear
-- **b522-latex-edit-box-over-displayed-latex** - ui changes to the text editor
+- **b543-lost-canvas-snapshot** - improve robustness of canvas saving
+- **b522-latex-edit-box-over-displayed-latex** - milkdown UI fixes
 
 ## Release 2025/01/21
 
-- **b65-enhanced-stats** - added set stats into the question stats
-- **b590-chat-canvas-documentation** - added sections about chatbots into the user documentation and the technical documentation
-- **/598-query-for-admin-dashboard-evaluation-functions-needs-optimisation - part 1** - prevented a query for evaluation function error statistics to be run as it caused the appliction to crash. There will be a follow-up work to optimise the query.
+- **b65-enhanced-stats** - chart added in the question STATS tab
+- **b590-chat-canvas-documentation** - chatbot documentation added
+- **b598-query-for-admin-dashboard-evaluation-functions-needs-optimisation - part 1** - evaluation function statistics disabled. Query will be optimised.
 
 ## Release 2025/01/15
 
-- **b524-modular-chatbot-workspace** - core development for introducing new chatbot functionality
-- **b540-chatbot-switches** - configuration updates to enable toggling chatbot functionality at the module, set, and question levels
-- **b548-chat-mcqs-information-conversion** - added functionality to parse multiple-choice questions (MCQs) into a user-readable format for chatbot interactions
-- **b552-pulumi-chat-infra-dev-staging-prod**  - prepared AWS infrastructure, including new AWS Lambdas, to support chatbot functionality across development, staging, and production environments
-- **b578-inconsistent-lambda-function-number-of-errors** - resolved inconsistencies in the display of Lambda function error statistics on the admin dashboard
+- **b524-modular-chatbot-workspace** - new chatbot functionality
+- **b540-chatbot-switches** - chatbot toggles
+- **b548-chat-mcqs-information-conversion** - parse MCQ respones into a user-readable format for chatbots
+- **b552-pulumi-chat-infra-dev-staging-prod**  - infrastructure for chatbots
+- **b578-inconsistent-lambda-function-number-of-errors** - resolved inconsistencies in eval function error statistics
 
 
 ## Release 2025/01/10
@@ -24,16 +24,16 @@
 
 ## Release 2025/01/09
 
-- **b75-add-labels-to-users-to-allow-filtering-in-analytics-examples-of-useful-labels-guest-msc-group2-personaltutor-etc-user-type** - added none option to the student filter
+- **b75-add-labels-to-users-to-allow-filtering-in-analytics-examples-of-useful-labels-guest-msc-group2-personaltutor-etc-user-type** - added 'none' option to student filter
 
 ## Release 2025/01/08
 
-- **b75-add-labels-to-users-to-allow-filtering-in-analytics-examples-of-useful-labels-guest-msc-group2-personaltutor-etc-user-type** - implemented student admin categories and student module tags  
+- **b75-add-labels-to-users-to-allow-filtering-in-analytics-examples-of-useful-labels-guest-msc-group2-personaltutor-etc-user-type** - student admin categories and student module tags  
 - **b562-single-multiple-choice-toggle-not-clear** - tidied up multiple choice toggle in the response area configuration panel
 
 ## Release 2024/12/12
 
-- **b563-misc-frontend-changes** - Small client-side setup improvements
+- **b563-misc-frontend-changes** - client-side setup improvements
 
 ## Release 2024/12/06
 
