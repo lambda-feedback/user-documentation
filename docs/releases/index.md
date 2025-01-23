@@ -1,3 +1,8 @@
+## Release 2025/01/23
+
+- **b543-lost-canvas-snapshot** - added a change to prevent the canvas content to disappear
+- **b522-latex-edit-box-over-displayed-latex** - ui changes to the text editor
+
 ## Release 2025/01/21
 
 - **b65-enhanced-stats** - added set stats into the question stats
