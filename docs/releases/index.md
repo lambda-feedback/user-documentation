@@ -1,3 +1,7 @@
+## Release 2025/01/29
+
+- **b591-workspace-split-panes-improvements** - Reworked the workspace split panes
+
 ## Release 2025/01/23
 
 - **b543-lost-canvas-snapshot** - improve robustness of canvas saving
