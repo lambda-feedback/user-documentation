@@ -1,5 +1,13 @@
 ## Release 2025/01/29
 
+- **b602-teacher-sets-overview-stats** - Show set's activity and progress statistics on teacher's module overview page
+- **b603-teacher-sets-list-stats** - Show set's activity and progress statistics on teacher's module content page
+- **b615-adjust-workspace-size-on-open** - Ensure workspace width always stays in given boundaries
+- **b589-teacher-set-statistics-improvements** - various improvements to the question statistics chart
+
+
+## Release 2025/01/29
+
 - **b591-workspace-split-panes-improvements** - Reworked the workspace split panes
 
 ## Release 2025/01/23
