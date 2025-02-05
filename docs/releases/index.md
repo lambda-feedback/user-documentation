@@ -2,7 +2,7 @@
 
 - **b559-instances-in-order** - corrected order of module instances in the header for both, teacher and student view, to be in descending chronological order
 - **b598-query-for-admin-dashboard-evaluation-functions-needs-optimisation** - optiised query for evaluation function statistics in admin dashboard
-- **b604-teacher-modules-stats** - Tim, please provide your comment. I pretty confused - is this card for reventing the stats? 
+- **b604-teacher-modules-stats** - Show set's activity and progress statistics on teacher's modules list page
 - **b607-duplicate-notifications** - preventing email notifications to be sent twice
 
 ## Release 2025/01/29
