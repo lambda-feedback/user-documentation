@@ -2,7 +2,7 @@
 
 - **b600-teacher-set-ra-statistics** - Set statistics for teachers
 - **b555-firefox-expression-writing-and-scanning-misaligned** - Upgraded canvas library to make sure canvas is working with Firefox
-- **b568-header-no-drop-down-if-only-one-instance** - the module instance to be displayed as a text (instead of dropdown) in the header if there is only one module instance
+- **b568-header-no-drop-down-if-only-one-instance** - The module instance to be displayed as a text (instead of dropdown) in the header if there is only one module instance
 
 ## Release 2025/02/05
 
