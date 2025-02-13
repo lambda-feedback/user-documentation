@@ -2,7 +2,7 @@ Lambda Feedback is a cloud-native application that is available with full servic
 
 This page contains information about any known incidents where service was interrupted. The page begain in November 2024 following a significant incident. The purpose is to be informative, transparent, and ensure lessons are always learned so that service improves over time.
 
-## 2025 November 25th: Incident related to new teacher roles feature
+## 2025 February 13th: Incident related to new teacher roles feature
 
 During this period teachers were not able to access teacher pages.
 
