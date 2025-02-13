@@ -20,7 +20,7 @@ During this period teachers were not able to access teacher pages.
 
 ### Lessons learned:
 
-- Features that work differently for users with TEACHER role (than for users with ADMIN role) need to be tested by a user with TEACHER role and it must not be a super-admin (because the role is automatically reverted back from TEACHER to ADMIN for super-admins). The same is valid for features that work differently for users with STUDENT role.
+- Features that behave differently for users with the TEACHER role (compared to users with the ADMIN role) must be tested by a user with the TEACHER role who is not a super-admin. This is because super-admins automatically revert from TEACHER back to ADMIN. The same applies to features that behave differently for users with the STUDENT role.
 
 ## 2024 mid-December to 2025 January 2nd: Imperial College security measures affected logins
 
