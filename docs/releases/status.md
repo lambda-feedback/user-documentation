@@ -2,6 +2,26 @@ Lambda Feedback is a cloud-native application that is available with full servic
 
 This page contains information about any known incidents where service was interrupted. The page begain in November 2024 following a significant incident. The purpose is to be informative, transparent, and ensure lessons are always learned so that service improves over time.
 
+## 2025 November 25th: Incident related to new teacher roles feature
+
+During this period teachers were not able to access teacher pages.
+
+### Timeline
+
+7:20am deployed a set of new features, including teacher roles
+
+9:47am issue reported - users with the TEACHER role were unable to access teacher pages.
+
+10:27am Issue reproduced on staging
+
+10:39am Issue fixed on staging; release to production initiated
+
+10:49am Confirmation that the fix worked in production
+
+### Lessons learned:
+
+- Features that work differently for users with TEACHER role (than for users with ADMIN role) need to be tested by a user with TEACHER role and it must not be a super-admin (because the role is automatically reverted back from TEACHER to ADMIN for super-admins). The same is valid for features that work differently for users with STUDENT role.
+
 ## 2024 mid-December to 2025 January 2nd: Imperial College security measures affected logins
 
 During this period the application was 100% available and operational. We were alerted on 2nd January that some users were not given permission by Imperial College London Microsoft 365 to login to third party applications. This was a a severe incident as it affected access to the application for some users.
