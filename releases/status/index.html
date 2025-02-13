@@ -2993,7 +2993,7 @@
 <p>10:49am Confirmation that the fix worked in production</p>
 <h3 id="lessons-learned">Lessons learned:<a class="headerlink" href="#lessons-learned" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Features that work differently for users with TEACHER role (than for users with ADMIN role) need to be tested by a user with TEACHER role and it must not be a super-admin (because the role is automatically reverted back from TEACHER to ADMIN for super-admins). The same is valid for features that work differently for users with STUDENT role.</li>
+<li>Features that behave differently for users with the TEACHER role (compared to users with the ADMIN role) must be tested by a user with the TEACHER role who is not a super-admin. This is because super-admins automatically revert from TEACHER back to ADMIN. The same applies to features that behave differently for users with the STUDENT role.</li>
 </ul>
 <h2 id="2024-mid-december-to-2025-january-2nd-imperial-college-security-measures-affected-logins">2024 mid-December to 2025 January 2nd: Imperial College security measures affected logins<a class="headerlink" href="#2024-mid-december-to-2025-january-2nd-imperial-college-security-measures-affected-logins" title="Permanent link">&para;</a></h2>
 <p>During this period the application was 100% available and operational. We were alerted on 2nd January that some users were not given permission by Imperial College London Microsoft 365 to login to third party applications. This was a a severe incident as it affected access to the application for some users.</p>
