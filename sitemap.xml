@@ -185,14 +185,6 @@
          <lastmod>2025-02-13</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/comparePhysicalQuantities/</loc>
-         <lastmod>2025-02-13</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/comparePhysicalQuantities/</loc>
-         <lastmod>2025-02-13</lastmod>
-    </url>
-    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareBoolean/</loc>
          <lastmod>2025-02-13</lastmod>
     </url>
@@ -201,19 +193,19 @@
          <lastmod>2025-02-13</lastmod>
     </url>
     <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/comparePhysicalQuantities/</loc>
+         <lastmod>2025-02-13</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/comparePhysicalQuantities/</loc>
+         <lastmod>2025-02-13</lastmod>
+    </url>
+    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/wolframAlphaEqual/</loc>
          <lastmod>2025-02-13</lastmod>
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/wolframAlphaEqual/</loc>
-         <lastmod>2025-02-13</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arrayEqual/</loc>
-         <lastmod>2025-02-13</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arrayEqual/</loc>
          <lastmod>2025-02-13</lastmod>
     </url>
     <url>
@@ -262,6 +254,14 @@
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareConstructs/parameters/</loc>
+         <lastmod>2025-02-13</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arrayEqual/</loc>
+         <lastmod>2025-02-13</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arrayEqual/</loc>
          <lastmod>2025-02-13</lastmod>
     </url>
     <url>
