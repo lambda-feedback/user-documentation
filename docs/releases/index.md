@@ -1,3 +1,10 @@
+## Release 2025/02/13
+
+- **b574-teacher-roles** - Introduced teacher roles to manage permissions and access levels.
+- **b583-student-view-should-be-the-same-for-teacher-and-admin** - Admin users now have the same view in student mode as teachers.
+- **b624-teacher-modules-stats-performances** - Improved performance when retrieving data for statistics and graphs in teacher modules.
+- **b637-chat-functions-upsert-service** - Standardised chatbot function deployment to use the same mechanism as evaluation functions.
+
 ## Release 2025/02/07
 
 - **b600-teacher-set-ra-statistics** - Set statistics for teachers
