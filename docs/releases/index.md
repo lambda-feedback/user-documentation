@@ -1,3 +1,7 @@
+## Release 2025/02/19
+
+- **631-chat-welcome-message-for-new-conversations** - Added a welcome message for students using the chatbot feature for the first time.
+
 ## Release 2025/02/13
 
 - **b574-teacher-roles** - Introduced teacher roles to manage permissions and access levels.
