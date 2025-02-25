@@ -1,10 +1,11 @@
 ## Release 2025/02/25
 
-- **b645-fix-question-version-duplicate-statistics** - Fixed statistics to avoid duplicate counting.
-- **b634-teacher-modules-progress-bar-tooltip-fix** - Removed module IDs from the progress bar tooltip.
+- **b373-show-number-of-unresolved-activities-on-tab-header** - Added information into the tab labels about number of unresolved activities and errors.
 - **b601-stats-switch-to-edit** - A change to allow easy access to the response area editing from the question stats.
-- **b635-chat-improvements-more-question-info** - Improvement in the chatbot functionality to include more information about the question.
 - **b630-stats-not-refreshed-after-enrolling-or-deleting-a-student** - A change to make sure that statistics refresh after a student is added to the module or removed.
+- **b634-teacher-modules-progress-bar-tooltip-fix** - Removed module IDs from the progress bar tooltip.
+- **b635-chat-improvements-more-question-info** - Improvement in the chatbot functionality to include more information about the question.
+- **b645-fix-question-version-duplicate-statistics** - Fixed statistics to avoid duplicate counting.
 
 ## Release 2025/02/19
 
