@@ -1,22 +1,7 @@
 ## Release 2025/03/05
 
-A new text editor based on [lexical](https://lexical.dev/) replaces Milkdown. All of the following are related to this change:
-
-- **sg4-lf-vulnerability-preventing-markdown-xss** - Prevent Markdown XSS.
-- **sg8-improve-raw-md-mode** - Raw Markdown mode upgrades.
-- **sg12-fix-styling** - Editor style improvements.
-- **sg16-improve-editor-focus-management** - Editor focus upgrades.
-- **sg20-remove-text-on-post-of-comment** - Upon pressing POST, the text in the editor box now disappears.
-- **sg28-change-esc-behaviour-on-modals** - When inputting YouTube and Panopto videos, pressing 'Esc' escapes the modal but does not exit edit mode.
-- **sg29-add-floating-link-editor** - Floating link editor that appears when clicking on a link, allowing users to edit the link’s title and URL.
-- **sg33-allow-images-to-be-links** - Images can be hyperlinks.
-- **sg36-change-toolbar-to-be-adaptive-wrt-current-formatting** - Toolbar responds to selection changes, Heading 1.
-- **sg38-verify-milkdown-editor-remains-functional-with-admin-switch-off** - Verified that the Milkdown editor remains functional when the admin switch is off.
-- **sg39-overhaul-markdown-parsing** - Improved parser robustness for legacy backend content, removing assumptions about Lexical’s Markdown input.
-- **sg41-make-md-response-area-respond-to-changes-in-text-editor-switch** - Adjusted the "Milkdown" response area to support both the Milkdown and Lexical text editors.
-- **sg51-student-mode-md-switch-submits-comment-or-reply** - Prevented the Markdown switch from submitting comments.
-- **sg52-dont-allow-horizontal-scrolling-for-whole-lexical-box** - Prevented horizontal scrolling when using the Milkup editor.
-- **b627-add-a-switch-for-text-editors** - Admin switch Milkdown and Lexical editors.
+- **b652-introducing-milkup-editor** - Implemented a new Milkup editor (a Lexical-based editor with extensions developed by a student group) to replace the existing Milkdown editor.
+- **b627-add-a-switch-for-text-editors** - Introduced switch to activate either Mildown editor or Milkup editor.
 
 ## Release 2025/02/25
 
