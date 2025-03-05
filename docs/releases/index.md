@@ -1,3 +1,21 @@
+## Release 2025/03/05
+
+- **sg4-lf-vulnerability-preventing-markdown-xss** - Improvements to prevent Markdown XSS.
+- **sg8-improve-raw-md-mode** - Improvements to raw Markdown mode.
+- **sg12-fix-styling** - "Milkup" editor style improvements.
+- **sg16-improve-editor-focus-management** - Improvements to maintain editor focus.
+- **sg20-remove-text-on-post-of-comment** - Upon pressing POST, the text in the editor box now disappears.
+- **sg28-change-esc-behaviour-on-modals** - Ensured that when inputting YouTube and Panopto videos, pressing 'Esc' escapes the modal but does not exit edit mode.
+- **sg29-add-floating-link-editor** - Added a floating link editor that appears when clicking on a link, allowing users to edit the link’s title and URL.
+- **sg33-allow-images-to-be-links** - Allowed images to be set as hyperlinks.
+- **sg36-change-toolbar-to-be-adaptive-wrt-current-formatting** - Toolbar now responds to selection changes, e.g., clicking on Heading 1 updates the toolbar to show Heading 1.
+- **sg38-verify-milkdown-editor-remains-functional-with-admin-switch-off** - Verified that the Milkdown editor remains functional when the admin switch is off.
+- **sg39-overhaul-markdown-parsing** - Improved parser robustness for old backend content, removing assumptions about Lexical’s Markdown input.
+- **sg41-make-md-response-area-respond-to-changes-in-text-editor-switch** - Adjusted the "Milkdown" response area to support both the Milkdown and Milkup text editors.
+- **sg51-student-mode-md-switch-submits-comment-or-reply** - Prevented the Markdown switch from submitting comments.
+- **sg52-dont-allow-horizontal-scrolling-for-whole-lexical-box** - Prevented horizontal scrolling when using the Milkup editor.
+- **b627-add-a-switch-for-text-editors** - Introduced a switch to activate either the Milkdown editor or the Milkup editor.
+
 ## Release 2025/02/25
 
 - **b373-show-number-of-unresolved-activities-on-tab-header** - numbers added to tabs in TEACHER mode.
