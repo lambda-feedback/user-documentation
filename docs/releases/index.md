@@ -1,3 +1,7 @@
+## Release 2025/03/11
+
+- **658-milkup-editor-improvements-i** - Improvements to the new Milkup editor, including handling tables, centering images in PDFs, handling modals, and improving step display in worked solutions and tutorials.
+
 ## Release 2025/03/05
 
 - **b652-introducing-milkup-editor** - Implemented a new Milkup editor (a Lexical-based editor with extensions developed by a student group) to replace the existing Milkdown editor.
