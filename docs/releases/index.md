@@ -1,12 +1,12 @@
 ## Release 2025/03/14
 
 - **b655-small-chat-improvements** - Minor chat enhancements, primarily focused on providing suggestions.
-- **b663-milkup-editor-improvements-ii** - Enhancements to the new Milkup editor, including improved layout for worked solutions and the horizontal ruler.
+- **b663-milkup-editor-improvements-ii** - Text editor tweaks.
 - **b659-style-of-chats-to-match-the-lexical-text-editor** - Updated chat styling.
 
 ## Release 2025/03/11
 
-- **b658-milkup-editor-improvements-i** - Improvements to the new Milkup editor, including handling tables, centering images in PDFs, handling modals, and improving step display in worked solutions and tutorials.
+- **b658-milkup-editor-improvements-i** - Text editor upgrades, including handling tables, centering images in PDFs, handling modals, and improving step-by-step display in worked solutions and tutorials.
 
 ## Release 2025/03/05
 
