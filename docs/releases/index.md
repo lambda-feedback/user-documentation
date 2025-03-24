@@ -1,3 +1,12 @@
+## Release 2025/03/24
+
+- **b531-teacher-modules-page-table-filtering-and-sorting** - improved sorting of the module list in the teacher view
+- **b642-update-manually-hidden-in-sets-page-immediately-after-updating-in-settings** - fixed the issue with the "manually hidden" switch not updating immediately
+- **b649-chatbot-message-reactions** - introduced reactions and flagging features to allow students to comment on chatbot responses
+- **b657-breadcrumbs-should-show-module-name** - added module name to the breadcrumbs
+- **b671-admin-chat-flags-page** - added a new admin page to view student flags on chatbot responses
+- **b660-global-tag-attributes** - added teacher email address as an attribute to the global tag to link the global tag with the corresponding teacher
+
 ## Release 2025/03/14
 
 - **b655-small-chat-improvements** - Minor chat enhancements, primarily focused on providing suggestions.
