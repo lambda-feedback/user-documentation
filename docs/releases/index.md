@@ -1,3 +1,11 @@
+## Release 2025/03/27
+
+- **b647-fix-tab-numbers** - corrected tab to display the correct number of activities
+- **b561-comments-buttons** - simplified button arrangement for posting comments
+- **b680-lexdown-insert-image-triggers-submit-event** - updated Lexical text editor implementation to prevent incorrect triggering of submit events
+- **b650-reactions-scroll-under-tabs-in-teacher-edit-mode** - improved UI so that reaction and flag icons scroll under the top panel instead of over it
+- **b599-teacher-set-timings-statistics** - added a graph to show statistics on how students access and work on sets
+
 ## Release 2025/03/24
 
 - **b531-teacher-modules-page-table-filtering-and-sorting** - improved sorting of the module list in the teacher view
