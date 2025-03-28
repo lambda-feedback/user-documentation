@@ -2,6 +2,46 @@ Lambda Feedback is a cloud-native application that is available with full servic
 
 This page contains information about any known incidents where service was interrupted. The page begain in November 2024 following a significant incident. The purpose is to be informative, transparent, and ensure lessons are always learned so that service improves over time.
 
+## 2025 March 28th: access blocked within a particular organisation's WiFi
+
+The URL lambdafeedback.com is served by a content delivery network (CDN), that was blocked by a particular organisation's WiFi. During this period, users on that WiFi couldn't access the site.  
+
+### Timeline
+
+2025/03/27 09:17 GMT We received a report that some users can't load the website at all. We announced this on the home page.
+
+2025/03/27 10:37 GMT The issues were identified as isolated to Imperial WiFi. Update on home page including advice to use a different WiFi (e.g. hotspot, or other location), or a [different DNS](https://developers.cloudflare.com/1.1.1.1/setup/windows/). Ticket with ICT and number shared with users. There was a response within minutes requesting more information, but no further response until the next morning.
+
+2025/03/28 09:22 GMT Imperial ICT acknowledged that their security software had blocked the whole CDN. Lambda Feedback was specifically unblocked and full service was resumed. We have asked for a broader unblocking.
+
+2025/03/28 09:32 GMT Authentication services were down (no logins) but resumed within a few minutes and service remained good. We'll investigate and report.
+
+2025/03/28 13:47 GMT Imperial ICT confirmed a wider unblocking.
+
+2025/03/28 14:45 GMT Incident closed. 
+
+### Lessons learned:
+
+Networks that provide internet access can block or incorrectly redirect users when trying to access Lambda Feedback. The block can be specific to one site or, as in this case, it can block a whole content delivery network (CDN) that serves many sites. 
+
+Affected users will never reach the site, and we will have no way to know that they are failing to access. 
+
+### Recommended Actions
+
+- Alert the ICT departments of key user groups to this problem, and ensure in advance that the relevent CDNs are not blocked.
+
+- Create a backup plan for if the URL or the CDN are not correctly routed
+
+- Monitor traffic to identify drops in usage that may indicate an issue (we already do this, but the drop was not significant enough in this case to be evident)
+
+- Monitor the Lambda Feedback email address (this was effective in this case and we were in touch with users)
+
+- Create a live chat with 'power users' for better communication during these incidents. A chat was started during this incident and will continue to be used
+
+- Consider local WiFi/networks as a possible cause for blocking site access, and test for this cause when troubleshooting access issues
+
+- Investigate the cause of the short unavailability of logins at 09:33 GMT on 28th March 2025.
+
 ## 2025 February 13th: Incident related to new teacher roles feature
 
 During this period teachers were not able to access teacher pages.
