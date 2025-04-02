@@ -1,5 +1,5 @@
 # Major releases
-For detailed notes, see [latest releases](latest_releases.md).
+This page contains summaries; see also [detailed releases](detailed_releases.md).
 ## 2025 Q1 new features
 
 ### Data analytics
