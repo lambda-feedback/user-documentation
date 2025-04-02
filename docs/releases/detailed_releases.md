@@ -1,3 +1,5 @@
+# Latest releases
+
 ## Release 2025/03/27
 
 - **b647-fix-tab-numbers** - corrected tab to display the correct number of activities
