@@ -138,6 +138,7 @@ plugins:
       fallback_to_build_date: true
   - macros
   - evaldocsloader:
+      enabled: !ENV [ENABLE_EVALDOCS, false]
       functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
       api_key:
         !ENV [

@@ -26,12 +26,14 @@ The workspace has a 'chat' pane where users chat with a bot that has access to t
 ### New content editor 
 
 'Lexdown', a markdown-first version of Meta's [lexical](https://lexical.dev/). As well as a more robust general component, this upgrade allows users to:
+
 - Resize images
 - Edit raw markdown
 - Preview latex including when it doesn't compile (with errors in red) 
 - Improved table capabilities
 
 ### User tags
+
 - Tag users within a module ('module tag'), to allow grouping and filtering
 - Tag users across modules ('global tag'), to allow user-orientated analytics (e.g. for pastoral care)
 
