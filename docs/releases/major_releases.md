@@ -5,12 +5,17 @@ For detailed notes, see [latest releases](latest_releases.md).
 ### Data analytics
 
 Enriched data for teachers, including:
+
 - Completion statistics per response area (in the 'STATS' tab within a question)
 ![](../assets/releases/2025Q1_RA_stats.png)
-- Completion statistics per question (in the 'STATS' tab within a question) ![](../assets/releases/2025Q1_question_stats.png)
-- Completion and activity statistics per Set (in the 'CONTENT' tab within a module) ![](../assets/releases/2025Q1_set_stats.png)
+- Completion statistics per question (in the 'STATS' tab within a question) 
+![](../assets/releases/2025Q1_question_stats.png)
+- Completion and activity statistics per Set (in the 'CONTENT' tab within a module) 
+![](../assets/releases/2025Q1_set_stats.png)
+- Completion and activity statistics per Set (on the 'OVERVIEW' tab within a module) 
 ![](../assets/releases/2025Q1_set_stats_2.png)
-- Completion and activity statistics per Module (on the home page) ![](../assets/releases/2025Q1_module_stats.png)
+- Completion and activity statistics per Module (on the home page) 
+![](../assets/releases/2025Q1_module_stats.png)
 
 ### Chat bots
 
