@@ -16,7 +16,7 @@ nav:
       - Opportunities: "opportunities.md"
       - Releases:
           - Major releases: "releases/major_releases.md"
-          - Detailed Releases: "releases/latest_releases.md"
+          - Detailed Releases: "releases/detailed_releases.md"
           - Previous releases:
               - 2023-24: "releases/relases_2023_24.md"
           - Status: "releases/status.md"
