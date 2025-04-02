@@ -1,3 +1,8 @@
+## Release 2025/04/02
+
+- **b690-lexdown-legacy-content** - updated Lexdown to ensure all legacy content is correctly displayed
+- **b676-user-permissions-tweaks-and-bugs** - added access restrictions to the question Stats tab, specifically limiting access to Explore and Configure functionality
+
 ## Release 2025/03/27
 
 - **b647-fix-tab-numbers** - corrected tab to display the correct number of activities
