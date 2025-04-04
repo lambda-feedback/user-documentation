@@ -1,3 +1,10 @@
+## Release 2025/04/04
+
+- **b599-teacher-set-timings-statistics** - set timing statistics introduced
+- **b647-fix-tab-numbers** - correct number of activities and errors on the tabs
+- **b664-milkup-vertical-spacing** - ui improvements
+- **b/681-teacher-landing-page** teacher landing page introduced
+
 ## Release 2025/04/02
 
 - **b690-lexdown-legacy-content** - updated Lexdown to ensure all legacy content is correctly displayed
