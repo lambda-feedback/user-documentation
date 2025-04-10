@@ -1,3 +1,7 @@
+## Release 2025/04/10
+
+- **b699-pdf-generator-inline-images** - Fixed an error that occurred when a question contained no images. This is a temporary fix, which causes non-captioned images to be left-aligned.
+
 ## Release 2025/04/04
 
 - **b599-teacher-set-timings-statistics** - set timing statistics introduced
