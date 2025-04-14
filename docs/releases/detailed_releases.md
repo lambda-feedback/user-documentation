@@ -1,3 +1,7 @@
+## Release 2025/04/14
+
+- **b616-teacher-sets-list-redesign** - New look of the student list in the teacher view.
+
 ## Release 2025/04/10
 
 - **b699-pdf-generator-inline-images** - Fixed an error that occurred when a question contained no images. This is a temporary fix, which causes non-captioned images to be left-aligned.
