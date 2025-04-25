@@ -3,6 +3,7 @@
 - **b674-breadcrumbs-tweaks** - Updated breadcrumbs to maintain consistency across the application.
 - **b682-teacher-role-type** - Admins can now view the teacher role type, and they can change the description for the "owner" role.
 - **b688-allow-multiple-teachers-per-global-tag** - Global tags can now have more than one teacher assigned.
+- **b695-display-an-error-if-a-content-cannot-be-displayed** - Teachers to see error if a content could not be parsed (by the Lexdown parser).
 
 ## Release 2025/04/14
 
