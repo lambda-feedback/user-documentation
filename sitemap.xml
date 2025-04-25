@@ -197,19 +197,19 @@
          <lastmod>2025-04-25</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arraySymbolicEqual/</loc>
-         <lastmod>2025-04-25</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arraySymbolicEqual/</loc>
-         <lastmod>2025-04-25</lastmod>
-    </url>
-    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/wolframAlphaEqual/</loc>
          <lastmod>2025-04-25</lastmod>
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/wolframAlphaEqual/</loc>
+         <lastmod>2025-04-25</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arraySymbolicEqual/</loc>
+         <lastmod>2025-04-25</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arraySymbolicEqual/</loc>
          <lastmod>2025-04-25</lastmod>
     </url>
     <url>
@@ -293,22 +293,6 @@
          <lastmod>2025-04-25</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/symbolicEqual/</loc>
-         <lastmod>2025-04-25</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/symbolicEqual/</loc>
-         <lastmod>2025-04-25</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareExpressions/</loc>
-         <lastmod>2025-04-25</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareExpressions/</loc>
-         <lastmod>2025-04-25</lastmod>
-    </url>
-    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/latexEqual/</loc>
          <lastmod>2025-04-25</lastmod>
     </url>
@@ -330,6 +314,22 @@
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/isSimilar/</loc>
+         <lastmod>2025-04-25</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/symbolicEqual/</loc>
+         <lastmod>2025-04-25</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/symbolicEqual/</loc>
+         <lastmod>2025-04-25</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareExpressions/</loc>
+         <lastmod>2025-04-25</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareExpressions/</loc>
          <lastmod>2025-04-25</lastmod>
     </url>
 </urlset>
