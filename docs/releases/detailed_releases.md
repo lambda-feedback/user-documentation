@@ -1,3 +1,9 @@
+## Release 2025/04/25
+
+- **b674-breadcrumbs-tweaks** - Updated breadcrumbs to maintain consistency across the application.
+- **b682-teacher-role-type** - Admins can now view the teacher role type, and they can change the description for the "owner" role.
+- **b688-allow-multiple-teachers-per-global-tag** - Global tags can now have more than one teacher assigned.
+
 ## Release 2025/04/14
 
 - **b616-teacher-sets-list-redesign** - New look of the student list in the teacher view.
