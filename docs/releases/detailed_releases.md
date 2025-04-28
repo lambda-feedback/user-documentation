@@ -2,6 +2,7 @@
 
 - **b683-personal-tutor-introduction** - The teacher home page now includes a Students panel for personal tutors to view their tutor group's students and their their progress.
 - **b689-allow-teacher-to-see-user-role-permissions** - Teachers can now view the permissions assigned to each teacher role.
+- **b691-admin-dashboard-unique-user-logs** -  Improved metric on the admin dashboard to count unique users.
 
 ## Release 2025/04/25
 
