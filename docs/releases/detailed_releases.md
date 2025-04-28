@@ -1,3 +1,8 @@
+## Release 2025/04/28
+
+- **b683-personal-tutor-introduction** - The teacher home page now includes a Students panel for personal tutors to view their tutor group's students and their their progress.
+- **b689-allow-teacher-to-see-user-role-permissions** - Teachers can now view the permissions assigned to each teacher role.
+
 ## Release 2025/04/25
 
 - **b674-breadcrumbs-tweaks** - Updated breadcrumbs to maintain consistency across the application.
