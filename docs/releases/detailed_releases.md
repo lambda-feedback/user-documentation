@@ -1,3 +1,11 @@
+## Release 2025/05/07
+
+- **b684-access-modules-as-personal-tutor** – Added links to the modules listed in the Students panel on the teacher landing page, allowing personal tutors to access the modules.
+- **b686-special-teacher-role-for-personal-tutor** – Introduced a special teacher role, "personal tutor", to configure access permissions for personal tutors.
+- **b702-filter-by-global-tag-admin** – Created a new filter component to filter users by email and/or cohort. Currently added only to the admin students page for testing.
+- **b707-paging-on-admin-modules-page-does-not-work** – Fixed a bug that caused pagination to not work correctly in several tables.
+
+
 ## Release 2025/04/28
 
 - **b683-personal-tutor-introduction** - The teacher home page now includes a Students panel for personal tutors to view their tutor group's students and their their progress.
