@@ -1,3 +1,7 @@
+## Release 2025/05/16
+
+- **b703-personal-tutor-tweaks** - A set of improvements to the personal tutor functionality.
+
 ## Release 2025/05/07
 
 - **b684-access-modules-as-personal-tutor** – Added links to the modules listed in the Students panel on the teacher landing page, allowing personal tutors to access the modules.
