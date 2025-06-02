@@ -1,3 +1,12 @@
+## Release 2025/06/02
+
+- **b668-lexdown-updates** - A set of improvements to the lexical editor implementation.
+- **b705-personal-tutor-imports** - Introduction of student import, including personal tutor and global tag assignment.
+- **/687-admin-teachers-add-global-tags** - Added global tags to the admin teachers page.
+- **b711-overlapping-elements** - Fixed a styling issue in the guidance widget.
+- **b716-lexdown-styling-tweaks** - A set of improvements to the styling of the lexical editor.
+- **b717-lexdown-raw-markdown-improvements** - Improvements to raw markdown handling.
+
 ## Release 2025/05/16
 
 - **b703-personal-tutor-tweaks** - A set of improvements to the personal tutor functionality.
