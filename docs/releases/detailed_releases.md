@@ -1,3 +1,7 @@
+## Release 2025/06/04
+
+- **b714-teacher-students-page-and-panel-ui-adjustments** - UI alignment of the Students and Modules tables on the Teachers home page.
+
 ## Release 2025/06/02
 
 - **b668-lexdown-updates** - A set of improvements to the lexical editor implementation.
