@@ -1,3 +1,7 @@
+## Release 2025/06/05
+
+- **b588-student-current-active-session-timings** -  Improved accuracy of question statistics graphs.
+
 ## Release 2025/06/04
 
 - **b714-teacher-students-page-and-panel-ui-adjustments** - UI alignment of the Students and Modules tables on the Teachers home page.
