@@ -1,6 +1,14 @@
+## Release 2025/06/11
+
+- **b710-navigate-to-explore-student-from-students-module-in-teacher-view** – Enabled navigation to the student explore page from the teacher's students page.  
+- **b712-alignment-on-student-home-page** – UI alignment adjustments on the student home page.  
+- **b715-admin-teachers-display-which-modules-the-teacher-is-assigned-to** – Added a new admin page showing all modules to which a teacher is assigned, either as a teacher or tutor.  
+- **b718-feed-displays-different-content-when-scrolling-through-modules** – Fixed feed pagination on the teacher home page.  
+- **b724-personal-tutor-imports-qa-requests** – Improved student import process.
+
 ## Release 2025/06/05
 
-- **b588-student-current-active-session-timings** -  Improved accuracy of question statistics graphs.
+- **b588-student-current-active-session-timings** - Improved accuracy of question statistics graphs.
 
 ## Release 2025/06/04
 
