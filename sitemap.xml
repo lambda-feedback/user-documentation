@@ -9,6 +9,10 @@
          <lastmod>2025-06-11</lastmod>
     </url>
     <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/publications/</loc>
+         <lastmod>2025-06-11</lastmod>
+    </url>
+    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/terminology/</loc>
          <lastmod>2025-06-11</lastmod>
     </url>
@@ -21,11 +25,11 @@
          <lastmod>2025-06-11</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/advanced/chatbot_agents/local/</loc>
+         <loc>https://lambda-feedback.github.io/user-documentation/advanced/chat_functions/local/</loc>
          <lastmod>2025-06-11</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/advanced/chatbot_agents/quickstart/</loc>
+         <loc>https://lambda-feedback.github.io/user-documentation/advanced/chat_functions/quickstart/</loc>
          <lastmod>2025-06-11</lastmod>
     </url>
     <url>
@@ -93,7 +97,7 @@
          <lastmod>2025-06-11</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/student/milkdown_student/</loc>
+         <loc>https://lambda-feedback.github.io/user-documentation/student/lexdown_student/</loc>
          <lastmod>2025-06-11</lastmod>
     </url>
     <url>
@@ -125,7 +129,7 @@
          <lastmod>2025-06-11</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/teacher/guides/milkdown/</loc>
+         <loc>https://lambda-feedback.github.io/user-documentation/teacher/guides/lexdown/</loc>
          <lastmod>2025-06-11</lastmod>
     </url>
     <url>
@@ -186,150 +190,6 @@
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/teacher/reference/response_area_components/Text/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arrayEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arrayEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/wolframAlphaEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/wolframAlphaEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareSets/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareSets/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareBoolean/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareBoolean/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/comparePhysicalQuantities/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/comparePhysicalQuantities/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/shortTextAnswer/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/shortTextAnswer/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/symbolicEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/symbolicEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareConstructs/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareConstructs/security/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareConstructs/syntax_and_style/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareConstructs/variable_content/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareConstructs/functions/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareConstructs/parameters/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareConstructs/future_improvements/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareConstructs/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareConstructs/syntax_and_style/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareConstructs/variable_content/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareConstructs/functions/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareConstructs/parameters/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arraySymbolicEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arraySymbolicEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/isExactEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/isExactEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/latexEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/latexEqual/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/isSimilar/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/isSimilar/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareExpressions/</loc>
-         <lastmod>2025-06-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareExpressions/</loc>
          <lastmod>2025-06-11</lastmod>
     </url>
 </urlset>
