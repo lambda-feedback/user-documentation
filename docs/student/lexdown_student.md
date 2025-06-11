@@ -1,6 +1,6 @@
 # Text Editing
 
-The [Milkdown editor](https://milkdown.dev/online-demo) is widely used in Lambda Feedback wherever rich text input is required.
+The lexdown is widely used in Lambda Feedback wherever rich text input is required.
 On the student interface, it is used to add personal solution notes, and to write comments.
 
 It accepts:

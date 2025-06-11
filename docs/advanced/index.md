@@ -1,29 +1,28 @@
 # Advanced users
 
-Advanced users can develop their own evaluation functions.
 
-## Evaluation functions
+## Microservices
 
-Evaluation functions are responsible for taking in a user's response, comparing it with a correct answer, and providing feedback to the frontend application. Living as containserized Lambda functions on the cloud, they are infinitely customisable and language-agnostic. Content authors should be able to create their own at will. However, we are aware that in a lot of cases, this grading logic will be similar, which is why a few functions have already been created.
+The fundamental idea of Lambda Feedback is that it calls external microservices to provide interaction with users. There are two types of microservice: 
 
-[Evaluation functions - Quickstart Guide](evaluation_functions/quickstart.md){ .md-button .md-button--primary }
+Evaluate a student response and provide feedback: 
+[Evaluation functions - Quickstart Guide](evaluation_functions/quickstart.md){ .md-button .md-button--primary style="width: 400px;"}
+
+Dialogic conversations with students:<br>
+[Chat functions - Quickstart guide ](chatbot_agents/quickstart.md){ .md-button .md-button--primary style="width: 400px;"}
+
+All microservices are called over http. There is complete freedom in their implementation. Lambda Feedback also provides families of deployed microservices, using open source code available in our public GitHub repositories.
+
+This section of documentation is to help developers of microservices. The documentation is written assuming you have basic developer skills.
+
+In addition to microservices, this 'Advanced' section caters to administrators of Lambda Feedback tenants; and to developers of interactive response areas, that can be published within our web-stack via discussion with the developers. 
 
 ## Response areas
 
 Response areas are components in the frontend where student users can enter a response. The response is sent to the evaluation function, which returns feedback to the response area. In the alpha version response areas are built into the software (rather than being modular) so are not straightforward to redevelop. This website catalogues the basic behaviour of response areas, to inform developers of evaluation functions.
 
-[Response areas - overview](response_areas/overview.md){ .md-button .md-button--primary}
+[Response areas - overview](response_areas/overview.md){ .md-button .md-button--primary style="width: 400px;"}
 
-## AI Chatbot Agents
+## Administrators
 
-Chatbot agents are AI Assistants that students can chat with to ask for help or further explanations regarding the Question that they are working on. Each Agent has its own personality and approach to assisting the students.
-
-[Chatbot Agents - Quickstart guide](chatbot_agents/quickstart.md){ .md-button .md-button--primary}
-
-## System Architecture
-
-- Technologies
-- Deployment pipelines
-- Hierarchy
-
-## Future Features
+Content to be added.

@@ -12,8 +12,9 @@ edit_uri: blob/main/docs/
 nav:
   - Home:
       - "index.md"
-      - Terminology: "terminology.md"
+      - Publications: "publications.md"
       - Opportunities: "opportunities.md"
+      - Terminology: "terminology.md"
       - Releases:
           - Major releases: "releases/major_releases.md"
           - Detailed Releases: "releases/detailed_releases.md"
@@ -26,7 +27,7 @@ nav:
       - Getting Started: "student/getting_started_student.md"
       - Answering Questions: "student/answering_questions.md"
       - Response Areas: "student/response_areas.md"
-      - Text Editing: "student/milkdown_student.md"
+      - Text Editing: "student/lexdown_student.md"
       - FAQ: "student/faq.md"
 
   - Teachers:
@@ -35,7 +36,7 @@ nav:
           - Getting Started: "teacher/guides/gettingstarted.md"
           - Editing questions: "teacher/guides/content-sets-questions.md"
           - Exporting and importing questions: "teacher/guides/question-export-import.md"
-          - Milkdown: "teacher/guides/milkdown.md"
+          - Milkdown: "teacher/guides/lexdown.md"
           - Analytics: "teacher/guides/analytics.md"
           - Good practice: "teacher/guides/good-practice.md"
           - FAQ: "teacher/guides/faq.md"
@@ -72,9 +73,9 @@ nav:
           - Deployed Functions:
               - "advanced/evaluation_functions/index.md"
           - Alternate Function Languages: "advanced/evaluation_functions/alternate_languages.md"
-      - Chat agents:
-          - Quickstart: "advanced/chatbot_agents/quickstart.md"
-          - Testing Functions Locally: "advanced/chatbot_agents/local.md"
+      - Chat functions:
+          - Quickstart: "advanced/chat_functions/quickstart.md"
+          - Testing Functions Locally: "advanced/chat_functions/local.md"
 
 # Configuration
 theme:
@@ -137,17 +138,17 @@ plugins:
   - git-revision-date-localized:
       fallback_to_build_date: true
   - macros
-  - evaldocsloader:
-      enabled: !ENV [ENABLE_EVALDOCS, true]
-      functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
-      api_key:
-        !ENV [
-          API_KEY,
-          "WiOS1vMpQyTuGL06ZJxjG1eZd2P0SPvuVzHpr6zjkTIJ33U2t5O5NWaZboWBv8aV",
-        ]
-      dev_section: ["Advanced", "Evaluation Functions", "Deployed Functions"]
-      user_section: ["Teachers", "Reference", "Evaluation Functions"]
-      github_token: !ENV [GITHUB_TOKEN, ""]
+  #- evaldocsloader:
+  #    enabled: !ENV [ENABLE_EVALDOCS, true]
+  #    functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
+  #    api_key:
+  #      !ENV [
+  #        API_KEY,
+  #        "WiOS1vMpQyTuGL06ZJxjG1eZd2P0SPvuVzHpr6zjkTIJ33U2t5O5NWaZboWBv8aV",
+  #      ]
+  #    dev_section: ["Advanced", "Evaluation Functions", "Deployed Functions"]
+  #    user_section: ["Teachers", "Reference", "Evaluation Functions"]
+  #    github_token: !ENV [GITHUB_TOKEN, ""]
 
 # Extra variables, accessible within markdown pages
 extra:
