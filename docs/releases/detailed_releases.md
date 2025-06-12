@@ -1,3 +1,9 @@
+## Release 2025/06/12
+
+- **b706-default-end-date-on-module-instances** - Made the module instance end date a required field.
+- **b719-access-denied-redirect** - Improved module instance permission checks to account for both teacher and tutor roles.
+- **b726-synchronise-stats-db-queries** - Synchronized the start and end dates used in module, student, and student-module access statistics. Now includes all students, regardless of their user roles.
+
 ## Release 2025/06/11
 
 - **b710-navigate-to-explore-student-from-students-module-in-teacher-view** – Enabled navigation to the student explore page from the teacher's students page.  
