@@ -1,3 +1,8 @@
+## Release 2025/06/18
+
+- **b720-allow-teachers-to-be-linked-to-global-tags-as-students** – Display both global tags (student and teacher) for **admin** and **teacher** users. Use only student global tags for **student** users.
+- **b723-set-edit-icon-buttons** – Display the set visibility icons as **buttons**.
+
 ## Release 2025/06/12
 
 - **b706-default-end-date-on-module-instances** - Made the module instance end date a required field.
