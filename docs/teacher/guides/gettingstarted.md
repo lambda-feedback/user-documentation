@@ -1,83 +1,97 @@
-# Get started as a teacher using Lambda Feedback
+# Getting Started with Lambda Feedback for Teachers
 
-## Access a module
+## Access a Module
 
-Use your Imperial Microsoft account to sign in and access your modules. By default you are logged in as a student and the interface will be blue. If you have teacher priviliges then you will see a teacher button at the top.
+Use your Imperial Microsoft account to sign in and access your modules. By default, you are logged in as a student, and the interface will be blue. If you have teacher **privileges**, you will see a 'Teacher' button at the top.
 
 ![Buttons](images/Student_Mode_Arrow.PNG)<br />
 
-To enter teacher mode, <ins>click on the Teacher button</ins>, and the colour of the interface will change to orange. This is where you are able to access all your modules, as well as upload and edit problem sets.
+To enter teacher mode, <ins>click the 'Teacher' button</ins>, and the **colour** of the interface will change to orange. This is where you can access all your modules, as well as upload and edit problem sets.
 
-As of 07/2023, new modules can only be added to Lambda Feedback by administrators. Please speak to an admin if you wish for your module to be added to the website.
+As of **July 2023**, new modules can only be added to Lambda Feedback by administrators. Please **contact an administrator** if you want your module added to the website.
 
 ![Teacher](images/Teacher_Mode_Orange.PNG)<br />
 
-To find the module you want, you can sort ASCENDING as per the image below:<br />
+To find the module you want, you can sort it in **ascending order** as shown below:
+<br />
 ![Sort](images/Sort_Modules.png){: style="height:200px"}
 ![Filter](images/Filter_Modules.png){: style="height:200px"}<br />
-_Image: quick sort (left) or filtering (right)_
+_Image: Quick sort (left) or filtering (right)_
 
-As of 31/8/22 the filtering/sorting only works on the content visible on the current page (other pages are ignored). We aim to fix this by sorting at the backend.
+**Note:** As of 31 August 2022, filtering and sorting only work on the content visible on the current page; other pages are ignored. We aim to fix this by implementing backend sorting.
 
-Select the module you wish to edit.<br />
+Select the module you wish to edit.
+<br />
 ![Select module](images/Teacher_Module_Selection.png)
 
-## Create a new problem set
+## Create a New Problem Set
 
-<ins>Click on your module</ins> and then <ins>click on "content"</ins> (upper left-hand corner).<br />
+<ins>Click your module</ins> and then <ins>click 'Content'</ins> (in the upper-left corner).
+<br />
 ![View sets](images/Teacher_View_Sets2.png)
 
-Create a new set by pressing the button seen below and this will automatically appear with a default name which you can edit by clicking 'edit set metadata':<br />
+Create a new set by **clicking** the 'Create Set' button:
+<br />
 ![Create set](images/create_set.png){: style="height:50px"}
 
-To edit the content, <ins>click on the set name</ins>. This will open the Set in a ['WYSIWYG'](https://en.wikipedia.org/wiki/WYSIWYG) editor. The first question is automatically created with a default name.
+A menu will appear with options to edit the name, description, and other settings for the new set.
+
+To edit the content, <ins>click the set name</ins>. This will open the set in a ['WYSIWYG'](https://en.wikipedia.org/wiki/WYSIWYG) editor. The first question is automatically created with a default name.
 
 The question structure is described [here](../../student/index.md).
 
-## Below the line
+## Below the Line
 
-Below the main question content you can provide high quality support material for students.
+Below the main question content, you can provide high-quality support material for students.
 
 ![Below the line buttons screenshot](../../student/images/Traffic_Light_Only.png){: style="height:50px"}
 
-A [student guide is here](../../student/index.md) and teachers use the content as follows:
+A [student guide is here](../../student/index.md). Teachers use the 'below the line' content as follows:
 
-- **Structured tutorial** is a canvas to provide scaffolding to students struggling with the question.
-- **Final answer** is self explanatory.
-- **Worked solutions** provides detailed, step-by-step solutions.
+-   **Structured tutorial** is to provide scaffolding for students struggling with the question.
+-   **Final answer** is self-explanatory.
+-   **Worked solutions** provides detailed, step-by-step solutions.
 
-All content below the line uses milkdown functionality. Worked solutions can be branched. Future developments will add branching and response areas to structured tutorials.
+All content below the line uses Milkdown functionality. Worked solutions can be branched. Future developments will add branching and response areas to structured tutorials.
 
-It is not necessary to include all three methods of help, if only one of the tabs is filled then only that one button will be included in the published student version.
+It is not necessary to include all three methods of help. If you only provide content for one tab, only that button will appear in the published student version.
 
 For general terminology, see [here.](../../terminology.md)
 
 To see further details on how to edit your questions, see [here.](content-sets-questions.md)
 
-## Enrolling students
+## Enrolling Students
 
-In TEACHER mode, open your module home page and click 'VIEW STUDENTS' then 'ENROL STUDENTS'
+In **Teacher mode**, open your module's home page, click the 'Students' tab, and then click 'Enrol Students'.
 
-![View students button](../../teacher/guides/images/view_students.png) ![Enrol students button](../../teacher/guides/images/enrol_students.png)
+![Teacher view students](../../teacher/guides/images/Teacher_view_students.png)
 
-Enter a comma-separated list of email addresses. Press 'Enter' to confirm the addresses, and then 'SUBMIT' to enrol the students
+Enter student email addresses. Press 'Enter' after each address, and then click 'SUBMIT' to enrol the students.
 
-### Imperial College London email addresses
+### Imperial College London Email Addresses
 
-You must use the long form email address:
+You must use the long-form email address:
 
 #### Valid:
 
 first.nameYY@imperial.ac.uk (student)
+<br>
 j.doe@imperial.ac.uk (staff)
+<br>
 first.name@imperial.ac.uk (staff)
+<br>
 
-#### Invalid
+#### Invalid:
 
 abc123@ic.ac.uk
+<br>
 abc123@imperial.ac.uk
+<br>
 user@ic.ac.uk
+<br>
 user@imperial.ac.uk
+<br>
 first.nameYY@ic.ac.uk
+<br>
 
-The reason for the above is because we use Azure Active Directory - i.e. Microsoft - to authorise users.
+This is because we use Azure Active Directory (i.e., Microsoft) to **authorise** users.
