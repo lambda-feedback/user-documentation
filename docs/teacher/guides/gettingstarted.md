@@ -12,7 +12,7 @@ As of **July 2023**, new modules can only be added to Lambda Feedback by adminis
 
 ![Teacher](images/Teacher_Mode_Orange.PNG)<br />
 
-To find the module you want, you can sort it in **ascending order** as shown below:
+To find the module you want, you can sort them in **ascending/descending order**, or filter them as shown below:
 <br />
 ![Sort](images/Sort_Modules.png){: style="height:200px"}
 ![Filter](images/Filter_Modules.png){: style="height:200px"}<br />
@@ -30,9 +30,7 @@ Select the module you wish to edit.
 <br />
 ![View sets](images/Teacher_View_Sets2.png)
 
-Create a new set by **clicking** the 'Create Set' button:
-<br />
-![Create set](images/create_set.png){: style="height:50px"}
+Create a new set by **clicking** the 'Create Set' button.
 
 A menu will appear with options to edit the name, description, and other settings for the new set.
 
@@ -66,7 +64,15 @@ In **Teacher mode**, open your module's home page, click the 'Students' tab, and
 
 ![Teacher view students](../../teacher/guides/images/Teacher_view_students.png)
 
-Enter student email addresses. Press 'Enter' after each address, and then click 'SUBMIT' to enrol the students.
+Enter a student's email address, or alternatively paste in a list of email addresses separated by commas.
+
+![Add_student_before](../images/Add_student_before.png)
+
+Press 'Enter' to add the email addresses:
+
+![Add_student_after](../images/Add_student_after.png)
+
+Then click 'SUBMIT' to enrol the students.
 
 ### Imperial College London Email Addresses
 
