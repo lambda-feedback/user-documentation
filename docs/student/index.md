@@ -3,7 +3,7 @@
 
 ## Question structure
 
-![Screenshot of question](images/question_overview.png){: style="width:600px"}
+![Screenshot of question](images/question_overview_new.png){: style="width:600px"}
 
 The image above shows an example question, with numbers to indicate:
 
@@ -17,9 +17,10 @@ The image above shows an example question, with numbers to indicate:
 8. Part selection (tabs)
 9. _Part content_ (only visible when relevant part is open - (a),(b), etc.)
 10. _Response area_, where student responses are entered and feedback is given
-11. Feedback to the teacher (currently in flux regarding the design - 31/8/22)
+11. Feedback to the teacher (currently in flux regarding the design - 02/07/25)
 12. Access to content 'below the line' providing extra support.
-
+13. _Workspace_ - Opens tab with canvas and ai chatbot
+14. Comments
 
 ## Below the line
 
@@ -27,7 +28,6 @@ The image above shows an example question, with numbers to indicate:
 ![Below the line buttons screenshot](images/Traffic_Light_Only.png){: style="height:50px"}
 
 
-- _My solutions_ - create your own content. Drag and drop images or type content. Use standard markdown.
 - _Structured tutorial_ - teachers use this in different ways. It is generally a way to provide scaffolding if you're struggling.
 - _Final Answer_ - warning, don't ever look at the answer before you make your own genuine attempt at answering the question.
 - _Worked solutions_ - warning, don't ever look at the solutions before you make your own attempt. If necessary, look at the first line and reveal a step at a time.
