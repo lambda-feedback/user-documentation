@@ -1,3 +1,11 @@
+## Release 2025/07/03
+
+- **b696-personal-tutor-students-filters-teacher** – Added a new advanced user filter to admin pages (listing admins and teachers) and to teacher pages (listing students).
+- **b713-teacher-students-page-add-filter-to-see-closed-modules** – Filtered module instances to display only current ones by default on the Modules page in TEACHER mode, and added an "Include closed module instances" switch.
+- **b720-allow-teachers-to-be-linked-to-global-tags-as-students** – Teachers and admins can now be linked to global tags not only as teachers but also as students.
+- **b735-students-import-change-to-optional-columns** – When importing students, the *teacher email* field is now optional, and *tag name* is mandatory. The *teacher name* was removed entirely.
+- **b742-allow-to-a-module-teacher-or-tutor-access-to-the-the-content-tab-unrestricted** – Removed the "Modify content" restriction from the Content tab in TEACHER mode.
+
 ## Release 2025/06/18
 
 - **b720-allow-teachers-to-be-linked-to-global-tags-as-students** – Display both global tags (student and teacher) for **admin** and **teacher** users. Use only student global tags for **student** users.
