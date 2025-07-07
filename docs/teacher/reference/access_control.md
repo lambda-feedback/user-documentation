@@ -8,7 +8,7 @@ Module access for students is controlled by enrolling student users. More detail
 
 Set access is granted to all users enrolled on a module, but the Set can be hidden by the teacher. Two methods can be used to hide a Set:
 
-1. Start and end dates (both optional) can be created in the Set Metadata
+1. Start and end dates (both optional) can be created in the Set Metadata.
 2. The Set can me _manually hidden_, which overrides the above settings.
 
 ## Support material within questions
