@@ -25,7 +25,7 @@ Lambda Feedback is a project at Imperial College running since 2021. For more in
 
 We are recruiting participants to collaborate with us on a pilot. [Register your interest here.](https://forms.office.com/e/qA1UndSHrs)
 
-## Overview of documentation
+## Overview of documentation:
 
 In these docs you can find:
 
