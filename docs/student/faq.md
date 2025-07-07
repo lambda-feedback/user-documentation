@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-## Why I cannot find the module I am looking for
+## Why I cannot find the module I am looking for?
 
 Access to each module is provided by the teacher owning the module.
 
