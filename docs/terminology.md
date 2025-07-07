@@ -30,7 +30,7 @@ A response area is an interactive element. Student enters a response and receive
 
 ### Sets
 
-We use the word 'Set' to refer to a group of questionscontent. In a university setting, a Set typically corresponds to an individual homework/tutorial sheet.
+We use the word 'Set' to refer to a group of questions content. In a university setting, a Set typically corresponds to an individual homework/tutorial sheet.
 
 ### Structured Tutorial
 
