@@ -1,5 +1,28 @@
 # Major releases
 This page contains summaries; see also [detailed releases](detailed_releases.md).
+## 2025 Q2 new features
+
+### User roles
+
+- Access control: different Teacher roles have access to combinations of privileges, including content editing, user enrollment, viewing cohort data, and viewing student data. The screenshot below is an example, and more combinations can be created by admins:
+
+![A table of roles and access rights, with ticks and crosses in the rows and columns](../assets/releases/TeacherRoles.png)
+
+An example of the roles in action:
+
+![Hover over a grey button says "your role 'Teaching assistant' does not have access to this functionality'"](../assets/releases/TeacherRoles2.png)
+
+- Personal tutor role: 
+	- This special role gives a specific teacher access to view data of a limited group of students.
+	- Access is by 'Global tags' associating a student to a teacher (across all modules).
+	- Teacher home page shows overview stats for personal tutees (see below).
+	- Stats can be expanded and explored in more detail.
+	- Data is symemtrically available to both students and tutors.
+
+![Screenshot of a table 'Students' listing anonymised students and their activity and progress in graphs. Data for one student has been expanded to show module-level data.](../assets/releases/PersonalTutorAnalytics.png)
+
+- Teachers - with relevant privilages - can now enrol other teachers, and change their roles.
+
 ## 2025 Q1 new features
 
 ### Data analytics
