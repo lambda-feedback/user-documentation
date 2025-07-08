@@ -1,3 +1,12 @@
+## Release 2025/07/08
+
+- **b504-canvas-pen-to-be-small-by-default** - Changed the pen to have options s,m,l and made the option s the default one.
+- **b611-expression-ra-updates** - Improved the expression response area preview.
+- **b727-improve-the-graph-library-dynamic-scale** - Improved the dynamic scale of the graph library.
+- **b739-audio-recorder** - Improved the Lexdown to allow to record audios directly.
+- **b757-chat-errors-response-time** - Improved the error handling of the chat-function.
+- **b745-backup-stopped-in-prod** - Improved the db backup.
+
 ## Release 2025/07/03
 
 - **b696-personal-tutor-students-filters-teacher** – Added a new advanced user filter to admin pages (listing admins and teachers) and to teacher pages (listing students).
