@@ -72,7 +72,7 @@ Live preview instantly renders a student's input. This is very useful for long/c
 
 ## Latex help
 
-1. Use \begin{array} to generate compact table
+1. Use `\begin{array}` to generate compact table
 i.e 
 ```
 \begin{array}{|c|c|}
@@ -86,15 +86,15 @@ i.e
 \end{array}
 ```
 
-![Image showing a example of a table](images/images.png)
+![Image showing a example of a table](images/table.png)
 
 2. Use `\begin{aligned}` to keep your working formatted nicely
 ```
-\begin{array}{ll}
+\begin{aligned}
 M_{d e f} &=\dfrac{1}{2}(M+M^T)\\
 & =\dfrac{1}{2} \begin{pmatrix} 4 & 14\\ -6 & -11 \end{pmatrix}+\begin{pmatrix} 4 & -6\\ 14 & -11 \end{pmatrix}\\
 & =\begin{pmatrix} 4 & 4\\ 4 & -11 \end{pmatrix}
-\end{array}
+\end{aligned}
 ```
 
 ![Image showing a example of a algined working](images/aligned.png)
@@ -109,4 +109,4 @@ f(x)=\left (\frac{(\cos (x) -x) + i(\sin (x) - x)}{wi} \right)
 
 This also works for `[ ]` and `\{ \}`
 
-4. Use `\sin`, `\cos` etc... if you are too lazy to write out `\text{sin }` everytime in equation mode.
+4. Use `\sin`, `\cos`, etc. as a shortcut for `\text{sin }`, `\text{cos }`, etc.
