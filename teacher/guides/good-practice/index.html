@@ -1824,11 +1824,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    wolframAlphaEqual
+    comparePhysicalQuantities
   </span>
   
 
@@ -1845,11 +1845,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    comparePhysicalQuantities
+    wolframAlphaEqual
   </span>
   
 
@@ -1908,27 +1908,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/shortTextAnswer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    shortTextAnswer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../user_eval_function_docs/compareSets/" class="md-nav__link">
         
   
@@ -1950,11 +1929,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/compareBoolean/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/shortTextAnswer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareBoolean
+    shortTextAnswer
   </span>
   
 
@@ -1976,6 +1955,27 @@
   
   <span class="md-ellipsis">
     symbolicEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/compareBoolean/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareBoolean
   </span>
   
 
@@ -2498,11 +2498,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    wolframAlphaEqual
+    comparePhysicalQuantities
   </span>
   
 
@@ -2519,11 +2519,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    comparePhysicalQuantities
+    wolframAlphaEqual
   </span>
   
 
@@ -2582,27 +2582,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/shortTextAnswer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    shortTextAnswer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../dev_eval_function_docs/compareSets/" class="md-nav__link">
         
   
@@ -2624,11 +2603,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/compareBoolean/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/shortTextAnswer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareBoolean
+    shortTextAnswer
   </span>
   
 
@@ -2650,6 +2629,27 @@
   
   <span class="md-ellipsis">
     symbolicEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_eval_function_docs/compareBoolean/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareBoolean
   </span>
   
 
@@ -3120,7 +3120,7 @@ Alternatively, you can use <code>$\displaystyle$</code> at the start of an inlin
 <p><img alt="Image showing a live-preview to a student's response" src="../images/live_preview.png" /></p>
 <h2 id="latex-help">Latex help<a class="headerlink" href="#latex-help" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Use \begin{array} to generate compact table
+<li>Use <code>\begin{array}</code> to generate compact table
 i.e 
 <div class="highlight"><pre><span></span><code>\begin{array}{|c|c|}
 \hline
@@ -3133,14 +3133,14 @@ i.e
 \end{array}
 </code></pre></div></li>
 </ol>
-<p><img alt="Image showing a example of a table" src="../images/images.png" /></p>
+<p><img alt="Image showing a example of a table" src="../images/table.png" /></p>
 <ol>
 <li>Use <code>\begin{aligned}</code> to keep your working formatted nicely
-<div class="highlight"><pre><span></span><code>\begin{array}{ll}
+<div class="highlight"><pre><span></span><code>\begin{aligned}
 M_{d e f} &amp;=\dfrac{1}{2}(M+M^T)\\
 &amp; =\dfrac{1}{2} \begin{pmatrix} 4 &amp; 14\\ -6 &amp; -11 \end{pmatrix}+\begin{pmatrix} 4 &amp; -6\\ 14 &amp; -11 \end{pmatrix}\\
 &amp; =\begin{pmatrix} 4 &amp; 4\\ 4 &amp; -11 \end{pmatrix}
-\end{array}
+\end{aligned}
 </code></pre></div></li>
 </ol>
 <p><img alt="Image showing a example of a algined working" src="../images/aligned.png" /></p>
@@ -3152,7 +3152,7 @@ M_{d e f} &amp;=\dfrac{1}{2}(M+M^T)\\
 <p><img alt="Image showing a example of a brackets" src="../images/bracket.png" /></p>
 <p>This also works for <code>[ ]</code> and <code>\{ \}</code></p>
 <ol>
-<li>Use <code>\sin</code>, <code>\cos</code> etc... if you are too lazy to write out <code>\text{sin }</code> everytime in equation mode.</li>
+<li>Use <code>\sin</code>, <code>\cos</code>, etc. as a shortcut for <code>\text{sin }</code>, <code>\text{cos }</code>, etc.</li>
 </ol>
 
 
@@ -3174,7 +3174,7 @@ M_{d e f} &amp;=\dfrac{1}{2}(M+M^T)\\
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 3, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 8, 2025</span>
   </span>
 
     
