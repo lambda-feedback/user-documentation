@@ -18,8 +18,6 @@ To find the module you want, you can sort them in **ascending/descending order**
 ![Filter](images/Filter_Modules.png){: style="height:200px"}<br />
 _Image: Quick sort (left) or filtering (right)_
 
-**Note:** As of 31 August 2022, filtering and sorting only work on the content visible on the current page; other pages are ignored. We aim to fix this by implementing backend sorting.
-
 Select the module you wish to edit.
 <br />
 ![Select module](images/Teacher_Module_Selection.png)
