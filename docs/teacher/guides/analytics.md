@@ -15,7 +15,7 @@ To improve the feedback that students receive and to better understand which are
 
 To see these statistics:
 
-1. Click on the **Stats** tab in teacher mode 
+1. Click on the **Stats** tab in teacher mode.
 2. Then click on **Explore** in the top right corner of each response area.
 
 You can even export these statistics as csv file!

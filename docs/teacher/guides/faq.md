@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-## How can I enroll students on my new [Module](../../terminology.md#modules)
+## How can I enroll students on my new [Module](../../terminology.md#modules)?
 
 Students and users are given access to a module using their college email address (from microsoft).
 
