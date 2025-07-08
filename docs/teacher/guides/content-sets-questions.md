@@ -1,4 +1,4 @@
-# Editing Questions
+# Editing questions
 
 This guide explains how to use the editor to create and modify [sets](https://lambda-feedback.github.io/user-documentation/terminology#sets) and [questions](https://lambda-feedback.github.io/user-documentation/terminology#questions).
 
