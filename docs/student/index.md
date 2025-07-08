@@ -3,7 +3,7 @@
 
 ## Question structure
 
-![Screenshot of question](images/question_overview_new.png){: style="width:600px"}
+![Screenshot of question](images/question_overview.png){: style="width:600px"}
 
 The image above shows an example question, with numbers to indicate:
 
