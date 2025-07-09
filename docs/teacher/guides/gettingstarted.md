@@ -64,11 +64,11 @@ In **Teacher mode**, open your module's home page, click the 'Students' tab, and
 
 Enter a student's email address, or alternatively paste in a list of email addresses separated by commas.
 
-![Add_student_before](./images/Add_student_before.png)
+![Add_student_before](./images/Add_student_before.png){: style="width:200px"}
 
 Press 'Enter' to add the email addresses:
 
-![Add_student_after](./images/Add_student_after.png)
+![Add_student_after](./images/Add_student_after.png){: style="width:200px"}
 
 Then click 'SUBMIT' to enrol the students.
 
