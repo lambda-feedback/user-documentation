@@ -85,8 +85,7 @@ Live preview instantly renders a student's input. This is very useful for long/c
   \hline
   \end{array}
   ```
-  
-  ![Image showing a example of a table](images/table.png)
+![Image showing a example of a table](images/table.png)
   
 2. Use `\begin{aligned}` to keep your working formatted nicely
 ```
