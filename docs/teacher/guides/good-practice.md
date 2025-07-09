@@ -72,22 +72,22 @@ Live preview instantly renders a student's input. This is very useful for long/c
 
 ## Latex help
 
-1. Use `\begin{array}` to generate compact table
-i.e 
-```
-\begin{array}{|c|c|}
-\hline
-\theta_{2,0} & \theta_{1,L}\\
-\hline
--6700 & 130.5641\\
-\hline
--6600 & 161.6086\\
-\hline
-\end{array}
-```
-
-![Image showing a example of a table](images/table.png)
-
+1. Use `\begin{array}` to generate a compact table i.e. 
+  
+  ```
+  \begin{array}{|c|c|}
+  \hline
+  \theta_{2,0} & \theta_{1,L}\\
+  \hline
+  -6700 & 130.5641\\
+  \hline
+  -6600 & 161.6086\\
+  \hline
+  \end{array}
+  ```
+  
+  ![Image showing a example of a table](images/table.png)
+  
 2. Use `\begin{aligned}` to keep your working formatted nicely
 ```
 \begin{aligned}
