@@ -3120,38 +3120,40 @@ Alternatively, you can use <code>$\displaystyle$</code> at the start of an inlin
 <p><img alt="Image showing a live-preview to a student's response" src="../images/live_preview.png" /></p>
 <h2 id="latex-help">Latex help<a class="headerlink" href="#latex-help" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Use <code>\begin{array}</code> to generate a compact table i.e. </li>
-</ol>
-<p><div class="highlight"><pre><span></span><code>\begin{array}{|c|c|}
-\hline
-\theta_{2,0} &amp; \theta_{1,L}\\
-\hline
--6700 &amp; 130.5641\\
-\hline
--6600 &amp; 161.6086\\
-\hline
-\end{array}
+<li>
+<p>Use <code>\begin{array}</code> to generate a compact table i.e.  </p>
+<div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>array<span class="nb">}{</span>|c|c|<span class="nb">}</span>
+<span class="k">\hline</span>
+<span class="k">\theta_</span><span class="nb">{</span>2,0<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\theta_</span><span class="nb">{</span>1,L<span class="nb">}</span><span class="k">\\</span>
+<span class="k">\hline</span>
+-6700 <span class="nb">&amp;</span> 130.5641<span class="k">\\</span>
+<span class="k">\hline</span>
+-6600 <span class="nb">&amp;</span> 161.6086<span class="k">\\</span>
+<span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>array<span class="nb">}</span>
 </code></pre></div>
-<img alt="Image showing a example of a table" src="../images/table.png" /></p>
-<ol>
-<li>Use <code>\begin{aligned}</code> to keep your working formatted nicely
-<div class="highlight"><pre><span></span><code>\begin{aligned}
-M_{d e f} &amp;=\dfrac{1}{2}(M+M^T)\\
-&amp; =\dfrac{1}{2} \begin{pmatrix} 4 &amp; 14\\ -6 &amp; -11 \end{pmatrix}+\begin{pmatrix} 4 &amp; -6\\ 14 &amp; -11 \end{pmatrix}\\
-&amp; =\begin{pmatrix} 4 &amp; 4\\ 4 &amp; -11 \end{pmatrix}
-\end{aligned}
-</code></pre></div></li>
-</ol>
+<p><img alt="Image showing a example of a table" src="../images/table.png" /></p>
+</li>
+<li>
+<p>Use <code>\begin{aligned}</code> to keep your working formatted nicely</p>
+<div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>aligned<span class="nb">}</span>
+M<span class="nb">_{</span>d e f<span class="nb">}</span> <span class="nb">&amp;</span>=<span class="k">\dfrac</span><span class="nb">{</span>1<span class="nb">}{</span>2<span class="nb">}</span>(M+M<span class="nb">^</span>T)<span class="k">\\</span>
+<span class="nb">&amp;</span> =<span class="k">\dfrac</span><span class="nb">{</span>1<span class="nb">}{</span>2<span class="nb">}</span> <span class="k">\begin</span><span class="nb">{</span>pmatrix<span class="nb">}</span> 4 <span class="nb">&amp;</span> 14<span class="k">\\</span> -6 <span class="nb">&amp;</span> -11 <span class="k">\end</span><span class="nb">{</span>pmatrix<span class="nb">}</span>+<span class="k">\begin</span><span class="nb">{</span>pmatrix<span class="nb">}</span> 4 <span class="nb">&amp;</span> -6<span class="k">\\</span> 14 <span class="nb">&amp;</span> -11 <span class="k">\end</span><span class="nb">{</span>pmatrix<span class="nb">}</span><span class="k">\\</span>
+<span class="nb">&amp;</span> =<span class="k">\begin</span><span class="nb">{</span>pmatrix<span class="nb">}</span> 4 <span class="nb">&amp;</span> 4<span class="k">\\</span> 4 <span class="nb">&amp;</span> -11 <span class="k">\end</span><span class="nb">{</span>pmatrix<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>aligned<span class="nb">}</span>
+</code></pre></div>
 <p><img alt="Image showing a example of a algined working" src="../images/aligned.png" /></p>
-<ol>
-<li>Use <code>\left</code> and <code>\right</code> for equations with multiple brackets</li>
-</ol>
-<div class="highlight"><pre><span></span><code>f(x)=\left (\frac{(\cos (x) -x) + i(\sin (x) - x)}{wi} \right)
+</li>
+<li>
+<p>Use <code>\left</code> and <code>\right</code> for equations with multiple brackets</p>
+<div class="highlight"><pre><span></span><code>f(x)=<span class="k">\left</span> (<span class="k">\frac</span><span class="nb">{</span>(<span class="k">\cos</span> (x) -x) + i(<span class="k">\sin</span> (x) - x)<span class="nb">}{</span>wi<span class="nb">}</span> <span class="k">\right</span>)
 </code></pre></div>
 <p><img alt="Image showing a example of a brackets" src="../images/bracket.png" /></p>
 <p>This also works for <code>[ ]</code> and <code>\{ \}</code></p>
-<ol>
-<li>Use <code>\sin</code>, <code>\cos</code>, etc. as a shortcut for <code>\text{sin }</code>, <code>\text{cos }</code>, etc.</li>
+</li>
+<li>
+<p>Use <code>\sin</code>, <code>\cos</code>, etc. as a shortcut for <code>\text{sin }</code>, <code>\text{cos }</code>, etc.</p>
+</li>
 </ol>
 
 
