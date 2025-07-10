@@ -10,6 +10,8 @@ Students and users are given access to a module using their college email addres
 4. Enter the enrolment page by clicking the **Entroll Students :material-plus:** button
 5. Enroll students by supplying one or more student email addresses
 
+For a visual guide, click [here](./gettingstarted.md#enrolling-students)
+
 ## How can I move questions between problem sets?
 
 When creating a new question the teacher can choose to "clone" from an existing question. The teacher can then delete the original version.

@@ -1,32 +1,62 @@
 # Good practice
 
-## Romanised operators
+## Formatting & style for readability
 
-Use romanised operators such as $\sin$, $\frac{\mathrm{d}}{\mathrm{d}x}$ instead of $sin$, $\frac{d}{dx}$, etc.
+### Use romanised text for operators and units
 
-## Use empty lines
+Use romanised operators and scientific units to distinguish them from variables, which are italicised.
 
-Using empty lines can improve the readability and neatness of your content. Empty lines are often useful before and after an equation, and between paragraphs of text. An empty line in markdown requires _two spaces_ on the line, otherwise the line is ignored.
+*   **Operators:** Use `\sin`, `\cos`, `\log`, `\det`, etc. For derivatives, use `\mathrm{d}` as in `\dfrac{\mathrm{d}y}{\mathrm{d}x}`.
+    *   **Correct:** $\sin(x)$, $\dfrac{\mathrm{d}}{\mathrm{d}x}$
+    *   **Incorrect:** $sin(x)$, $\frac{d}{dx}$
 
-## Space between numbers and units
+*   **Units:** Use `\text{...}` or `\mathrm{...}` (mathrm allows for numbers in the units, i.e. $\mathrm{m^2}$). Ensure the unit's case is correct (e.g., `m` for milli, `M` for mega).
+    *   **Correct:** $5 \text{ m}$, $10 \text{ kN}$
+    *   **Incorrect:** $5 m$, $10 kN$
+
+### Space between numbers and units
 
 Put appropriate space between a number and its unit, such as `5 m` or `3 kg`, according to the SI conventions.
 
-## Romanise units and check their case
+e.g. `$5 \text{ m}$` to get $5 \text{ m}$
 
-Use romanised units such as $\text{m}$, $\text{kN}$ instead of $m$, $kN$. Ensure that the case of the unit is correct.
+### Use empty lines
 
-## Add tests to response areas
+Using empty lines can improve the readability and neatness of your content.
 
-In a response area, press `configure` then `tests`.
+Empty lines are often useful before and after an equation, and between paragraphs of text. An empty line in markdown requires _two spaces_ on the line, otherwise the line is ignored.
 
-Tests allow you to enter potential student responses, define whether they are correct or not, then run the evaluation function on those student responses. This allows you to quickly test whether or not the evaluation function works as expected.
+Alternatively, adding empty LaTeX text, `\text{}`, can work if all else fails.
 
-## Save and publish as you go
+## Using platform features effectively
+
+### Save and publish as you go
 
 Saving and publishing work regularly is recommended to prevent accidental data loss.
 
-## Use branching when relevant
+### Add tests to response areas
+
+In a response area, press `Configure` then `Test`.
+
+Tests allow you to enter potential student responses, define whether they are correct or not, then run the evaluation function on those student responses. This allows you to quickly test whether or not the evaluation function works as expected.
+
+### Use pre-response area text to be clear what should be entered
+
+Pre-response area text is found under `Configure` - `Input` in the evaluation function.
+
+You can use LaTeX in the pre-response area text.
+
+![Image showing a pre-response area](images/pre_response_area.png)
+
+### Use live preview and permit all types of input
+
+Live preview is found under `Configure` - `Input` - `Display settings`.
+
+Live preview instantly renders a student's input. This is very useful for long/complicated equations, as it allows students to ensure their input is correct.
+
+![Image showing a live-preview to a student's response](images/live_preview.png)
+
+### Use branching when relevant
 
 Branching is a feature for `worked solutions`. It allows you to have different solution pathways Usage examples:
 
@@ -35,44 +65,37 @@ Branching is a feature for `worked solutions`. It allows you to have different s
 
 ![gif showing the branching feature](images/branching.gif)
 
-## Use pre-response area text to be clear what should be entered
+### Use audio clips
 
-Pre-response area text is found under `configure` - `INPUT` in the evaluation function.
+Just drag + drop an audio file into the editor.
 
-You can use LaTeX in the pre-response area text.
+### Issue with input symbols
 
-![Image showing a pre-response area](images/pre_response_area.png)
+When defining the `code` of an input symbol in the response areas, the system cannot accept brackets (i.e using `dot(x)` for $\dot{x}$). The response must be formatted in a different way (i.e `dot_x`). 
 
-## Use `\dfrac` for bigger fractions when needed.
-
-Use `$\dfrac{numerator}{denominator}$` for bigger fractions when you need to display them more clearly or emphasize them. For example, `$\dfrac{3}{4}$` will produce a bigger fraction than `$\frac{3}{4}$`.
-Alternatively, you can use `$\displaystyle$` at the start of an inline equation to render everything afterwards full-size (as in display maths mode), this is especially helpful for integrals.
-
-## Use `\small` when smaller fonts or fractions are needed
-
-Use `$\small{text}$` when you need to display smaller fonts or fractions in your LaTeX expressions. For example, `$\small{\frac{1}{2}}$` will produce a smaller fraction than `$\frac{1}{2}$`.
-
-## Use audio clips
-
-Just drag + drop an audio file into the milkdown editor.
-
-## Issue with input symbols
-
-For the `code` of input symbols in the response areas, the system cannot accept brackets (i.e `dot(x)` for $\dot{x}$) and response must be formatted in different ways (i.e `dot_x`). 
-
-`a_b` will render as $a_b$ without adding an input symbol, but note that `dot_x` overrides the `_` input (in this example, will render as $\dot{x}$ instead of $dot_x$)
-
-## Use live preview and permit all types of input
-
-Live preview and input types are found in an evaluation function under `configure` - `INPUT`.
-
-Live preview instantly renders a student's input. This is very useful for long/complicated equations, as it allows students to ensure their input is correct.
-
-![Image showing a live-preview to a student's response](images/live_preview.png)
+`a_b` will render as $a_b$ without adding an input symbol, but note that `dot_x` will override the `_` input in this example (will render as $\dot{x}$ instead of $dot_x$).
 
 ## Latex help
 
-1. Use `\begin{array}` to generate a compact table i.e.  
+### Use `\dfrac` for bigger fractions when needed.
+
+Use `$\dfrac{numerator}{denominator}$` for bigger fractions when you need to display them more clearly or emphasize them. For example, `$\dfrac{3}{4}$` will produce a bigger fraction than `$\frac{3}{4}$`:
+
+$\dfrac{3}{4} \quad$    (dfrac)
+
+$\frac{3}{4} \quad$    (frac)
+
+Alternatively, you can use `$\displaystyle$` at the start of an inline equation to render everything afterwards full-size (as in display maths mode), this is especially helpful for integrals.
+
+### Use `\small` when smaller fonts or fractions are needed
+
+Use `$\small{text}$` when you need to display smaller fonts or fractions in your LaTeX expressions. For example, `$\small{\frac{1}{2}}$` will produce a smaller fraction than `$\frac{1}{2}$`.
+
+$\small{\frac{1}{2}} \quad$ (small)
+
+$\frac{1}{2}$
+
+### Use `\begin{array}` to generate a compact table i.e.  
     
     ```latex
     \begin{array}{|c|c|}
@@ -88,7 +111,7 @@ Live preview instantly renders a student's input. This is very useful for long/c
 
     ![Image showing a example of a table](images/table.png)
 
-2. Use `\begin{aligned}` to keep your working formatted nicely
+### Use `\begin{aligned}` to keep your working formatted nicely
 
     ```latex
     \begin{aligned}
@@ -100,7 +123,7 @@ Live preview instantly renders a student's input. This is very useful for long/c
 
     ![Image showing a example of a algined working](images/aligned.png)
 
-3. Use `\left` and `\right` for equations with multiple brackets
+### Use `\left` and `\right` for equations with multiple brackets
 
     ```latex
     f(x)=\left (\frac{(\cos (x) -x) + i(\sin (x) - x)}{wi} \right)
@@ -110,4 +133,6 @@ Live preview instantly renders a student's input. This is very useful for long/c
 
     This also works for `[ ]` and `\{ \}`
 
-4. Use `\sin`, `\cos`, etc. as a shortcut for `\text{sin }`, `\text{cos }`, etc.
+### Shortcut for romanised operators
+
+Use `\sin`, `\cos`, etc. as a shortcut for `\text{sin }`, `\text{cos }`, etc.
