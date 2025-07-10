@@ -1049,7 +1049,7 @@
         
   
   <span class="md-ellipsis">
-    Milkdown
+    Lexdown
   </span>
   
 
@@ -1112,18 +1112,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#analytics-history" class="md-nav__link">
+  <a href="#module-level-analytics" class="md-nav__link">
     <span class="md-ellipsis">
-      Analytics History
+      Module-level analytics
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tracking-students-response" class="md-nav__link">
+  <a href="#analytics-and-question-versions" class="md-nav__link">
     <span class="md-ellipsis">
-      Tracking students' response
+      Analytics and question versions
     </span>
   </a>
   
@@ -1323,11 +1323,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/access_control/" class="md-nav__link">
+      <a href="../../reference/content_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Access control
+    Content management
   </span>
   
 
@@ -1716,11 +1716,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    wolframAlphaEqual
+    arraySymbolicEqual
   </span>
   
 
@@ -1758,11 +1758,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    arraySymbolicEqual
+    wolframAlphaEqual
   </span>
   
 
@@ -1842,11 +1842,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/symbolicEqual/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/compareSets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    symbolicEqual
+    compareSets
   </span>
   
 
@@ -1863,11 +1863,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/compareSets/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/symbolicEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareSets
+    symbolicEqual
   </span>
   
 
@@ -2390,11 +2390,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    wolframAlphaEqual
+    arraySymbolicEqual
   </span>
   
 
@@ -2432,11 +2432,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    arraySymbolicEqual
+    wolframAlphaEqual
   </span>
   
 
@@ -2516,11 +2516,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/symbolicEqual/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/compareSets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    symbolicEqual
+    compareSets
   </span>
   
 
@@ -2537,11 +2537,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/compareSets/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/symbolicEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareSets
+    symbolicEqual
   </span>
   
 
@@ -2823,18 +2823,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#analytics-history" class="md-nav__link">
+  <a href="#module-level-analytics" class="md-nav__link">
     <span class="md-ellipsis">
-      Analytics History
+      Module-level analytics
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tracking-students-response" class="md-nav__link">
+  <a href="#analytics-and-question-versions" class="md-nav__link">
     <span class="md-ellipsis">
-      Tracking students' response
+      Analytics and question versions
     </span>
   </a>
   
@@ -2864,19 +2864,15 @@
 
 
 <h1 id="analytics-guide">Analytics Guide<a class="headerlink" href="#analytics-guide" title="Permanent link">&para;</a></h1>
+<h2 id="module-level-analytics">Module-level analytics<a class="headerlink" href="#module-level-analytics" title="Permanent link">&para;</a></h2>
+<p>The module overview tab displays cohort progress and cohort activity. Access to the overview tab is subject to teacher role privileges.</p>
+<p>The Content tab displays all Sets, with cohort-level data on activity and progress within each Set. Access to the data within the Content tab is subject to teacher role privileges.</p>
+<p>Within the content there is a stats tab which shows cohort-level data on question completion and statistics on time spent on each question. Response Areas are listed and show completion rates overall, and best per student. Detailed response statistics are available in the 'Explore' button on the Response area. The stats tab availability is subject to teacher role privileges.</p>
+<p>The ID of Response Areas is linked between module instances. If a Response Area maintains the response data shape then the data across multiple instances can be combined for stronger statistics. As of 10/7/25 there are no features in the UI to link data across instances, but these links will be added in future (the data saved is in the correct structure to allow this feature on all past data).</p>
+<h2 id="analytics-and-question-versions">Analytics and question versions<a class="headerlink" href="#analytics-and-question-versions" title="Permanent link">&para;</a></h2>
 <p>Analytics begin when a question is <em>published</em>. After publishing a question for the first time it becomes available to students and their usage is logged and fed back to the student and the teacher. </p>
-<h2 id="analytics-history">Analytics History<a class="headerlink" href="#analytics-history" title="Permanent link">&para;</a></h2>
-<p>Analytics are linked to response areas. Each question can have more response areas and they can be added or removed. When a response area is removed, then it is removed only from the "current version" of the question (the version that the teacher is editing) and it persists on the previous version(s) of the question. It means that all submissions and analytics remain, but they are now linked to the response area which only exists on a previous version(s) of the question.</p>
-<p>Currently it is possible to see only analytics against the published version of the question.</p>
-<p>We are now working on the improvement so that it is possible to see analytics against all reponse areas (including those that exist only on previous versions of the question).</p>
-<h2 id="tracking-students-response">Tracking students' response<a class="headerlink" href="#tracking-students-response" title="Permanent link">&para;</a></h2>
-<p>To improve the feedback that students receive and to better understand which areas they need help with, it is possible to check the different student responses and the frequency of each response for each response area. </p>
-<p>To see these statistics:</p>
-<ol>
-<li>Click on the <strong>Stats</strong> tab in teacher mode.</li>
-<li>Then click on <strong>Explore</strong> in the top right corner of each response area.</li>
-</ol>
-<p>You can even export these statistics as csv file!</p>
+<p>Each question can have add or remove response areas. When a response area is removed, then it is removed only from the "current version" of the question (the version that the teacher is editing) and it persists on the previous version(s) of the question. This means that all submissions and analytics remain, but they are now linked to the response area which only exists on a previous version(s) of the question.</p>
+<p>Currently (as of 10/7/25) only analytics against the published version of the question can be seen in the UI. Other data, although still saved, cannot be seen.</p>
 
 
 
@@ -2897,7 +2893,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 7, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 10, 2025</span>
   </span>
 
     

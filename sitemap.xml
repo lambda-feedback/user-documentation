@@ -141,7 +141,7 @@
          <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/teacher/reference/access_control/</loc>
+         <loc>https://lambda-feedback.github.io/user-documentation/teacher/reference/content_management/</loc>
          <lastmod>2025-07-10</lastmod>
     </url>
     <url>
@@ -193,11 +193,11 @@
          <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/wolframAlphaEqual/</loc>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arraySymbolicEqual/</loc>
          <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/wolframAlphaEqual/</loc>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arraySymbolicEqual/</loc>
          <lastmod>2025-07-10</lastmod>
     </url>
     <url>
@@ -249,11 +249,11 @@
          <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arraySymbolicEqual/</loc>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/wolframAlphaEqual/</loc>
          <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arraySymbolicEqual/</loc>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/wolframAlphaEqual/</loc>
          <lastmod>2025-07-10</lastmod>
     </url>
     <url>
@@ -281,19 +281,19 @@
          <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/symbolicEqual/</loc>
-         <lastmod>2025-07-10</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/symbolicEqual/</loc>
-         <lastmod>2025-07-10</lastmod>
-    </url>
-    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/compareSets/</loc>
          <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareSets/</loc>
+         <lastmod>2025-07-10</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/symbolicEqual/</loc>
+         <lastmod>2025-07-10</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/symbolicEqual/</loc>
          <lastmod>2025-07-10</lastmod>
     </url>
     <url>
