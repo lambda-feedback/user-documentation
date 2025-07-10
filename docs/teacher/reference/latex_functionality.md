@@ -8,9 +8,9 @@ All content is formatted in [_markdown_](https://www.markdownguide.org/basic-syn
 
 Special attention is required when formatting $\LaTeX$ which, although it is formatted using standard markdown (i.e. delimited by the `$` for 'inline formulas', and `$$` for an equation environment), must use a subset of $\LaTeX$ in order to compile for both outputs. This sometimes requires a compromise by the author.
 
-## The milkdown editor
+## The Lexdown editor
 
-All content in Lambda Feedback is stored as markdown (ASCII content), however it is always input/edited using the [milkdown](https://milkdown.dev/online-demo) editor. This editor has the advantage of providing live interactive previews of content, including $\LaTeX$ via katex.
+All content in Lambda Feedback is stored as markdown (ASCII content), input/edited using our Lexdown editor. The editor has a preview mode providing live interactive previews of content, including $\LaTeX$ via katex, and a raw markdown mode.
 
 ## Web requirements: katex
 

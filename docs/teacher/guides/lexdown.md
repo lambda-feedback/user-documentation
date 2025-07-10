@@ -9,7 +9,7 @@ The lexdown is widely used in Lambda Feedback. It accepts:
 
 The lexdown editor is an adapted version of lexical to use markdown-first, and incorporate features including drag-and-drop images, embedded videos and autio, and switch to raw markdown.
 
-## Common needs in milkdown
+## Common needs in Lexdown
 
 Here's a walkthrough to create some basic content:
 

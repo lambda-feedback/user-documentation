@@ -1,12 +1,47 @@
-# Access control
+# Content structure
 
 ## Modules
 
-Module access for students is controlled by enrolling student users. More details to be added here.
+Modules are the fundamental unit of content management in Lambda Feedback (not, for example, cohorts, or years/terms/semesters)
+
+## Instances of a module (e.g. '2026/27')
+
+Instances of a module are independentent but share the same umbrella title to help organise content. A module with multiple instances will have a drop-down menu in the title bar where users can switch modules. If you do not see the drop-down then you do not have access to other instances (or there are no other instances).
+
+![screenshot showing dropdown menu of multiple instances](../images/switch_instance_teacher.png)
+
+### Default instance when there are multiple
+
+When opening a module in Lambda Feedback the default instance opens. The default is defined based on start and end dates for the instances. There are obvious cases such is if there is only one instance, or only one instance that is open and not closed. Logic for other cases is as follows:
+
+| Case | Default instance|
+|---|---|
+|All instances closed in past|Most recent start date|
+|All instances not started yet|Latest start date*|
+|Multiple instances open|Latest start date|
+
+
+\* This logic seems incorrect, but as of 10/7/25 it was the behaviour of the system
+
+The UX is based around the default being the most common need. In the rare case that access to a different instance is required, navigation is available.
+
+Note that students rarely access multiple instances of a module; teachers rarely access previous/closed instances of a module. 
+
+### Data continuity between instances
+
+Instances are independent. New instances are created without students enrolled, submissions or events recorded, or comments. Student and teacher enrollments are independent between different instances.
+
+## Teacher roles
+
+There are multiple Teacher roles, which are allocated per module instance. Admins manage the list of teacher roles available within a tenant. Each teacher role has a customised combination of privileges. One role always exists, which is 'Module Owner', which includes all privileges. 
+
+## Enrolment
+
+Access for students or teachers is controlled by enrollment, which is detailed in the [getting started](../guides/gettingstarted.md#enrolling-students) guide. 
 
 ## Sets
 
-Set access is granted to all users enrolled on a module, but the Set can be hidden by the teacher. Two methods can be used to hide a Set:
+Set access is granted to all student users enrolled on a module instance, but the Set can be hidden by the teacher. Two methods can be used to hide a Set:
 
 1. Start and end dates (both optional) can be created in the Set Metadata.
 2. The Set can me _manually hidden_, which overrides the above settings.
@@ -15,7 +50,7 @@ Set access is granted to all users enrolled on a module, but the Set can be hidd
 
 The following types of support materials are available to students in the `help` section:
 
-- Sructured tutorial
+- Structured tutorial
 - Final answer
 - Worked solutions
 

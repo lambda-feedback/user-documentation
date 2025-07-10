@@ -13,7 +13,7 @@ This guide explains how to use the editor to create and modify [sets](https://la
 | **1** | **Add Question** | Add a new blank question, duplicate an existing question, or upload a .zip file containing one or more question JSON files. |
 | **2** | **File, Preview, and Stats** | Access pages for:<br>• **File:** Manage versions, download as a JSON file, or delete the question.<br>• **Preview:** See the question as a student would.<br>• **Stats:** View statistics on student responses for the question. |
 | **3** | **Question Name** | Edit the name of the question. |
-| **4** | **Master Content** | The main content for the question, which is always visible above the individual parts. This field uses the Milkdown editor. |
+| **4** | **Master Content** | The main content for the question, which is always visible above the individual parts. This field uses the Lexdown editor. |
 | **5** | **Current Part** | **Indicates** which question part you are currently editing. |
 | **6** | **Part Content** | Edit the content for the selected question part (i.e., the sub-question). |
 | **7** | **Response Area** | The input field where a student submits their answer. Adding a response area is optional. |

@@ -99,3 +99,9 @@ first.nameYY@ic.ac.uk
 <br>
 
 This is because we use Azure Active Directory (i.e., Microsoft) to **authorise** users.
+
+## Enrolling Teachers
+
+Teachers with the 'enrol teachers' privilege on a particular module instance can enrol other teachers on that instance. The process is similar to enrolling students as above, but in the 'Teachers' tab. When enrolling a teacher on a module instance, a role can be selected, and the privileges for that role are listed. 
+
+Teachers without the 'enrol teachers' privilage on a particular module instance, if attempting to enrol teachers, will not be able to access the feature but will receive feedback accordingly. 

@@ -36,7 +36,7 @@ nav:
           - Getting Started: "teacher/guides/gettingstarted.md"
           - Editing questions: "teacher/guides/content-sets-questions.md"
           - Exporting and importing questions: "teacher/guides/question-export-import.md"
-          - Milkdown: "teacher/guides/lexdown.md"
+          - Lexdown: "teacher/guides/lexdown.md"
           - Analytics: "teacher/guides/analytics.md"
           - Good practice: "teacher/guides/good-practice.md"
           - FAQ: "teacher/guides/faq.md"
@@ -44,7 +44,7 @@ nav:
               - Guidance Time Suggestion: "teacher/guides/guidance/guidance-time-suggestion.md"
 
       - Reference:
-          - Access control: "teacher/reference/access_control.md"
+          - Content management: "teacher/reference/content_management.md"
           - Latex functionality: "teacher/reference/latex_functionality.md"
           - PDF generation: "teacher/reference/pdf_generation.md"
           - Response Areas:

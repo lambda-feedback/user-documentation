@@ -52,9 +52,9 @@ You can use LaTeX in the pre-response area text.
 
 ### Live preview
 
-Live preview instantly renders a student's input. This is very useful for long/complicated equations, as it allows students to ensure their input is correct.
+Live preview is on by default with the Expression response area. Live preview instantly renders a student's input. This is very useful for long/complicated equations, as it allows students to ensure their input is correct.
 
-Live preview is found under `Configure` - `Input` - `Display settings`.
+Live preview settings are found under `Configure` - `Input` - `Display settings`.
 
 ![Image showing a live-preview to a student's response](images/live_preview.png)
 
@@ -71,13 +71,20 @@ Usage examples:
 
 ### Audio clips
 
-Just drag + drop an audio file into the editor.
+Drag + drop an audio file into the editor, or record audio on the 'Insert v' drowpdown in Lexdown.
 
-### Issue with input symbols
+### Input symbols
 
-When defining the `code` of an input symbol in the response areas, the system cannot accept brackets (i.e using `dot(x)` for $\dot{x}$). The response must be formatted in a different way (i.e `dot_x`). 
+Input symbols help in two ways:
 
-`a_b` will render as $a_b$ without adding an input symbol, but note that `dot_x` will override the `_` input in this example (will render as $\dot{x}$ instead of $dot_x$).
+1. Show the evaluation function how to interpret responses
+2. (If displayed) show the student how to express their response
+
+Input symbols require a display symbol where single dollars to delimit inline-math latex are recommended (e.g. `$x$` will display to students as $x$) and corresponding code to be used by the evaluation function (e.g. `x`). Displaying symbols to students is helpful when it's not clear how to type a symbol as code; for exaxmple symbol $\rho$ may be inserted is `rho` or `r` or `p` depending on the opinion of the teacher.
+
+Providing alternatives is optional but recommended. Alternatives help provide higher reliability feedback. For example, alternatives to `rho` could be `Rho`, `RHO`, `r`, `R`, `p`, `P` - although some of these may not be acceptable if they have another meaning in the context in question. 
+
+
 
 ## Latex help
 
