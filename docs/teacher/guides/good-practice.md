@@ -2,7 +2,7 @@
 
 ## Formatting & style for readability
 
-### Use romanised text for operators and units
+### Romanised text for operators and units
 
 Use romanised operators and scientific units to distinguish them from variables, which are italicised.
 
@@ -20,7 +20,7 @@ Put appropriate space between a number and its unit, such as `5 m` or `3 kg`, ac
 
 e.g. `$5 \text{ m}$` to get $5 \text{ m}$
 
-### Use empty lines
+### Empty lines
 
 Using empty lines can improve the readability and neatness of your content.
 
@@ -36,11 +36,13 @@ Saving and publishing work regularly is recommended to prevent accidental data l
 
 ### Add tests to response areas
 
-In a response area, press `Configure` then `Test`.
-
 Tests allow you to enter potential student responses, define whether they are correct or not, then run the evaluation function on those student responses. This allows you to quickly test whether or not the evaluation function works as expected.
 
-### Use pre-response area text to be clear what should be entered
+In a response area, press `Configure` then `Test`.
+
+### Pre-response area text
+
+Use pre-response area text to make clear what students should write.
 
 Pre-response area text is found under `Configure` - `Input` in the evaluation function.
 
@@ -48,24 +50,26 @@ You can use LaTeX in the pre-response area text.
 
 ![Image showing a pre-response area](images/pre_response_area.png)
 
-### Use live preview and permit all types of input
-
-Live preview is found under `Configure` - `Input` - `Display settings`.
+### Live preview
 
 Live preview instantly renders a student's input. This is very useful for long/complicated equations, as it allows students to ensure their input is correct.
 
+Live preview is found under `Configure` - `Input` - `Display settings`.
+
 ![Image showing a live-preview to a student's response](images/live_preview.png)
 
-### Use branching when relevant
+### Branching
 
-Branching is a feature for `worked solutions`. It allows you to have different solution pathways Usage examples:
+Branching is a feature for `worked solutions`. It allows you to have different solution pathways
+
+Usage examples:
 
 - When a question can be solved via multiple different methods, branching can be used for each method.
 - When a question has multiple parts, where each part involves substitution of different values, branching can be used for each part.
 
 ![gif showing the branching feature](images/branching.gif)
 
-### Use audio clips
+### Audio clips
 
 Just drag + drop an audio file into the editor.
 
@@ -77,7 +81,7 @@ When defining the `code` of an input symbol in the response areas, the system ca
 
 ## Latex help
 
-### Use `\dfrac` for bigger fractions when needed.
+### Use `\dfrac` for bigger fractions
 
 Use `$\dfrac{numerator}{denominator}$` for bigger fractions when you need to display them more clearly or emphasize them. For example, `$\dfrac{3}{4}$` will produce a bigger fraction than `$\frac{3}{4}$`:
 
@@ -87,7 +91,7 @@ $\frac{3}{4} \quad$    (frac)
 
 Alternatively, you can use `$\displaystyle$` at the start of an inline equation to render everything afterwards full-size (as in display maths mode), this is especially helpful for integrals.
 
-### Use `\small` when smaller fonts or fractions are needed
+### Use `\small` for a smaller font
 
 Use `$\small{text}$` when you need to display smaller fonts or fractions in your LaTeX expressions. For example, `$\small{\frac{1}{2}}$` will produce a smaller fraction than `$\frac{1}{2}$`.
 
@@ -95,7 +99,7 @@ $\small{\frac{1}{2}} \quad$ (small)
 
 $\frac{1}{2}$
 
-### Use `\begin{array}` to generate a compact table i.e.  
+### Use `\begin{array}` to generate a compact table
     
     ```latex
     \begin{array}{|c|c|}
@@ -109,7 +113,7 @@ $\frac{1}{2}$
     \end{array}
     ```
 
-    ![Image showing a example of a table](images/table.png)
+![Image showing a example of a table](images/table.png)
 
 ### Use `\begin{aligned}` to keep your working formatted nicely
 
@@ -121,17 +125,19 @@ $\frac{1}{2}$
     \end{aligned}
     ```
 
-    ![Image showing a example of a algined working](images/aligned.png)
+![Image showing a example of a algined working](images/aligned.png)
 
 ### Use `\left` and `\right` for equations with multiple brackets
+
+This sizes the brackets correctly to the height of the equation.
 
     ```latex
     f(x)=\left (\frac{(\cos (x) -x) + i(\sin (x) - x)}{wi} \right)
     ```
 
-    ![Image showing a example of a brackets](images/bracket.png)
+![Image showing a example of a brackets](images/bracket.png)
 
-    This also works for `[ ]` and `\{ \}`
+This also works for `[ ]` and `\{ \}`
 
 ### Shortcut for romanised operators
 
