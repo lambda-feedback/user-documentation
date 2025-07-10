@@ -1,3 +1,7 @@
+## Release 2025/07/10
+
+- **b746-bulk-rollover-enhancements** - Converted the bulk module rollover into a backend process and added a dedicated page to monitor its progress.
+
 ## Release 2025/07/08
 
 - **b504-canvas-pen-to-be-small-by-default** - Changed the pen to have options s,m,l and made the option s the default one.
