@@ -1565,6 +1565,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compareexpressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      compareExpressions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#component-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Component Parameters
@@ -1593,18 +1602,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#allow-handwrite-experimental" class="md-nav__link">
+  <a href="#enable-handwriting-input" class="md-nav__link">
     <span class="md-ellipsis">
-      Allow Handwrite (Experimental)
+      Enable Handwriting Input
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#photo-experimental" class="md-nav__link">
+  <a href="#enable-photo-upload" class="md-nav__link">
     <span class="md-ellipsis">
-      Photo (Experimental)
+      Enable Photo Upload
     </span>
   </a>
   
@@ -1823,11 +1832,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../user_eval_function_docs/compareConstructs/" class="md-nav__link">
+      <a href="../../../../user_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareConstructs
+    wolframAlphaEqual
   </span>
   
 
@@ -1844,11 +1853,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../user_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
+      <a href="../../../../user_eval_function_docs/compareConstructs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    wolframAlphaEqual
+    compareConstructs
   </span>
   
 
@@ -2497,11 +2506,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../dev_eval_function_docs/compareConstructs/" class="md-nav__link">
+      <a href="../../../../dev_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareConstructs
+    wolframAlphaEqual
   </span>
   
 
@@ -2518,11 +2527,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../dev_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
+      <a href="../../../../dev_eval_function_docs/compareConstructs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    wolframAlphaEqual
+    compareConstructs
   </span>
   
 
@@ -2942,6 +2951,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compareexpressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      compareExpressions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#component-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Component Parameters
@@ -2970,18 +2988,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#allow-handwrite-experimental" class="md-nav__link">
+  <a href="#enable-handwriting-input" class="md-nav__link">
     <span class="md-ellipsis">
-      Allow Handwrite (Experimental)
+      Enable Handwriting Input
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#photo-experimental" class="md-nav__link">
+  <a href="#enable-photo-upload" class="md-nav__link">
     <span class="md-ellipsis">
-      Photo (Experimental)
+      Enable Photo Upload
     </span>
   </a>
   
@@ -3040,14 +3058,25 @@
 <p>Calculates the difference between the teacher answer (ans) and the student response (res); compares this to an allowable difference comprising an absolute tolerance (atol) and a relative tolerance (rtol).</p>
 <h3 id="symbolicequal"><code>symbolicEqual</code><a class="headerlink" href="#symbolicequal" title="Permanent link">&para;</a></h3>
 <p>Compares two symbolic expressions for mathematical equivalence, using SymPy. See <a href="https://www.sympy.org/en/index.html.md-button">SymPy</a> for further information.</p>
+<h2 id="compareexpressions">compareExpressions<a class="headerlink" href="#compareexpressions" title="Permanent link">&para;</a></h2>
+<p><strong>Input Symbols</strong></p>
+<p>This is a powerful feature for defining a dictionary of accepted symbols. For each symbol, you define:
+*   <strong>Symbol:</strong> The LaTeX-rendered symbol (e.g., <code>$f(x)$</code>).
+*   <strong>Code:</strong> The machine-readable variable name (e.g., <code>fx</code>). This is what your students will type and what the evaluation function sees.
+*   <strong>Alternatives:</strong> A list of other codes you want to accept for the same symbol (e.g., <code>f_x</code>, <code>f(x)</code>, <code>f</code>). This allows you to anticipate different ways students might type the same thing.
+*   <strong>Visibility:</strong> A <code>TRUE</code>/<code>FALSE</code> toggle. If "Display input symbols" is enabled in the Input tab, this setting determines whether a specific symbol is shown to the student. This allows you to show students common symbols while still accepting less common or alternative ones in the background.</p>
+<p><img alt="example" src="../screenshots/input_symbols.png" />
+<img alt="example" src="../screenshots/input_symbols_preview.png" /></p>
+<p>Tolerances can also be added. These will apply to the numerical parts of the answer (e.g. the <span class="arithmatex">\(10\)</span> in <span class="arithmatex">\(10x\)</span>).</p>
+<p>This is done using the <code>atol</code> and <code>rtol</code> fields under the Evaluation Function Parameters section.</p>
 <h2 id="component-parameters">Component Parameters<a class="headerlink" href="#component-parameters" title="Permanent link">&para;</a></h2>
 <h3 id="post_response_text-optional"><code>post_response_text</code> (optional)<a class="headerlink" href="#post_response_text-optional" title="Permanent link">&para;</a></h3>
 <p>Text block to be displayed to the left of the input field. Markdown and LaTeX are allowed following the usual syntax.</p>
 <h3 id="pre_response_text-optional"><code>pre_response_text</code> (optional)<a class="headerlink" href="#pre_response_text-optional" title="Permanent link">&para;</a></h3>
 <p>Text block to be displayed to the left of the input field. Markdown and LaTeX are allowed following the usual syntax.</p>
-<h3 id="allow-handwrite-experimental">Allow Handwrite (Experimental)<a class="headerlink" href="#allow-handwrite-experimental" title="Permanent link">&para;</a></h3>
-<p>Enables a handwriting canvas in the browser, which allows a student can use to draw their expression, rather than type using Sympy's syntax.</p>
-<h3 id="photo-experimental">Photo (Experimental)<a class="headerlink" href="#photo-experimental" title="Permanent link">&para;</a></h3>
+<h3 id="enable-handwriting-input">Enable Handwriting Input<a class="headerlink" href="#enable-handwriting-input" title="Permanent link">&para;</a></h3>
+<p>Enables a handwriting canvas in the browser, which allows a student to draw their expression, rather than type using Sympy's syntax.</p>
+<h3 id="enable-photo-upload">Enable Photo Upload<a class="headerlink" href="#enable-photo-upload" title="Permanent link">&para;</a></h3>
 <p>Allows a student to upload their expression as an image, as an alternative to handwriting if the student isn't using a phone or tablet.</p>
 <h2 id="setting-the-answer">Setting The Answer<a class="headerlink" href="#setting-the-answer" title="Permanent link">&para;</a></h2>
 <p>Type the correct answer into the 'Response Area Answer' using standard syntax. As the student enters the answer, this will be rendered using the 'live preview' feature, to ensure the correct expression has been entered.</p>
@@ -3078,7 +3107,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 14, 2025</span>
   </span>
 
     
