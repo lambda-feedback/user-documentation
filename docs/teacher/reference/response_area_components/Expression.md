@@ -24,7 +24,7 @@ This is a powerful feature for defining a dictionary of accepted symbols. For ea
 ![example](screenshots/input_symbols.png)
 ![example](screenshots/input_symbols_preview.png)
 
-Tolerances can also be added. These will apply to the numerical parts of the answer (e.g. the '10' in '10x').
+Tolerances can also be added. These will apply to the numerical parts of the answer (e.g. the $10$ in $10x$).
 
 This is done using the `atol` and `rtol` fields under the Evaluation Function Parameters section.
 
