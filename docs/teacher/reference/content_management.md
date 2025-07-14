@@ -44,7 +44,7 @@ Access for students or teachers is controlled by enrollment, which is detailed i
 Set access is granted to all student users enrolled on a module instance, but the Set can be hidden by the teacher. Two methods can be used to hide a Set:
 
 1. Start and end dates (both optional) can be created in the Set Metadata.
-2. The Set can me _manually hidden_, which overrides the above settings.
+2. The Set can be _manually hidden_, which overrides the above settings.
 
 ## Support material within questions
 
@@ -76,7 +76,7 @@ This is valid for all questions in the set except those for which the support ma
 
 #### Available with warnings
 
-A warning window appears if the studen opens the content before the recommended time.
+A warning window appears if the student opens the content before the recommended time.
 
 The recommended time is the <span style="color: red;">Minimum time estimate (mins)</span> which can be set on the question <span style="color: red;">Guidance</span> page:
 
@@ -87,7 +87,7 @@ However, the option will be changed to **Available**, if any of the following is
 - The student has downloaded the PDF
 - The part is marked as done
 - There is no minimum time estimate set for the question
-- The time now minus the time the student first accessed the question is more than the minimum time estimate
+- The time now minus the time the student first accessed the question is more than the minimum time estimate (the student has accessed the question for longer than the minimum time estimate)
 
 This is valid for all questions in the set except those for which the support material access is set to be unavailable at the question level (see below).
 
