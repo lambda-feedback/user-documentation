@@ -1832,11 +1832,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../user_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
+      <a href="../../../../user_eval_function_docs/compareConstructs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    wolframAlphaEqual
+    compareConstructs
   </span>
   
 
@@ -1853,11 +1853,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../user_eval_function_docs/compareConstructs/" class="md-nav__link">
+      <a href="../../../../user_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareConstructs
+    wolframAlphaEqual
   </span>
   
 
@@ -2506,11 +2506,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../dev_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
+      <a href="../../../../dev_eval_function_docs/compareConstructs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    wolframAlphaEqual
+    compareConstructs
   </span>
   
 
@@ -2527,11 +2527,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../dev_eval_function_docs/compareConstructs/" class="md-nav__link">
+      <a href="../../../../dev_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareConstructs
+    wolframAlphaEqual
   </span>
   
 
@@ -3060,11 +3060,13 @@
 <p>Compares two symbolic expressions for mathematical equivalence, using SymPy. See <a href="https://www.sympy.org/en/index.html.md-button">SymPy</a> for further information.</p>
 <h2 id="compareexpressions">compareExpressions<a class="headerlink" href="#compareexpressions" title="Permanent link">&para;</a></h2>
 <p><strong>Input Symbols</strong></p>
-<p>This is a powerful feature for defining a dictionary of accepted symbols. For each symbol, you define:
-*   <strong>Symbol:</strong> The LaTeX-rendered symbol (e.g., <code>$f(x)$</code>).
-*   <strong>Code:</strong> The machine-readable variable name (e.g., <code>fx</code>). This is what your students will type and what the evaluation function sees.
-*   <strong>Alternatives:</strong> A list of other codes you want to accept for the same symbol (e.g., <code>f_x</code>, <code>f(x)</code>, <code>f</code>). This allows you to anticipate different ways students might type the same thing.
-*   <strong>Visibility:</strong> A <code>TRUE</code>/<code>FALSE</code> toggle. If "Display input symbols" is enabled in the Input tab, this setting determines whether a specific symbol is shown to the student. This allows you to show students common symbols while still accepting less common or alternative ones in the background.</p>
+<p>This is a powerful feature for defining a dictionary of accepted symbols. For each symbol, you define:</p>
+<ul>
+<li><strong>Symbol:</strong> The LaTeX-rendered symbol (e.g., <code>$f(x)$</code>).</li>
+<li><strong>Code:</strong> The machine-readable variable name (e.g., <code>fx</code>). This is what your students will type and what the evaluation function sees.</li>
+<li><strong>Alternatives:</strong> A list of other codes you want to accept for the same symbol (e.g., <code>f_x</code>, <code>f(x)</code>, <code>f</code>). This allows you to anticipate different ways students might type the same thing.</li>
+<li><strong>Visibility:</strong> A <code>TRUE</code>/<code>FALSE</code> toggle. If "Display input symbols" is enabled in the Input tab, this setting determines whether a specific symbol is shown to the student. This allows you to show students common symbols while still accepting less common or alternative ones in the background.</li>
+</ul>
 <p><img alt="example" src="../screenshots/input_symbols.png" />
 <img alt="example" src="../screenshots/input_symbols_preview.png" /></p>
 <p>Tolerances can also be added. These will apply to the numerical parts of the answer (e.g. the <span class="arithmatex">\(10\)</span> in <span class="arithmatex">\(10x\)</span>).</p>
