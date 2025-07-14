@@ -4,7 +4,7 @@
 
 Under the File menu, select the Export as JSON option:
 
-![export question menu item](images/export_question.png)
+![export question menu item](images/export_question.png){: style="height:300px"}
 
 The question and images (if any) will be downloaded into your download folder.
 
