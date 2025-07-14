@@ -7,7 +7,10 @@ Provides two input fields with `Number` and `Units` placeholder texts. This area
 ## Component Parameters 
 ### `pre_response_text` & `post_response_text` (optional)
 Text block to be displayed to the left and right of the input field respectively. Markdown and LaTeX are allowed following the usual syntax.
+
 ### Comparing units
+This is done using the **compareExpressions** evaluation function.
+
 By ticking the `physical_quantity (boolean)` option in the *Evaluate* tab, answers with different units from the reference answer can be compared.
 
 ![physical quantity ticked](screenshots/physical_quantity.png)
@@ -20,6 +23,8 @@ For example, if the reference answer is 100 m, the following answers will also b
 
 See [here](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareExpressions/#4-checking-the-value-of-an-expression-or-a-physical-quantity) for more information
 ### Tolerances
+This is done using the **compareExpressions** evaluation function.
+
 Tolerances can be added to your answer using the `atol (number)` and `rtol (number)` fields, which denote absolute and relative tolerances respectively.
 
 ## Response Structure
