@@ -16,6 +16,7 @@ Compares two symbolic expressions for mathematical equivalence, using SymPy. See
 **Input Symbols**
 
 This is a powerful feature for defining a dictionary of accepted symbols. For each symbol, you define:
+
 *   **Symbol:** The LaTeX-rendered symbol (e.g., `$f(x)$`).
 *   **Code:** The machine-readable variable name (e.g., `fx`). This is what your students will type and what the evaluation function sees.
 *   **Alternatives:** A list of other codes you want to accept for the same symbol (e.g., `f_x`, `f(x)`, `f`). This allows you to anticipate different ways students might type the same thing.
