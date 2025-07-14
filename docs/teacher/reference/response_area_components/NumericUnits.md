@@ -17,6 +17,8 @@ For example, if the reference answer is 100 m, the following answers will also b
 *   0.1 km
 *   10000 cm
 *   10^5 mm
+
+See [here](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareExpressions/#4-checking-the-value-of-an-expression-or-a-physical-quantity) for more information
 ### Tolerances
 Tolerances can be added to your answer using the `atol (number)` and `rtol (number)` fields, which denote absolute and relative tolerances respectively.
 
