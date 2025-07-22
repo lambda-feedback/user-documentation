@@ -1,3 +1,11 @@
+## Release 2025/07/22
+
+- **b516-ai-bubble-width** - Fix workspace conversation bubbles style
+- **b762-content-formatting-help-direct-to-milkdown-page** - Fix content editing documentation links
+- **b766-unescape-chars** - Fix characters escaping when switching from Markdown view
+- **b768-ra-sandbox** - Introduce response area sandbox
+- **hotfix** - Fix TLDraw crashes when using text shape
+
 ## Release 2025/07/10
 
 - **b746-bulk-rollover-enhancements** - Converted the bulk module rollover into a backend process and added a dedicated page to monitor its progress.
