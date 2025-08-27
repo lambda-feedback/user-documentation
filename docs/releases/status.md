@@ -2,7 +2,9 @@ Lambda Feedback is a cloud-native application that is available with full servic
 
 This page contains information about any known incidents where service was interrupted. The page begain in November 2024 following a significant incident. The purpose is to be informative, transparent, and ensure lessons are always learned so that service improves over time.
 
-## 2025 March 28th: access blocked within a particular organisation's WiFi
+The Severity of incidents is the product of number of users affected (for 100 users, N = 1), magnitude of the effect (scale 1-5 from workable to no service), and the duration (in hours). Severity below 1 is LOW, between 1 and 100 is SIGNIFICANT, and above 100 is HIGH. The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
+
+## 2025 March 28th: access blocked within a particular organisation's WiFi (Severity: SIGNIFICANT)
 
 The URL lambdafeedback.com is served by a content delivery network (CDN), that was blocked by a particular organisation's WiFi. During this period, users on that WiFi couldn't access the site.  
 
@@ -42,7 +44,7 @@ Affected users will never reach the site, and we will have no way to know that t
 
 - Investigate the cause of the short unavailability of logins at 09:33 GMT on 28th March 2025.
 
-## 2025 February 13th: Incident related to new teacher roles feature
+## 2025 February 13th: Incident related to new teacher roles feature (Severity: LOW)
 
 During this period teachers were not able to access teacher pages.
 
@@ -62,7 +64,7 @@ During this period teachers were not able to access teacher pages.
 
 - Features that behave differently for users with the TEACHER role (compared to users with the ADMIN role) must be tested by a user with the TEACHER role who is not a super-admin. This is because super-admins automatically revert from TEACHER back to ADMIN. The same applies to features that behave differently for users with the STUDENT role.
 
-## 2024 mid-December to 2025 January 2nd: Imperial College security measures affected logins
+## 2024 mid-December to 2025 January 2nd: Imperial College security measures affected logins (severity: HIGH)
 
 During this period the application was 100% available and operational. We were alerted on 2nd January that some users were not given permission by Imperial College London Microsoft 365 to login to third party applications. This was a a severe incident as it affected access to the application for some users.
 
@@ -88,7 +90,7 @@ Monitoring immediately after and the following morning showed that two known use
  
 - When an organisation uses single sign-on (SSO), ensure that the Lambda Feedback application permissions are granted by the organisation admin, even if the service initially works without those permissions being granted by admins. This action will protect against possible future issues, especially like the incident reported here.
 
-## 2024 November 4-8th: Incident related to new logins
+## 2024 November 4-8th: Incident related to new logins (Severity: SIGNIFICANT)
 
 Deployment of a new authentication process caused service interruptions. Login was not possible at certain times, affecting all users. Effects were between Monday 4th and Friday 8th November, all related to release b506.
 
