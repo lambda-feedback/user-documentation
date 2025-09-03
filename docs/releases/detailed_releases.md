@@ -1,7 +1,7 @@
 ## Release 2025/09/03 - part 2
 
-- **b787-discrepancy-in-teacher-and-student-submission-payload** - fixed the submission api payload for the TEACHER mode
-- **b793-non-interpretable-equation-message** - displaying correct message for non-interpretable equation in TEACHER mode
+- **b787-discrepancy-in-teacher-and-student-submission-payload** - fixed the submission API payload for the TEACHER mode
+- **b793-non-interpretable-equation-message** - displaying correct message for typed, non-interpretable equation in TEACHER mode
 
 ## Release 2025/09/03
 
@@ -9,12 +9,12 @@
 - **b557-the-app-is-hanging-if-the-set-has-no-question** - improved handling of the situation when a set has no question
 - **b701-create-tag-on-edit-tags-page-in-admin-mode** - added new admin pages to maintain global tags
 - **b729-revisit-roles-redirect** - improved navigation to modules pages when switching from TEACHER view to STUDENT view and vice versa
-- **b752-user-filter-tweaks** - ui improvement of the user filter feature
+- **b752-user-filter-tweaks** - UI improvement to the user filter feature
 - **b756-zero-stars** - improved stars display in the generated PDF documents
 - **b761-bulk-rollover-tweaks** - bulk rollover improvements
 - **b762-content-formatting-help-direct-to-milkdown-page** - corrected the navigation from the content formatting help link
 - **b772-types-for-global-tags** - introduced global tag types
-- **b779-standard-cancel-and-save-buttons-positioned-at-the-end-of-a-page** - fixed the positing of the save and cancel buttons
+- **b779-standard-cancel-and-save-buttons-positioned-at-the-end-of-a-page** - fixed positioning of the save and cancel buttons
 - **b780-sort-the-evaluation-functions-in-the-drop-down-list-alphabetically** - sorted the evaluation function in the alphabetic order
 
 ## Release 2025/07/22
