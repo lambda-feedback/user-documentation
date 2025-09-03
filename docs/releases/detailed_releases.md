@@ -1,3 +1,8 @@
+## Release 2025/09/03 - part 2
+
+- **b787-discrepancy-in-teacher-and-student-submission-payload** - fixed the submission api payload for the TEACHER mode
+- **b793-non-interpretable-equation-message** - displaying correct message for non-interpretable equation in TEACHER mode
+
 ## Release 2025/09/03
 
 - **b335-enable-expression-live-preview-in-teacher-mode** - enable live preview of expressions in the TEACHER mode
