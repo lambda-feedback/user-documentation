@@ -11,7 +11,9 @@ The app was available and fully functional during this time and successfully cal
 ### Timeline
 
 2025/08/26 17:54 Evaluation functions became unavailable due to a deployment error.
+
 2025/08/26 18:21 Message added to the home page. Fix began development and testing.
+
 2025/08/26 21:51 Fix is complete and home pag eupdated.
 
 Estimated number of users affected: one. This low number was due to a quiet period in the academic year, and the rapid response to the problem.
