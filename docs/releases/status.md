@@ -4,6 +4,30 @@ This page contains information about any known incidents where service was inter
 
 The Severity of incidents is the product of number of users affected (for 100 users, N = 1), magnitude of the effect (scale 1-5 from workable to no service), and the duration (in hours). Severity below 1 is LOW, between 1 and 100 is SIGNIFICANT, and above 100 is HIGH. The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
 
+## 2025 August  27th: Evaluation functions temporarily unavailable (Severity: LOW)
+
+The app was available and fully functional during this time and successfully called external evaluation functions. The evaluation functions managed by the Lambda Feedback team (which is most of them at the current time) became unavailable due to the API gateway of those functions being modified incorrectly. During this time, users submitting an answer on the app were given an error message.
+
+### Timeline
+
+2025/08/26 17:54 Evaluation functions became unavailable due to a deployment error.
+2025/08/26 18:21 Message added to the home page. Fix began development and testing.
+2025/08/26 21:51 Fix is complete and home pag eupdated.
+
+Estimated number of users affected: one. This low number was due to a quiet period in the academic year, and the rapid response to the problem.
+
+### Analysis
+
+- Due to evaluation functions having only one environment ('staging') that was used by both the STAGING and PROD versions of the app, changes to the staging gateway affected the production application.
+- The error itself happened because an update to infrastructure included changes by a different developer that weren't noticed by the one pushing the changes
+
+### Lessons learned
+
+- Implement independent staging and prod environments for evaluation functions (DONE as part of the fix)
+- When pushing infrastructure changes, always run Pulumi preview before starting, to see if changes are already awaiting push
+- Don't push infrastructure changes when no other developers are available to support any issues
+- Create a feature on the app for admins to optionally declare a base URL for evaluation functions, allowing groups of evaluation functions to be rapidly redirected
+
 ## 2025 March 28th: access blocked within a particular organisation's WiFi (Severity: SIGNIFICANT)
 
 The URL lambdafeedback.com is served by a content delivery network (CDN), that was blocked by a particular organisation's WiFi. During this period, users on that WiFi couldn't access the site.  
