@@ -1,3 +1,7 @@
+## Release 2025/09/05
+
+- **b796-check-button-does-not-appear-again-after-changing-the-answer** - a fix provided so that Check button reappears after the user changes his answer
+
 ## Release 2025/09/03 - part 2
 
 - **b787-discrepancy-in-teacher-and-student-submission-payload** - fixed the submission API payload for the TEACHER mode
