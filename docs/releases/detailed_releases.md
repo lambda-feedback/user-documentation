@@ -1,3 +1,13 @@
+## Release 2025/09/08
+
+- **b550-ui-tweaks-iv** – General UI improvements, mainly alignment adjustments.  
+- **b783-ugly-mcq-questions-scroll-bars** – Removed unwanted scrollbars in the MCQ response area on Firefox.  
+- **b798-expression-type-mode-does-not-display-feedback-correctly** – Fixed an issue where typed input in the Expression area was not parsed correctly. This was caused by earlier fixes, which have now been reverted:  
+  - **b796** – Check button not reappearing after changing the answer  
+  - **b787** – Discrepancy in teacher and student submission payload  
+  - **b335** – Enabled expression live preview in Teacher mode  
+
+
 ## Release 2025/09/05
 
 - **b796-check-button-does-not-appear-again-after-changing-the-answer** - a fix provided so that Check button reappears after the user changes his answer
