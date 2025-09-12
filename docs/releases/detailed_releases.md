@@ -1,3 +1,8 @@
+## Release 2025/09/12
+
+- **b708-filter-modules-in-teacher-view-by-teacher-roles** – improved module filtering, adding support for filtering by teacher roles and the *closed modules* flag  
+- **b800-likert-response-type** – introduced the new **likert** response type for surveys
+
 ## Release 2025/09/08
 
 - **b550-ui-tweaks-iv** – General UI improvements, mainly alignment adjustments.  
