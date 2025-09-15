@@ -1,3 +1,7 @@
+## Release 2025/09/15
+
+- **b777-expression-multi-line** - multi-line expression response area added
+
 ## Release 2025/09/12
 
 - **b708-filter-modules-in-teacher-view-by-teacher-roles** – improved module filtering, adding support for filtering by teacher roles and the *closed modules* flag  
