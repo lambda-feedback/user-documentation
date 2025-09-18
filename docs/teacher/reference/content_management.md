@@ -39,14 +39,55 @@ There are multiple Teacher roles, which are allocated per module instance. Admin
 
 Access for students or teachers is controlled by enrollment, which is detailed in the [getting started](../guides/gettingstarted.md#enrolling-students) guide. 
 
-## Sets
+## Set visibility
 
-Set access is granted to all student users enrolled on a module instance, but the Set can be hidden by the teacher. Two methods can be used to hide a Set:
+### Rules
 
-1. Start and end dates (both optional) can be created in the Set Metadata.
-2. The Set can be _manually hidden_, which overrides the above settings.
+Visibility to students is governed by the 'Manually hidden' toggle, AND the opening times.
 
-## Support material within questions
+Manually hidden (TRUE): regardless of timings, the Set will not be visible to students.
+
+Manually hidden (FALSE): the Set visibility to student depends on the opening and closing settings
+
+Opening time: 
+- before this time, the Set is not visible to students
+- after this time, or if this time is blank, the Set is visible to students if 'Manually hidden' is FALSE. 
+
+Closing time:
+- after this time, the Set is not visible to students
+- before this time, or if this time is blank, the Set is visible to students if 'Manually hidden' is FALSE. 
+
+### Editing Set visibility
+
+In TEACHER mode, users with Edit permissions can modify the visibility of a Set:
+
+Visibility can be edited within the 'Content' tab. Each set has an icon on the left hand side indicating the current visibility. Clicking on the icon opens a modal to edit and save the visibility: 
+
+![Icon/button for visibility of a Set](images/Visibility_example.png){width=150px}
+
+Alternatively, clicking on the 'Settings' icon will open a broader list of options, including the visibility settings.
+
+Examples of the icon indicating visibility are below, with the mouse hover:
+
+![a](images/Visibility_manual.png){width=150px}
+![a](images/Visibility_visible.png){width=120px}
+
+
+![a](images/Visibility_visible_timer.png){width=130px}
+![a](images/Visibility_timer_hidden.png){width=135px}
+![a](images/Visibility_manual_timer.png){width=150px}
+
+
+
+
+
+## Question visibility
+
+When a Set is visible, all pages within that Set can be accessed by a student user. 
+
+However, the visibility of 'support material' (such as worked solutions) can be controlled.
+
+## Support material visibility
 
 The following types of support materials are available to students in the `help` section:
 
@@ -56,9 +97,9 @@ The following types of support materials are available to students in the `help`
 
 Two methods can be used to hide support material:
 
-### Configuring student access at the set level
+### Configuring student access at the Set level
 
-Open the <span style="color: red;">Edit Set Metadata</span> page by clicking on the Edit Set Metadata button in the list of sets:
+Click <span style="color: red;">Update Set</span>:
 
 ![Image showing edit set metadata option](./images/edit_set_option.png)
 
