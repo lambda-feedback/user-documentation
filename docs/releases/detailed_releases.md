@@ -1,3 +1,9 @@
+## Release 2025/09/23
+
+- **b777-expression-multi-line** - multi-line expression response area tweaks
+- **755-rework-expression-ra** - single-line expression response area improvements
+- **801-use-mathpix-app-tokens** - use Mathpix directly from the client-side
+
 ## Release 2025/09/15
 
 - **b777-expression-multi-line** - multi-line expression response area added
