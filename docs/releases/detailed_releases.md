@@ -1,3 +1,8 @@
+## Release 2025/09/25
+
+- **b816-likert-response-type-mobile-view** – adjusted Likert grid to fit on mobile screens  
+- **b536-optimise-student-module-list-retrieval** – optimised data retrieval for the home screen
+
 ## Release 2025/09/23
 
 - **b777-expression-multi-line** - multi-line expression response area tweaks
