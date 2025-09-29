@@ -1,3 +1,12 @@
+## Release 2025/09/29
+
+- **b567-instance-dropdown-tweak** – improved UI for the module instance dropdown  
+- **b813-fix-question-overview-buttons-alignment** – corrected alignment of buttons on the question file tab  
+- **b814-remove-expression-ra** – removed code for the legacy EXPRESSION response area  
+- **b817-wrong-order-of-module-instances-in-dropdown-in-teacher-mode** – corrected the order of module instances in TEACHER mode  
+- **b818-omni-input-tweaks** – tweaks to the multi-line expression response area 
+- **b825-teacher-view-of-tutees** - improved ui for the student statistics in TEACHER mode
+
 ## Release 2025/09/25
 
 - **b816-likert-response-type-mobile-view** – adjusted Likert grid to fit on mobile screens  
