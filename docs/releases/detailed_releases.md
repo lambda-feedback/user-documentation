@@ -1,3 +1,7 @@
+## Release 2025/10/01
+
+- **b815-filter-tweaks-ii** - improved module filtering in the student view for closed module instances
+ 
 ## Release 2025/09/29
 
 - **b567-instance-dropdown-tweak** – improved UI for the module instance dropdown  
