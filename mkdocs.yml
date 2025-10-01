@@ -141,7 +141,7 @@ plugins:
   - evaldocsloader:
       enabled: !ENV [ENABLE_EVALDOCS, true]
       functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
-    api_key:
+      api_key:
         !ENV [
           API_KEY,
           "WiOS1vMpQyTuGL06ZJxjG1eZd2P0SPvuVzHpr6zjkTIJ33U2t5O5NWaZboWBv8aV",
