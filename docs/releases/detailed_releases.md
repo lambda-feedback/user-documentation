@@ -1,3 +1,11 @@
+## Release 2025/10/02
+
+- **b516-set-layout-ui-upgrades** - new set layout with 2 adjustable panes
+- **b740-student-nav-upgrades** - add set navigation within set for students
+- **b831-teacher-nav-upgrades** - add set navigation within set for teachers
+- **b826-teacher-drag-handles** - add drag handle for re-ordering response areas
+- **b821-more-firebase-auth-errors-caught** - ensure usre is fully authenticated before making request to the backend
+
 ## Release 2025/10/01
 
 - **b815-filter-tweaks-ii** - improved module filtering in the student view for closed module instances
