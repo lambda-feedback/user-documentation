@@ -1,19 +1,17 @@
-# The milkdown editor
+# The lexdown editor
 
-The [milkdown editor](https://milkdown.dev/online-demo) is widely used in Lambda Feedback. It accepts:
+The lexdown is widely used in Lambda Feedback. It accepts:
 
 - standard [markdown](https://www.markdownguide.org/basic-syntax/)
 - [$\LaTeX$](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) (delimited by $ and limited to [KaTeX](https://www.katex.org) functionality)
 - images (paste or drag and drop)
 - videos (paste a URL)
 
-## Common needs in milkdown
+The lexdown editor is an adapted version of lexical to use markdown-first, and incorporate features including drag-and-drop images, embedded videos and autio, and switch to raw markdown.
+
+## Common needs in Lexdown
 
 Here's a walkthrough to create some basic content:
-
-### Empty lines
-
-Two blank spaces in a line will ensure it persists (as in standard markdown).
 
 ### Inline maths
 
@@ -59,6 +57,8 @@ This is the process to create the solution steps:
 
 ### Images
 
-You can add images with drag-and-drop or copy-and-paste. Currently (July '24) there is no way to resize images other than lowering the resolution - see below. 
+You can add images with drag-and-drop or copy-and-paste. Images can be resized with the mouse, or click on the image to configure, or edit the raw markdown.
 
-![Image showing resized images on lambda feedback](images/resize_images.png)
+### Empty lines
+
+Use 'Enter' for a new paragraph, or 'shift-Enter' for a line break.

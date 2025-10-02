@@ -2,7 +2,95 @@ Lambda Feedback is a cloud-native application that is available with full servic
 
 This page contains information about any known incidents where service was interrupted. The page begain in November 2024 following a significant incident. The purpose is to be informative, transparent, and ensure lessons are always learned so that service improves over time.
 
-## 2024 mid-December to 2025 January 2nd: Imperial College security measures affected logins
+The Severity of incidents is the product of number of users affected (for 100 users, N = 1), magnitude of the effect (scale 1-5 from workable to no service), and the duration (in hours). Severity below 1 is LOW, between 1 and 100 is SIGNIFICANT, and above 100 is HIGH. The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
+
+## 2025 August  27th: Evaluation functions temporarily unavailable (Severity: LOW)
+
+The app was available and fully functional during this time and successfully called external evaluation functions. The evaluation functions managed by the Lambda Feedback team (which is most of them at the current time) became unavailable due to the API gateway of those functions being modified incorrectly. During this time, users submitting an answer on the app were given an error message.
+
+### Timeline
+
+2025/08/26 17:54 Evaluation functions became unavailable due to a deployment error.
+
+2025/08/26 18:21 Message added to the home page. Fix began development and testing.
+
+2025/08/26 21:51 Fix is complete and home pag eupdated.
+
+Estimated number of users affected: one. This low number was due to a quiet period in the academic year, and the rapid response to the problem.
+
+### Analysis
+
+- Due to evaluation functions having only one environment ('staging') that was used by both the STAGING and PROD versions of the app, changes to the staging gateway affected the production application.
+- The error itself happened because an update to infrastructure included changes by a different developer that weren't noticed by the one pushing the changes
+
+### Lessons learned
+
+- Implement independent staging and prod environments for evaluation functions (DONE as part of the fix)
+- When pushing infrastructure changes, always run Pulumi preview before starting, to see if changes are already awaiting push
+- Don't push infrastructure changes when no other developers are available to support any issues
+- Create a feature on the app for admins to optionally declare a base URL for evaluation functions, allowing groups of evaluation functions to be rapidly redirected
+
+## 2025 March 28th: access blocked within a particular organisation's WiFi (Severity: SIGNIFICANT)
+
+The URL lambdafeedback.com is served by a content delivery network (CDN), that was blocked by a particular organisation's WiFi. During this period, users on that WiFi couldn't access the site.  
+
+### Timeline
+
+2025/03/27 09:17 GMT We received a report that some users can't load the website at all. We announced this on the home page.
+
+2025/03/27 10:37 GMT The issues were identified as isolated to Imperial WiFi. Update on home page including advice to use a different WiFi (e.g. hotspot, or other location), or a [different DNS](https://developers.cloudflare.com/1.1.1.1/setup/windows/). Ticket with ICT and number shared with users. There was a response within minutes requesting more information, but no further response until the next morning.
+
+2025/03/28 09:22 GMT Imperial ICT acknowledged that their security software had blocked the whole CDN. Lambda Feedback was specifically unblocked and full service was resumed. We have asked for a broader unblocking.
+
+2025/03/28 09:32 GMT Authentication services were down (no logins) but resumed within a few minutes and service remained good. We'll investigate and report.
+
+2025/03/28 13:47 GMT Imperial ICT confirmed a wider unblocking.
+
+2025/03/28 14:45 GMT Incident closed. 
+
+### Lessons learned:
+
+Networks that provide internet access can block or incorrectly redirect users when trying to access Lambda Feedback. The block can be specific to one site or, as in this case, it can block a whole content delivery network (CDN) that serves many sites. 
+
+Affected users will never reach the site, and we will have no way to know that they are failing to access. 
+
+### Recommended Actions
+
+- Alert the ICT departments of key user groups to this problem, and ensure in advance that the relevent CDNs are not blocked.
+
+- Create a backup plan for if the URL or the CDN are not correctly routed
+
+- Monitor traffic to identify drops in usage that may indicate an issue (we already do this, but the drop was not significant enough in this case to be evident)
+
+- Monitor the Lambda Feedback email address (this was effective in this case and we were in touch with users)
+
+- Create a live chat with 'power users' for better communication during these incidents. A chat was started during this incident and will continue to be used
+
+- Consider local WiFi/networks as a possible cause for blocking site access, and test for this cause when troubleshooting access issues
+
+- Investigate the cause of the short unavailability of logins at 09:33 GMT on 28th March 2025.
+
+## 2025 February 13th: Incident related to new teacher roles feature (Severity: LOW)
+
+During this period teachers were not able to access teacher pages.
+
+### Timeline
+
+7:20am deployed a set of new features, including teacher roles
+
+9:47am issue reported - users with the TEACHER role were unable to access teacher pages.
+
+10:27am Issue reproduced on staging
+
+10:39am Issue fixed on staging; release to production initiated
+
+10:49am Confirmation that the fix worked in production
+
+### Lessons learned:
+
+- Features that behave differently for users with the TEACHER role (compared to users with the ADMIN role) must be tested by a user with the TEACHER role who is not a super-admin. This is because super-admins automatically revert from TEACHER back to ADMIN. The same applies to features that behave differently for users with the STUDENT role.
+
+## 2024 mid-December to 2025 January 2nd: Imperial College security measures affected logins (severity: HIGH)
 
 During this period the application was 100% available and operational. We were alerted on 2nd January that some users were not given permission by Imperial College London Microsoft 365 to login to third party applications. This was a a severe incident as it affected access to the application for some users.
 
@@ -28,7 +116,7 @@ Monitoring immediately after and the following morning showed that two known use
  
 - When an organisation uses single sign-on (SSO), ensure that the Lambda Feedback application permissions are granted by the organisation admin, even if the service initially works without those permissions being granted by admins. This action will protect against possible future issues, especially like the incident reported here.
 
-## 2024 November 4-8th: Incident related to new logins
+## 2024 November 4-8th: Incident related to new logins (Severity: SIGNIFICANT)
 
 Deployment of a new authentication process caused service interruptions. Login was not possible at certain times, affecting all users. Effects were between Monday 4th and Friday 8th November, all related to release b506.
 

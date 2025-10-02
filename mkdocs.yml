@@ -12,10 +12,12 @@ edit_uri: blob/main/docs/
 nav:
   - Home:
       - "index.md"
-      - Terminology: "terminology.md"
+      - Publications: "publications.md"
       - Opportunities: "opportunities.md"
+      - Terminology: "terminology.md"
       - Releases:
-          - "releases/index.md"
+          - Major releases: "releases/major_releases.md"
+          - Detailed Releases: "releases/detailed_releases.md"
           - Previous releases:
               - 2023-24: "releases/relases_2023_24.md"
           - Status: "releases/status.md"
@@ -25,7 +27,7 @@ nav:
       - Getting Started: "student/getting_started_student.md"
       - Answering Questions: "student/answering_questions.md"
       - Response Areas: "student/response_areas.md"
-      - Text Editing: "student/milkdown_student.md"
+      - Text Editing: "student/lexdown_student.md"
       - FAQ: "student/faq.md"
 
   - Teachers:
@@ -34,7 +36,7 @@ nav:
           - Getting Started: "teacher/guides/gettingstarted.md"
           - Editing questions: "teacher/guides/content-sets-questions.md"
           - Exporting and importing questions: "teacher/guides/question-export-import.md"
-          - Milkdown: "teacher/guides/milkdown.md"
+          - Lexdown: "teacher/guides/lexdown.md"
           - Analytics: "teacher/guides/analytics.md"
           - Good practice: "teacher/guides/good-practice.md"
           - FAQ: "teacher/guides/faq.md"
@@ -42,7 +44,7 @@ nav:
               - Guidance Time Suggestion: "teacher/guides/guidance/guidance-time-suggestion.md"
 
       - Reference:
-          - Access control: "teacher/reference/access_control.md"
+          - Content management: "teacher/reference/content_management.md"
           - Latex functionality: "teacher/reference/latex_functionality.md"
           - PDF generation: "teacher/reference/pdf_generation.md"
           - Response Areas:
@@ -71,9 +73,9 @@ nav:
           - Deployed Functions:
               - "advanced/evaluation_functions/index.md"
           - Alternate Function Languages: "advanced/evaluation_functions/alternate_languages.md"
-      - Chat agents:
-          - Quickstart: "advanced/chatbot_agents/quickstart.md"
-          - Testing Functions Locally: "advanced/chatbot_agents/local.md"
+      - Chat functions:
+          - Quickstart: "advanced/chat_functions/quickstart.md"
+          - Testing Functions Locally: "advanced/chat_functions/local.md"
           - Chat Agents Information: "advanced/chatbot_agents/info.md"
 
 # Configuration
@@ -138,6 +140,7 @@ plugins:
       fallback_to_build_date: true
   - macros
   - evaldocsloader:
+      enabled: !ENV [ENABLE_EVALDOCS, true]
       functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
       api_key:
         !ENV [

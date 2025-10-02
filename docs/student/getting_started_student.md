@@ -51,4 +51,4 @@ A chat interface connecting you with helpful Chatbots. Chatbot agents are AI Ass
 
 For more information on what the chatbot knows about you and how you can use it to its full potential:
 
-[Chatbot Agents - More Info](../advanced/chatbot_agents/info.md){ .md-button .md-button--primary}
+[Chatbots - More Info](../advanced/chat_functions/info.md){ .md-button .md-button--primary}

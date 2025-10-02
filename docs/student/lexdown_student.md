@@ -1,6 +1,6 @@
 # Text Editing
 
-The [Milkdown editor](https://milkdown.dev/online-demo) is widely used in Lambda Feedback wherever rich text input is required.
+The lexdown is widely used in Lambda Feedback wherever rich text input is required.
 On the student interface, it is used to add personal solution notes, and to write comments.
 
 It accepts:
@@ -22,7 +22,7 @@ Produces the following output:
 
 \[ \int_V \nabla \cdot \vec{f} \mathrm{d}V = \oint_S \vec{f} \cdot \hat{n} \mathrm{d}S \]
 
-In the Milkdown editor, anything surrounded by dollar signs (like `$ x^2 $`) will be interpreted as LaTeX. 
+In the Lexdown editor, anything surrounded by dollar signs (like `$ x^2 $`) will be interpreted as LaTeX. 
 Only the subset supported by [KaTeX](https://katex.org/docs/supported), which includes most common LaTeX functions, can be used.
 
 ### LaTeX equations in 5 minutes

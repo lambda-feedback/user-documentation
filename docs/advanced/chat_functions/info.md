@@ -16,7 +16,7 @@ The Chatbots have at their basis a [Large Language Model (LLM)](https://en.wikip
 
 Currently the students have access to the following AI Chatbots. Many others are in development.
 
-1. Informational Chatbot
+#### 1. Informational Chatbot
 
 This chatbot aims to complete all the relevant tasks the student requests based on the current Question they are working on. The Chatbot is aware of the Question details, answer, worked solution and guidance from the lecturer.
 
@@ -26,6 +26,32 @@ Some technical details:
 response time (on average): 10 seconds
 
 Helping approach: encourages self-discovery of the answer, but will reveal the solution if requested
+</code>
+</pre>
+
+#### 2. Concise Chatbot
+
+This chatbot aims to concisely respond to all relevant tasks the student requests based on the current Question they are working on. The Chatbot is aware of the Question details, answer, worked solution and guidance from the lecturer.
+
+Some technical details:
+<pre style="white-space: pre-wrap;">
+<code>LLM model: Gemini-2.0-flash (Google)
+response time (on average): 10 seconds
+
+Helping approach: provides short, direct answers without extra detail
+</code>
+</pre>
+
+#### 3. Reflective Chatbot
+
+This chatbot aims to respond to all relevant tasks the student requests by emphasising self-reflection through asking the student follow-up questions. The Chatbot is aware of the Question details, answer, worked solution and guidance from the lecturer.
+
+Some technical details:
+<pre style="white-space: pre-wrap;">
+<code>LLM model: gpt-4o-mini (OpenAI)
+response time (on average): 10 seconds
+
+Helping approach: always responds with a follow-up question
 </code>
 </pre>
 

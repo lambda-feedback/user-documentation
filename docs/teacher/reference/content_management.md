@@ -1,29 +1,105 @@
-# Access control
+# Content structure
 
 ## Modules
 
-Module access for students is controlled by enrolling student users. More details to be added here.
+Modules are the fundamental unit of content management in Lambda Feedback (not, for example, cohorts, or years/terms/semesters)
 
-## Sets
+## Instances of a module (e.g. '2026/27')
 
-Set access is granted to all users enrolled on a module, but the Set can be hidden by the teacher. Two methods can be used to hide a Set:
+Instances of a module are independentent but share the same umbrella title to help organise content. A module with multiple instances will have a drop-down menu in the title bar where users can switch modules. If you do not see the drop-down then you do not have access to other instances (or there are no other instances).
 
-1. Start and end dates (both optional) can be created in the Set Metadata
-2. The Set can me _manually hidden_, which overrides the above settings.
+![screenshot showing dropdown menu of multiple instances](../images/switch_instance_teacher.png)
 
-## Support material within questions
+### Default instance when there are multiple
+
+When opening a module in Lambda Feedback the default instance opens. The default is defined based on start and end dates for the instances. There are obvious cases such is if there is only one instance, or only one instance that is open and not closed. Logic for other cases is as follows:
+
+| Case | Default instance|
+|---|---|
+|All instances closed in past|Most recent start date|
+|All instances not started yet|Latest start date*|
+|Multiple instances open|Latest start date|
+
+
+\* This logic seems incorrect, but as of 10/7/25 it was the behaviour of the system
+
+The UX is based around the default being the most common need. In the rare case that access to a different instance is required, navigation is available.
+
+Note that students rarely access multiple instances of a module; teachers rarely access previous/closed instances of a module. 
+
+### Data continuity between instances
+
+Instances are independent. New instances are created without students enrolled, submissions or events recorded, or comments. Student and teacher enrollments are independent between different instances.
+
+## Teacher roles
+
+There are multiple Teacher roles, which are allocated per module instance. Admins manage the list of teacher roles available within a tenant. Each teacher role has a customised combination of privileges. One role always exists, which is 'Module Owner', which includes all privileges. 
+
+## Enrolment
+
+Access for students or teachers is controlled by enrollment, which is detailed in the [getting started](../guides/gettingstarted.md#enrolling-students) guide. 
+
+## Set visibility
+
+### Rules
+
+Visibility to students is governed by the 'Manually hidden' toggle, AND the opening times.
+
+Manually hidden (TRUE): regardless of timings, the Set will not be visible to students.
+
+Manually hidden (FALSE): the Set visibility to student depends on the opening and closing settings
+
+Opening time: 
+- before this time, the Set is not visible to students
+- after this time, or if this time is blank, the Set is visible to students if 'Manually hidden' is FALSE. 
+
+Closing time:
+- after this time, the Set is not visible to students
+- before this time, or if this time is blank, the Set is visible to students if 'Manually hidden' is FALSE. 
+
+### Editing Set visibility
+
+In TEACHER mode, users with Edit permissions can modify the visibility of a Set:
+
+Visibility can be edited within the 'Content' tab. Each set has an icon on the left hand side indicating the current visibility. Clicking on the icon opens a modal to edit and save the visibility: 
+
+![Icon/button for visibility of a Set](images/Visibility_example.png){width=150px}
+
+Alternatively, clicking on the 'Settings' icon will open a broader list of options, including the visibility settings.
+
+Examples of the icon indicating visibility are below, with the mouse hover:
+
+![a](images/Visibility_manual.png){width=150px}
+![a](images/Visibility_visible.png){width=120px}
+
+
+![a](images/Visibility_visible_timer.png){width=130px}
+![a](images/Visibility_timer_hidden.png){width=135px}
+![a](images/Visibility_manual_timer.png){width=150px}
+
+
+
+
+
+## Question visibility
+
+When a Set is visible, all pages within that Set can be accessed by a student user. 
+
+However, the visibility of 'support material' (such as worked solutions) can be controlled.
+
+## Support material visibility
 
 The following types of support materials are available to students in the `help` section:
 
-- Sructured tutorial
+- Structured tutorial
 - Final answer
 - Worked solutions
 
 Two methods can be used to hide support material:
 
-### Configuring student access at the set level
+### Configuring student access at the Set level
 
-Open the <span style="color: red;">Edit Set Metadata</span> page by clicking on the Edit Set Metadata button in the list of sets:
+Click <span style="color: red;">Update Set</span>:
 
 ![Image showing edit set metadata option](./images/edit_set_option.png)
 
@@ -41,7 +117,7 @@ This is valid for all questions in the set except those for which the support ma
 
 #### Available with warnings
 
-A warning window appears if the studen opens the content before the recommended time.
+A warning window appears if the student opens the content before the recommended time.
 
 The recommended time is the <span style="color: red;">Minimum time estimate (mins)</span> which can be set on the question <span style="color: red;">Guidance</span> page:
 
@@ -52,7 +128,7 @@ However, the option will be changed to **Available**, if any of the following is
 - The student has downloaded the PDF
 - The part is marked as done
 - There is no minimum time estimate set for the question
-- The time now minus the time the student first accessed the question is more than the minimum time estimate
+- The time now minus the time the student first accessed the question is more than the minimum time estimate (the student has accessed the question for longer than the minimum time estimate)
 
 This is valid for all questions in the set except those for which the support material access is set to be unavailable at the question level (see below).
 
