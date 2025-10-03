@@ -5,7 +5,8 @@ Chatbot agents are AI Assistants that students can chat with to ask for help or 
 The Chatbots have at their basis a [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) which received information regarding:
 
 - the details of the Question the student is on currently,
-- the answer and worked solutions for each Response Area of the Question,
+- the final answer, structured tutorial, and worked solutions of the Question,
+- the answer for each Response Area,
 - the student's progress on all parts of the Question,
 - the students's current previewed part,
 - the guidance time and tips form the lecturer.
