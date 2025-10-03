@@ -1,3 +1,11 @@
+## Release 2025/10/03
+
+- **b773-export-image-captions-to-json** – included image captions in exported question JSON files  
+- **b774-style-in-captions** – enabled LaTeX and Markdown support in image captions  
+- **b775-image-caption-character-limit** – removed the 250-character limit on image captions  
+- **b827-unenrol-many-users** – added a new feature to allow unenrolling multiple students at once in the teacher view
+- **b828-display-student-stats-even-for-0-user-access** – stats graphs are now displayed even when they show *0 student accesses* (previously no graph was shown)  
+
 ## Release 2025/10/02
 
 - **b516-set-layout-ui-upgrades** - new set layout with 2 adjustable panes
