@@ -499,7 +499,7 @@ ujson = "^5.10.0"
 type = "git"
 url = "https://github.com/lambda-feedback/EvalDocsLoader.git"
 reference = "main"
-resolved_reference = "c52ff00714be572287e4d4a87a3ac5378b090cce"
+resolved_reference = "6c691bb3ebe0a89e7b9a76fa0c0edd5e3a4ee3f1"
 
 [[package]]
 name = "frozenlist"
