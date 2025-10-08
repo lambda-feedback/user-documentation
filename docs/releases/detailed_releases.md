@@ -1,3 +1,10 @@
+## Release 2025/10/08
+
+- **b827-unenroll-many-users** – added a feature allowing teachers to unenrol multiple students at once  
+- **b834-reduce-size-of-description-box-in-settings-modal** – made the description box narrower  
+- **b789-admin-global-tag-pages-tweaks** – changed global tag type values to make them more explanatory  
+- **b790-students-import-wizard-add-info-on-step-2** – added explanations for each column in Step 2 of the students import wizard  
+
 ## Release 2025/10/03
 
 - **b773-export-image-captions-to-json** – included image captions in exported question JSON files  
