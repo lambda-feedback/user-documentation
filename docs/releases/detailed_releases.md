@@ -1,6 +1,13 @@
+## Release 2025/10/09
+
+- **b827-unenroll-many-users – part 3** – added information about the number of students to be unenroled  
+- **b802-all-drop-downs-and-tables-in-correct-order** – checked and corrected default order in drop-down lists and tables across the application  
+- **b824-remove-spaces-from-module-instance-dropdown** – removed spaces inside brackets in the module instance header drop-down button label  
+
+
 ## Release 2025/10/08
 
-- **b827-unenroll-many-users** – added a feature allowing teachers to unenrol multiple students at once  
+- **b827-unenroll-many-users - part 2** – improved button labels  
 - **b834-reduce-size-of-description-box-in-settings-modal** – made the description box narrower  
 - **b789-admin-global-tag-pages-tweaks** – changed global tag type values to make them more explanatory  
 - **b790-students-import-wizard-add-info-on-step-2** – added explanations for each column in Step 2 of the students import wizard  
@@ -10,7 +17,7 @@
 - **b773-export-image-captions-to-json** – included image captions in exported question JSON files  
 - **b774-style-in-captions** – enabled LaTeX and Markdown support in image captions  
 - **b775-image-caption-character-limit** – removed the 250-character limit on image captions  
-- **b827-unenrol-many-users** – added a new feature to allow unenrolling multiple students at once in the teacher view
+- **b827-unenrol-many-users - part 1** – added a new feature to allow unenrolling multiple students at once in the teacher view
 - **b828-display-student-stats-even-for-0-user-access** – stats graphs are now displayed even when they show *0 student accesses* (previously no graph was shown)  
 
 ## Release 2025/10/02
