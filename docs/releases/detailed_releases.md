@@ -1,3 +1,8 @@
+## Release 2025/10/10
+
+- **b638-any-external-chat-function** - integrate functionality to allow for any externally-hosted chatbot
+- **b810-multiple-chatbots-student** -ui-upgrade - changes to student UI to allow for the selection of which chatbot to use
+
 ## Release 2025/10/09
 
 - **b827-unenroll-many-users – part 3** – added information about the number of students to be unenroled  
