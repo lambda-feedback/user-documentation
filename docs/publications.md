@@ -20,6 +20,12 @@ hide:
 
 - Extended manifesto on why the education sector should use microservices for automated judgement in education. Reviews literature on systems engineering, software architecture, and eco-systems. Articulates the role of modules, interoperability, and microservices. Focuses on arguments for innovation and ethical use of AI. Results from deployments of microservices in Lambda feedback show how such a system can work in future. Highlights the needs for the future. This paper is a long read (~30 pages), providing the detailed thinking behind Lambda Feedback.
 
+#### 2025d: Chatbots for Dialogic Feedback during Self-Study: The Importance of Contextual Information
+
+- [:material-download: Download PDF](assets/publications/2025_EERN_Paper_Proceedings_Extracted.pdf) or access via the [Engineering Education Research Network (EERN) Conference Proceedings](https://research.manchester.ac.uk/en/publications/uk-and-ireland-engineering-education-research-network-annual-symp)
+
+- Conference Extended Abstract (8-pages); This paper examines how providing chatbots with context affects their educational value. Using a framework of impasse-driven learning, we introduce concepts of objective context (e.g. course materials) and subjective context (e.g. student's thought process). Our empirical evidence shows the benefits of providing context to chatbots. We also discuss the potential risks, namely removing student agency and ‘productive struggle’. We conclude that, on balance, chatbots are likely to be most educationally beneficial if context is available, but that chatbots should be configured to manage the risks. We outline future work on managing the risks.
+
 #### 2024: Automated Feedback on Student Attempts to Produce a Set of Dimensionless Power Products from a Set of Physical Quantities that Describe a Physical Problem
 
 - [:material-download: Download PDF](assets/publications/Lundengard_etal_2023_Preprint_Automated_feedback_on_dimensionless_power_products_from_physical_quantities.pdf) or access via [International Journal for Technology in Mathematics Education](https://www.ingentaconnect.com/content/resinf/tme/2024/00000031/00000003/art00003)
