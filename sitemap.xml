@@ -193,14 +193,6 @@
          <lastmod>2025-10-14</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/symbolicEqual/</loc>
-         <lastmod>2025-10-14</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/symbolicEqual/</loc>
-         <lastmod>2025-10-14</lastmod>
-    </url>
-    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/shortTextAnswer/</loc>
          <lastmod>2025-10-14</lastmod>
     </url>
@@ -214,6 +206,14 @@
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareBoolean/</loc>
+         <lastmod>2025-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/symbolicEqual/</loc>
+         <lastmod>2025-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/symbolicEqual/</loc>
          <lastmod>2025-10-14</lastmod>
     </url>
     <url>
