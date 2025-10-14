@@ -4,11 +4,11 @@ Chatbots are LLM assistants that students can chat with to ask for help or furth
 
 The Chatbots have at their basis a [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) which received information regarding:
 
-- the details of the Question the student is on currently,
+- the details of the Question the student is on currently (the raw markdown content of the question (all parts & response areas), the question name and number, and the set name, number and description),
 - the final answer, structured tutorial, and worked solutions of the Question,
 - the answer for each Response Area,
 - the progress of the student on all parts of the Question,
-- the current student previewed part,
+- the current student previewed part is emphasised,
 - the guidance time and tips form the lecturer.
 
 ---
