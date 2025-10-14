@@ -10,9 +10,9 @@ hide:
 
 #### 2025b: How do we define and evaluate "good" automated formative feedback?
 
-- [:material-download: Download PDF](assets/publications/Johnson_etal_SEFI_2025_FeedbackWorkshop.pdf). Will be a workshop at [SEFI 2025](https://www.sefi2025.eu/), but not currently published.
+- [:material-download: Download PDF](assets/publications/Johnson_etal_2025_SEFI_Workshop_Good_automated_feedback.pdf). A workshop hosted at [SEFI 2025](https://www.sefi2025.eu/).
 
-- Conference workshop. General overview (5 pages) of the literature and thinking behind automated formative feedback. Good for educators wanting a general framing of our approach.
+- General overview (6 pages) of the literature and thinking behind automated formative feedback, with some community inputs on how we should evaluate automated feedback. Good for educators wanting a general framing of our approach.
 
 #### 2024: Automated Feedback on Student Attempts to Produce a Set of Dimensionless Power Products from a Set of Physical Quantities that Describe a Physical Problem
 
