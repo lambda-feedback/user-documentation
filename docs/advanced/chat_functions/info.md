@@ -7,8 +7,8 @@ The Chatbots have at their basis a [Large Language Model (LLM)](https://en.wikip
 - the details of the Question the student is on currently,
 - the final answer, structured tutorial, and worked solutions of the Question,
 - the answer for each Response Area,
-- the student's progress on all parts of the Question,
-- the students's current previewed part,
+- the progress of the student on all parts of the Question,
+- the current student previewed part,
 - the guidance time and tips form the lecturer.
 
 ---

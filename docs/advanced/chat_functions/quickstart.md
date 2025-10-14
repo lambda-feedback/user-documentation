@@ -2,7 +2,7 @@
 
 ## What is a Chat Function?
 
-It's a function which calls Large Language Models (LLMs) to respond to the student's messages given contextual data:
+A chat function is a function which calls Large Language Models (LLMs) to respond to the messages of students given contextual data:
 
 - question data
 - user data such as past responses to the problem
@@ -16,7 +16,7 @@ Chat functions host a chatbot. Chatbots capture and automate the process of assi
 	- For new functions: clone the template repo for [chat-function-boilerplate](https://github.com/lambda-feedback/chat-function-boilerplate). **Make sure the new repository is set to public (it needs access to organisation secrets)**. 
 	- For existing functions: please make your changes on a new separate branch
 
-2. _If you are creating a new chatbot_, you can either edit the `scr/agents/base_agent` or copy it and rename it based on your chatbot's name.
+2. _If you are creating a new chatbot_, you can either edit the `scr/agents/base_agent` or copy it and rename it based on the name of your chatbot.
 3. You are now ready to start making changes and implementing features by editing each of the main function-logic files:
 
 	1. **`scr/agents/{base_agent}/{base}_agent.py`**: This file contains the main LLM pipeline using [LangGraph](https://langchain-ai.github.io/langgraph/) and [LangChain](https://python.langchain.com/docs/introduction/).
@@ -56,7 +56,7 @@ Chat functions host a chatbot. Chatbots capture and automate the process of assi
 
    3. _If you edited the chatbot agent file name_, make sure to add your chatbot `invoke()` function to the `module.py` file.
 
-	 4. Update the `config.json` file with the chatbot's name.
+	 4. Update the `config.json` file with the name of the chat function.
 
    5. Please add a `README.md` file to describe the use and behaviour of your chatbot.
 
