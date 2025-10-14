@@ -8,8 +8,8 @@ The fundamental idea of Lambda Feedback is that it calls external microservices 
 Evaluate a student response and provide feedback: 
 [Evaluation functions - Quickstart Guide](evaluation_functions/quickstart.md){ .md-button .md-button--primary style="width: 400px;"}
 
-Dialogic conversations with students:<br>
-[Chat functions - Quickstart guide ](chatbot_agents/quickstart.md){ .md-button .md-button--primary style="width: 400px;"}
+AI Chatbots to converse with students:<br>
+[Chat functions - Quickstart guide ](chat_functions/quickstart.md){ .md-button .md-button--primary style="width: 400px;"}
 
 All microservices are called over http. There is complete freedom in their implementation. Lambda Feedback also provides families of deployed microservices, using open source code available in our public GitHub repositories.
 

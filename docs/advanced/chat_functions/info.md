@@ -1,6 +1,6 @@
 # AI Chatbots - More information
 
-Chatbot agents are AI Assistants that students can chat with to ask for help or further explanations regarding the Question that they are working on. Each Agent has its own personality and approach to assisting the students.
+Chatbots are LLM assistants that students can chat with to ask for help or further explanations regarding the Question that they are working on. Each chatbot has its own personality and approach to assisting the students.
 
 The Chatbots have at their basis a [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) which received information regarding:
 
@@ -30,4 +30,4 @@ Click on the links below for information on each chatbot:
 
 ## AI Chatbot Development
 
-Are you interested in developing your own chatbot? Then please check out the [Quickstart guide](quickstart.md) to develop and deploy your own AI chat agent for Lambda Feedback.
+Are you interested in developing your own chatbot? Then check out the [Quickstart guide](quickstart.md) to develop and deploy your own AI chat function for Lambda Feedback.

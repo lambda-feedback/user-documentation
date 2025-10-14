@@ -45,7 +45,7 @@ A pane where you can write down your thought process and notes for the previewed
 ![Canvas Interface](images/canvas_interface.png)
 
 #### Chat: 
-A chat interface connecting you with helpful Chatbots. Chatbot agents are AI Assistants that you can chat with to ask for help or further explanations regarding the Question that you are working on. 
+A chat interface connecting you with helpful Chatbots. The Chatbots are AI Assistants that you can chat with to ask for help or further explanations regarding the Question that you are working on. 
 
 ![Chat Interface](images/chat_interface.png)
 

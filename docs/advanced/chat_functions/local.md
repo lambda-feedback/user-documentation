@@ -1,19 +1,19 @@
-# Running and Testing Agents Locally
+# Running and Testing Chat function Locally
 
-You can run the Python function for your agent itself by writing a `main()` function, or you can call the [`testbench_prompts.py`](https://github.com/lambda-feedback/lambda-chat/blob/main/src/agents/utils/testbench_prompts.py) script that runs a similar pipeline to the `module.py`.
+You can run the Python function for your chat function itself by writing a `main()` function, or you can call the [`testbench_prompts.py`](https://github.com/lambda-feedback/lambda-chat/blob/main/src/agents/utils/testbench_prompts.py) script that runs a similar pipeline to the `module.py`.
 
 ```bash
 python src/agents/utils/testbench_prompts.py
 ```
 
-You can also use the `test_prompts.py` script to test the agents with example inputs from Lambda Feedback questions and synthetic conversations.
+You can also use the `test_prompts.py` script to test the chat function with example inputs from Lambda Feedback questions and synthetic conversations.
 ```bash
 python src/agents/utils/test_prompts.py
 ```
 
 ## Testing using the Docker Image [:material-docker:](https://www.docker.com/)
 
-You can also build and run the docker pipeline for the agents. The chatbot agents are deployed onto a AWS Lambda serverless cloud function using the docker image. Hence, for final testing of your chatbots, we recommend completing those steps.
+You can also build and run the docker pipeline for the chat function. The chatbot associated with the chat function is deployed onto a AWS Lambda serverless cloud function using the docker image. Hence, for final testing of your chatbot, we recommend completing those steps.
 
 #### Build the Docker Image
 
