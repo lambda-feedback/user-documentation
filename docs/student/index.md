@@ -19,7 +19,7 @@ The image above shows an example question, with numbers to indicate:
 10. _Response area_, where student responses are entered and feedback is given
 11. Feedback to the teacher (currently in flux regarding the design - 02/07/25)
 12. Access to content 'below the line' providing extra support.
-13. _Workspace_ - Opens tab with canvas and ai chatbot
+13. _Workspace_ - Opens tab with canvas and chat
 14. Comments
 
 ## Below the line

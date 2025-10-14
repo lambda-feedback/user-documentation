@@ -1,4 +1,4 @@
-# AI Chatbots - More information
+# Chatbots - More information
 
 Chatbots are LLM assistants that students can chat with to ask for help or further explanations regarding the Question that they are working on. Each chatbot has its own personality and approach to assisting the students.
 
@@ -15,7 +15,7 @@ The Chatbots have at their basis a [Large Language Model (LLM)](https://en.wikip
 
 ## Available Chatbots
 
-Currently the students have access to the following AI Chatbots. Many others are in development.
+Currently the students have access to the following Chatbots. Many others are in development.
 
 Click on the links below for information on each chatbot:
 
@@ -28,6 +28,6 @@ Click on the links below for information on each chatbot:
 [3. Reflective Chatbot](https://github.com/lambda-feedback/reflectiveChatFunction/blob/main/docs/user.md)
 
 
-## AI Chatbot Development
+## Chat-function Development
 
 Are you interested in developing your own chatbot? Then check out the [Quickstart guide](quickstart.md) to develop and deploy your own AI chat function for Lambda Feedback.

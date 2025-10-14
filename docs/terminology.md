@@ -56,4 +56,4 @@ This is an optional section, and so does not have to be included in any question
 
 ### Workspace
 
-On the Question page, the students has access to their own workspace tab. Here they can find the "Canvas", for handwriting notes, and the "Chat", for conversing with an AI Chatbot on the question materials.
+On the Question page, the students has access to their own workspace tab. Here they can find the "Canvas", for handwriting notes, and the "Chat", for conversing with an LLM-driven Chatbot on the question materials.
