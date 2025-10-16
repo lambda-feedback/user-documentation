@@ -4,17 +4,17 @@ Chat functions are the microservices that Lambda Feedback calls to provide the u
 
 The chatbots have at their basis a [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) which received information regarding:
 
-- the raw markdown content of the question the student is on currently, including:
-  - the question name, number and content
-  - the final answer, structured tutorial, and worked solutions of the question
-  - the guidance (blurb and time estimate) form the teacher for the question
-  - the set name, number and description
-  - all parts with their number, content and done status (current part emphasised) 
-  - all response areas and their respective expected answers
-- the progress of the student on all parts of the Question, including:
-  - the total number of responses and the number of wrong responses the student has made for each response area
-  - the last responses the student has made for each response area and the received feedback
-  - the time duration the student has spent on the respective question and current part on that day
+- The raw markdown content of the question the student is on currently, including:
+    - The question name, number and content
+    - The final answer, structured tutorial, and worked solutions of the question
+    - The guidance (blurb and time estimate) from the teacher for the question
+    - The set name, number and description
+    - All parts with their number, content and done status (current part emphasised)
+    - All response areas and their respective expected answers
+- The progress of the student on all parts of the Question, including:
+    - The total number of responses and the number of wrong responses the student has made for each response area
+    - The last responses the student has made for each response area and the received feedback
+    - The time duration the student has spent on the respective question and current part on that day
 
 ---
 
