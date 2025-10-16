@@ -18,13 +18,13 @@ hide:
 
 - [:material-download: Download PDF](assets/publications/AI_Microservices_for_Sustainable_Innovation_in_Education-v3.pdf) pre-print under review. Also available on OSF: [https://osf.io/preprints/edarxiv/wq4bd_v3](https://osf.io/preprints/edarxiv/wq4bd_v3)
 
-- Extended manifesto on why the education sector should use microservices for automated judgement in education. Reviews literature on systems engineering, software architecture, and eco-systems. Articulates the role of modules, interoperability, and microservices. Focuses on arguments for innovation and ethical use of AI. Results from deployments of microservices in Lambda feedback show how such a system can work in future. Highlights the needs for the future. This paper is a long read (~30 pages), providing the detailed thinking behind Lambda Feedback.
+- Journal pre-print (~30 pages). Extended manifesto on why the education sector should use microservices for automated judgement in education. Literature review, conceptual arguments on innovation and ethics, and results from deployments of Lambda Feedback. This paper is a long read, providing the detailed thinking behind Lambda Feedback.
 
 #### 2025d: Chatbots for Dialogic Feedback during Self-Study: The Importance of Contextual Information
 
 - [:material-download: Download PDF](assets/publications/2025_EERN_Paper_Proceedings_Extracted.pdf) or access via the [Engineering Education Research Network (EERN) Conference Proceedings](https://research.manchester.ac.uk/en/publications/uk-and-ireland-engineering-education-research-network-annual-symp)
 
-- Conference Extended Abstract (8-pages); This paper examines how providing chatbots with context affects their educational value. Using a framework of impasse-driven learning, we introduce concepts of objective context (e.g. course materials) and subjective context (e.g. student's thought process). Our empirical evidence shows the benefits of providing context to chatbots. We also discuss the potential risks, namely removing student agency and ‘productive struggle’. We conclude that, on balance, chatbots are likely to be most educationally beneficial if context is available, but that chatbots should be configured to manage the risks. We outline future work on managing the risks.
+- Conference Extended Abstract (8-pages). Using a framework of impasse-driven learning we explore the role of chatbots, and focus on whether the bot has access to context. Empirical results show students benefitting from chatbots accessing context. Valuable thinking behind the benefits and risks of AI in education, combining theory and practice.
 
 #### 2024: Automated Feedback on Student Attempts to Produce a Set of Dimensionless Power Products from a Set of Physical Quantities that Describe a Physical Problem
 
