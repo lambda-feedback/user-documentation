@@ -1,3 +1,8 @@
+## Release 2025/10/17
+
+- **b814-retire-expression-ra** - remove unused Mathpix equation endoint
+- **782-branching-strategy** - new deployment workflow
+
 ## Release 2025/10/10
 
 - **b638-any-external-chat-function** - integrate functionality to allow for any externally-hosted chatbot
