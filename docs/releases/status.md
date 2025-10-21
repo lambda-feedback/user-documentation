@@ -4,6 +4,56 @@ This page contains information about any known incidents where service was inter
 
 The Severity of incidents is the product of number of users affected (for 100 users, N = 1), magnitude of the effect (scale 1-5 from workable to no service), and the duration (in hours). Severity below 1 is LOW, between 1 and 100 is SIGNIFICANT, and above 100 is HIGH. The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
 
+## 2025 October 20th: AWS Outage in US East (No effects, brief review)
+
+A major outage in AWS US East affected millions of users globally. There were no impacts on Lambda Feedback during this outage. However, we should review our situation in case such an event effects us.
+
+The reason we were unaffected is because we do not host in US East. If an AWS outage occured on the infrastructure we use (or one of the services we use) then our services would be unavailable.
+
+Steps we can take to manage this situation:
+
+1. ✅ Multi-region backup of our DB to ensure no data loss. Already in place. 
+2. 🟨 Multi-region synchronised DB service on the application, to ensure continuity of service.  We have created the infrastructure as code for this setup, but not activated it. The operational costs are very high, and the benefit is limited because it only insures against a database outage, while still being vulnerable to outage of any other services (especially our servers)
+3. 🟥 Multi-region synchronised full stack and load balancer. This setup is too expensive and complex for our operation. Major services such as Zoom and major educational platforms including Mobius, Ed Discussion, and InteDashboard were unavailable. It is not economically viable to insure against these situations, and the sector needs to accept these rare outages as long as data is recoverable.
+
+Summary: no change to our operations.
+
+## 2025 October 17th: Handwriting input temporarily unavailable (Severity: SIGNIFICANT)
+
+Handwriting in response areas (but not in the canvas) did not return a preview and could not be submitted. Users received an error in a toast saying that the service would not work. All other services remained operational.
+
+### Timeline (UK / BST)
+
+2025/10/17 08:24 Handwriting inputs ceased to return previews to the user due to a deployed code change that removed redudant code, but also code that it transpired was required. 
+
+2025/10/17 12:20 We became aware of a problem from using the system and alerted the dev team. A response began at 12:52.
+
+2025/10/17 12:58 Message on home page: "We are aware that handwriting input is not functioning. We will update this message when we have more info."
+
+2025/10/17 12:59 Code revert began. 
+
+2025/10/17 13:07 Problem resolved. Message on home page: "The system is now fully operational. From 08:24-13:07 UK time handwriting inputs were not working. This has been fixed and we will follow up with an investigation."
+
+### Analysis
+
+Technically, the issue was caused by removing code that was necessary. 
+
+Operationally, the process was as follows:
+- Removal of 'unused' code submitted by one dev and reviewed by another and approved. 
+- The code was not subject to user testing ('QA') due to no anticipated effect to test.
+- The code was pushed in the morning to minimise impact on users
+- Alerts were not monitored closely
+
+Post-hoc analysis shows that approximately 20 users were affected.
+
+### Lessons learned
+
+- Basic QA of all changes going to PROD is necessary (on STAGING). It won't always catch problems but it will sometimes (and in this case it would have).
+- Monitoring immediately after pushes, and approximately an hour after pushes, should be standard procedure.
+- Integration tests would help, although they are considered outside the scope of this project at the current stage due to the resource required to continually maintain those tests
+
+N=0.2, effect = 2, duration = 5. Severity = 2 (SIGNIFICANT.)
+
 ## 2025 August  27th: Evaluation functions temporarily unavailable (Severity: LOW)
 
 The app was available and fully functional during this time and successfully called external evaluation functions. The evaluation functions managed by the Lambda Feedback team (which is most of them at the current time) became unavailable due to the API gateway of those functions being modified incorrectly. During this time, users submitting an answer on the app were given an error message.
