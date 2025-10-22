@@ -4,6 +4,42 @@ This page contains information about any known incidents where service was inter
 
 The Severity of incidents is the product of number of users affected (for 100 users, N = 1), magnitude of the effect (scale 1-5 from workable to no service), and the duration (in hours). Severity below 1 is LOW, between 1 and 100 is SIGNIFICANT, and above 100 is HIGH. The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
 
+## 2025 October 17th: Handwriting input temporarily unavailable (Severity: SIGNIFICANT)
+
+Handwriting in response areas (but not in the canvas) did not return a preview and could not be submitted. Users received an error in a toast saying that the service would not work. All other services remained operational.
+
+### Timeline (UK / BST)
+
+2025/10/17 08:24 Handwriting inputs ceased to return previews to the user due to a deployed code change that removed redudant code, but also code that it transpired was required. 
+
+2025/10/17 12:20 We became aware of a problem from using the system and alerted the dev team. A response began at 12:52.
+
+2025/10/17 12:58 Message on home page: "We are aware that handwriting input is not functioning. We will update this message when we have more info."
+
+2025/10/17 12:59 Code revert began. 
+
+2025/10/17 13:07 Problem resolved. Message on home page: "The system is now fully operational. From 08:24-13:07 UK time handwriting inputs were not working. This has been fixed and we will follow up with an investigation."
+
+### Analysis
+
+Technically, the issue was caused by removing code that was necessary. 
+
+Operationally, the process was as follows:
+- Removal of 'unused' code submitted by one dev and reviewed by another and approved. 
+- The code was not subject to user testing ('QA') due to no anticipated effect to test.
+- The code was pushed in the morning to minimise impact on users
+- Alerts were not monitored closely
+
+Post-hoc analysis shows that approximately 20 users were affected.
+
+### Lessons learned
+
+- Basic QA of all changes going to PROD is necessary (on STAGING). It won't always catch problems but it will sometimes (and in this case it would have).
+- Monitoring immediately after pushes, and approximately an hour after pushes, should be standard procedure.
+- Integration tests would help, although they are considered outside the scope of this project at the current stage due to the resource required to continually maintain those tests
+
+N=0.2, effect = 2, duration = 5. Severity = 2 (SIGNIFICANT.)
+
 ## 2025 August  27th: Evaluation functions temporarily unavailable (Severity: LOW)
 
 The app was available and fully functional during this time and successfully called external evaluation functions. The evaluation functions managed by the Lambda Feedback team (which is most of them at the current time) became unavailable due to the API gateway of those functions being modified incorrectly. During this time, users submitting an answer on the app were given an error message.
@@ -14,7 +50,7 @@ The app was available and fully functional during this time and successfully cal
 
 2025/08/26 18:21 Message added to the home page. Fix began development and testing.
 
-2025/08/26 21:51 Fix is complete and home pag eupdated.
+2025/08/26 21:51 Fix is complete and home page eupdated.
 
 Estimated number of users affected: one. This low number was due to a quiet period in the academic year, and the rapid response to the problem.
 
@@ -29,6 +65,8 @@ Estimated number of users affected: one. This low number was due to a quiet peri
 - When pushing infrastructure changes, always run Pulumi preview before starting, to see if changes are already awaiting push
 - Don't push infrastructure changes when no other developers are available to support any issues
 - Create a feature on the app for admins to optionally declare a base URL for evaluation functions, allowing groups of evaluation functions to be rapidly redirected
+
+N = 0.01, effect = 3, duration = 4. Severity = 0.12 (LOW)
 
 ## 2025 March 28th: access blocked within a particular organisation's WiFi (Severity: SIGNIFICANT)
 
