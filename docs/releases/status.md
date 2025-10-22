@@ -10,9 +10,9 @@ The Severity of incidents is the product of:
 
 Severity:
 
-- <  1 is LOW
-- 1 - 100 is SIGNIFICANT
-- > 100 is HIGH. 
+- x < 1       is LOW
+- 1 < x < 100 is SIGNIFICANT
+- x >     100 is HIGH. 
 
 The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
 
