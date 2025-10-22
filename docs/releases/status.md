@@ -4,25 +4,11 @@ This page contains information about any known incidents where service was inter
 
 The Severity of incidents is the product of number of users affected (for 100 users, N = 1), magnitude of the effect (scale 1-5 from workable to no service), and the duration (in hours). Severity below 1 is LOW, between 1 and 100 is SIGNIFICANT, and above 100 is HIGH. The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
 
-## 2025 October 20th: AWS Outage in US East (No effects, brief review)
-
-A major outage in AWS US East affected millions of users globally. There were no impacts on Lambda Feedback during this outage. However, we should review our situation in case such an event effects us.
-
-The reason we were unaffected is because we do not host in US East. If an AWS outage occured on the infrastructure we use (or one of the services we use) then our services would be unavailable.
-
-Steps we can take to manage this situation:
-
-1. ✅ Multi-region backup of our DB to ensure no data loss. Already in place. 
-2. 🟨 Multi-region synchronised DB service on the application, to ensure continuity of service.  We have created the infrastructure as code for this setup, but not activated it. The operational costs are very high, and the benefit is limited because it only insures against a database outage, while still being vulnerable to outage of any other services (especially our servers)
-3. 🟥 Multi-region synchronised full stack and load balancer. This setup is too expensive and complex for our operation. Major services such as Zoom and major educational platforms including Mobius, Ed Discussion, and InteDashboard were unavailable. It is not economically viable to insure against these situations, and the sector needs to accept these rare outages as long as data is recoverable.
-
-Summary: no change to our operations.
-
 ## 2025 October 17th: Handwriting input temporarily unavailable (Severity: SIGNIFICANT)
 
 Handwriting in response areas (but not in the canvas) did not return a preview and could not be submitted. Users received an error in a toast saying that the service would not work. All other services remained operational.
 
-### Timeline (UK / BST)
+### Timeline (UK / BST)
 
 2025/10/17 08:24 Handwriting inputs ceased to return previews to the user due to a deployed code change that removed redudant code, but also code that it transpired was required. 
 
@@ -64,7 +50,7 @@ The app was available and fully functional during this time and successfully cal
 
 2025/08/26 18:21 Message added to the home page. Fix began development and testing.
 
-2025/08/26 21:51 Fix is complete and home pag eupdated.
+2025/08/26 21:51 Fix is complete and home page eupdated.
 
 Estimated number of users affected: one. This low number was due to a quiet period in the academic year, and the rapid response to the problem.
 
@@ -79,6 +65,8 @@ Estimated number of users affected: one. This low number was due to a quiet peri
 - When pushing infrastructure changes, always run Pulumi preview before starting, to see if changes are already awaiting push
 - Don't push infrastructure changes when no other developers are available to support any issues
 - Create a feature on the app for admins to optionally declare a base URL for evaluation functions, allowing groups of evaluation functions to be rapidly redirected
+
+N = 0.01, effect = 3, duration = 4. Severity = 0.12 (LOW)
 
 ## 2025 March 28th: access blocked within a particular organisation's WiFi (Severity: SIGNIFICANT)
 
