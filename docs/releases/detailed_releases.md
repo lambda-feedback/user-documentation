@@ -1,3 +1,9 @@
+## Release 2025/10/27
+
+- **b539-chasing-likes** – Improved the UI for reaction icons to prevent them from disappearing before the mouse can reach them.  
+- **b843-feedback-feedback** – Added reactions, allowing students to give feedback on the feedback they receive on their answers.  
+- **b846-global-tags-editing-group-emails** – Reordered fields on the Global Tag editing page for better clarity and usability.
+
 ## Release 2025/10/17
 
 - **b814-retire-expression-ra** - remove unused Mathpix equation endoint
