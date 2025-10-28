@@ -1,3 +1,9 @@
+## Release 2025/10/28
+
+- **b854-metadata-when-cloning-questions** – Display additional information when creating a question by cloning an existing one.
+- **b856-global-tags-owner-validation-error** – Fixed the validation logic for global tag ownership.
+- **b863-sentry-error-variable-input-got-invalid-value** – Resolved an error reported by the automated alert system that occurred when an empty value was sent to the API.
+
 ## Release 2025/10/27
 
 - **b539-chasing-likes** – Improved the UI for reaction icons to prevent them from disappearing before the mouse can reach them.  
