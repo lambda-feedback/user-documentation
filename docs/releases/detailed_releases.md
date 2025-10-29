@@ -1,3 +1,7 @@
+## Release 2025/10/29
+
+- **b221-overall-progress** - Set of changes to display students overall progress to the teacher.
+
 ## Release 2025/10/28
 
 - **b854-metadata-when-cloning-questions** – Display additional information when creating a question by cloning an existing one.
