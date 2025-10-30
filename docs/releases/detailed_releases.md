@@ -1,3 +1,8 @@
+## Release 2025/10/30
+
+- **b860-reaction-icons-are-flashing-numbers** - Fixed an issue where numbers briefly appeared above reaction icons.
+- **b865-teacher-preview-display-feedback-on-feedback** - Restored reactions in the teacher question preview, which had been mistakenly removed in a previous update.
+
 ## Release 2025/10/29
 
 - **b221-overall-progress** - Set of changes to display students overall progress to the teacher.
