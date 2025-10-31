@@ -1,3 +1,8 @@
+## Release 2025/10/31
+
+- **b853-remove-feedback-when-user-changes-answer** - The feedback now disappears when the user starts changing their answer.
+- **b867-sentry-disable-spans-and-replays** - Adjusted Sentry configuration to prevent a large number of alerts for the same cause.
+
 ## Release 2025/10/30
 
 - **b860-reaction-icons-are-flashing-numbers** - Fixed an issue where numbers briefly appeared above reaction icons.
