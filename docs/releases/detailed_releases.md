@@ -1,51 +1,51 @@
 ## Release 2025/11/05
 
-- **b851-empty-question-title-prevents-save** - Improvements to the question title validation and error handling.
-- **b765-audio-record-tweaks** - Improved the UI for audio recordings.
-- **b839-captions-with-latex-adjustments** - Reverted changes provided by **b774-style-in-captions** to confirm if they were causing saving delays when editing questions.
-- **b842-button-widths** - UI improvements in the display of the response area buttons, making them aligned.
+- **b851-empty-question-title-prevents-save** - Question title validation and error handling improvements.
+- **b765-audio-record-tweaks** - Improved UI for audio recordings.
+- **b839-captions-with-latex-adjustments** - Revert **b774-style-in-captions**.
+- **b842-button-widths** - Teacher editor UI: response area button widths aligned.
 
 ## Release 2025/10/31
 
-- **b853-remove-feedback-when-user-changes-answer** - The feedback now disappears when the user starts changing their answer.
+- **b853-remove-feedback-when-user-changes-answer** - Feedback disappears when user input is modified.
 - **b867-sentry-disable-spans-and-replays** - Adjusted Sentry configuration to prevent a large number of alerts for the same cause.
 
 ## Release 2025/10/30
 
-- **b860-reaction-icons-are-flashing-numbers** - Fixed an issue where numbers briefly appeared above reaction icons.
-- **b865-teacher-preview-display-feedback-on-feedback** - Restored reactions in the teacher question preview, which had been mistakenly removed in a previous update.
+- **b860-reaction-icons-are-flashing-numbers** - Fix: numbers were briefly appearing above all reaction icons.
+- **b865-teacher-preview-display-feedback-on-feedback** - Restored reactions in the teacher question preview.
 
 ## Release 2025/10/29
 
-- **b221-overall-progress** - Set of changes to display students overall progress to the teacher.
+- **b221-overall-progress** - Display overall progress of all students to the teacher within a module.
 
 ## Release 2025/10/28
 
-- **b854-metadata-when-cloning-questions** – Display additional information when creating a question by cloning an existing one.
-- **b856-global-tags-owner-validation-error** – Fixed the validation logic for global tag ownership.
+- **b854-metadata-when-cloning-questions** – Additional information when cloning from another question.
+- **b856-global-tags-owner-validation-error** – Fixed validation logic for global tag ownership.
 - **b863-sentry-error-variable-input-got-invalid-value** – Resolved an error reported by the automated alert system that occurred when an empty value was sent to the API.
 
 ## Release 2025/10/27
 
 - **b539-chasing-likes** – Improved the UI for reaction icons to prevent them from disappearing before the mouse can reach them.  
-- **b843-feedback-feedback** – Added reactions, allowing students to give feedback on the feedback they receive on their answers.  
+- **b843-feedback-feedback** – Added reactions to response areas; students can give feedback on the feedback they receive.  
 - **b846-global-tags-editing-group-emails** – Reordered fields on the Global Tag editing page for better clarity and usability.
 
 ## Release 2025/10/17
 
-- **b814-retire-expression-ra** - remove unused Mathpix equation endoint
-- **782-branching-strategy** - new deployment workflow
+- **b814-retire-expression-ra** - Removed unused Mathpix equation endoint
+- **782-branching-strategy** - New deployment workflow
 
 ## Release 2025/10/10
 
-- **b638-any-external-chat-function** - integrate functionality to allow for any externally-hosted chatbot
-- **b810-multiple-chatbots-student** -ui-upgrade - changes to student UI to allow for the selection of which chatbot to use
+- **b638-any-external-chat-function** - Chatbots implemented as external microservices
+- **b810-multiple-chatbots-student** - Student UI: choice of chatbot
 
 ## Release 2025/10/09
 
-- **b827-unenroll-many-users – part 3** – added information about the number of students to be unenroled  
-- **b802-all-drop-downs-and-tables-in-correct-order** – checked and corrected default order in drop-down lists and tables across the application  
-- **b824-remove-spaces-from-module-instance-dropdown** – removed spaces inside brackets in the module instance header drop-down button label  
+- **b827-unenroll-many-users – part 3** – Added information about the number of students to be unenroled  
+- **b802-all-drop-downs-and-tables-in-correct-order** – Checked and corrected default order in drop-down lists and tables across the application  
+- **b824-remove-spaces-from-module-instance-dropdown** – Module instance header drop-down UI tweak  
 
 
 ## Release 2025/10/08
