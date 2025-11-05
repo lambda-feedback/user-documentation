@@ -1,3 +1,10 @@
+## Release 2025/11/05
+
+- **b851-empty-question-title-prevents-save** - Improvements to the question title validation and error handling.
+- **b765-audio-record-tweaks** - Improved the UI for audio recordings.
+- **b839-captions-with-latex-adjustments** - Reverted changes provided by **b774-style-in-captions** to confirm if they were causing saving delays when editing questions.
+- **b842-button-widths** - UI improvements in the display of the response area buttons, making them aligned.
+
 ## Release 2025/10/31
 
 - **b853-remove-feedback-when-user-changes-answer** - The feedback now disappears when the user starts changing their answer.
