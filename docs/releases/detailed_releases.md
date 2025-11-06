@@ -1,3 +1,8 @@
+# Release 2025/11/06
+
+- **b871-set-number-in-mobile-view** - Fixed the display of set numbers shown as part of the question title in the mobile view.
+- **b847-explore-should-be-grey-when-no-data** - Fixed the clickability of buttons in the response area in the teacher view.
+
 ## Release 2025/11/05
 
 - **b851-empty-question-title-prevents-save** - Question title validation and error handling improvements.
