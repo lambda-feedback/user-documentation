@@ -1,5 +1,7 @@
 # Expression
 
+> **⚠️ DEPRECATED:** This feature is deprecated and will be removed in a future version. Please use [Math_Single_Line](Math_Single_Line.md) instead.
+
 This response area is very similar to [Text](Text.md), differing in that it can display how the user's response was interpreted back to them through the 'live preview' feature. This works using the grading function, providing a `feedback.response_latex` field, which gets rendered.
 
 ## Evaluation Function Options
