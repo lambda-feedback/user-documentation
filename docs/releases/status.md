@@ -2,13 +2,76 @@ Lambda Feedback is a cloud-native application that is available with full servic
 
 This page contains information about any known incidents where service was interrupted. The page begain in November 2024 following a significant incident. The purpose is to be informative, transparent, and ensure lessons are always learned so that service improves over time.
 
-The Severity of incidents is the product of number of users affected (for 100 users, N = 1), magnitude of the effect (scale 1-5 from workable to no service), and the duration (in hours). Severity below 1 is LOW, between 1 and 100 is SIGNIFICANT, and above 100 is HIGH. The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
+The Severity of incidents is the product of: 
+
+- number of users affected (for 100 users, N = 1), 
+- magnitude of the effect (scale 1-5 from workable to no service), 
+- duration (in hours). 
+
+Severity:
+
+- <  1 is LOW
+- 1 - 100 is SIGNIFICANT
+- > 100 is HIGH. 
+
+The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
+
+## 2025 November 18th: Some evaluation functions failing (Severity: LOW):
+
+Some evaluation functions returned errors.
+
+### Timeline (UK / GMT)
+
+2025/11/18 21:18 GMT: some but not all feedback functions failed. Investigation initiated and message on home page
+2025/11/18 21:39 GMT: updated to users that the cause was identified.
+2025/11/18 21:45 GMT: issue resolved. Home page updated.
+
+### Analysis
+
+The root cause of the issue was the outage of Cloudflare, which cause wide issues on the internet including for example X, ChatGPT, and other services being unavailable.
+
+Our system does not use Cloudflare so was unaffected. However, any of our evaluation functions using an old version of our baselayer rely on calling GitHub to retrieve a schema. GitHub git services were down (presumably due to the Cloudflare outage), which meant that our functions could not validate their schemas and therefore failed.
+
+We tried to implement a solution but were unable to because implementation relied on GitHub workflows, which failed for the same reason. GitHub had announced they were resolving the issue, and when it was resolved our services returned to normal.
+
+The solution in this case is to upgrade all of our evaluation functions to a newer version of the baselayer, which has schemas bundled and does not rely on external services. 
+
+### Recommended action
+
+Update all evaluation function baselayers.
+
+N=1, effect = 2, duration = 0.5. Severity = 1 (LOW)
+
+## 2025 November 10th: Service unresponsive (Severity: SIGNIFICANT):
+
+The application was unresponsive.
+
+### Timeline (UK / GMT)
+
+2025/11/10 14:21 Service became unresponseive, e.g. pages not loading. Reports from users through various channels. Developers began investigating, message sent to Teachers.
+
+2025/11/10 14:28 Service returned to normal. Home page message displayed to inform users.
+
+### Analysis
+
+During the period of unresponsiveness, the key symptoms within the system were overloading the CPU of the servers. Error logging and alerts did successfully detect downtime and alert the developer team, who responded. Although developers were looking into the problem, and tried to increase resource to resolve the problem, in fact the autoscaling solved the problem itself. 
+
+The underlying cause was a combination of high usage, leading to CPU overload. This type of scenario is normal and correctly triggered autoscaling. The issue in this case was that autoscaling should happen seamlessly, without service interruptions in the intervening period. 
+
+### Action taken:
+
+- Decrease the CPU and memory usage level at which scaling is triggered. This increases overall costs but decreases the chance of service interruptions.
+- Enhance system logs so that more information is available if a similar event occurs
+- Investigate CPU and memory usage to identify opportunities for improvements (outcome: useage is typical for NODE.js applications, no further action)
+
+N=3, effect = 5, duration = 0.15. Severity = 2.25 (SIGNIFICANT)
+
 
 ## 2025 October 17th: Handwriting input temporarily unavailable (Severity: SIGNIFICANT)
 
 Handwriting in response areas (but not in the canvas) did not return a preview and could not be submitted. Users received an error in a toast saying that the service would not work. All other services remained operational.
 
-### Timeline (UK / BST)
+### Timeline (UK / BST)
 
 2025/10/17 08:24 Handwriting inputs ceased to return previews to the user due to a deployed code change that removed redudant code, but also code that it transpired was required. 
 
