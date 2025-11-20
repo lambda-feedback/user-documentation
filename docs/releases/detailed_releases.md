@@ -1,3 +1,12 @@
+## Release 2025/11/20
+
+- **b845-add-filter-to-global-tags-multi-widget** – Added a search feature to the global tags multi-select widget, making it easier to find tags quickly.
+- **b875-meq-student-home-page-links** – Added links to Module Evaluation Questionnaires (MEQs) on the student home page.
+- **b876-meq-set-navigation** – Renamed “Surveys” to Module Evaluation Questionnaires (MEQs) and improved navigation so students can easily access MEQs for all their modules.
+- **b879-meq-module-stats** – Improved the statistics view so it is clear which sets are MEQ sets.
+- **b880-meq-set-dates-defaults** – Added default hide and release dates for MEQs at the tenant level to simplify setup.
+- **b886-student-progress-in-teacher-view-is-not-aligned-if-it-contains-stars** – Improved the alignment of progress indicators in the teacher view, including when a star (submitted solution by student) is shown.
+
 ## Release 2025/11/17
 
 - **b849-import-tags-with-same-column-name** – Allow columns in the student-upload spreadsheet to have identical titles.
