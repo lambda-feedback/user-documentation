@@ -28,13 +28,11 @@ Some evaluation functions returned errors.
 
 ### Analysis
 
-The root cause of the issue was the outage of Cloudflare, which cause wide issues on the internet including for example X, ChatGPT, and other services being unavailable.
+Some of our evaluation functions still use an old version of our baselayer, which calls GitHub to retrieve a schema. GitHub git services were down (https://www.githubstatus.com/incidents/5q7nmlxz30sk), which meant that our functions could not validate their schemas and therefore failed.
 
-Our system does not use Cloudflare so was unaffected. However, any of our evaluation functions using an old version of our baselayer rely on calling GitHub to retrieve a schema. GitHub git services were down (presumably due to the Cloudflare outage), which meant that our functions could not validate their schemas and therefore failed.
+The same issue meant that we could not push updates to code during the incident, due code being deployed via GitHub.  GitHub had announced they were resolving the issue, and when it was resolved our services returned to normal.
 
-We tried to implement a solution but were unable to because implementation relied on GitHub workflows, which failed for the same reason. GitHub had announced they were resolving the issue, and when it was resolved our services returned to normal.
-
-The solution in this case is to upgrade all of our evaluation functions to a newer version of the baselayer, which has schemas bundled and does not rely on external services. 
+The solution in this case is to upgrade all of our evaluation functions to a newer version of the baselayer, which has schemas bundled and does not rely on external services.
 
 ### Recommended action
 
