@@ -22,21 +22,21 @@ Some evaluation functions returned errors.
 
 ### Timeline (UK / GMT)
 
-2025/11/18 21:18 GMT: some but not all feedback functions failed. Investigation initiated and message on home page
-2025/11/18 21:39 GMT: updated to users that the cause was identified.
+The application was fully available during this time period.
+
+2025/11/18 21:18 GMT: some but not all evaluation functions (external microservices) failed. Investigation initiated and message added on home page
+2025/11/18 21:39 GMT: home page updated to users that the cause was identified.
 2025/11/18 21:45 GMT: issue resolved. Home page updated.
 
 ### Analysis
 
-Some of our evaluation functions still use an old version of our baselayer, which calls GitHub to retrieve a schema. GitHub git services were down (https://www.githubstatus.com/incidents/5q7nmlxz30sk), which meant that our functions could not validate their schemas and therefore failed.
+Some of our evaluation functions still use an old version of our baselayer, which calls GitHub to retrieve a schema and validate inputs. GitHub git services were down (https://www.githubstatus.com/incidents/5q7nmlxz30sk), which meant that those of our functions that call GitHub could not validate their schemas and therefore failed. Other evaluation functions had previously been updated to remove the need to call GitHub and were therefore not affected by the issue.
 
-The same issue meant that we could not push updates to code during the incident, due code being deployed via GitHub.  GitHub had announced they were resolving the issue, and when it was resolved our services returned to normal.
-
-The solution in this case is to upgrade all of our evaluation functions to a newer version of the baselayer, which has schemas bundled and does not rely on external services.
+The same root cuase meant that we could not push updates to code during the incident, due code being deployed via GitHub.  GitHub had announced they were resolving the issue, and when it was resolved our services returned to normal.
 
 ### Recommended action
 
-Update all evaluation function baselayers.
+Update all evaluation function baselayers to remove dependency on external calls when validating.
 
 N=1, effect = 2, duration = 0.5. Severity = 1 (LOW)
 
