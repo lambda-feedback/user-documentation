@@ -59,6 +59,10 @@ This is the process to create the solution steps:
 
 You can add images with drag-and-drop or copy-and-paste. Images can be resized with the mouse, or click on the image to configure, or edit the raw markdown.
 
+### Audio clips
+
+Drag + drop an audio file into the editor, or record audio on the 'Insert v' drowpdown in Lexdown.
+
 ### Empty lines
 
 Use 'Enter' for a new paragraph, or 'shift-Enter' for a line break.
