@@ -21,4 +21,4 @@ To use this feature do the following:
    
 2. Click on the "Suggest" button in the guidance configuration tab after you have filled in all the question's attributes.
 
-![Suggest Button](../../images/guidance-time-suggestion.png)
+![Suggest Button](images/guidance-time-suggestion.png)
