@@ -3,12 +3,16 @@
 ## Module-level analytics
 
 The module overview tab displays cohort progress and cohort activity. Access to the overview tab is subject to teacher role privileges.
+![Module Overview](images/Module_Stats.png)
 
 The Content tab displays all Sets, with cohort-level data on activity and progress within each Set. Access to the data within the Content tab is subject to teacher role privileges.
+![Set Overview](images/Set_Stats.png)
 
 Within the content there is a stats tab which shows cohort-level data on question completion and statistics on time spent on each question. Response Areas are listed and show completion rates overall, and best per student. Detailed response statistics are available in the 'Explore' button on the Response area. The stats tab availability is subject to teacher role privileges.
 
 The ID of Response Areas is linked between module instances. If a Response Area maintains the response data shape then the data across multiple instances can be combined for stronger statistics. As of 10/7/25 there are no features in the UI to link data across instances, but these links will be added in future (the data saved is in the correct structure to allow this feature on all past data).
+
+![Detailed Set Stats](images/Detailed_Set_Stats.png)
 
 ## Analytics and question versions
 
