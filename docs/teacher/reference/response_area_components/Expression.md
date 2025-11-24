@@ -4,30 +4,12 @@ This response area is very similar to [Text](Text.md), differing in that it can 
 
 ## Evaluation Function Options
 
-### `isSimilar`
+### [isSimilar](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/isSimilar/)
 
-Calculates the difference between the teacher answer (ans) and the student response (res); compares this to an allowable difference comprising an absolute tolerance (atol) and a relative tolerance (rtol).
+### [symbolicEqual](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/symbolicEqual/)
 
-### `symbolicEqual`
+### [compareExpressions](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareExpressions/)
 
-Compares two symbolic expressions for mathematical equivalence, using SymPy. See [SymPy](https://www.sympy.org/en/index.html.md-button) for further information.
-
-## compareExpressions
-**Input Symbols**
-
-This is a powerful feature for defining a dictionary of accepted symbols. For each symbol, you define:
-
-*   **Symbol:** The LaTeX-rendered symbol (e.g., `$f(x)$`).
-*   **Code:** The machine-readable variable name (e.g., `fx`). This is what your students will type and what the evaluation function sees.
-*   **Alternatives:** A list of other codes you want to accept for the same symbol (e.g., `f_x`, `f(x)`, `f`). This allows you to anticipate different ways students might type the same thing.
-*   **Visibility:** A `TRUE`/`FALSE` toggle. If "Display input symbols" is enabled in the Input tab, this setting determines whether a specific symbol is shown to the student. This allows you to show students common symbols while still accepting less common or alternative ones in the background.
-
-![example](screenshots/input_symbols.png)
-![example](screenshots/input_symbols_preview.png)
-
-Tolerances can also be added. These will apply to the numerical parts of the answer (e.g. the $10$ in $10x$).
-
-This is done using the `atol` and `rtol` fields under the Evaluation Function Parameters section.
 
 ## Component Parameters
 

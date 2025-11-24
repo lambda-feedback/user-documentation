@@ -4,7 +4,4 @@ This response area allows students to select True or False.
 
 ## Evaluation Function Options
 
-### `isExactEqual`
-
-Checks if the answer is exactly equal to the response. In this case if the response is True or False.
-The `type` should be set to `bool`, to ensure boolean comparison.
+### [isExactEqual](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/isExactEqual/)
