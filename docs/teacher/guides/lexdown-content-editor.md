@@ -1,15 +1,15 @@
-# The content editor
+# The Lexdown content editor
 
-The content editor is widely used in Lambda Feedback. It accepts:
+The Lexdown content editor is widely used in Lambda Feedback. It accepts:
 
 - standard [markdown](https://www.markdownguide.org/basic-syntax/)
 - [$\LaTeX$](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) (delimited by $ and limited to [KaTeX](https://www.katex.org) functionality)
 - images (paste or drag and drop)
 - videos (paste a URL)
 
-The content editor is an adapted version of lexical to use markdown-first, and incorporate features including drag-and-drop images, embedded videos and audio, and switch to raw markdown.
+The Lexdown editor is an adapted version of lexical to use markdown-first, and incorporate features including drag-and-drop images, embedded videos and audio, and switch to raw markdown.
 
-## Common needs in the content editor
+## Common needs in the Lexdown editor
 
 Here's a walkthrough to create some basic content:
 
