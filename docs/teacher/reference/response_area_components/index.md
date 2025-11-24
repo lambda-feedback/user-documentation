@@ -54,7 +54,8 @@ This opens the **Response Area Panel**, separated into four tabs:
     - Text (for short text answers)
     - Table
     - Multiple-choice
-    - Expression (gives a preview for the typed symbolic expression)
+    - MATH_SINGLE_LINE
+    - MATH_MULTI_LINE
     - Numeric units (separate fields for a number and its units)
     - Code
     - Essay (for long text answers)

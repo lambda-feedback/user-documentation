@@ -4,8 +4,7 @@ General multiple choice response area. Features multiple options for single answ
 
 ## Evaluation Function Options
 
-### ArrayEqual
-Evaluation function checks if the supplied response and answer arrays are within the optionally supplied tolerances. This is based on the [numpy.allclose](https://numpy.org/doc/stable/reference/generated/numpy.allclose.html) function. Numpy is a dependancy for this function, but it means that arrays of any shape (regular) can be compared efficiently.
+### [ArrayEqual](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arrayEqual/)
 
 ## Parameters 
 ### `options` (required)

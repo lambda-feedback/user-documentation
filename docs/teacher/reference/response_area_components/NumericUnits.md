@@ -4,6 +4,10 @@ Provides two input fields with `Number` and `Units` placeholder texts. This area
 
 **Note:** this area will display how the user's response was interpred using the `interp_string` field provided in the feedback object returned by that function (if it exists).
 
+## Evaluation Function Options
+
+### [compareExpressions](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareExpressions/)
+
 ## Component Parameters 
 ### `pre_response_text` & `post_response_text` (optional)
 Text block to be displayed to the left and right of the input field respectively. Markdown and LaTeX are allowed following the usual syntax.

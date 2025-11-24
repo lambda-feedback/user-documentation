@@ -4,13 +4,9 @@ Matrix response area. Will populate the component with a grid of text input fiel
 
 ## Evaluation Function Options
 
-### ArrayEqual
-Evaluation function checks if the supplied response and answer arrays are within the optionally supplied tolerances. This is based on the [numpy.allclose](https://numpy.org/doc/stable/reference/generated/numpy.allclose.html) function. Numpy is a dependancy for this function, but it means that arrays of any shape (regular) can be compared efficiently.
+### [ArrayEqual](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arrayEqual/)
 
-
-### ArraySymbolicEqual
-Very similar to the SymbolicEqual grading function, but grading any list of expressions instead. This algorithm can take any level of nesting for "response" and "answer" fields, as grading is done recursively (as long as both shapes are identical). Symbolic grading is done using the SymPy library. See [SymPy](https://www.sympy.org/en/index.html.md-button) for further information.
-
+### [ArraySymbolicEqual](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arraySymbolicEqual/)
 
 ## Component Parameters 
 ### `rows and cols` (required)

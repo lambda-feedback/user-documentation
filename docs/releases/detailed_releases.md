@@ -1,3 +1,22 @@
+## Release 2025/11/20
+
+- **b845-add-filter-to-global-tags-multi-widget** – Added a search feature to the global tags multi-select widget, making it easier to find tags quickly.
+- **b875-meq-student-home-page-links** – Added links to Module Evaluation Questionnaires (MEQs) on the student home page.
+- **b876-meq-set-navigation** – Renamed “Surveys” to Module Evaluation Questionnaires (MEQs) and improved navigation so students can easily access MEQs for all their modules.
+- **b879-meq-module-stats** – Improved the statistics view so it is clear which sets are MEQ sets.
+- **b880-meq-set-dates-defaults** – Added default hide and release dates for MEQs at the tenant level to simplify setup.
+- **b886-student-progress-in-teacher-view-is-not-aligned-if-it-contains-stars** – Improved the alignment of progress indicators in the teacher view, including when a star (submitted solution by student) is shown.
+
+## Release 2025/11/17
+
+- **b849-import-tags-with-same-column-name** – Allow columns in the student-upload spreadsheet to have identical titles.
+- **b864-admin-chat-statistics** – Added a new page in the admin view to preview chat usage statistics.
+- **b868-set-card-items-do-not-align-on-some-cards** – Aligned items inside set cards in the teacher view so they line up.
+- **b870-cant-add-links-in-lexdown-except-in-raw-markdown** – Fixed link creation in the Lexdown editor.
+- **b874-making-saving-draft-message-to-appear-subtle** – Made the “saving draft” message for question versions less intrusive.
+- **b882-expanded-list-of-teacher-roles-overflows-window** – Improved UI to ensure the expanded teacher-roles popup is centered.
+- **b886-student-progress-in-teacher-view-is-not-aligned-if-it-contains-stars** – UI fix to ensure student progress bars remain aligned even when they contain stars.
+
 ## Release 2025/11/06
 
 - **b871-set-number-in-mobile-view** - Fixed the display of set numbers shown as part of the question title in the mobile view.
