@@ -69,10 +69,6 @@ Usage examples:
 
 ![gif showing the branching feature](images/branching.gif)
 
-### Audio clips
-
-Drag + drop an audio file into the editor, or record audio on the 'Insert v' drowpdown in Lexdown.
-
 ### Input symbols
 
 Input symbols help in two ways:

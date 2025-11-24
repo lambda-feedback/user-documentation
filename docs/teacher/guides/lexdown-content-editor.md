@@ -1,15 +1,15 @@
-# The lexdown editor
+# The Lexdown content editor
 
-The lexdown is widely used in Lambda Feedback. It accepts:
+The Lexdown content editor is widely used in Lambda Feedback. It accepts:
 
 - standard [markdown](https://www.markdownguide.org/basic-syntax/)
 - [$\LaTeX$](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) (delimited by $ and limited to [KaTeX](https://www.katex.org) functionality)
 - images (paste or drag and drop)
 - videos (paste a URL)
 
-The lexdown editor is an adapted version of lexical to use markdown-first, and incorporate features including drag-and-drop images, embedded videos and autio, and switch to raw markdown.
+The Lexdown editor is an adapted version of lexical to use markdown-first, and incorporate features including drag-and-drop images, embedded videos and audio, and switch to raw markdown.
 
-## Common needs in Lexdown
+## Common needs in the Lexdown editor
 
 Here's a walkthrough to create some basic content:
 
@@ -58,6 +58,10 @@ This is the process to create the solution steps:
 ### Images
 
 You can add images with drag-and-drop or copy-and-paste. Images can be resized with the mouse, or click on the image to configure, or edit the raw markdown.
+
+### Audio clips
+
+Drag + drop an audio file into the editor, or record audio on the 'Insert v' drowpdown in Lexdown.
 
 ### Empty lines
 

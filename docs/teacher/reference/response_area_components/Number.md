@@ -4,11 +4,9 @@ Very similar to the [Text](Text.md) response area, except the user response is p
 
 ## Evaluation Function Options
 
-### `isSimilar`
-Calculates the difference between the teacher answer (ans) and the student response (res); compares this to an allowable difference comprising an absolute tolerance (atol) and a relative tolerance (rtol). 
+### [isSimilar](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/isSimilar/)
 
-### `isExactEqual`
-A strict comparison in Python using '=='. This function is a basic utility but often not the function you really want to use because it is quite brittle.
+### [isExactEqual](https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/isExactEqual/)
 
 ## Setting The Answer
 

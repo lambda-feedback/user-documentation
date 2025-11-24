@@ -33,15 +33,15 @@ nav:
   - Teachers:
       - "teacher/index.md"
       - Guides:
-          - Getting Started: "teacher/guides/gettingstarted.md"
+          - Getting started: "teacher/guides/gettingstarted.md"
           - Editing questions: "teacher/guides/content-sets-questions.md"
+          - Lexdown content editor: "teacher/guides/lexdown-content-editor.md"
           - Exporting and importing questions: "teacher/guides/question-export-import.md"
-          - Lexdown: "teacher/guides/lexdown.md"
           - Analytics: "teacher/guides/analytics.md"
           - Good practice: "teacher/guides/good-practice.md"
+          - Guidance: "teacher/guides/guidance.md"
           - FAQ: "teacher/guides/faq.md"
-          - Guidance:
-              - Guidance Time Suggestion: "teacher/guides/guidance/guidance-time-suggestion.md"
+
 
       - Reference:
           - Content management: "teacher/reference/content_management.md"
@@ -50,13 +50,17 @@ nav:
           - Response Areas:
               - "teacher/reference/response_area_components/index.md"
               - Text: "teacher/reference/response_area_components/Text.md"
+              - Essay: "teacher/reference/response_area_components/Essay.md"
+              - Milkdown: "teacher/reference/response_area_components/Milkdown.md"
               - Number: "teacher/reference/response_area_components/Number.md"
               - Boolean: "teacher/reference/response_area_components/Boolean.md"
               - NumericUnits: "teacher/reference/response_area_components/NumericUnits.md"
               - Expression: "teacher/reference/response_area_components/Expression.md"
               - MultipleChoice: "teacher/reference/response_area_components/MultipleChoice.md"
+              - Likert: "teacher/reference/response_area_components/Likert.md"
               - Matrix: "teacher/reference/response_area_components/Matrix.md"
               - Table: "teacher/reference/response_area_components/Table.md"
+              - Code: "teacher/reference/response_area_components/Code.md"
           - Evaluation Functions:
               - "teacher/reference/evaluation_functions/index.md"
 
