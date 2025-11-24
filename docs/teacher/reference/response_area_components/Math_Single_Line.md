@@ -1,6 +1,6 @@
 # Math_Single_Line
 
-This response area allows users to type, write or upload mathematics, and then displays how the user's response was interpreted back to them through the 'live preview' feature. This works using the evaluation function, providing a `feedback.response_latex` field, which gets rendered.
+This response area allows users to type, write or upload mathematics, and then displays how the user's response was interpreted back to them through the 'live preview' feature. 
 
 ## Evaluation Function Options
 
