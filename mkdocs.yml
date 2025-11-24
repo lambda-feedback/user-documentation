@@ -56,6 +56,8 @@ nav:
               - Boolean: "teacher/reference/response_area_components/Boolean.md"
               - NumericUnits: "teacher/reference/response_area_components/NumericUnits.md"
               - Expression: "teacher/reference/response_area_components/Expression.md"
+              - Math Single Line: "teacher/reference/response_area_components/Math_Single_Line.md"
+              - Math Multi Line: "teacher/reference/response_area_components/Math_Multi_Line.md"
               - MultipleChoice: "teacher/reference/response_area_components/MultipleChoice.md"
               - Likert: "teacher/reference/response_area_components/Likert.md"
               - Matrix: "teacher/reference/response_area_components/Matrix.md"
