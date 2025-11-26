@@ -10,7 +10,7 @@ Special attention is required when formatting $\LaTeX$ which, although it is for
 
 ## The Lexdown content editor
 
-All content in Lambda Feedback is stored as markdown (ASCII content), input/edited using our [Lexdown editor](../guides/lexdown-content-editor.md). The editor has a preview mode providing live interactive previews of content, including $\LaTeX$ via katex, and a raw markdown mode.
+All content in Lambda Feedback is stored as markdown (ASCII content), input/edited using our [Lexdown editor](../guides/lexdown). The editor has a preview mode providing live interactive previews of content, including $\LaTeX$ via katex, and a raw markdown mode.
 
 ## Web requirements: katex
 

@@ -35,7 +35,7 @@ nav:
       - Guides:
           - Getting started: "teacher/guides/gettingstarted.md"
           - Editing questions: "teacher/guides/content-sets-questions.md"
-          - Lexdown content editor: "teacher/guides/lexdown-content-editor.md"
+          - Lexdown content editor: "teacher/guides/lexdown.md"
           - Exporting and importing questions: "teacher/guides/question-export-import.md"
           - Analytics: "teacher/guides/analytics.md"
           - Good practice: "teacher/guides/good-practice.md"

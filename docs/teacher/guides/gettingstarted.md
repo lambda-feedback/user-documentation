@@ -48,7 +48,7 @@ A [student guide is here](../../student/index.md). Teachers use the 'below the l
 -   **Final answer** is self-explanatory.
 -   **Worked solutions** provides detailed, step-by-step solutions.
 
-All content below the line uses the [Lexdown](./lexdown-content-editor.md) content editor functionality. Worked solutions can be [branched](https://lambda-feedback.github.io/user-documentation/teacher/guides/good-practice/#branching), or split into [steps](https://lambda-feedback.github.io/user-documentation/teacher/guides/lexdown/#steps-in-worked-solutions). Future developments will add branching and response areas to structured tutorials.
+All content below the line uses the [Lexdown](./lexdown) content editor functionality. Worked solutions can be [branched](https://lambda-feedback.github.io/user-documentation/teacher/guides/good-practice/#branching), or split into [steps](https://lambda-feedback.github.io/user-documentation/teacher/guides/lexdown/#steps-in-worked-solutions). Future developments will add branching and response areas to structured tutorials.
 
 It is not necessary to include all three methods of help. If you only provide content for one tab, only that button will appear in the published student version.
 
