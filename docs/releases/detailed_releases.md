@@ -1,3 +1,14 @@
+## Release 2025/11/26
+
+- **b830-remember-search-and-filter-settings-across-the-app** - Added support for remembering search and filter settings across the app during a session.
+- **b877-meq-evaluated-teachers-list** - Added the ability to configure which teachers are evaluated in each MEQ set, including a new “repeat statements for each teacher” option and several small usability improvements.
+- **b878-meq-likert-updates** - Improved the Likert question type with editable columns, clearer submission behaviour for surveys, and several small usability and layout fixes.
+- **b895-set-name-edit-issues** - Fixed issues with editing set names, including unwanted navigation when opening the dialog and repositioning the edit icon next to the title.
+- **b898-meq-tweaks-batch-1** - Improved the MEQ sets page with corrected headers, refreshed layouts and styling (including icons, alignment, and backgrounds), and ensured the student module list always reloads correctly.
+- **b906-meq-tweaks-batch-2** - Improved the MEQ experience with smoother global submission, clearer messages and titles, support for empty Likert responses, a ‘Next MEQ’ button, and better handling of redacted content.
+- **b908-meq-layout-fix** - Fixed a layout issue that caused a double-scroll effect after adding the sets navigation bar.
+- **b910-meq-tweaks-batch-3** - Improved the MEQ moderation table and mobile experience, including clearer question numbering, consistent approve/reject buttons, visible essay inputs on mobile, and correct handling of draw mode.
+
 ## Release 2025/11/20
 
 - **b845-add-filter-to-global-tags-multi-widget** – Added a search feature to the global tags multi-select widget, making it easier to find tags quickly.
