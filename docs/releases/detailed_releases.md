@@ -1,3 +1,8 @@
+## Release 2025/11/27
+
+- **b912-meq-batch-import** - Added modules batch import features for MEQ launch.
+- **914-meq-tweaks-batch-4** - Minor wording and layout changes for MEQ sets.
+
 ## Release 2025/11/26
 
 - **b830-remember-search-and-filter-settings-across-the-app** - Added support for remembering search and filter settings across the app during a session.
