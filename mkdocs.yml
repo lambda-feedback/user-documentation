@@ -28,6 +28,7 @@ nav:
       - Answering Questions: "student/answering_questions.md"
       - Response Areas: "student/response_areas.md"
       - Text Editing: "student/lexdown_student.md"
+      - Module evaluation questionnaires (MEQ): "student/MEQ.md"
       - FAQ: "student/faq.md"
 
   - Teachers:
@@ -40,8 +41,8 @@ nav:
           - Analytics: "teacher/guides/analytics.md"
           - Good practice: "teacher/guides/good-practice.md"
           - Guidance: "teacher/guides/guidance.md"
+          - Module evaluation questionnaires (MEQ): "teacher/guides/MEQ.md"
           - FAQ: "teacher/guides/faq.md"
-
 
       - Reference:
           - Content management: "teacher/reference/content_management.md"
@@ -145,17 +146,17 @@ plugins:
   - git-revision-date-localized:
       fallback_to_build_date: true
   - macros
-  - evaldocsloader:
-      enabled: !ENV [ENABLE_EVALDOCS, true]
-      functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
-      api_key:
-        !ENV [
-          API_KEY,
-          "WiOS1vMpQyTuGL06ZJxjG1eZd2P0SPvuVzHpr6zjkTIJ33U2t5O5NWaZboWBv8aV",
-        ]
-      dev_section: ["Advanced", "Evaluation Functions", "Deployed Functions"]
-      user_section: ["Teachers", "Reference", "Evaluation Functions"]
-      github_token: !ENV [GITHUB_TOKEN, ""]
+  # - evaldocsloader:
+  #     enabled: !ENV [ENABLE_EVALDOCS, true]
+  #     functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
+  #     api_key:
+  #       !ENV [
+  #         API_KEY,
+  #         "WiOS1vMpQyTuGL06ZJxjG1eZd2P0SPvuVzHpr6zjkTIJ33U2t5O5NWaZboWBv8aV",
+  #       ]
+  #     dev_section: ["Advanced", "Evaluation Functions", "Deployed Functions"]
+  #     user_section: ["Teachers", "Reference", "Evaluation Functions"]
+  #     github_token: !ENV [GITHUB_TOKEN, ""]
 
 # Extra variables, accessible within markdown pages
 extra:
