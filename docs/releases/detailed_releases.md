@@ -1,3 +1,7 @@
+## Release 2025/12/01
+
+- **b917-meq-release** - Make MEQs visible on students' home page
+
 ## Release 2025/11/27
 
 - **b912-meq-batch-import** - Added modules batch import features for MEQ launch.
