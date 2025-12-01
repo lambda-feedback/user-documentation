@@ -10,8 +10,8 @@ Student responses are treated as follows:
 
 - Responses are saved when 'SUBMIT' is pressed, with confirmation provided.
 - Multiple responses are possible. Responses are initialised by the last saved submission, and can then be edited and re-submitted with the 'SUBMIT' button.
-- Only the last response is used when collecting data.
-- All responses are confidential to all users of the platform, i.e. the author of the response is never associated with the response.
+- Only the last response is used when displaying data to teachers.
+- All responses are confidential to all users of the platform, i.e. the author of the response is never associated with the response when it is displayed to teachers.
 - No responses are visible to teachers while an MEQ is open.
 
 
@@ -24,7 +24,7 @@ MEQ data are only accessible to teachers, and only under certain conditions. A m
 |MEQ is open | Response is about a specific teacher? | Available to |
 |--|--|--|
 |Yes |n/a|Data not available|
-|No |No|Any teacher on the module|
+|No |No|Any teacher or moderator on the module|
 |No |Yes|Only that teacher and the moderator|
   
 
@@ -42,6 +42,3 @@ MEQ data are only accessible to teachers, and only under certain conditions. A m
 
 When a student has open MEQs that are incomplete, a progress bar will appear on the home page. When all MEQs are complete, or none is open, the bar will disappear.
 
-## Information for teachers
-
-There is an additional guide, [MEQ for teachers](../../teacher/guides/MEQ).
