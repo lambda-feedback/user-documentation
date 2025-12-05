@@ -1,3 +1,7 @@
+## Release 2025/12/05
+
+- **b916-meq-tweaks-batch-5** - Minor MEQ improvements, including correct handling of optional Likert responses, better tab layout with long titles, and green ticks on tabs.
+
 ## Release 2025/12/01
 
 - **b917-meq-release** - Make MEQs visible on students' home page
@@ -5,7 +9,7 @@
 ## Release 2025/11/27
 
 - **b912-meq-batch-import** - Added modules batch import features for MEQ launch.
-- **914-meq-tweaks-batch-4** - Minor wording and layout changes for MEQ sets.
+- **b914-meq-tweaks-batch-4** - Minor wording and layout changes for MEQ sets.
 
 ## Release 2025/11/26
 
