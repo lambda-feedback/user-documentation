@@ -16,6 +16,42 @@ Severity:
 
 The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
 
+## 2025 December 4th: Brief DB outage (Severity: LOW):
+
+### Timeline (GMT/UTC)
+
+10:58 DB was unavailable for a few seconds, affecting about 20 users (e.g. page won't load)
+
+11:14 Alerts automatically created
+
+11:15 Developers responded 
+
+11:40 Decision and action
+
+11:45 Incident over
+
+### Analysis
+
+The incident was triggered by a mistake by a developer on the DB configuration, which triggered a DB restart. Restart was successful so issues only arose during the brief restart period.
+
+The analysis and decision concluded that the configuration needed to be reverted, and the DB restarted again.
+
+The DB connections to the app remained open during the configuration change, avoiding any need for users to re-authenticate. This minimised the impact of the incident, but meant the quickest and safest response required a second restart. 
+
+### Actions
+
+We have implemented protections against destructive actions on the DB, increasing barriers to this type of event.
+
+We have increased user security requirements to confgure the DB (this incident was not security related, but it was a useful prompt).
+
+Second-developer reviews are now required before any DB configuration changes are required.
+
+Developers should only make configuration changes when fully aware of the consequences and able to handle the process
+
+We have documented the error messages that correspond to this issue, to make detection faster and more accurate in future.
+
+N=20, effect = 4, duration = 0.01. Severity = 0.008 (LOW)
+
 ## 2025 November 18th: Some evaluation functions failing (Severity: LOW):
 
 Some evaluation functions returned errors.
