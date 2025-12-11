@@ -1,3 +1,9 @@
+## Release 2025/12/11
+
+- **b923-cannot-assign-moderator-role-to-a-new-teacher-in-admin** - Allow admin to assign moderator roles
+- **b926-handle-null-submission-on-teacher-errors** - Show errors with empty submittions
+- **927-meq-discard-confirmation** - Ask for confirmation when navigating away from a filled but not submitted MEQ
+
 ## Release 2025/12/05
 
 - **b916-meq-tweaks-batch-5** - Minor MEQ UI tweaks: tab and title layout; green ticks on tabs.
