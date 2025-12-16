@@ -1,3 +1,7 @@
+## Release 2025/12/16 bis
+
+- **b935-login-fails-when-email-address-changes** - Fix login for Microsoft users after they've changed their email address.
+
 ## Release 2025/12/16
 
 - **b547-chat-ui-tweaks** - Improved chat interface behaviour, including correct tab selection when switching questions, immediate display of user messages, updated styling, and a new typing animation.
