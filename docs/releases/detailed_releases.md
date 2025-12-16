@@ -1,3 +1,9 @@
+## Release 2025/12/16
+
+ **b547-chat-ui-tweaks** - Improved chat interface behaviour, including correct tab selection when switching questions, immediate display of user messages, updated styling, and a new typing animation.
+
+- **b890-admin-chat-statistics-tweaks** - Simplified the Admin Chat Statistics page by replacing descriptive sentences with concise table headings and labels.
+
 ## Release 2025/12/11
 
 - **b923-cannot-assign-moderator-role-to-a-new-teacher-in-admin** - Allow admin to assign moderator roles
