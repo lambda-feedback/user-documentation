@@ -1,3 +1,9 @@
+## Release 2025/12/19
+
+- **931-chat-cursor-fix** - Keep the chat input focused after sending a message
+- **b936-numeric-units-ra-type-cannot-be-cleared** - Fix bug preventing NUMERIC_UNITS response type to clear
+- **b933-numeric-and-numericalunits-allow-empty-student-response** - Fix a bug that allowed empty submission on BOOLEAN, ESSAY, NUMBER, NUMERIC_UNITS and  TEXT response types.
+
 ## Release 2025/12/16 bis
 
 - **b935-login-fails-when-email-address-changes** - Fix login for Microsoft users after they've changed their email address.
