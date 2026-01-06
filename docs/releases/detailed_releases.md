@@ -1,3 +1,8 @@
+## Release 2026/01/06
+
+- **b808-meq-stats-page** - Improved MEQ statistics visibility, filtering, and access control, ensuring teachers and moderators see only appropriate, recent, and sufficiently populated data.
+- **b919-meq-moderation-improvements** - Improved MEQ moderation by excluding empty submissions, consolidating identical responses, showing only the latest submissions, and refining moderation navigation.
+
 ## Release 2025/12/19
 
 - **931-chat-cursor-fix** - Keep the chat input focused after sending a message
