@@ -1,5 +1,9 @@
 ## Release 2026/01/06
 
+- **b943-meq-explore-button-throws-error** – Fixed an issue where the Explore page could throw an error for MEQ submissions with empty responses.
+
+## Release 2026/01/06
+
 - **b808-meq-stats-page** - Improved MEQ statistics visibility, filtering, and access control, ensuring teachers and moderators see only appropriate, recent, and sufficiently populated data.
 - **b919-meq-moderation-improvements** - Improved MEQ moderation by excluding empty submissions, consolidating identical responses, showing only the latest submissions, and refining moderation navigation.
 
