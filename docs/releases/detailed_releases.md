@@ -1,4 +1,4 @@
-## Release 2026/01/06
+## Release 2026/01/07
 
 - **b943-meq-explore-button-throws-error** – Fixed an issue where the Explore page could throw an error for MEQ submissions with empty responses.
 
