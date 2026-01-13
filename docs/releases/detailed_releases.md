@@ -1,3 +1,8 @@
+## Release 2026/01/13
+
+- **b937-meq-likert-scale** – Added Likert scale visualisation for MEQ stats and improved N/A handling.
+- **b944-meq-stats-fixes** – Improved MEQ statistics access control, evaluated teacher selection, and various minor changes.
+
 ## Release 2026/01/07
 
 - **b943-meq-explore-button-throws-error** – Fixed an issue where the Explore page could throw an error for MEQ submissions with empty responses.
