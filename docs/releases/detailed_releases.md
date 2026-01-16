@@ -1,3 +1,13 @@
+## Release 2026/01/16
+
+- **b889-make-the-displayed-numbers-when-importing-students-less-confusing** – Improved student import header mapping by making system column identifiers visually secondary.
+- **b909-stats-displayed-without-permission** – Fixed stats being shown without permission by enforcing VIEW STATS access in the Students table.
+- **b915-header-for-personal-tutors** – Fixed module header so personal tutors see the correct module title instead of the “TEACHER” label.
+- **b930-navigation-to-empty-student-details-page-in-teacher-view** – Fixed navigation to student details so persisted filters do not lead to an empty or incorrect view.
+- **b932-api-retrieves-all-students-not-filtered-by-teacher-permissions** – Fixed student filtering so teachers and tutors only see students they are authorised to view.
+- **b934-admin-modules-filter-module-name-replaced-by-module-id-after-returning-to-page** – Fixed Admin -> Modules filter to restore module names instead of internal IDs when returning to the page.
+- **b940-filter-teacher-modules-students-does-not-remember-sets** – Fixed set-based filters not being restored in the Teacher -> Module -> Students view when navigation away and back.
+
 ## Release 2026/01/13
 
 - **b937-meq-likert-scale** – Added Likert scale visualisation for MEQ stats and improved N/A handling.
