@@ -71,6 +71,8 @@ nav:
       - "advanced/index.md"
       - Response Areas:
           - Overview: "advanced/response_areas/overview.md"
+          - Create a New Response Area: "advanced/response_areas/create.md"
+          - Response Area Sandbox: "advanced/response_areas/sandbox.md"
       - Evaluation Functions:
           - Quickstart Guide: "advanced/evaluation_functions/quickstart.md"
           - General Specification: "advanced/evaluation_functions/specification.md"
