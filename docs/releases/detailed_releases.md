@@ -1,3 +1,10 @@
+## Release 2026/01/30
+
+- **b909-stats-displayed-without-permission** - Ensured student progress statistics are displayed only when the user has the View Stats permission. Statistics are now returned only for students the user is authorised to view, including correct handling of tutor-only access.
+- **b951-images-response-area** - Added a new Images response area type, allowing students to submit image-based responses and enabling teachers to view and assess image submissions consistently with other response areas.
+- **b953-null-responseconfig-api-error** – Prevented GraphQL errors when response configuration is absent by aligning schema nullability.
+- **b954-dont-fetch-stats-without-access** – Prevented stats queries from being issued when the teacher role does not grant access to set statistics, avoiding unnecessary backend errors.
+
 ## Release 2026/01/16
 
 - **b889-make-the-displayed-numbers-when-importing-students-less-confusing** – Improved student import header mapping by making system column identifiers visually secondary.
