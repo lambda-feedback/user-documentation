@@ -84,6 +84,8 @@ nav:
           - Quickstart: "advanced/chat_functions/quickstart.md"
           - Testing Functions Locally: "advanced/chat_functions/local.md"
           - Chat Functions Information: "advanced/chat_functions/info.md"
+      - Administrators:
+          - User Access: "advanced/administrators/user_access.md"
 
 # Configuration
 theme:
