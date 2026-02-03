@@ -54,15 +54,17 @@ There are currently the following types of Teacher Roles:
 
 ### OWNER
 
-This is a system-defined role. The administrator can only change its description. The administrator cannot delete this role or modify its permissions.
+This is a system-defined **role type**. Exactly one role exists with this type.
 
-Role of this type grant access to modules for module owners. This role is assigned automatically to the user who creates a new module instance but can also be assigned or reassigned to other teachers on the module.
+The administrator can modify the role’s description, but cannot delete the role or change its permissions.
+
+This role is assigned automatically to the user who creates a new module instance, but it may also be reassigned to other users with ADMIN or TEACHER base roles.
 
 The role of this type provides **Teacher** access to the module.
 
 ### CUSTOM
 
-This role type can be added, updated, or deleted by administrators.
+Roles of this **role type** can be added, updated, or deleted by administrators.
 
 Administrators (or teachers with relevant permissions) can assign this role to users to grant them access to a module instance as teachers.
 
@@ -76,19 +78,27 @@ There is currently the following type of Tutor Roles:
 
 ### PERSONAL TUTOR
 
-This is a system-defined role. The administrator cannot delete this role but can modify its description and permissions, except for the **View student data** permission.
+This is a system-defined **role type**. The system provides a single role of this type.
+
+The administrator cannot delete this role but can modify its description and permissions, except for the **View student data** permission.
 
 This role is assigned indirectly using Global Tags, which group students into student groups and assign teachers or administrators as tutors to those groups.
 
 A teacher or administrator gains access to a module if there is at least one student in that module who shares a Global Tag with the teacher or administrator. Access to the module is then restricted by the permissions assigned to the PERSONAL TUTOR role.
 
-Although the tutor role includes the **View student data** permission, this permission is limited to only those students within the same tutor group (i.e., those sharing the same Global Tag), unless the same user would have a TEACHER ROLE to the same module with **View student data** permission. This differs from teacher access, where permissions apply to all students within the module.
+Although the tutor role includes the **View student data** permission, that permission applies **only** to students within the same tutor group (i.e. those sharing the same Global Tag), unless the same user would have a TEACHER ROLE to the same module with **View student data** permission. This differs from teacher access, where permissions apply to all students within the module.
 
-Role of this type provides **Tutor** access to the module.
+**Tutor access** therefore represents indirect, student-scoped access to a module, rather than full module-level teacher access.
+
+Role of this type provides **Tutor access** to the module.
 
 ## Moderator access
 
-Moderator access is currently defined by the presence of the **Moderate student submissions** permission. In the current implementation, moderator access is modelled as a variant of teacher role assignment rather than as a separate access mechanism. As a result, a user may be assigned either teacher access or moderator access to a module, but not both simultaneously.
+Moderator access is currently defined by the presence of the **Moderate student submissions** permission. In the current implementation, moderator access is modelled as a variant of teacher role assignment rather than as a separate access mechanism.
+
+As a result, a user may be assigned **either a “true” teacher role or a moderation-enabled teacher role** for a module, but cannot hold **both role assignments simultaneously**. A moderation-enabled role still grants teacher-level access to the module; however, it replaces any other teacher role assignment rather than layering on top of it.
+
+This choice affects how roles are currently assigned in the UI. It does not imply that moderation represents an additional teaching responsibility, nor that multiple teacher-role assignments are conceptually required.
 
 Any role (typically a CUSTOM role) with this permission enabled grants moderator access to a module.
 
