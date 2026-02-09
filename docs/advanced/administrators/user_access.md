@@ -1,121 +1,65 @@
-# Purpose
-
-This section is intended for administrators configuring access and advanced users supporting access-related workflows.
-
-It explains:
-- the different types of user roles
-- how roles are created and configured
-- how those roles affect access to modules and functionality
-
-This documentation focuses on access semantics and configuration rather than providing a full UI walkthrough.
-
 # Base User Roles
 
 There are currently 3 base user roles:
 
 ## STUDENT
 
-Users with the STUDENT role have access only to student pages.
-
-## ADMIN
-
-Users with the ADMIN role have access to all admin pages. They also have contextual access to teacher and student pages, subject to the same module-level access rules that apply to users with the TEACHER base role.
+Users with the STUDENT role have access only to student pages. There is only one class or type of STUDENT role, however access to specific modules is subject to enrollment as a student on that module. Enrolment of students is done by a teacher.
 
 ## TEACHER
 
-Users with the TEACHER role have access to teacher pages, but only for modules to which they are linked as a teacher, tutor, or moderator. They can also access student pages for those modules.
+Users with the TEACHER role have access, in addition to student pages, to teacher pages. This includes, for example, the teacher home page (`/teacher`). Within TEACHER pages, users only have access to modules to which they are linked as a teacher or tutor. 
 
-User access to teacher-facing functionality is controlled by a set of permissions.
+Access as a _teacher_ requires enrollment as a teacher on the relevant module, which can be done in two different ways:
 
-These permissions currently apply only to TEACHER pages, tabs, menus, and features (such as activities or viewing statistics).
+- by teachers on that module with the relevant permissions.
+- by ADMIN users in the ADMIN pages.
 
-## Mental model
+Access as a _tutor_ to teacher pages of a module is by a link to a student who is enrolled on that module. The link is via a ['global tag'](user_tags.md), which is managed by an ADMIN.
 
-Access to teacher-facing functionality is determined by:
+On each module that a user is enrolled as a teacher, they will be assigned a teacher _role_. The number of different roles (such as 'MODULE OWNER' or 'TEACHING ASSISTANT'), and their respective permissions, is configurable by ADMIN users. Each role is defined by which permissions are, or are not, assigned to the role. Permissions include access to pages, tabs, menus, and features (such as enrolling or viewing statistics).
 
-1. The user’s **base role** (ADMIN or TEACHER)
-2. How the user is linked to a module:
-    - as a **teacher** (via a teacher role)
-    - as a **tutor** (via global tags)
-    - as a **moderator** (via a role containing moderation permission)
-3. The **permissions** associated with that access
+Permissions that can be assigned to a teacher role are visible when enrolling a teacher. The pop-up shows which permissions exist, which roles have been configured, and their intersection. An example is below.
 
-These access mechanisms are evaluated independently and may overlap in effect, but they are not interchangeable.
+![](permissions_example.png)
+
+Permissions are part of the application. Roles are configured by ADMIN users on the app.
+
+## ADMIN
+
+Users with the ADMIN role have, in addtion to TEACHER and STUDET privileges, access to all admin pages. There is only one class of ADMIN.
+
 
 # Teacher Roles
 
-Teacher Roles are permission groupings used to control direct module-level teacher access for users with ADMIN or TEACHER base roles. They do not apply to users with the STUDENT base role.
+There are two fundamental TEACHER roles: OWNER and CUSTOM, with further configurations are possible through the CUSTOM role type, which are managed by ADMIN users. There is also a PERSONAL TUTOR role, which is an independent way to allocate permissions.
 
-The UI currently labels these permission sets as "Teacher Roles," though this terminology may evolve.
+## OWNER
 
-## Teacher access
+A fixed role. ADMIN can modify the role’s name, but cannot delete the role or change its permissions.
 
-There are currently the following types of Teacher Roles:
+OWNER is assigned automatically to the user who creates a new module instance, but it may also be reassigned to other users with TEACHER (or ADMIN) base roles.
 
-### OWNER
+## CUSTOM
 
-This is a system-defined **role type**. Exactly one role exists with this type.
+ADMINS can configure an unlimited number of custom roles, which can then be assigned to teachers by ADMIN, and by TEACHERs with relevant enrollment permissions on a given module.
 
-The administrator can modify the role’s description, but cannot delete the role or change its permissions.
-
-This role is assigned automatically to the user who creates a new module instance, but it may also be reassigned to other users with ADMIN or TEACHER base roles.
-
-The role of this type provides **Teacher** access to the module.
-
-### CUSTOM
-
-Roles of this **role type** can be added, updated, or deleted by administrators.
-
-Administrators (or teachers with relevant permissions) can assign this role to users to grant them access to a module instance as teachers.
-
-All roles of this type provide **Teacher** access to the module.
-
-## Tutor access
+## PERSONAL TUTOR
 
 Tutor access is not a teacher role. It is a separate access mechanism derived from student–tutor relationships.
 
-There is currently the following type of Tutor Roles:
+ADMIN cannot delete the tutor role but can modify its description and permissions, except for the `View student data` permission.
 
-### PERSONAL TUTOR
+Tutors are implicitly assigned by linking a teacher to a Global (student) Tag. For example a Global Tag named '2028' could be applied to a cohort of students, and be linked to a teacher who is then a 'tutor'.
 
-This is a system-defined **role type**. The system provides a single role of this type.
+Tutor access to a module for a TEACHER (or ADMIN) requires at least one STUDENT in that module to share a Global Tag with the TEACHER (or ADMIN). Access to the module is then restricted by the permissions assigned to the PERSONAL TUTOR role.
 
-The administrator cannot delete this role but can modify its description and permissions, except for the **View student data** permission.
+Although the tutor role includes the `View student data` permission, that permission applies _only_ to students within the same tutor group (i.e. those sharing the same Global Tag); an exception is if the same user also has a TEACHER ROLE, on the same module, with `View student data` permission. Access to student data for tutors differs from normal TEACHER access, where permissions apply to all students within the module.
 
-This role is assigned indirectly using Global Tags, which group students into student groups and assign teachers or administrators as tutors to those groups.
-
-A teacher or administrator gains access to a module if there is at least one student in that module who shares a Global Tag with the teacher or administrator. Access to the module is then restricted by the permissions assigned to the PERSONAL TUTOR role.
-
-Although the tutor role includes the **View student data** permission, that permission applies **only** to students within the same tutor group (i.e. those sharing the same Global Tag), unless the same user would have a TEACHER ROLE to the same module with **View student data** permission. This differs from teacher access, where permissions apply to all students within the module.
-
-**Tutor access** therefore represents indirect, student-scoped access to a module, rather than full module-level teacher access.
-
-Role of this type provides **Tutor access** to the module.
+Note that a TEACHER can be enrolled on a module with a TEACHER role, and additionally by being linked as a TUTOR. Permissions then combine and are _additive_ (a permission from either role is sufficient for permission to be granted).
 
 ## Moderator access
 
-Moderator access is currently defined by the presence of the **Moderate student submissions** permission. In the current implementation, moderator access is modelled as a variant of teacher role assignment rather than as a separate access mechanism.
+Moderator features require a TEACHER role to include the `Moderate student submissions` permission. TEACHER roles with these permissions cannot be assigned by other TEACHERs (including OWNERs), but can only be assigned by an ADMIN.
 
-As a result, a user may be assigned **either a “true” teacher role or a moderation-enabled teacher role** for a module, but cannot hold **both role assignments simultaneously**. A moderation-enabled role still grants teacher-level access to the module; however, it replaces any other teacher role assignment rather than layering on top of it.
-
-This choice affects how roles are currently assigned in the UI. It does not imply that moderation represents an additional teaching responsibility, nor that multiple teacher-role assignments are conceptually required.
-
-Any role (typically a CUSTOM role) with this permission enabled grants moderator access to a module.
-
-This reflects the current system behaviour and should not be interpreted as a conceptual requirement of the access model.
-
-## How to assign access to the module
-
-The ADMIN module instance teachers page allows administrators to grant module access to users with ADMIN or TEACHER base roles by selecting the relevant teacher role. Because the system currently allows assigning only one teacher role per user per module, moderation access is mutually exclusive with other teacher-role-based access.
-
-In practice, a user must be assigned either:
-	•	a “true” teacher role (with Moderate student submissions disabled), or
-	•	a "moderator" role that includes the Moderate student submissions permission.
-
-This reflects a limitation of the current role-assignment model rather than an inherent requirement of the access semantics.
-
-The TEACHER module teachers page allows teachers with the appropriate permissions to grant module access to other users with ADMIN or TEACHER base roles by selecting the relevant teacher role, though they can only assign “true” teacher roles (i.e. roles with Moderate student submissions permission disabled).
-
->Note: A detailed description of individual permissions and their effects is maintained in the technical documentation for developers. This page focuses on access concepts and configuration rather than permission-by-permission behaviour.
-
->Note: The administration UI presents teacher roles, tutor access, and moderator access in a single table for configuration convenience. This does not imply that they are equivalent access mechanisms.
+Moderators have privileged access to staff-specific comments on MEQ, and this privilege is above that of a module owner. Details available in [../student/MEQ#access-to-meq-data](../../../student/MEQ/#access-to-meq-data).
