@@ -44,13 +44,15 @@ OWNER is assigned automatically to the user who creates a new module instance, b
 
 ADMINS can configure an unlimited number of custom roles, which can then be assigned to teachers by ADMIN, and by TEACHERs with relevant enrollment permissions on a given module.
 
-## PERSONAL TUTOR
+# Personal tutor
 
-Tutor access is not a teacher role. It is a separate access mechanism derived from student–tutor relationships.
+Personal tutor is listed in the ADMIN panel with other teacher roles, but it is an independent access mechanism derived from student–tutor relationships (tutor access is not a teacher role). 
 
-ADMIN cannot delete the tutor role but can modify its description and permissions, except for the `View student data` permission.
+Permissions for personal tutor always includes `View student data`. Other permissions are controlled by ADMIN users and can be enabled or disabled. Whatever permissions are applied, apply to all personal tutors - there is only one configuration of personal tutors.
 
-Tutors are implicitly assigned by linking a teacher to a Global (student) Tag. For example a Global Tag named '2028' could be applied to a cohort of students, and be linked to a teacher who is then a 'tutor'.
+### Assigning a personal tutor
+
+Personal tutors are implicitly assigned by linking a teacher to a Global (student) Tag. For example a Global Tag named '2028' could be applied to a cohort of students, and be linked to a teacher who is then a 'tutor'.
 
 Tutor access to a module for a TEACHER (or ADMIN) requires at least one STUDENT in that module to share a Global Tag with the TEACHER (or ADMIN). Access to the module is then restricted by the permissions assigned to the PERSONAL TUTOR role.
 
