@@ -1,3 +1,8 @@
+## Release 2026/02/10
+
+- **b445-pandoc-error-latex-followed-by-a-number** – Improved PDF generation robustness when LaTeX expressions are immediately followed by numbers. 
+- **b956-case-insensitive-email-address-on-enrolment** – Normalised email address handling during enrolment.
+
 ## Release 2026/01/30
 
 - **b909-stats-displayed-without-permission** - Ensured student progress statistics are displayed only when the user has the View Stats permission. Statistics are now returned only for students the user is authorised to view, including correct handling of tutor-only access.
