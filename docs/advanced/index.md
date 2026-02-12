@@ -23,6 +23,9 @@ Response areas are components in the frontend where student users can enter a re
 
 [Response areas - overview](response_areas/overview.md){ .md-button .md-button--primary style="width: 400px;"}
 
-## Administrators
+## Administrators
 
-Content to be added.
+This section contains documentation for users responsible for managing tenant-level configuration and advanced operational behaviour in Lambda Feedback.
+
+[Administrators](administrators/user_access.md){ .md-button .md-button--primary style="width: 400px;"}
+
