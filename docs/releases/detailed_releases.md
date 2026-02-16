@@ -1,3 +1,10 @@
+## Release 2026/02/16
+
+- **b901-teacher-role-permissions-to-activities-and-errors** – Aligned Activities and Errors visibility with the resolved user-access policy. Student row visibility and email masking now consistently follow View Student Data rules across both features, including correct handling of mixed Teacher and Tutor roles.
+- **b962-restrict-stats-in-module-student-view** – Introduced a separate View Student Stats permission to ensure consistent and explicit control of student-level statistics visibility.
+- **b966-closed-modules-not-visible** – Fixed client-side filtering so closed module instances are correctly hidden or shown according to the "Hide finished modules" toggle, with the default behaviour hiding finished modules for new users.
+- **b968-add-user-access-documentation-for-student-stats-and-activity-permissions** – Updated User Access technical documentation to reflect the clarified teacher and tutor permissions for Activities, Errors, and student-level statistics.
+
 ## Release 2026/02/10
 
 - **b445-pandoc-error-latex-followed-by-a-number** – Improved PDF generation robustness when LaTeX expressions are immediately followed by numbers. 
