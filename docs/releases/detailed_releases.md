@@ -1,3 +1,9 @@
+## Release 2026/02/20
+
+- **b961-left-handed-canvas** – Improved canvas usability to address left-handed user friction by preventing unintended width resizing, adding support for flipping canvas/content sides, introducing an option to lock canvas width, and enabling a full-screen canvas mode similar to response area canvas behaviour.
+- **b967-add-ui-toggle-to-mask-student-emails** – Introduced a TEACHER-mode UI toggle to mask student names and email addresses in the Students table and Student View for presentation purposes.
+
+
 ## Release 2026/02/16
 
 - **b901-teacher-role-permissions-to-activities-and-errors** – Aligned Activities and Errors visibility with the resolved user-access policy. Student row visibility and email masking now consistently follow View Student Data rules across both features, including correct handling of mixed Teacher and Tutor roles.
