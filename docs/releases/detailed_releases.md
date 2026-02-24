@@ -1,3 +1,8 @@
+## Release 2026/02/24
+
+- **b975-bulk-create-meq-sets** – Added bulk creation of MEQ sets across multiple modules and instances from a template, with shared settings and background job progress reporting.
+
+
 ## Release 2026/02/20
 
 - **b961-left-handed-canvas** – Improved canvas usability to address left-handed user friction by preventing unintended width resizing, adding support for flipping canvas/content sides, introducing an option to lock canvas width, and enabling a full-screen canvas mode similar to response area canvas behaviour.
