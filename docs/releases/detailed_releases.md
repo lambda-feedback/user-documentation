@@ -1,3 +1,7 @@
+## Release 2026/03/02
+
+- **b472-bulk-enrol-unenroll-enhancements** – Introduced Phase 1 of the Bulk Enrol wizard, allowing administrators and teachers (subject to permissions) to enrol the same selected students or teachers onto one or more selected module instances in a single workflow.
+
 ## Release 2026/02/24
 
 - **b975-bulk-create-meq-sets** – Added bulk creation of MEQ sets across multiple modules and instances from a template, with shared settings and background job progress reporting.
