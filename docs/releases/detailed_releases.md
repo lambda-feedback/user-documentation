@@ -1,3 +1,12 @@
+
+## Release 2026/03/05
+
+- **b510-double-dollars-feedback-problem** – Fixed handling of feedback containing double-dollar LaTeX delimiters after reverting a previous incomplete attempt.
+- **b811-rich-text-math-improvements** – Improved rendering of evaluation feedback so text, HTML, LaTeX, and Markdown responses are displayed consistently and as intended.
+- **b850-improve-show-hide-chat-logic** – Simplified chat visibility defaults by setting `Question - display chatbot` to true and `Set - chatbot visibility` to OPEN, with a migration updating existing records accordingly.
+- **b988-meq-spring-import** – Updated MEQ import scripts to support additional teacher roles and evaluated-subject logic, improve CSV handling (whitespace normalisation and optional student assignment), and refine documentation for future imports.
+- **b997-bulk-create-meq-sets-tweaks-1** – Improved the Bulk Create MEQ Sets feature by adding instance name to the summary table and correcting release-date time handling to prevent unintended UTC time shifts.
+
 ## Release 2026/03/02
 
 - **b472-bulk-enrol-unenroll-enhancements** – Introduced Phase 1 of the Bulk Enrol wizard, allowing administrators and teachers (subject to permissions) to enrol the same selected students or teachers onto one or more selected module instances in a single workflow.
