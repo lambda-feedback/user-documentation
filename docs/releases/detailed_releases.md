@@ -1,4 +1,8 @@
 
+## Release 2026/03/09
+
+- **b994-b472-phase-2-bulk-enrol-by-global-tag** – Added Phase 2 of the Bulk Enrol wizard, enabling administrators to enrol students onto one or more selected module instances based on Global Tags. Supports combining manual email input, CSV import, and tag-based user resolution with deduplication and validation in a single workflow.
+
 ## Release 2026/03/05
 
 - **b510-double-dollars-feedback-problem** – Fixed handling of feedback containing double-dollar LaTeX delimiters after reverting a previous incomplete attempt.
