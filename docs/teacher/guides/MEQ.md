@@ -10,7 +10,9 @@ This page provides additional information relevant to teachers.
 
 ### Create an MEQ
 
-An MEQ is a special type of Set. It can be created in the _Content_ tab of a module in TEACHER mode. MEQs use templates that are controlled centrally on the tenant (e.g. school or university). To modify or extend the available templates, speak to your administrator.
+An MEQ is a special type of Set. It can be created in the _Content_ tab of a module in TEACHER mode. MEQs use templates that are controlled centrally on the tenant (e.g. school or university). 
+
+To modify or extend the available templates, or the default date and time for opening and closing an MEQ, speak to your administrator.
 
 When you add an MEQ from a template, the following can be edited:
 
