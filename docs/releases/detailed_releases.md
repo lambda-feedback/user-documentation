@@ -1,3 +1,6 @@
+## Release 2026/03/10
+
+- **b976-moderator-dashboards** – Introduced a tabbed Moderator dashboard (Approvals, Module Stats, Teacher Stats placeholder) and added a comprehensive Module Stats table for moderated MEQ sets with inline editing (dates, visibility, teachers), completion metrics, template-defined reportable Likert averages, and CSV export.
 
 ## Release 2026/03/09
 
