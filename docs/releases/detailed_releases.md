@@ -1,3 +1,8 @@
+## Release 2026/03/16
+
+- **b632-chat-functions-admin-page-ui-services** – Introduced full ADMIN management for Chat Functions (create/edit/archive/restore) with soft-delete support (deletedAt), restricted student access to non-archived functions, a new tabbed admin UI (Functions & Statistics), dashboard summary card, and aligned Evaluation Functions admin pages to the same multi-tab structure.
+- **b1011-fix-set-access-for-tutors** – Fixed an access-control issue where personal tutors in STUDENT mode could enter a module but were incorrectly denied access to its MEQ sets, aligning behaviour with student and module-owner access expectations.
+
 ## Release 2026/03/10
 
 - **b976-moderator-dashboards** – Introduced a tabbed Moderator dashboard (Approvals, Module Stats, Teacher Stats placeholder) and added a comprehensive Module Stats table for moderated MEQ sets with inline editing (dates, visibility, teachers), completion metrics, template-defined reportable Likert averages, and CSV export.
