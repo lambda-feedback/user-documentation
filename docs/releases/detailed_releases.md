@@ -6,6 +6,7 @@
 - **b836-expression-response-area-bugs** – Fixed UI overlap of Scan and Import (scan/draw) buttons in the EXPRESSION response area configure panel (Test tab) following the MULTI_LINES update.
 - **b992-overlap-on-meq-set-settings** – Fixed UI overlap in the MEQ Set settings modal (teacher auto-select covered by white bar) and adjusted modal positioning to ensure module and instance names remain visible.
 - **b977-meq-sets-dont-clone-with-instance** – Fixed an error occurring when cloning a module instance containing MEQ sets, ensuring instances clone successfully regardless of associated MEQ data.
+- **b995-b472-phase-3-bulk-enrol-by-csv-upload** – Added Phase 3 of the Bulk Enrol wizard, enabling enrolment of students or teachers onto selected module instances via CSV upload.
 - **b1001-canvas-assets-store** – Externalised canvas assets (e.g. images) via TLDraw `TLAssetStore`, storing them in S3 instead of embedding data URIs in snapshots, reducing snapshot size and database load.
 - **b1010-canvas-blank-auto-saves** – Fixed unintended canvas auto-upsert on open to prevent creation of empty snapshots, reducing redundant canvas records and database noise.
 - **b1013-moderator-dashboard-tweaks** – Updated the Moderator dashboard by hiding scores while an MEQ is open, introducing ordering by module name then instance name, and adding percentage completion display.
