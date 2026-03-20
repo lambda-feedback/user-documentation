@@ -1,3 +1,16 @@
+
+## Release 2026/03/20
+
+- **b551-set-user-on-sentry** – Enhanced Sentry integration by attaching authenticated user ID (and backend IP where available) to error reports, improving traceability and troubleshooting across backend and frontend.
+- **b749-limit-canvas-snapshot-size** – Introduced safeguards to prevent excessively large canvas snapshots from being stored, addressing rare multi‑MB snapshot payloads and protecting database storage.
+- **b836-expression-response-area-bugs** – Fixed UI overlap of Scan and Import (scan/draw) buttons in the EXPRESSION response area configure panel (Test tab) following the MULTI_LINES update.
+- **b992-overlap-on-meq-set-settings** – Fixed UI overlap in the MEQ Set settings modal (teacher auto-select covered by white bar) and adjusted modal positioning to ensure module and instance names remain visible.
+- **b977-meq-sets-dont-clone-with-instance** – Fixed an error occurring when cloning a module instance containing MEQ sets, ensuring instances clone successfully regardless of associated MEQ data.
+- **b1001-canvas-assets-store** – Externalised canvas assets (e.g. images) via TLDraw `TLAssetStore`, storing them in S3 instead of embedding data URIs in snapshots, reducing snapshot size and database load.
+- **b1010-canvas-blank-auto-saves** – Fixed unintended canvas auto-upsert on open to prevent creation of empty snapshots, reducing redundant canvas records and database noise.
+- **b1013-moderator-dashboard-tweaks** – Updated the Moderator dashboard by hiding scores while an MEQ is open, introducing ordering by module name then instance name, and adding percentage completion display.
+- **b1015-remove-unintended-search-bar-from-module-students-page** – Removed an unintentionally introduced search bar from the Teacher → Module → Students page, restoring the intended layout (no functional filtering was previously wired).
+
 ## Release 2026/03/16
 
 - **b632-chat-functions-admin-page-ui-services** – Introduced full ADMIN management for Chat Functions (create/edit/archive/restore) with soft-delete support (deletedAt), restricted student access to non-archived functions, a new tabbed admin UI (Functions & Statistics), dashboard summary card, and aligned Evaluation Functions admin pages to the same multi-tab structure.
