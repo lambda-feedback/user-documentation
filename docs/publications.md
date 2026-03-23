@@ -2,6 +2,12 @@
 hide:
   - toc
 ---
+#### 2026a: μEd API: Towards A Shared API for EdTech Microservices
+
+- [:material-download: Download PDF](assets/publications/Solch_etal_2026_AIED_pre-print_muEd_A_Shared_API_for_EdTech.pdf) or access via arxiv: [https://arxiv.org/pdf/2603.10014](https://arxiv.org/pdf/2603.10014)
+
+- Conference paper; 4-page intro to the μEd ('mu Ed') API - a standard interface for education microservices.
+
 #### 2025a: Formative feedback on engineering self-study: Towards 1 million times per year per cohort
 
 - [:material-download: Download PDF](assets/publications/Johnson_etal_2025_EDUCON_camera_ready.pdf) or access via IEEE: [https://ieeexplore.ieee.org/abstract/document/11016422](https://ieeexplore.ieee.org/abstract/document/11016422)
