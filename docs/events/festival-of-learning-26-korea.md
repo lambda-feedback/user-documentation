@@ -1,0 +1,106 @@
+## Build and Deploy Microservices for Automated Feedback
+_Festival of Learning 2026, South Korea_
+
+**Alexandra Neagu¹, Peter B. Johnson¹, Marcus Messer¹, Fun Siong Lim²**
+
+¹ Imperial College London, London, UK
+
+² Nanyang Technological University, Singapore
+
+[See the extended abstract here]()
+
+---
+
+### Key Information
+
+We present a half-day hands-on tutorial to design, implement, and deploy an education microservice to evaluate student submissions to learning tasks and provide automated feedback. 
+The tutorial is primarily for the Learning@Scale and AIED communities, welcoming domain experts regardless of programming experience, and is motivated by the need for domain-specific knowledge when automating feedback.
+
+To source the necessary expertise within each domain, feedback automation must be developed at a granular level within each discipline and be informed by experts. 
+We conceive of each discipline-specific feedback automation logic as a *microservice* — a modular, independently deployed software service that communicates via standard protocols and performs a specialised role — that can be re-used by different platforms across the sector.
+
+The tutorial aims to:
+
+1. **Enable participants to build and deploy an *evaluation function*** (a working microservice to evaluate student submissions and return feedback) to a learning task of own choice on Lambda Feedback.
+
+2. **Generate community discussion and collaboration** on the adoption and design of the education microservices architecture and infrastructure for scaling pedagogical innovation (such as discussion on the trade-offs in automated feedback design for formative vs. summative contexts; domain-specific heuristics vs. LLM-based approaches). Community feedback gathered during the discussion session will inform future versions of the μEd API [1] specification.
+
+3. **Contribute to an open-source education microservice ecosystem** that persists beyond this tutorial. Participants will be able to continue improving and using the created microservice after the tutorial. Groups' repositories can remain public under the `lambdafeedback` GitHub organisation after the tutorial ends, contributing directly to the open-source microservice ecosystem community.
+
+The tutorial will use the public, platform-independent [μEd API](https://mued.org) to make microservices available across e-learning platforms. 
+[Lambda Feedback](https://lambdafeedback.com) will be provided as an example platform where teachers curate learning tasks, students submit answers, and automated feedback is delivered by calling a specialist microservice that evaluates the student submission against a criteria or expected solution.
+
+Tutorial participants will be divided in groups of 3–5 of mixed-abilities, each member encouraged to adopt one of the three proposed roles: the *Implementer* who codes the evaluation function, the *Task Designer* who defines the task problem and criteria, and the *Test Author* who creates sample student submissions and judges feedback quality.
+
+
+### Tutorial Schedule
+
+| Duration | Activity |
+|----------|----------|
+| **(60 min)** | ***Introduction Phase*** |
+| 15 min | **Welcome and motivation:** Introduce Lambda Feedback and how students and teachers can use it in a live demo; explain the microservices architecture behind it; explain what participants will build and why it matters. |
+| 10 min | **Live skill survey (Mentimeter):** Gauge participant backgrounds: Programming experience, subject domain, GitHub account status. Results used for group formation. |
+| 15 min | **Group formation:** Assignment into mixed-ability groups of 3–5. Roles assigned; groups choose domain of the learning task. |
+| 20 min | **Technical introduction + live demo + Q&A:** Present the capabilities of Lambda Feedback, detailing the UI for learning task creation. Walkthrough of the Python boilerplate with live demo: organizer forks the boilerplate, pushes a one-line change, service gets added and can be used live in Lambda Feedback. Q&A throughout. |
+| **(100 min)** | ***Hands-on Phase*** |
+| 20 min | **Environment setup:** Each group forks the boilerplate into `lambdafeedback` organization and begin drafting their problem and test cases. |
+| 30 min | **Coffee break** |
+| 50 min | **Build own evaluation microservice:** Two parallel workstreams within each group: Implementers code the evaluation function, Task Designers create example tasks and specific criteria, Test Authors create sample student submissions. |
+| **(80 min)** | ***Closing Phase*** |
+| 30 min | **Demos:** Each group demos their live evaluation function on Lambda Feedback using their own sample student submissions. |
+| 40 min | **Discussion:** What was hard throughout the development and deployment? What was missing? What pedagogical decisions did your group debate? Peer feedback. Community input on education microservice architecture. |
+| 10 min | **Wrap-up and next steps:** Closing remarks; Share how to contribute to μEd API or adopt Lambda Feedback in own course. |
+
+---
+
+### Microservice Development and Deployment Process
+
+Throughout the tutorial, groups will follow the same development and deployment process split per role designed to minimise setup and debugging friction. 
+The group will first decide on the domain and learning task they want to provide automated feedback on, then start working on the development, with each member focusing on the tasks appointed to each role.
+
+To minimise the 'blank-page' burden, we provide example task and evaluation strategies for the participants to choose or get inspired from. 
+Boilerplates of a microservice will be provided and will include deployment pipelines using cloud functions (such as AWS Lambda Functions). 
+Each team will fork the boilerplate into the `lambdafeedback` GitHub organisation and develop their evaluation function on the forked repo. 
+When pushing new code onto the group's repo, a deployment CI/CD pipeline triggers automatically and deploys the microservice to Lambda Feedback's AWS infrastructure. 
+After a successful deployment, the evaluation function will appear available in Lambda Feedback for the team to use on their agreed learning task.
+
+No prior knowledge of microservices, REST APIs, or the platforms involved is assumed, and participation does not necessarily require previous coding experience. 
+The only prerequisite is a GitHub account for at least one member per group — which can be created during the tutorial.
+
+For post-tutorial use, participants are not restricted to Lambda Feedback's AWS deployment infrastructure; developers may deploy their microservice on any infrastructure of their choice and register the publicly accessible microservice API URL with Lambda Feedback. 
+This illustrates the power of a provider-agnostic microservices model: an evaluation microservice built during the tutorial can later be moved to an institution's own servers but still be in use by Lambda Feedback.
+
+---
+
+### Example Tasks and Evaluation Strategies
+
+To avoid idea paralysis, during the *Introduction Phase* we introduce four example task and evaluation strategies for the groups to get inspiration from. Groups can select one of the example strategies or pursue their own ideas.
+
+- **Keyword / concept check:** Evaluates a text submission for expected words or concepts (example tasks: definition of physics phenomena, components of a chemical substance, ...)
+- **Numerical value comparison:** Evaluate whether the numerical submission is within acceptable bounds (example tasks: verify a rounding of decimal places, estimate pressure value at 100m under the sea, ...)
+- **Criteria comparison:** Maps student submission against a given criteria (e.g., using large language models (LLMs)) and returns per-criterion feedback (example tasks: verify the reasoning behind an explanation of why the urban heat island effect takes place, verify the time and space complexity of a code snippet, ...)
+- **Image analysis:** Evaluates an uploaded image for specific patterns (example task: detect electrical components in an image of a breadboard, analyse a hand-drawn visualisation of Roman bath ruins ...)
+
+The organiser will provide a limited amount of API credits for LLMs, if they are chosen as a methodology for evaluation.
+
+
+### Microservices in Action: Lambda Feedback & μEd API
+
+Lambda Feedback [2] is an e-learning platform developed at Imperial College London, UK, built around the microservice architecture concept for automated feedback. Lambda Feedback is used by thousands of students each year across undergraduate studies in Engineering, Natural Sciences, Medicine, and Business, as well as in schools, for example in Essay writing. The platform facilitates teachers to curate self-study tasks for students.
+
+To provide automated feedback on domain-specific learning tasks, Lambda Feedback connects to independent *evaluation functions* — microservices that evaluate student submissions and return timely feedback. Each evaluation function is invoked via the μEd API [1], an open HTTP API specification for educational microservices designed with the aim to allow subject experts to contribute feedback algorithms to any platform without engaging with the full platform stack (μEd API specification: https://www.mued.org/). The μEd API is initially being adopted into the education microservice design of four institutions — Imperial College London, TU Munich, ETH Zürich, and Nanyang Technological University — with the ambition to serve the whole sector in future.
+
+The microservice model employed by the μEd API and the Lambda Feedback platform addresses the 'platform lock-in' challenge, where teacher agency over the automations made available to their students is limited by the learning platforms employed. By sourcing automation from platform-agnostic sources (*microservices*), teachers may maintain a free choice of educational tools regardless of their primary learning platform.
+
+---
+
+
+### Organizing Committee
+
+**Alexandra Neagu** is a Doctoral Student at Imperial College London. Her research focuses on adopting and evaluating Large Language Models to provide automated dialogic formative feedback during self-study. She is a core developer of Lambda Feedback and worked on the deployment infrastructure and the CI/CD pipeline that underpins the tutorial's deployment model.
+
+**Peter B. Johnson** is a Principal Lecturer and Deputy Director of Studies in the Department of Mechanical Engineering at Imperial College London. He has ten years of experience delivering innovation projects in education, including creating and directing Lambda Feedback, an e-learning platform that provides automated formative feedback serving thousands of students and delivering feedback millions of times each year.
+
+**Marcus Messer** is a Postdoctoral Research Associate at Imperial College London. His research focuses on automated formative feedback across multiple disciplines, with an emphasis on STEM education, with his thesis work on automated assessment tools for programming education. He is responsible for supporting the development of Lambda Feedback's educational microservices.
+
+**Fun Siong Lim** is the Head of the Centre for Applications of Teaching and Learning Analytics for Students (ATLAS) at Nanyang Technological University (NTU), Singapore. His research applies learning analytics and Generative AI to support student success, including intelligent tutoring at scale. He is a co-developer of the μEd API and leads NTU's adoption of the education microservices architecture introduced in this tutorial.
