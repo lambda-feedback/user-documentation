@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareExpressions/">
       
       
-        <link rel="prev" href="../comparePhysicalQuantities/">
+        <link rel="prev" href="../isExactEqual/">
       
       
-        <link rel="next" href="../arraySymbolicEqual/">
+        <link rel="next" href="../isSimilar/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -1872,27 +1872,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../wolframAlphaEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wolframAlphaEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../compareBoolean/" class="md-nav__link">
         
   
@@ -1919,6 +1898,69 @@
   
   <span class="md-ellipsis">
     comparePhysicalQuantities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wolframAlphaEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wolframAlphaEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arraySymbolicEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    arraySymbolicEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isExactEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    isExactEqual
   </span>
   
 
@@ -2001,9 +2043,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#atol" class="md-nav__link">
+  <a href="#absolute_tolerance-atol" class="md-nav__link">
     <span class="md-ellipsis">
-      atol
+      absolute_tolerance (atol)
     </span>
   </a>
   
@@ -2088,9 +2130,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rtol" class="md-nav__link">
+  <a href="#relative_tolerance-rtol" class="md-nav__link">
     <span class="md-ellipsis">
-      rtol
+      relative_tolerance (rtol)
     </span>
   </a>
   
@@ -2572,48 +2614,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../arraySymbolicEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arraySymbolicEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../isExactEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    isExactEqual
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -3130,27 +3130,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wolframAlphaEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../dev_eval_function_docs/compareBoolean/" class="md-nav__link">
         
   
@@ -3193,11 +3172,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev_eval_function_docs/compareExpressions/" class="md-nav__link">
+      <a href="../../dev_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    compareExpressions
+    wolframAlphaEqual
   </span>
   
 
@@ -3240,6 +3219,27 @@
   
   <span class="md-ellipsis">
     isExactEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/compareExpressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareExpressions
   </span>
   
 
@@ -3576,9 +3576,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#atol" class="md-nav__link">
+  <a href="#absolute_tolerance-atol" class="md-nav__link">
     <span class="md-ellipsis">
-      atol
+      absolute_tolerance (atol)
     </span>
   </a>
   
@@ -3663,9 +3663,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rtol" class="md-nav__link">
+  <a href="#relative_tolerance-rtol" class="md-nav__link">
     <span class="md-ellipsis">
-      rtol
+      relative_tolerance (rtol)
     </span>
   </a>
   
@@ -4178,9 +4178,9 @@
 <p>Note that this function is designed to handle comparisons of mathematical expressions but has some limited ability to handle comparison of equalities as well. More precisely, if the answer is of the form <span class="arithmatex">\(f(x_1,\ldots,x_n) = g(x_1,\ldots,x_n)\)</span> and the response is of the form <span class="arithmatex">\(\tilde{f}(x_1,\ldots,x_n) = \tilde{g}(x_1,\ldots,x_n)\)</span> then the function checks if <span class="arithmatex">\(f(x_1,\ldots,x_n) - g(x_1,\ldots,x_n)\)</span> is a multiple of <span class="arithmatex">\(\tilde{f}(x_1,\ldots,x_n) / \tilde{g}(x_1,\ldots,x_n)\)</span>.</p>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <h3 id="optional-parameters">Optional parameters<a class="headerlink" href="#optional-parameters" title="Permanent link">&para;</a></h3>
-<p>There are 15 optional parameters that can be set: <code>atol</code>, <code>complexNumbers</code>, <code>convention</code>, <code>criteria</code>, <code>elementary_functions</code>, <code>feedback_for_incorrect_response</code>, <code>multiple_answers_criteria</code>, <code>physical_quantity</code>, <code>plus_minus</code>/<code>minus_plus</code>, <code>rtol</code>, <code>specialFunctions</code>, <code>strict_syntax</code>, <code>strictness</code>, <code>symbol_assumptions</code>.</p>
-<h4 id="atol"><code>atol</code><a class="headerlink" href="#atol" title="Permanent link">&para;</a></h4>
-<p>Sets the absolute tolerance, <span class="arithmatex">\(e_a\)</span>, i.e. if the answer, <span class="arithmatex">\(x\)</span>, and response, <span class="arithmatex">\(\tilde{x}\)</span>, are numerical values then the response is considered equal to the answer if $|x-\tilde{x}| \leq e_aBy default <code>atol</code> is set to <code>0</code>, which means the comparison will be done with as high accuracy as possible. If either the answer or the response aren't numerical expressions this parameter is ignored.</p>
+<p>There are 15 optional parameters that can be set: <code>absolute_tolerance</code>, <code>complexNumbers</code>, <code>convention</code>, <code>criteria</code>, <code>elementary_functions</code>, <code>feedback_for_incorrect_response</code>, <code>multiple_answers_criteria</code>, <code>physical_quantity</code>, <code>plus_minus</code>/<code>minus_plus</code>, <code>rtol</code>, <code>specialFunctions</code>, <code>strict_syntax</code>, <code>strictness</code>, <code>symbol_assumptions</code>.</p>
+<h4 id="absolute_tolerance-atol"><code>absolute_tolerance</code> (<code>atol</code>)<a class="headerlink" href="#absolute_tolerance-atol" title="Permanent link">&para;</a></h4>
+<p>Sets the absolute tolerance, <span class="arithmatex">\(e_a\)</span>, i.e. if the answer, <span class="arithmatex">\(x\)</span>, and response, <span class="arithmatex">\(\tilde{x}\)</span>, are numerical values then the response is considered equal to the answer if $|x-\tilde{x}| \leq e_aBy default <code>absolute_tolerance</code> is set to <code>0</code>, which means the comparison will be done with as high accuracy as possible. If either the answer or the response aren't numerical expressions this parameter is ignored.</p>
 <h4 id="complexnumbers"><code>complexNumbers</code><a class="headerlink" href="#complexnumbers" title="Permanent link">&para;</a></h4>
 <p>If you want to use <code>I</code> for the imaginary constant, set the grading parameter <code>complexNumbers</code> to True.</p>
 <h4 id="convention"><code>convention</code><a class="headerlink" href="#convention" title="Permanent link">&para;</a></h4>
@@ -4256,8 +4256,8 @@
 <p><strong>Remark:</strong> Setting <code>physical_quantity</code> to <code>true</code> will also mean that comparisons will be done numerically. If neither the <code>atol</code> nor <code>rtol</code> parameters are set, the evaluation function will choose a relative error based on the number of significant digits given in the answer.</p>
 <p>When <code>physical_quantity</code> the evaluation function will generate feedback based on the flowchart below.</p>
 <p><strong>TODO:</strong> Generate new flowchart for updated physical quantity feedback generation procedure.</p>
-<h4 id="rtol"><code>rtol</code><a class="headerlink" href="#rtol" title="Permanent link">&para;</a></h4>
-<p>Sets the relative tolerance, <span class="arithmatex">\(e_r\)</span>, i.e. if the answer, <span class="arithmatex">\(x\)</span>, and response, <span class="arithmatex">\(\tilde{x}\)</span>, are numerical values then the response is considered equal to the answer if <span class="arithmatex">\(\left|\frac{x-\tilde{x}}{x}\right| \leq e_r\)</span>. By default <code>rtol</code> is set to <code>0</code>, which means the comparison will be done with as high accuracy as possible. If either the answer or the response aren't numerical expressions this parameter is ignored.</p>
+<h4 id="relative_tolerance-rtol"><code>relative_tolerance</code> (<code>rtol</code>)<a class="headerlink" href="#relative_tolerance-rtol" title="Permanent link">&para;</a></h4>
+<p>Sets the relative tolerance, <span class="arithmatex">\(e_r\)</span>, i.e. if the answer, <span class="arithmatex">\(x\)</span>, and response, <span class="arithmatex">\(\tilde{x}\)</span>, are numerical values then the response is considered equal to the answer if <span class="arithmatex">\(\left|\frac{x-\tilde{x}}{x}\right| \leq e_r\)</span>. By default <code>relative_tolerance</code> is set to <code>0</code>, which means the comparison will be done with as high accuracy as possible. If either the answer or the response aren't numerical expressions this parameter is ignored.</p>
 <h4 id="strictness"><code>strictness</code><a class="headerlink" href="#strictness" title="Permanent link">&para;</a></h4>
 <p>Controls the conventions used when parsing physical quantities.</p>
 <p><strong>Remark:</strong> If <code>physical_quantity</code> is set to <code>false</code>, this parameter will be ignored.</p>
@@ -5111,7 +5111,7 @@ For more information checkout the <a href="https://docs.sympy.org/latest/explana
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 23, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 26, 2026</span>
   </span>
 
     
