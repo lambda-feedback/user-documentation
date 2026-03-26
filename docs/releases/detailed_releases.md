@@ -1,5 +1,9 @@
+## Release 2026/03/26
 
-## Release 2026/03/20
+- **b996-b472-phase-4-cross-module-bulk-unenrol** – Extended the Bulk Enrol wizard to support cross-module bulk unenrol for students and teachers.
+- **b1008-move-bulk-fill-button-to-templates-page** – Moved the Bulk Fill entry point from ADMIN → Modules to ADMIN → Templates and updated routing to align with the templates-based workflow.
+
+# Release 2026/03/20
 
 - **b551-set-user-on-sentry** – Enhanced Sentry integration by attaching authenticated user ID (and backend IP where available) to error reports, improving traceability and troubleshooting across backend and frontend.
 - **b749-limit-canvas-snapshot-size** – Introduced safeguards to prevent excessively large canvas snapshots from being stored, addressing rare multi‑MB snapshot payloads and protecting database storage.
