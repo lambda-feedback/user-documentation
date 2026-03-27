@@ -5,6 +5,11 @@ hide:
 
 ## Events and Resources
 
+### 2026-06-27 - 2026-06-28 - Pedagogical Evaluation of Automated Feedback Workshop 2026
+_Festival of Learning, South Korea_
+
+**Visit the [workshop page](https://peaf-workshop.github.io/2026) for more information.**
+
 ### 2026-06-27 - 2026-06-28 - Build and Deploy Microservices for Automated Feedback
 _Festival of Learning, South Korea_
 
