@@ -8,13 +8,13 @@ site_description: >-
 repo_url: https://github.com/lambda-feedback/user-documentation
 edit_uri: blob/main/docs/
 
-# Project tree
+# Project tree "events/index.md"
 nav:
   - Home:
       - "index.md"
       - Publications: "publications.md"
+      - Events: events/index.md
       - Opportunities: "opportunities.md"
-      - Terminology: "terminology.md"
       - Releases:
           - Major releases: "releases/major_releases.md"
           - Detailed Releases: "releases/detailed_releases.md"
@@ -39,8 +39,9 @@ nav:
           - Lexdown content editor: "teacher/guides/lexdown.md"
           - Exporting and importing questions: "teacher/guides/question-export-import.md"
           - Analytics: "teacher/guides/analytics.md"
+          - Guidance (feature): "teacher/guides/guidance.md"
           - Good practice: "teacher/guides/good-practice.md"
-          - Guidance: "teacher/guides/guidance.md"
+          - Terminology: "terminology.md"
           - Module evaluation questionnaires (MEQ): "teacher/guides/MEQ.md"
           - FAQ: "teacher/guides/faq.md"
 
