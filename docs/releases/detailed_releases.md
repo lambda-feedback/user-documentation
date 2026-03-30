@@ -1,3 +1,8 @@
+## Release 2026/03/30
+
+- **b982-refactor-admin-users-section** – Introduced a dedicated Tags tab under Admin -> Users, moved tag creation and import flows there, and simplified and clarified the Users page layout while preserving existing student tag assignment behaviour.
+- **b1024-b472-phase-3-follow-up-improve-fuzzy-matching-validation** – Refined bulk enrol CSV matching, split validation into Modules and Users steps, and improved wizard UX and layout.
+
 ## Release 2026/03/26
 
 - **b996-b472-phase-4-cross-module-bulk-unenrol** – Extended the Bulk Enrol wizard to support cross-module bulk unenrol for students and teachers.
