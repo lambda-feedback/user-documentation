@@ -1,7 +1,13 @@
 ## Release 2026/03/30
 
 - **b982-refactor-admin-users-section** – Introduced a dedicated Tags tab under Admin -> Users, moved tag creation and import flows there, and simplified and clarified the Users page layout while preserving existing student tag assignment behaviour.
+- **b1017-include-response-in-activities-csv** – Extended the Activities CSV export (Teacher → Module → Activities) to include feedback request and response data, aligning the download with the updated table columns.
 - **b1024-b472-phase-3-follow-up-improve-fuzzy-matching-validation** – Refined bulk enrol CSV matching, split validation into Modules and Users steps, and improved wizard UX and layout.
+- **b1025-moderator-dashboard-tweaks-ii** – Updated Moderator dashboard CSV export to include all rows (not just the current page) and all available columns, including percentage and recently added fields.
+- **b1031-render-rewrite-rules-needs-updating** – Ensured Render rewrite rules are regenerated when new dynamic pages are added, preventing 404 errors on reload and incorrect routing (e.g. bulkFill path resolving to a dynamic template route).
+- **b1033-remove-useless-set-event-fetch** – Removed redundant SetAccessEvent fetch that was discarding results and causing unnecessary `SetAccessEvent_setId_idx` reads.
+- **b1034-broken-teacher-set-access-check** – Fixed a missing `await` in the teacher set access check that could cause the permission validation to be bypassed.
+- **b1036-event-tables-date-index** – Added database indexes on createdAt for SetAccessEvent, PartAccessEvent, and ButtonEvent tables to improve performance of admin and date-based queries.
 
 ## Release 2026/03/26
 
