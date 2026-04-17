@@ -1,3 +1,11 @@
+## Release 2026/04/17
+
+- **b969-when-enrolling-already-enrolled-person-return-relevant-message** – Improved enrolment toast messages to clearly distinguish enrol, role update, already-enrolled, mixed, and no-change outcomes.
+- **b979-display-clear-message-when-student-stats-hidden-due-to-permission** – Updated student statistics messaging to clearly distinguish between “no sets available” and “statistics hidden due to permissions”.
+- **b981-b472-phase-5-optional-module-instance-with-intelligent-resolution** – Enhanced the Bulk Enrol/Unenrol CSV flow to allow optional module instance values, automatically resolving single-instance modules and prompting for consistent instance selection when multiple instances exist.
+- **b1009-mued-api-chat-adoption** – Adopted the muEd API for chat functions with versioned schema fetching and auto-generated backend (TypeScript) and lf_toolkit (Python) types, supporting controlled version upgrades and backwards compatibility with existing APIs.
+- **b1039-introduce-permissions-tab-and-fix-tags-ui** – Added a new Permissions tab under Admin → Users (moving Teacher Roles there) and resolved UI inconsistencies in the Tags tab, including spacing, layout shift, page title alignment, and removal of redundant edit buttons.
+
 ## Release 2026/03/30
 
 - **b982-refactor-admin-users-section** – Introduced a dedicated Tags tab under Admin -> Users, moved tag creation and import flows there, and simplified and clarified the Users page layout while preserving existing student tag assignment behaviour.
