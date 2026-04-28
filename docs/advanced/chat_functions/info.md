@@ -22,15 +22,13 @@ The chatbots have at their basis a [Large Language Model (LLM)](https://en.wikip
 
 Currently the students have access to the following chat functions that host their own specific chatbot. Many others are in development.
 
-Click on the links below for information on each chatbot:
+For a comparison of each chatbot's philosophy, behaviour, and when to pick it, see the [Chatbots guide for teachers](../../teacher/guides/chatbots.md) (or the [student-facing version](../../student/chatbots.md)).
 
-[1. Informational Chatbot](https://github.com/lambda-feedback/informationalChatFunction/blob/main/docs/user.md)
+Per-chatbot source and technical details:
 
-
-[2. Concise Chatbot](https://github.com/lambda-feedback/conciseChatFunction/blob/main/docs/user.md)
-
-
-[3. Reflective Chatbot](https://github.com/lambda-feedback/reflectiveChatFunction/blob/main/docs/user.md)
+- [Informational Chatbot](https://github.com/lambda-feedback/informationalChatFunction/blob/main/docs/user.md)
+- [Concise Chatbot](https://github.com/lambda-feedback/conciseChatFunction/blob/main/docs/user.md)
+- [Reflective Chatbot](https://github.com/lambda-feedback/reflectiveChatFunction/blob/main/docs/user.md)
 
 
 ## Chat Function Development

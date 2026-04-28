@@ -23,31 +23,96 @@ Chat functions host a chatbot. Chatbots capture and automate the process of assi
 
    	- the chat function expects the following arguments when it being called:
 
-   	Body with necessary Params:
+   	Body with necessary fields:
 
    	```JSON
    	{
-   		"message":"hi",
-   		"params":{
-   				"conversation_id":"12345Test",
-   				"conversation_history": [{"type":"user","content":"hi"}]
+   		"conversationId": "12345Test",
+   		"messages": [{ "role": "USER", "content": "hi" }],
+   		"user": { "type": "LEARNER" }
+   	}
+   	```
+
+   	Body with optional fields:
+
+   	```JSON
+   	{
+   		"conversationId": "12345Test",
+   		"messages": [
+   			{ "role": "USER", "content": "<previous user message>" },
+   			{ "role": "ASSISTANT", "content": "<previous assistant reply>" },
+   			{ "role": "USER", "content": "hi" }
+   		],
+   		"user": {
+   			"type": "LEARNER",
+   			"preference": { "conversationalStyle": "<stored style string>" },
+   			"taskProgress": {
+   				"timeSpentOnQuestion": "30 minutes",
+   				"accessStatus": "a good amount of time spent on this question today.",
+   				"markedDone": "This question is still being worked on.",
+   				"currentPart": {
+   					"position": 0,
+   					"timeSpentOnPart": "10 minutes",
+   					"markedDone": "This part is not marked done.",
+   					"responseAreas": [
+   						{
+   							"responseType": "EXPRESSION",
+   							"totalSubmissions": 3,
+   							"wrongSubmissions": 2,
+   							"latestSubmission": {
+   								"submission": "<student's last answer>",
+   								"feedback": "<feedback text from evaluator>",
+   								"answer": "<reference answer used for evaluation>"
+   							}
+   						}
+   					]
+   				}
+   			}
+   		},
+   		"context": {
+   			"summary": "<compressed conversation history>",
+   			"set": { "title": "Fundamentals", "number": 2, "description": "<set description>" },
+   			"question": {
+   				"title": "Understanding Polymorphism",
+   				"number": 3,
+   				"guidance": "<teacher guidance>",
+   				"content": "<master question content>",
+   				"estimatedTime": "15-25 minutes",
+   				"parts": [
+   					{
+   						"position": 0,
+   						"content": "<part prompt>",
+   						"answerContent": "<part answer>",
+   						"workedSolutionSections": [
+   							{ "position": 0, "title": "Step 1", "content": "..." }
+   						],
+   						"structuredTutorialSections": [
+   							{ "position": 0, "title": "Hint", "content": "..." }
+   						],
+   						"responseAreas": [
+   							{
+   								"position": 0,
+   								"responseType": "EXPRESSION",
+   								"answer": "<reference answer>",
+   								"preResponseText": "<label shown before input>"
+   							}
+   						]
+   					}
+   				]
+   			}
    		}
    	}
    	```
 
-   	Body with optional Params:
+   	Expected response:
 
    	```JSON
    	{
-   		"message":"hi",
-   		"params":{
-   				"conversation_id":"12345Test",
-   				"conversation_history":[{"type":"user","content":"hi"}],
-   				"summary":" ",
-   				"conversational_style":" ",
-   				"question_response_details": "",
-   				"include_test_data": true,
-   				"agent_type": {agent_name}
+   		"output": { "role": "ASSISTANT", "content": "<assistant reply text>" },
+   		"metadata": {
+   			"summary": "<updated conversation summary>",
+   			"conversationalStyle": "<updated style string>",
+   			"processingTimeMs": 1234
    		}
    	}
    	```
@@ -62,7 +127,7 @@ Chat functions host a chatbot. Chatbots capture and automate the process of assi
 
 4. Changes can be tested locally by running the pipeline tests using:
 	```bash
-	pytest src/module_test.py
+	pytest
 	```
    [Running and Testing Chat Functions Locally](local.md){ .md-button }
 
@@ -78,16 +143,14 @@ Chat functions host a chatbot. Chatbots capture and automate the process of assi
 			curl --location 'https://<***>.execute-api.eu-west-2.amazonaws.com/default/chat/chatFunctionBoilerplate-dev' \
 			--header 'Content-Type: application/json' \
 			--data '{
-					"message": "hi",
-					"params": {
-							"conversation_id": "12345Test",
-							"conversation_history": [
-									{
-											"type": "user",
-											"content": "hi"
-									}
-							]
-					}
+					"conversationId": "12345Test",
+					"messages": [
+							{
+									"role": "USER",
+									"content": "hi"
+							}
+					],
+					"user": { "type": "LEARNER" }
 			}'
 
 7. Once the `dev` chat function is fully tested, you can merge the code to the default branch (`main`). This will trigger the `main.yml` workflow, which will deploy the `staging` and `prod` versions of your chat function. Please contact the ADMIN to provide you the URLS for the `staging` and `prod` versions of your chat function.

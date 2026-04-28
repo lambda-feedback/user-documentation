@@ -1,14 +1,19 @@
 # Running and Testing Chat function Locally
 
-You can run the Python function for your chat function itself by writing a `main()` function, or you can call the [`testbench_prompts.py`](https://github.com/lambda-feedback/lambda-chat/blob/main/src/agents/utils/testbench_prompts.py) script that runs a similar pipeline to the `module.py`.
+## Run Unit Tests
+
+You can run the unit tests using `pytest`:
 
 ```bash
-python src/agents/utils/testbench_prompts.py
+pytest
 ```
 
-You can also use the `test_prompts.py` script to test the chat function with example inputs from Lambda Feedback questions and synthetic conversations.
+## Run the Chat Script
+
+You can use the `manual_agent_run.py` script to test the agents with example inputs from Lambda Feedback questions and synthetic conversations:
+
 ```bash
-python src/agents/utils/test_prompts.py
+python tests/manual_agent_run.py
 ```
 
 ## Testing using the Docker Image [:material-docker:](https://www.docker.com/)
@@ -44,10 +49,20 @@ This will start the evaluation function and expose it on port `8080` and it will
 ```bash
 curl --location 'http://localhost:8080/2015-03-31/functions/function/invocations' \
 --header 'Content-Type: application/json' \
---data '{"body":"{\"message\": \"hi\", \"params\": {\"conversation_id\": \"12345Test\", \"conversation_history\": [{\"type\": \"user\", \"content\": \"hi\"}]}}"}'
+--data '{"body":"{\"conversationId\": \"12345Test\", \"messages\": [{\"role\": \"USER\", \"content\": \"hi\"}], \"user\": {\"type\": \"LEARNER\"}}"}'
 ```
 
-### Call Docker Container From Postman
+### Call Docker Container
+
+#### A. Call Docker with Python Requests
+
+In the `tests/` folder you can find the `manual_agent_requests.py` script that calls the POST URL of the running Docker container. It reads input files matching the expected schema, so you can use it to validate your chatbot end-to-end.
+
+```bash
+python tests/manual_agent_requests.py
+```
+
+#### B. Call Docker Container From Postman
 
 POST URL:
 
@@ -55,24 +70,100 @@ POST URL:
 http://localhost:8080/2015-03-31/functions/function/invocations
 ```
 
-Body:
+Body (stringified within `body` for the API request):
 
 ```JSON
-{"body":"{\"message\": \"hi\", \"params\": {\"conversation_id\": \"12345Test\", \"conversation_history\": [{\"type\": \"user\", \"content\": \"hi\"}]}}"}
+{"body":"{\"conversationId\": \"12345Test\", \"messages\": [{\"role\": \"USER\", \"content\": \"hi\"}], \"user\": {\"type\": \"LEARNER\"}}"}
 ```
 
-Body with optional Params:
-```JSON
+Input Body with optional fields:
+```json
 {
-    "message":"hi",
-    "params":{
-        "conversation_id":"12345Test",
-        "conversation_history":[{"type":"user","content":"hi"}],
-        "summary":" ",
-        "conversational_style":" ",
-        "question_response_details": "",
-        "include_test_data": true,
-        "agent_type": {agent_name}
+  "conversationId": "<uuid>",
+  "messages": [
+    { "role": "USER", "content": "<previous user message>" },
+    { "role": "ASSISTANT", "content": "<previous assistant reply>" },
+    { "role": "USER", "content": "<current message>" }
+  ],
+  "user": {
+    "type": "LEARNER",
+    "preference": {
+      "conversationalStyle": "<stored style string>"
+    },
+    "taskProgress": {
+      "timeSpentOnQuestion": "30 minutes",
+      "accessStatus": "a good amount of time spent on this question today.",
+      "markedDone": "This question is still being worked on.",
+      "currentPart": {
+        "position": 0,
+        "timeSpentOnPart": "10 minutes",
+        "markedDone": "This part is not marked done.",
+        "responseAreas": [
+          {
+            "responseType": "EXPRESSION",
+            "totalSubmissions": 3,
+            "wrongSubmissions": 2,
+            "latestSubmission": {
+              "submission": "<student's last answer>",
+              "feedback": "<feedback text from evaluator>",
+              "answer": "<reference answer used for evaluation>"
+            }
+          }
+        ]
+      }
     }
+  },
+  "context": {
+    "summary": "<compressed conversation history>",
+    "set": {
+      "title": "Fundamentals",
+      "number": 2,
+      "description": "<set description>"
+    },
+    "question": {
+      "title": "Understanding Polymorphism",
+      "number": 3,
+      "guidance": "<teacher guidance>",
+      "content": "<master question content>",
+      "estimatedTime": "15-25 minutes",
+      "parts": [
+        {
+          "position": 0,
+          "content": "<part prompt>",
+          "answerContent": "<part answer>",
+          "workedSolutionSections": [
+            { "position": 0, "title": "Step 1", "content": "..." }
+          ],
+          "structuredTutorialSections": [
+            { "position": 0, "title": "Hint", "content": "..." }
+          ],
+          "responseAreas": [
+            {
+              "position": 0,
+              "responseType": "EXPRESSION",
+              "answer": "<reference answer>",
+              "preResponseText": "<label shown before input>"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+Output Response:
+
+```json
+{
+  "output": {
+    "role": "ASSISTANT",
+    "content": "<assistant reply text>"
+  },
+  "metadata": {
+    "summary": "<updated conversation summary>",
+    "conversationalStyle": "<updated style string>",
+    "processingTimeMs": 1234
+  }
 }
 ```
