@@ -15,6 +15,13 @@ Every chatbot is automatically given:
 - Time the student has spent on the question and current part today
 - The chat history with that student
 
+> If you would like to make the chatbots available to your students, you can turn them on within the module settings. You can also choose to hide the chatbots from students on specific sets and questions by toggling the "Show chatbots" setting for that question or set.
+
+> | Module level | Set level | Question level |
+>  |---|---|---|
+>  | ![Module toggle](./images/chatbots-moduleLevelToggle.png) | ![Set toggle](./images/chatbots-setLevelToggle.png) | ![Question  toggle](./images/chatbots-questionLevelToggle.png) |
+
+
 ## Comparison
 
 | Chatbot | Best for | Tone | LLM | ~Response time |
