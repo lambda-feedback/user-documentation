@@ -30,11 +30,15 @@ Your teacher chooses which chatbot is attached to a question, but if you're choo
 
 ## Informational
 
-A patient tutor that breaks problems into steps. It will give you hints first and only show the full answer if you ask explicitly. It explains *why* you went wrong when you make a mistake, and tends to end its replies with a question to keep the conversation going.
+A patient tutor that breaks problems into steps. It will give you hints first and only show the full answer if you ask explicitly. It explains *why* you went wrong when you make a mistake, and tends to end its replies with a question to keep the chat going.
 
 **Example chat**
 
-<!-- Add an example transcript here. -->
+> **You:** How can I start solving this question?
+>
+> **Informational:** The question asks which of the given sets of equations represent possible three-dimensional incompressible flow cases. To determine this, we need to check the condition for incompressible flow for each case.
+>
+> Do you recall the mathematical condition for a flow to be incompressible?
 
 **Tip:** if its explanation is longer than you need, ask "in one sentence, what should I do next?"
 
@@ -46,7 +50,9 @@ Short, direct answers and nothing else. No preamble, no examples, no summary —
 
 **Example chat**
 
-<!-- Add an example transcript here. -->
+> **You:** How can I start solving this question?
+>
+> **Concise:** Consider which governing equation applies to this problem.
 
 **Tip:** if a hint is too short, ask it to explain *why* — it'll expand.
 
@@ -58,6 +64,8 @@ A Socratic tutor that almost always replies with a question instead of an answer
 
 **Example chat**
 
-<!-- Add an example transcript here. -->
+> **You:** How can I start solving this question?
+>
+> **Reflective:** What specific part of the question are you looking to tackle first, and what do you already understand about the concepts involved, such as the flow characteristics in a viscometer?
 
 **Tip:** if you're truly stuck and the questions aren't helping, tell it what you've already tried and ask it to guide you through the problem.

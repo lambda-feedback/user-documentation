@@ -13,7 +13,7 @@ Every chatbot is automatically given:
 - The set name, number, and description
 - The student's response history for each response area (total submissions, wrong submissions, latest submission and feedback)
 - Time the student has spent on the question and current part today
-- The conversation history with that student
+- The chat history with that student
 
 You don't need to brief the chatbot — the question and the student's progress are the brief.
 
@@ -43,7 +43,11 @@ You don't need to brief the chatbot — the question and the student's progress 
 
 **Example chat**
 
-<!-- Add a 2–3 turn example transcript here, ideally one where the student asks for the answer and the bot first nudges, then reveals it. -->
+> **Student:** How can I start solving this question?
+>
+> **Informational:** The question asks which of the given sets of equations represent possible three-dimensional incompressible flow cases. To determine this, we need to check the condition for incompressible flow for each case.
+>
+> Do you recall the mathematical condition for a flow to be incompressible?
 
 [More details and source →](https://github.com/lambda-feedback/informationalChatFunction/blob/main/docs/user.md)
 
@@ -62,7 +66,9 @@ You don't need to brief the chatbot — the question and the student's progress 
 
 **Example chat**
 
-<!-- Add a 2–3 turn example here showing how terse the responses are compared to Informational. -->
+> **Student:** How can I start solving this question?
+>
+> **Concise:** Consider which governing equation applies to this problem.
 
 [More details and source →](https://github.com/lambda-feedback/conciseChatFunction/blob/main/docs/user.md)
 
@@ -82,7 +88,9 @@ You don't need to brief the chatbot — the question and the student's progress 
 
 **Example chat**
 
-<!-- Add a 2–3 turn example here, ideally showing the bot turning a "what's the answer?" into a guiding question. -->
+> **Student:** How can I start solving this question?
+>
+> **Reflective:** What specific part of the question are you looking to tackle first, and what do you already understand about the concepts involved, such as the flow characteristics in a viscometer?
 
 [More details and source →](https://github.com/lambda-feedback/reflectiveChatFunction/blob/main/docs/user.md)
 

@@ -10,7 +10,7 @@ pytest
 
 ## Run the Chat Script
 
-You can use the `manual_agent_run.py` script to test the agents with example inputs from Lambda Feedback questions and synthetic conversations:
+You can use the `manual_agent_run.py` script to test the agents with example inputs from Lambda Feedback questions and synthetic chats:
 
 ```bash
 python tests/manual_agent_run.py
@@ -114,7 +114,7 @@ Input Body with optional fields:
     }
   },
   "context": {
-    "summary": "<compressed conversation history>",
+    "summary": "<compressed chat history>",
     "set": {
       "title": "Fundamentals",
       "number": 2,
@@ -161,7 +161,7 @@ Output Response:
     "content": "<assistant reply text>"
   },
   "metadata": {
-    "summary": "<updated conversation summary>",
+    "summary": "<updated chat summary>",
     "conversationalStyle": "<updated style string>",
     "processingTimeMs": 1234
   }

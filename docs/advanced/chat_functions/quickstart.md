@@ -70,7 +70,7 @@ Chat functions host a chatbot. Chatbots capture and automate the process of assi
    			}
    		},
    		"context": {
-   			"summary": "<compressed conversation history>",
+   			"summary": "<compressed chat history>",
    			"set": { "title": "Fundamentals", "number": 2, "description": "<set description>" },
    			"question": {
    				"title": "Understanding Polymorphism",
@@ -110,7 +110,7 @@ Chat functions host a chatbot. Chatbots capture and automate the process of assi
    	{
    		"output": { "role": "ASSISTANT", "content": "<assistant reply text>" },
    		"metadata": {
-   			"summary": "<updated conversation summary>",
+   			"summary": "<updated chat summary>",
    			"conversationalStyle": "<updated style string>",
    			"processingTimeMs": 1234
    		}
