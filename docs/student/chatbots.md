@@ -8,13 +8,13 @@ When you're working on a question, you can open the workspace tab and chat with 
 
 The chatbot already knows:
 
-- The question you're on, all its parts, the final answer, and the worked solution
+- The question you're on, all its parts, its guidance, the final answer, and the worked solution
 - Your responses so far on this question and the feedback you got
 - How long you've spent on the question today
 
 So you don't need to copy-paste the question or re-explain what you've tried — just ask.
 
-The chatbot is there to help you with **this specific question**. It won't help with unrelated material.
+The chatbot is there to help you with **the specific question you are working on**. It won't help with unrelated material.
 
 ## Which chatbot should I use?
 
@@ -23,14 +23,14 @@ Your teacher chooses which chatbot is attached to a question, but if you're choo
 | Chatbot | Use this if you want… | How chatty |
 |---|---|---|
 | [Informational](#informational) | A clear explanation, or for it to walk you through the solution | Verbose |
-| [Concise](#concise) | A quick hint without a wall of text | Short |
+| [Concise](#concise) | A quick hint or clarification without a wall of text | Short |
 | [Reflective](#reflective) | To be nudged with questions instead of being given the answer | Asks you back |
 
 ---
 
 ## Informational
 
-A patient tutor that breaks problems into steps. It will give you hints first and only show the full answer if you ask explicitly. It explains *why* you went wrong when you make a mistake, and tends to end its replies with a question to keep the chat going.
+A patient tutor that breaks problems into steps. It will give you hints first and only show the full answer only if you ask explicitly. It explains *why* you went wrong when you make a mistake, and tends to end its replies with a question to encourage further thinking or engagement.
 
 **Example chat**
 
@@ -46,7 +46,7 @@ A patient tutor that breaks problems into steps. It will give you hints first an
 
 ## Concise
 
-Short, direct answers and nothing else. No preamble, no examples, no summary — unless you ask for them. Best when you just need one missing fact to get unstuck.
+Short, direct answers and nothing else. No preamble, no examples, no details — unless you ask for them. Best when you just need one missing fact to get unstuck.
 
 **Example chat**
 
@@ -60,7 +60,7 @@ Short, direct answers and nothing else. No preamble, no examples, no summary —
 
 ## Reflective
 
-A Socratic tutor that almost always replies with a question instead of an answer. It's trying to get you to work it out yourself by asking you to clarify, check your assumptions, or explain your reasoning.
+A tutor that almost always replies with a question instead of an answer. It's trying to get you to work it out yourself by asking you to clarify, check your assumptions, or explain your reasoning.
 
 **Example chat**
 

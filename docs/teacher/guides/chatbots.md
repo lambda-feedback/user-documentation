@@ -15,15 +15,13 @@ Every chatbot is automatically given:
 - Time the student has spent on the question and current part today
 - The chat history with that student
 
-You don't need to brief the chatbot — the question and the student's progress are the brief.
-
 ## Comparison
 
 | Chatbot | Best for | Tone | LLM | ~Response time |
 |---|---|---|---|---|
 | [Informational](#informational) | Students who want explanations and worked-through help | Explanatory | Gemini 2.5 Flash Lite (Google) | ~10s |
 | [Concise](#concise) | Students who want a quick hint and to get back to working | Short | Gemini 2.5 Flash Lite (Google) | ~10s |
-| [Reflective](#reflective) | Questions where you want students to think it through themselves | Socratic | gpt-4o-mini (OpenAI) | ~10s |
+| [Reflective](#reflective) | Students who want to be encouraged to think through problems themselves | Socratic | gpt-4o-mini (OpenAI) | ~10s |
 
 ---
 
@@ -55,7 +53,7 @@ You don't need to brief the chatbot — the question and the student's progress 
 
 ## Concise
 
-**Role:** A tutor that gives short, direct answers and then stops.
+**Role:** A tutor that gives short, direct answers.
 
 **Key behaviours from the role prompt**
 
