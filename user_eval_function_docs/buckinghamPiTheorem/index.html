@@ -1,0 +1,4738 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Architecture, syntax and usage details for an online learning platform focused on providing rich feedback to the user.">
+      
+      
+        <meta name="author" content="Pierre Tharreau, Louis Manestar">
+      
+      
+        <link rel="canonical" href="https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/buckinghamPiTheorem/">
+      
+      
+        <link rel="prev" href="../arraySymbolicEqual/">
+      
+      
+        <link rel="next" href="../survey/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>buckinghamPiTheorem - Lambda Feedback Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#buckinghampitheorem" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lambda Feedback Documentation" class="md-header__button md-logo" aria-label="Lambda Feedback Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lambda Feedback Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              buckinghamPiTheorem
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lambda-feedback/user-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../student/" class="md-tabs__link">
+          
+  
+    
+  
+  Students
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../teacher/" class="md-tabs__link">
+          
+  
+    
+  
+  Teachers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../advanced/" class="md-tabs__link">
+          
+  
+    
+  
+  Advanced
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lambda Feedback Documentation" class="md-nav__button md-logo" aria-label="Lambda Feedback Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Lambda Feedback Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lambda-feedback/user-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opportunities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opportunities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Releases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Releases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/major_releases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Major releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/detailed_releases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Detailed Releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_3" id="__nav_1_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Previous releases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Previous releases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/relases_2023_24/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023-24
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../student/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Students
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Students
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/getting_started_student/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/answering_questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Answering Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/response_areas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Response Areas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/lexdown_student/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Editing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/MEQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module evaluation questionnaires (MEQ)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../teacher/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Teachers
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Teachers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/gettingstarted/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/content-sets-questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/lexdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lexdown content editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/question-export-import/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exporting and importing questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/analytics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/guidance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guidance (feature)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/good-practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Good practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/MEQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module evaluation questionnaires (MEQ)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/content_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Content management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/latex_functionality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latex functionality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/pdf_generation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PDF generation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../teacher/reference/response_area_components/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Response Areas
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Response Areas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Essay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Milkdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Milkdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Boolean/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boolean
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/NumericUnits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NumericUnits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Expression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Math_Single_Line/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math Single Line
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Math_Multi_Line/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math Multi Line
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/MultipleChoice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MultipleChoice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Likert/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Likert
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../teacher/reference/evaluation_functions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Evaluation Functions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Evaluation Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linearAlgebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linearAlgebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compareSets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareSets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wolframAlphaEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wolframAlphaEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comparePhysicalQuantities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    comparePhysicalQuantities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nonogram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nonogram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compareBoolean/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareBoolean
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arrayEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    arrayEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphEval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    graphEval
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../langModels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    langModels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shortTextAnswer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shortTextAnswer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isSimilar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    isSimilar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../symbolicEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    symbolicEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../riskAssessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    riskAssessment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isExactEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    isExactEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GCSEenglish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCSEenglish
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comparePython/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    comparePython
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arraySymbolicEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    arraySymbolicEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    buckinghamPiTheorem
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    buckinghamPiTheorem
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom_feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      custom_feedback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="custom_feedback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tags-for-customisable-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tags for customisable feedback
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom_feedback_combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      custom_feedback_combinations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="custom_feedback_combinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-feedback-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default feedback messages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementary_functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      elementary_functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="elementary_functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      quantities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="quantities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-si-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: SI dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-base-si-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: Base SI units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-si-prefixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: SI prefixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-derived-si-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: Derived SI units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-common-non-si-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: Common non-SI units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-imperial-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: Imperial units
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strict_syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      strict_syntax
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-example-where-a-valid-set-have-one-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Example where a valid set have one group
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1) Example where a valid set have one group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-parameter-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of parameter values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-responses-that-illustrate-the-evaluation-functions-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of responses that illustrate the evaluation functions capabilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-example-where-a-valid-sets-have-two-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Example where a valid sets have two groups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2) Example where a valid sets have two groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-parameter-values_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of parameter values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-responses-that-illustrate-the-evaluation-functions-capabilities_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of responses that illustrate the evaluation functions capabilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-example-with-customised-feedback-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Example with customised feedback messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3) Example with customised feedback messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-parameter-values_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of parameter values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-responses-that-illustrate-the-customized-feedback-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of responses that illustrate the customized feedback messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terse-solution-giving-the-general-form-of-a-valid-set-of-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terse solution giving the general form of a valid set of groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../survey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    survey
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compareExpressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareExpressions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../advanced/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Response Areas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Response Areas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/response_areas/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Evaluation Functions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Evaluation Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quickstart Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/specification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/local/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing Functions Locally
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation Function Utils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../advanced/evaluation_functions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deployed Functions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_6" id="__nav_4_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Deployed Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/linearAlgebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linearAlgebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/compareSets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareSets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/wolframAlphaEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wolframAlphaEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    comparePhysicalQuantities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/nonogram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nonogram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/compareBoolean/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareBoolean
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    arrayEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/graphEval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    graphEval
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/langModels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    langModels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shortTextAnswer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    isSimilar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/symbolicEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    symbolicEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/riskAssessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    riskAssessment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/isExactEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    isExactEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/GCSEenglish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCSEenglish
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/comparePython/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    comparePython
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    arraySymbolicEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/buckinghamPiTheorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    buckinghamPiTheorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/survey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    survey
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_eval_function_docs/compareExpressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    compareExpressions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/alternate_languages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alternate Function Languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chat functions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chat functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/chat_functions/quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quickstart
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/chat_functions/local/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing Functions Locally
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/chat_functions/info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat Functions Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Administrators
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Administrators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/administrators/user_access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/administrators/user_tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom_feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      custom_feedback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="custom_feedback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tags-for-customisable-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tags for customisable feedback
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom_feedback_combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      custom_feedback_combinations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="custom_feedback_combinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-feedback-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default feedback messages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementary_functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      elementary_functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="elementary_functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      quantities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="quantities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-si-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: SI dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-base-si-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: Base SI units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-si-prefixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: SI prefixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-derived-si-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: Derived SI units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-common-non-si-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: Common non-SI units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-imperial-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: Imperial units
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strict_syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      strict_syntax
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-example-where-a-valid-set-have-one-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Example where a valid set have one group
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1) Example where a valid set have one group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-parameter-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of parameter values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-responses-that-illustrate-the-evaluation-functions-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of responses that illustrate the evaluation functions capabilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-example-where-a-valid-sets-have-two-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Example where a valid sets have two groups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2) Example where a valid sets have two groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-parameter-values_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of parameter values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-responses-that-illustrate-the-evaluation-functions-capabilities_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of responses that illustrate the evaluation functions capabilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-example-with-customised-feedback-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Example with customised feedback messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3) Example with customised feedback messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-parameter-values_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of parameter values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-responses-that-illustrate-the-customized-feedback-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of responses that illustrate the customized feedback messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terse-solution-giving-the-general-form-of-a-valid-set-of-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terse solution giving the general form of a valid set of groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="buckinghampitheorem">buckinghamPiTheorem<a class="headerlink" href="#buckinghampitheorem" title="Permanent link">&para;</a></h1>
+<p><a class="md-button" href="https://github.com/lambda-feedback/buckinghamPiTheorem/blob/main/app/docs/user.md">Edit on GitHub <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0l-30.1 30 97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5l167.3-167.4-98-98zM96 64c-53 0-96 43-96 96v256c0 53 43 96 96 96h256c53 0 96-43 96-96v-96c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32z"/></svg></span></a>
+<a class="md-button" href="https://github.com/lambda-feedback/buckinghamPiTheorem">View Code <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span></a></p>
+<hr />
+<div class="admonition info">
+<p class="admonition-title">Supported Response Area Types</p>
+<p>This evaluation function is supported by the following Response Area components:</p>
+<ul>
+<li><code>EXPRESSION</code></li>
+<li><code>MATH_SINGLE_LINE</code></li>
+<li><code>MATH_MULTI_LINES</code></li>
+</ul>
+</div>
+<p>Evaluates a candidate list of power products (e.g. <code>U*L/nu</code>, <code>p/rho/U^2</code>) for validity as a set of dimensionless quantities that satisfy the Buckingham Pi theorem. Uses a modified  version of the algorithm described in <a href="https://doi.org/10.6084/m9.figshare.24850131">Automated feedback on student attempts to produce a set of dimensionless power products from a list of quantities that describe a physical problem</a></p>
+<p>There are three different ways of supplying this function with the necessary information.
+1. In <code>answer</code>, provide an example set of groups as a comma separated list. When used this way the function assumes that the given example is a valid set containing the minimum number of groups.
+2. In the <code>quantities</code> parameter, supply a comma-separated list of the dimensions for each quantity and set <code>answer</code> to <code>-</code>. The function will then compute a list of sufficiently many independent dimensionless quantities and compare to the response.
+3. Fill in the <code>answer</code> as per option <strong>1</strong> and <code>quantities</code> as per option <strong>2</strong>. The function will then confirm that the supplied <code>answer</code> is dimensionless and valid before comparing it to the response. If the supplied <code>answer</code> is not valid the function will return an error regardless of the response.</p>
+<p>Note that in lists of groups the items should ideally be written as power products, i.e. in the form <span class="arithmatex">\(q_1^{c_1} \cdot q_2^{c_2} \cdots q_n^{c_n}\)</span> where <span class="arithmatex">\(q_1, q_2 \ldots q_n\)</span> are quantities and <span class="arithmatex">\(c_1, c_2 \ldots c_n\)</span> are integers. For example, consider a task where <span class="arithmatex">\(\frac{U L}{\nu}, \frac{nu}{f L^2}\)</span> is a valid set:
+- The responses <code>U*L/nu, nu/(f*L^2)</code> and <code>U L nu^(-1), nu f^(-1) L^(-2)</code> are examples of responses written in the ideal format,
+- The response <code>U^(0.33)*L^(0.33)/nu^(0.33), nu/(f*L^2)^(2/3)</code> is theoretically valid, but can cause unexpected behaviour during comparison with response, due to non-integer exponents,
+- <code>sin(U*L/nu), log(nu/(f*L^2)^(2/3))</code> will not be accepted since the two expressions are not power products.</p>
+<p>The function can also handle sums of power products multiplied by constants. If the total number of groups is less than required the set of groups is considered invalid, even if there is a sufficient number of terms with independent power products in the response.
+For example, consider a task where <span class="arithmatex">\(\frac{U L}{\nu}, \frac{nu}{f L^2}\)</span> is a valid set:
+- The response <code>U*L/nu+1, nu/(f*L^2)+U*L/nu</code> will be considered valid, since there are two groups in the response, and if each term is considered separately the result is three different power products <code>U*L/nu</code>, <code>1</code> and <code>nu/(f*L^2)</code>, and the two non-constant expressions, <code>U*L/nu</code> and <code>nu/(f*L^2)</code>, are independent,
+- The response <code>U*L/nu+1, nu/(f*L^2)+U/(f*L)</code> will be considered valid, since there are two groups in the response, and if each term is considered separately the result is four expressions <code>U*L/nu</code>, <code>1</code>, <code>nu/(f*L^2)</code> and <code>U/(f*L)</code> but only two of them, <code>U*L/nu</code> and <code>nu/(f*L^2)</code>, are independent (since <code>U/(f*L)</code> is equal to <code>U*L/nu * nu/(f*L^2)</code>),
+- The response <code>U*L/nu+nu/(f*L^2)</code> will not be considered valid because even though the terms considered separately gives enough independent dimensionless power products, the response has too few expressions.</p>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
+<p>There are four optional parameters that can be set: <code>custom_feedback</code>, <code>elementary_functions</code>, <code>quantities</code>, <code>strict_syntax</code>.</p>
+<h2 id="custom_feedback"><code>custom_feedback</code><a class="headerlink" href="#custom_feedback" title="Permanent link">&para;</a></h2>
+<p>Custom feedback can be set on a per-task basis. <strong>Note:</strong> Custom feedback only supports fixed strings, this means that for some situations the custom feedback cannot be as detailed as the default feedback.</p>
+<p>The parameter must be set as a dictionary with keys from the feedback tags listed below. The value for each key can be any string.</p>
+<h3 id="tags-for-customisable-feedback">Tags for customisable feedback<a class="headerlink" href="#tags-for-customisable-feedback" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>PARSE_ERROR_WARNING</code> Response cannot be parsed as an expression or physical quantity.</li>
+<li><code>STRICT_SYNTAX_EXPONENTIATION</code> Warns that <code>^</code> cannot be used for exponentiation when <code>strict_syntax</code> is set to <code>true</code>.</li>
+<li><code>VALID_CANDIDATE_SET</code> Message that is displayed when a response is found to be a valid set of groups. <strong>Note:</strong> setting this will not affect the Correct/Incorrect message, it will only add further text.</li>
+<li><code>NOT_DIMENSIONLESS</code> Message displayed when at least one groups is not dimensionless.</li>
+<li><code>MORE_GROUPS_THAN_REFERENCE_SET</code> Message displayed when the response contains more groups than necessary.</li>
+<li><code>CANDIDATE_GROUPS_NOT_INDEPENDENT</code> Message displayed when the groups in the response are not independent.</li>
+<li><code>TOO_FEW_INDEPENDENT_GROUPS</code> Message displayed when the response contains fewer groups than necessary.</li>
+<li><code>UNKNOWN_SYMBOL</code> Message displayed when the response contains some undefined symbol.</li>
+<li><code>SUM_WITH_INDEPENDENT_TERMS</code>  Message displayed when the response has too few groups but one (or more) of the groups is a sum with independent terms.</li>
+</ul>
+<h2 id="custom_feedback_combinations"><code>custom_feedback_combinations</code><a class="headerlink" href="#custom_feedback_combinations" title="Permanent link">&para;</a></h2>
+<p>Custom feedback can be set on a per-task basis. <strong>Note:</strong> Custom feedback only supports fixed strings, this means that for some situations the custom feedback cannot be as detailed as the default feedback.</p>
+<p>The <code>custom_feedback</code> parameters overrides the feedback for individual tags, it is also possible to override the feedback produced by specific combinations of tags using the <code>custom_feedback_combinations</code>.</p>
+<p>The vald format for the parameter is given below. The <code>CASE_NAME</code> values must be dinstinct string, but will otherwise be ignored, the tags must come from those listed for the <code>custom_feedback</code> parameter.</p>
+<div class="highlight"><pre><span></span><code>&quot;custom_feedback_combinations&quot;: {
+    &quot;CASE_NAME_1&quot;: [
+        [
+            &quot;TAG_1_1&quot;,
+            ...
+            &quot;TAG_1_m&quot;
+        ],
+        &quot;FEEDBACK STRING 1&quot;
+    ],
+    ...
+    &quot;CASE_NAME_N&quot;: [
+        [
+            &quot;TAG_N_1&quot;,
+            ...
+            &quot;TAG_N_k&quot;
+        ],
+        &quot;FEEDBACK STRING N&quot;
+    ]
+}
+</code></pre></div>
+<p><strong>Note:</strong> If there are more than one combination of tags present in the result, the tag list with the most members take precedence, e.g. if the results has tags <code>A, B, C, D</code> and there is custom feedback set for <code>A,B,C</code> and <code>A,B</code> then custom feedback for <code>A,B,C</code> will be shown together with the default feedback for <code>D</code>.</p>
+<h3 id="default-feedback-messages">Default feedback messages<a class="headerlink" href="#default-feedback-messages" title="Permanent link">&para;</a></h3>
+<p>The default feedback messages, including non-customisable ones are listed below:</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Remark</th>
+<th>Feedback message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NO_RESPONSE</code></td>
+<td></td>
+<td>"No response submitted."</td>
+</tr>
+<tr>
+<td>`NO_ANSWER"</td>
+<td></td>
+<td>"No answer was given."</td>
+</tr>
+<tr>
+<td><code>QUANTITIES_NOT_WRITTEN_CORRECTLY</code></td>
+<td></td>
+<td>"List of quantities not written correctly."</td>
+</tr>
+<tr>
+<td><code>PARSE_ERROR_WARNING</code></td>
+<td>With response expression <span class="arithmatex">\(E\)</span></td>
+<td>"<span class="arithmatex">\(E\)</span> could not be parsed as a valid mathematical expression. Ensure that correct notation is used, that the expression is unambiguous and that all parentheses are closed."</td>
+</tr>
+<tr>
+<td><code>STRICT_SYNTAX_EXPONENTIATION</code></td>
+<td></td>
+<td>"Note that <code>^</code> cannot be used to denote exponentiation, use <code>**</code> instead."</td>
+</tr>
+<tr>
+<td><code>VALID_CANDIDATE_SET</code></td>
+<td>Feedback message is omitted since correctness of the results will be displayed instead</td>
+<td>""</td>
+</tr>
+<tr>
+<td><code>NOT_DIMENSIONLESS</code></td>
+<td>For response with a single group <span class="arithmatex">\(G\)</span></td>
+<td>"The group <span class="arithmatex">\(G\)</span> is not dimensionless."</td>
+</tr>
+<tr>
+<td><code>NOT_DIMENSIONLESS</code></td>
+<td>For response where group <span class="arithmatex">\(G_1 \ldots G_k\)</span> are not dimensionless</td>
+<td>"The groups <span class="arithmatex">\(G_1 \ldots G_k\)</span> and <span class="arithmatex">\(G_k\)</span> are not dimensionless."</td>
+</tr>
+<tr>
+<td><code>MORE_GROUPS_THAN_REFERENCE_SET</code></td>
+<td></td>
+<td>"Response has more groups than necessary."</td>
+</tr>
+<tr>
+<td><code>CANDIDATE_GROUPS_NOT_INDEPENDENT</code></td>
+<td></td>
+<td>"Groups in response are not independent. It has <span class="arithmatex">\(r\)</span> independent group(s) and contains <span class="arithmatex">\(n\)</span> groups."</td>
+</tr>
+<tr>
+<td><code>TOO_FEW_INDEPENDENT_GROUPS</code></td>
+<td>With response expression <span class="arithmatex">\(E\)</span></td>
+<td>"<span class="arithmatex">\(E\)</span> contains too few independent groups. It has <span class="arithmatex">\(r\)</span> independent group(s) and needs at least <span class="arithmatex">\(n\)</span> independent groups."</td>
+</tr>
+<tr>
+<td><code>UNKNOWN_SYMBOL</code></td>
+<td>With unknown symbols <span class="arithmatex">\(s_1 \ldots s_k\)</span></td>
+<td>"Unknown symbol(s): <span class="arithmatex">\(s_1 \ldots s_k\)</span>."</td>
+</tr>
+<tr>
+<td><code>SUM_WITH_INDEPENDENT_TERMS</code></td>
+<td>With response expression <span class="arithmatex">\(E\)</span></td>
+<td>"Sum in <span class="arithmatex">\(S\)</span> contains more independent terms that there are groups in total. Group expressions should ideally be written as a comma-separated list where each item is an entry of the form <span class="arithmatex">\(q_1^{c_1} q_2^{c_2}\ldots q_n^{c_n}\)</span>."</td>
+</tr>
+</tbody>
+</table>
+<h2 id="elementary_functions"><code>elementary_functions</code><a class="headerlink" href="#elementary_functions" title="Permanent link">&para;</a></h2>
+<p>When using implicit multiplication (i.e. when <code>strict_syntax</code> is set to true) function names with multiple characters are sometimes split and not interpreted properly, e.g. <code>sin(x)</code> might be interpreted as <code>s*i*n*(x)</code>. Setting <code>elementary_functions</code> to true will reserve the function names listed below and prevent them from being split. If a name is said to have one or more alternatives this means that it will accept the alternative names but the reserved name is what will be shown in the preview.</p>
+<p><code>sin</code>, <code>sinc</code>, <code>csc</code> (alternative <code>cosec</code>), <code>cos</code>, <code>sec</code>, <code>tan</code>, <code>cot</code> (alternative <code>cotan</code>), <code>asin</code> (alternative <code>arcsin</code>), <code>acsc</code> (alternatives <code>arccsc</code>, <code>arccosec</code>), <code>acos</code> (alternative <code>arccos</code>), <code>asec</code> (alternative <code>arcsec</code>), <code>atan</code> (alternative <code>arctan</code>), <code>acot</code> (alternatives <code>arccot</code>, <code>arccotan</code>), <code>atan2</code> (alternative <code>arctan2</code>), <code>sinh</code>, <code>cosh</code>, <code>tanh</code>, <code>csch</code> (alternative <code>cosech</code>), <code>sech</code>, <code>asinh</code> (alternative <code>arcsinh</code>), <code>acosh</code> (alternative <code>arccosh</code>), <code>atanh</code> (alternative <code>arctanh</code>), <code>acsch</code> (alternatives <code>arccsch</code>, <code>arcosech</code>), <code>asech</code> (alternative <code>arcsech</code>), <code>exp</code> (alternative <code>Exp</code>), <code>E</code> (equivalent to <code>exp(1)</code>, alternative <code>e</code>), <code>log</code>, <code>sqrt</code>, <code>sign</code>, <code>Abs</code> (alternative <code>abs</code>), <code>Max</code> (alternative <code>max</code>), <code>Min</code> (alternative <code>min</code>), <code>arg</code>, <code>ceiling</code> (alternative <code>ceil</code>), <code>floor</code></p>
+<h3 id="quantities"><code>quantities</code><a class="headerlink" href="#quantities" title="Permanent link">&para;</a></h3>
+<p>String that lists all quantities that can be used in the answer and response.</p>
+<p>Each quantity should be written in the form <code>('quantity name','(dimensions)')</code> and all pairs concatenated into a single string. See tables below for available dimensions.</p>
+<p><strong>Note:</strong> Quantities can also be defined using common units, but the units names must be written out in full, for example <code>('l','(length)')</code> and <code>('l','(kilometre)')</code> is equivalent, but <code>('l','(km)')</code> will generate an error. For this reason it is recommended that the quantities are specified using the base dimensions instead.</p>
+<h4 id="table-si-dimensions">Table: SI dimensions<a class="headerlink" href="#table-si-dimensions" title="Permanent link">&para;</a></h4>
+<p>Default dimensions correspond to the base quantities in Table 1 of the <a href="https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes">NIST Guide to the SI, Chapter 4: The Two Classes of SI Units and the SI Prefixes</a></p>
+<table>
+<thead>
+<tr>
+<th>Dimension name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>length</td>
+</tr>
+<tr>
+<td>mass</td>
+</tr>
+<tr>
+<td>time</td>
+</tr>
+<tr>
+<td>electriccurrent</td>
+</tr>
+<tr>
+<td>temperature</td>
+</tr>
+<tr>
+<td>amountofsubstance</td>
+</tr>
+<tr>
+<td>luminousintensity</td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-base-si-units">Table: Base SI units<a class="headerlink" href="#table-base-si-units" title="Permanent link">&para;</a></h4>
+<p>SI base units based on Table 2 in https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf</p>
+<p>Note that gram is used as a base unit instead of kilogram.</p>
+<table>
+<thead>
+<tr>
+<th>SI base unit</th>
+<th>Dimension</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metre</td>
+<td>length</td>
+</tr>
+<tr>
+<td>gram</td>
+<td>mass</td>
+</tr>
+<tr>
+<td>second</td>
+<td>time</td>
+</tr>
+<tr>
+<td>ampere</td>
+<td>electriccurrent</td>
+</tr>
+<tr>
+<td>kelvin</td>
+<td>temperature</td>
+</tr>
+<tr>
+<td>mole</td>
+<td>amountofsubstance</td>
+</tr>
+<tr>
+<td>candela</td>
+<td>luminousintensity</td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-si-prefixes">Table: SI prefixes<a class="headerlink" href="#table-si-prefixes" title="Permanent link">&para;</a></h4>
+<p>SI prefixes based on Table 7 in https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf
+All prefixes are dimensionless.</p>
+<table>
+<thead>
+<tr>
+<th>SI Prefix</th>
+<th>Factor</th>
+<th></th>
+<th>SI Prefix</th>
+<th>Factor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>yotta</td>
+<td><span class="arithmatex">\(10^{24}\)</span></td>
+<td></td>
+<td>deci</td>
+<td><span class="arithmatex">\(10^{-1}\)</span></td>
+</tr>
+<tr>
+<td>zetta</td>
+<td><span class="arithmatex">\(10^{21}\)</span></td>
+<td></td>
+<td>centi</td>
+<td><span class="arithmatex">\(10^{-2}\)</span></td>
+</tr>
+<tr>
+<td>exa'</td>
+<td><span class="arithmatex">\(10^{18}\)</span></td>
+<td></td>
+<td>milli</td>
+<td><span class="arithmatex">\(10^{-3}\)</span></td>
+</tr>
+<tr>
+<td>peta</td>
+<td><span class="arithmatex">\(10^{15}\)</span></td>
+<td></td>
+<td>micro</td>
+<td><span class="arithmatex">\(10^{-6}\)</span></td>
+</tr>
+<tr>
+<td>tera</td>
+<td><span class="arithmatex">\(10^{12}\)</span></td>
+<td></td>
+<td>nano</td>
+<td><span class="arithmatex">\(10^{-9}\)</span></td>
+</tr>
+<tr>
+<td>giga</td>
+<td><span class="arithmatex">\(10^{9}\)</span></td>
+<td></td>
+<td>pico</td>
+<td><span class="arithmatex">\(10^{-12}\)</span></td>
+</tr>
+<tr>
+<td>mega</td>
+<td><span class="arithmatex">\(10^{6}\)</span></td>
+<td></td>
+<td>femto</td>
+<td><span class="arithmatex">\(10^{-15}\)</span></td>
+</tr>
+<tr>
+<td>kilo</td>
+<td><span class="arithmatex">\(10^{3}\)</span></td>
+<td></td>
+<td>atto</td>
+<td><span class="arithmatex">\(10^{-18}\)</span></td>
+</tr>
+<tr>
+<td>hecto</td>
+<td><span class="arithmatex">\(10^{2}\)</span></td>
+<td></td>
+<td>zepto</td>
+<td><span class="arithmatex">\(10^{-21}\)</span></td>
+</tr>
+<tr>
+<td>deka</td>
+<td><span class="arithmatex">\(10^{1}\)</span></td>
+<td></td>
+<td>yocto</td>
+<td><span class="arithmatex">\(10^{-24}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-derived-si-units">Table: Derived SI units<a class="headerlink" href="#table-derived-si-units" title="Permanent link">&para;</a></h4>
+<p>Derived SI based on Table 4 in https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf</p>
+<p>Note that the function treats radians and steradians as dimensionless values.</p>
+<table>
+<thead>
+<tr>
+<th>Unit name</th>
+<th>Expressed in base SI units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>radian</td>
+<td><span class="arithmatex">\((2\pi)^{-1}\)</span></td>
+</tr>
+<tr>
+<td>steradian</td>
+<td><span class="arithmatex">\((4\pi)^{-1}\)</span></td>
+</tr>
+<tr>
+<td>hertz</td>
+<td><span class="arithmatex">\(\mathrm{second}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>newton</td>
+<td><span class="arithmatex">\(\mathrm{metre}~\mathrm{kilogram}~\mathrm{second}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>pascal</td>
+<td><span class="arithmatex">\(\mathrm{metre}^{-1}~\mathrm{kilogram}~\mathrm{second}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>joule</td>
+<td><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram~second}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>watt</td>
+<td><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram~second}^{-3}\)</span></td>
+</tr>
+<tr>
+<td>coulomb</td>
+<td><span class="arithmatex">\(\mathrm{second~ampere}\)</span></td>
+</tr>
+<tr>
+<td>volt</td>
+<td><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram second}^{-3}~\mathrm{ampere}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>farad</td>
+<td><span class="arithmatex">\(\mathrm{metre}^{-2}~\mathrm{kilogram}^{-1}~\mathrm{second}^4~\mathrm{ampere}^2\)</span></td>
+</tr>
+<tr>
+<td>ohm</td>
+<td><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram second}^{-3}~\mathrm{ampere}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>siemens</td>
+<td><span class="arithmatex">\(\mathrm{metre}^{-2}~\mathrm{kilogram}^{-1}~\mathrm{second}^3~\mathrm{ampere}^2\)</span></td>
+</tr>
+<tr>
+<td>weber</td>
+<td><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram~second}^{-2}~\mathrm{ampere}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>tesla</td>
+<td><span class="arithmatex">\(\mathrm{kilogram~second}^{-2} \mathrm{ampere}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>henry</td>
+<td><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{kilogram~second}^{-2}~\mathrm{ampere}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>lumen</td>
+<td><span class="arithmatex">\(\mathrm{candela}\)</span></td>
+</tr>
+<tr>
+<td>lux</td>
+<td><span class="arithmatex">\(\mathrm{metre}^{-2}~\mathrm{candela}\)</span></td>
+</tr>
+<tr>
+<td>becquerel</td>
+<td><span class="arithmatex">\(\mathrm{second}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>gray</td>
+<td><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{second}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>sievert</td>
+<td><span class="arithmatex">\(\mathrm{metre}^2~\mathrm{second}^{-2}\)</span></td>
+</tr>
+<tr>
+<td>katal</td>
+<td><span class="arithmatex">\(\mathrm{mole~second}^{-1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-common-non-si-units">Table: Common non-SI units<a class="headerlink" href="#table-common-non-si-units" title="Permanent link">&para;</a></h4>
+<p>Commonly used non-SI units based on Table 8 in https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf and Tables 7 and 8 in https://www.bipm.org/documents/20126/41483022/si_brochure_8.pdf
+Note that the function treats angles, neper and bel as dimensionless values.</p>
+<p>Note that only the first table in this section has short form symbols defined, the second table does not, this is done to minimize ambiguities when writing units.</p>
+<table>
+<thead>
+<tr>
+<th>Unit name</th>
+<th>Expressed in SI units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>minute</td>
+<td><span class="arithmatex">\(60~\mathrm{second}\)</span></td>
+</tr>
+<tr>
+<td>hour</td>
+<td><span class="arithmatex">\(3600~\mathrm{second}\)</span></td>
+</tr>
+<tr>
+<td>degree</td>
+<td><span class="arithmatex">\(\frac{1}{360}\)</span></td>
+</tr>
+<tr>
+<td>liter</td>
+<td><span class="arithmatex">\(10^{-3}~\mathrm{metre}^3\)</span></td>
+</tr>
+<tr>
+<td>metric_ton</td>
+<td><span class="arithmatex">\(10^3~\mathrm{kilogram}\)</span></td>
+</tr>
+<tr>
+<td>neper</td>
+<td><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td>bel</td>
+<td><span class="arithmatex">\(\frac{1}{2}~\ln(10)\)</span></td>
+</tr>
+<tr>
+<td>electronvolt</td>
+<td><span class="arithmatex">\(1.60218 \cdot 10^{-19}~\mathrm{joule}\)</span></td>
+</tr>
+<tr>
+<td>atomic_mass_unit</td>
+<td><span class="arithmatex">\(1.66054 \cdot 10^{-27}~\mathrm{kilogram}\)</span></td>
+</tr>
+<tr>
+<td>angstrom</td>
+<td><span class="arithmatex">\(10^{-10}~\mathrm{metre}\)</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Unit name</th>
+<th>Expressed in SI units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>day</td>
+<td><span class="arithmatex">\(86400~\mathrm{second}\)</span></td>
+</tr>
+<tr>
+<td>angleminute</td>
+<td><span class="arithmatex">\(\frac{\pi}{10800}\)</span></td>
+</tr>
+<tr>
+<td>anglesecond</td>
+<td><span class="arithmatex">\(\frac{\pi}{648000}\)</span></td>
+</tr>
+<tr>
+<td>astronomicalunit</td>
+<td><span class="arithmatex">\(149597870700~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>nauticalmile</td>
+<td><span class="arithmatex">\(1852~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>knot</td>
+<td><span class="arithmatex">\(\frac{1852}{3600}~\mathrm{metre~second}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>are</td>
+<td><span class="arithmatex">\(10^2~\mathrm{metre}^2\)</span></td>
+</tr>
+<tr>
+<td>hectare</td>
+<td><span class="arithmatex">\(10^4~\mathrm{metre}^2\)</span></td>
+</tr>
+<tr>
+<td>bar</td>
+<td><span class="arithmatex">\(10^5~\mathrm{pascal}\)</span></td>
+</tr>
+<tr>
+<td>barn</td>
+<td><span class="arithmatex">\(10^{-28}~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>curie</td>
+<td>$3.7 \cdot 10^{10}~\mathrm{becquerel}</td>
+</tr>
+<tr>
+<td>roentgen</td>
+<td><span class="arithmatex">\(2.58 \cdot 10^{-4}~\mathrm{kelvin~(kilogram)}^{-1}\)</span></td>
+</tr>
+<tr>
+<td>rad</td>
+<td><span class="arithmatex">\(10^{-2}~\mathrm{gray}\)</span></td>
+</tr>
+<tr>
+<td>rem</td>
+<td><span class="arithmatex">\(10^{-2}~\mathrm{sievert}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-imperial-units">Table: Imperial units<a class="headerlink" href="#table-imperial-units" title="Permanent link">&para;</a></h4>
+<p>Commonly imperial units taken from https://en.wikipedia.org/wiki/Imperial_units</p>
+<table>
+<thead>
+<tr>
+<th>Unit name</th>
+<th>Expressed in SI units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inch</td>
+<td><span class="arithmatex">\(0.0254~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>foot</td>
+<td><span class="arithmatex">\(0.3048~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>yard</td>
+<td><span class="arithmatex">\(0.9144~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>mile</td>
+<td><span class="arithmatex">\(1609.344~\mathrm{metre}\)</span></td>
+</tr>
+<tr>
+<td>fluid ounce</td>
+<td><span class="arithmatex">\(28.4130625~\mathrm{millilitre}\)</span></td>
+</tr>
+<tr>
+<td>gill</td>
+<td><span class="arithmatex">\(142.0653125~\mathrm{millilitre}\)</span></td>
+</tr>
+<tr>
+<td>pint</td>
+<td><span class="arithmatex">\(568.26125~\mathrm{millilitre}\)</span></td>
+</tr>
+<tr>
+<td>quart</td>
+<td><span class="arithmatex">\(1.1365225~\mathrm{litre}\)</span></td>
+</tr>
+<tr>
+<td>gallon</td>
+<td><span class="arithmatex">\(4546.09~\mathrm{litre}\)</span></td>
+</tr>
+<tr>
+<td>ounce</td>
+<td><span class="arithmatex">\(28.349523125~\mathrm{gram}\)</span></td>
+</tr>
+<tr>
+<td>pound</td>
+<td><span class="arithmatex">\(0.45359237~\mathrm{kilogram}\)</span></td>
+</tr>
+<tr>
+<td>stone</td>
+<td><span class="arithmatex">\(6.35029318~\mathrm{kilogram}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="strict_syntax"><code>strict_syntax</code><a class="headerlink" href="#strict_syntax" title="Permanent link">&para;</a></h3>
+<p>If <code>strict_syntax</code> is set to true then the answer and response must have <code>*</code> or <code>/</code> between each part of the expressions and exponentiation must be done using <code>**</code>.</p>
+<p>For example: with <code>strict_syntax</code> set to false <code>a*b</code> and <code>ab</code> will be interpreted as equivalent, but with <code>strict_syntax</code> set to false <code>ab</code> will be interpreted as a single symbol instead of a multiplication.</p>
+<p>If <code>strict_syntax</code> is set to false, then <code>^</code> used instead of <code>**</code>, e.g. <code>c**2</code> and <code>c^2</code> will be considered equivalent. In this case it is also recommended to list any multi-character symbols expected to appear in the response as input symbols. If <code>strict_syntax</code> is set to true then <code>c^2</code> will give a warning that <code>^</code> will not be interpreted as exponentiation.</p>
+<p>By default <code>strict_syntax</code> is set to true.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<p>Implemented versions of these examples can be found in the module 'Examples: Evaluation Functions'.</p>
+<h3 id="1-example-where-a-valid-set-have-one-group">1) Example where a valid set have one group<a class="headerlink" href="#1-example-where-a-valid-set-have-one-group" title="Permanent link">&para;</a></h3>
+<p>In this example the task is: Given <span class="arithmatex">\(U\)</span>, <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(\nu\)</span>, suggest a dimensionless group.</p>
+<p>For this problem we do not need to predefine any quantities and give exact dimensions. The algorithm assumes that all symbols in the answer (that are not numbers or predefined constants such as <span class="arithmatex">\(\pi\)</span>) are quantities and that there are no other quantities that should appear in the answer.</p>
+<p><strong>Note:</strong> This means that the algorithm does not in any way check that the stated answer is dimensionless, that is left to the task author.</p>
+<p>For this example <code>answer</code> is set to <code>U*L/nu</code>. It is not necessary to use this specific answer, any example of a correct dimensionless group, e.g. <code>nu/(U*L)</code>, should work.</p>
+<p>With default settings it is required to put <code>*</code> (or <code>/</code>) between each part of the response and answer. To remove this requirement the parameter <code>strict_syntax</code> is set to false. Since <code>nu</code> is a multi-character symbol it needs to be added as a symbol.</p>
+<h4 id="list-of-parameter-values">List of parameter values<a class="headerlink" href="#list-of-parameter-values" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>answer</code>: <code>U*L/nu</code></li>
+<li><code>strict_syntax</code>: <code>false</code></li>
+</ul>
+<h4 id="examples-of-responses-that-illustrate-the-evaluation-functions-capabilities">Examples of responses that illustrate the evaluation functions capabilities<a class="headerlink" href="#examples-of-responses-that-illustrate-the-evaluation-functions-capabilities" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>U*L/nu</code> a valid group</li>
+<li><code>nu/U/L</code> a valid group</li>
+<li><code>U^2*L^2/nu^2</code> a valid group</li>
+<li><code>U*L/nu+1</code> a valid group</li>
+<li><code>8*U*L/nu</code> a valid group</li>
+<li><code>q*U*L/nu</code> a group with an unknown symbol</li>
+<li><code>U*L/nu, nu/U/L</code> two dimensionless groups that are not independent</li>
+<li><code>U*L</code> group that is not dimensionless</li>
+</ul>
+<h3 id="2-example-where-a-valid-sets-have-two-groups">2) Example where a valid sets have two groups<a class="headerlink" href="#2-example-where-a-valid-sets-have-two-groups" title="Permanent link">&para;</a></h3>
+<p>In this example the task is: Given <span class="arithmatex">\(U\)</span>, <span class="arithmatex">\(L\)</span>, <span class="arithmatex">\(\nu\)</span> and <span class="arithmatex">\(f\)</span>, determine the necessary number of dimensionless groups and give one example of possible expressions for them.</p>
+<p>This task is similar to example a) with two significant differences. First, adding <span class="arithmatex">\(f\)</span> means that there are now two groups required, and second the task will constructed by defining the quantities and let the function compute the rest on its own instead of supplying a reference example.</p>
+<p>For this example an EXPRESSION response area is used with <code>quantities</code> set to <code>('U','(length/time)') ('L','(length)') ('nu','(length**2/time)') ('f','(1/time)')</code> and <code>answer</code> set to <code>-</code>.</p>
+<p>With default settings it is required to put <code>*</code> (or <code>/</code>) between each part of the response and answer. To remove this requirement the parameter <code>strict_syntax</code> is set to false. Since <code>nu</code> is a multi-character symbol it needs to be added as an input symbol.</p>
+<h4 id="list-of-parameter-values_1">List of parameter values<a class="headerlink" href="#list-of-parameter-values_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>answer</code>: <code>-</code></li>
+<li><code>quantities</code> : <code>('U','(length/time)') ('L','(length)') ('nu','(length**2/time)') ('f','(1/time)')</code></li>
+<li><code>strict_syntax</code>: <code>false</code></li>
+</ul>
+<h4 id="examples-of-responses-that-illustrate-the-evaluation-functions-capabilities_1">Examples of responses that illustrate the evaluation functions capabilities<a class="headerlink" href="#examples-of-responses-that-illustrate-the-evaluation-functions-capabilities_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>U*L/nu, f*L/U</code> a valid set of groups</li>
+<li><code>8*U*L/nu, f*L/U+1</code> a valid set of groups</li>
+<li><code>U*L/nu+f*L/U</code> sum that contains two valid groups does not count as valid</li>
+<li><code>U*L/nu+f*L/U, f*L/U</code> sum that contains two valid groups does count as valid if the total number of groups is sufficient</li>
+<li><code>U*L/nu</code> too few groups</li>
+<li><code>U*L/nu, f*L/U, U/f/L</code> too many groups</li>
+<li><code>U*L/nu, f/U</code> two groups where one is not dimensionless</li>
+<li><code>L/nu, f/U</code> two groups where neither group is dimensionless</li>
+</ul>
+<h3 id="3-example-with-customised-feedback-messages">3) Example with customised feedback messages<a class="headerlink" href="#3-example-with-customised-feedback-messages" title="Permanent link">&para;</a></h3>
+<p>In this example the task is:
+Suppose we are studying water waves that move under the influence of gravity. We suppose that the variables of interest are the acceleration in free fall <span class="arithmatex">\(g\)</span>, the velocity of the wave <span class="arithmatex">\(v\)</span>, the height of the wave <span class="arithmatex">\(h\)</span> and the wave length <span class="arithmatex">\(\ell\)</span>. We also suppose that they are related by a dimensionally complete equation <span class="arithmatex">\(f(g,v,h,\ell) = 0\)</span>. Determine the minimum number of dimensionless power products describe this problem according to the Buckingham Pi theorem and give one example of a valid set of power products.</p>
+<p>For this problem two dimensionless groups are needed, see the worked solution at the bottom of this example for a terse solution that gives the general form of the dimensionless quantities.</p>
+<p>For this example an EXPRESSION response area is used the answer <code>g**(-2)*v**4*h*l**3, g**(-2)*v**4*h**2*l**4</code> (this corresponds to <span class="arithmatex">\(p_1 = 1\)</span>, <span class="arithmatex">\(p_2 = 2\)</span>, <span class="arithmatex">\(q_1 = 3\)</span>, <span class="arithmatex">\(q_2 = 4\)</span> in the worked solution shown in the examples module). The feedback was customised by setting the <code>custom_feedback</code> parameter too:<br />
+<code>{</code><br />
+<code>"VALID_CANDIDATE_SET": "Your list of power products satisfies the Buckingham Pi theorem."</code>,<br />
+<code>"NOT_DIMENSIONLESS": "At least one power product is not dimensionless."</code>,<br />
+<code>"MORE_GROUPS_THAN_REFERENCE_SET": "Response has more power products than necessary."</code>,<br />
+<code>"CANDIDATE_GROUPS_NOT_INDEPENDENT": "Power products in response are not independent."</code>,<br />
+<code>"TOO_FEW_INDEPENDENT_GROUPS": "Candidate set contains too few independent power products."</code>,<br />
+<code>"UNKNOWN_SYMBOL": "One of the power products contains an unknown symbol."</code>,<br />
+<code>"SUM_WITH_INDEPENDENT_TERMS": "The candidate set contains an expression which contains more independent terms than there are power products in total. The candidate set should ideally only contain expressions written as power products."</code><br />
+<code>}</code></p>
+<p>With default settings it is required to put <code>*</code> (or <code>/</code>) between each part of the response and answer. To remove this requirement the parameter <code>strict_syntax</code> is set to false.</p>
+<h4 id="list-of-parameter-values_2">List of parameter values<a class="headerlink" href="#list-of-parameter-values_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>answer</code>: <code>g**(-2)*v**4*h*l**3, g**(-2)*v**4*h**2*l**4</code></li>
+<li><code>custom_feedback</code> : <code>{</code><br />
+<code>"VALID_CANDIDATE_SET": "Your list of power products satisfies the Buckingham Pi theorem."</code>,<br />
+<code>"NOT_DIMENSIONLESS": "At least one power product is not dimensionless."</code>,<br />
+<code>"MORE_GROUPS_THAN_REFERENCE_SET": "Response has more power products than necessary."</code>,<br />
+<code>"CANDIDATE_GROUPS_NOT_INDEPENDENT": "Power products in response are not independent."</code>,<br />
+<code>"TOO_FEW_INDEPENDENT_GROUPS": "Candidate set contains too few independent power products."</code>,<br />
+<code>"UNKNOWN_SYMBOL": "One of the power products contains an unknown symbol."</code>,<br />
+<code>"SUM_WITH_INDEPENDENT_TERMS": "The candidate set contains an expression which contains more independent terms than there are power products in total. The candidate set should ideally only contain expressions written as power products."</code><br />
+  }`</li>
+<li><code>strict_syntax</code>: <code>false</code></li>
+</ul>
+<h4 id="examples-of-responses-that-illustrate-the-customized-feedback-messages">Examples of responses that illustrate the customized feedback messages<a class="headerlink" href="#examples-of-responses-that-illustrate-the-customized-feedback-messages" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>g*v**(-2)*h**3*l**2, g**2*v**(-4)*h**3*l</code> a valid set of power products</li>
+<li><code>h*l, h**2*l**2</code> two power products that are not independent</li>
+<li><code>g**1*v**2*h**3*l**4, g**4*v**3*h**2*l**1</code> two power products that are not dimensionless</li>
+<li><code>g**(-2)*v**4*h*l**3, g**(-2)*v**4*h**2*l**4, g**(-1)*v**2*h</code> set of three power products where any two power products together creates a valid set</li>
+<li><code>q*g**(-2)*v**4*h*l**3, g**(-2)*v**4*h**2*l**4</code> two power products where one has an undefined symbol, i.e. <code>q</code></li>
+<li><code>g**(-2)*v**4*h*l**3+g**(-2)*v**4*h**2*l**4</code> two power products in a sum instead of written as a set</li>
+</ul>
+<h4 id="terse-solution-giving-the-general-form-of-a-valid-set-of-groups">Terse solution giving the general form of a valid set of groups<a class="headerlink" href="#terse-solution-giving-the-general-form-of-a-valid-set-of-groups" title="Permanent link">&para;</a></h4>
+<p>We have the following dimensions:
+<span class="arithmatex">\([a] = LT^{-2}\)</span>, <span class="arithmatex">\([v] = LT^{-1}\)</span>, <span class="arithmatex">\([h] = L\)</span>, <span class="arithmatex">\([\ell] = L\)</span>
+This gives the dimensional matrix:
+<span class="arithmatex">\(A = \begin{pmatrix} 1 &amp; -2 \\ 1 &amp; -1 \\ 1 &amp; 0 \\ 1 &amp; 0 \end{pmatrix}\)</span>
+Gaussian elimination can be used to how that <span class="arithmatex">\(r=\mathrm{rank}(A)\)</span>. With <span class="arithmatex">\(m=3\)</span> quantities it follows from the Buckingham Pi theorem that we need <span class="arithmatex">\(m-r = 2\)</span> dimensionless quantities <span class="arithmatex">\(\pi_1\)</span> and <span class="arithmatex">\(\pi_2\)</span>.</p>
+<p>For <span class="arithmatex">\(\pi_i\)</span>, <span class="arithmatex">\(i \in \{1,2\}\)</span> the following holds:
+<span class="arithmatex">\([\pi_i] = [g]^{a_i} [v]^{b_i} [h]^{c_i} [l]^{d_i} = L^{a_i+b_i+c_i+d_i} T^{-2a_i-b_i}\)</span></p>
+<p><span class="arithmatex">\(\Rightarrow \begin{cases} a_i+b_i+c_i+d_i = 0, \\ -2a_i-b_i = 0 \end{cases} \Rightarrow \begin{cases} a_i = p_i-q_i, \\ b_i = -2a_i \\ c_i = -p_i \\ d_i = -q_i \end{cases}\)</span>, where <span class="arithmatex">\(p_i\)</span> and <span class="arithmatex">\(q_i\)</span> (<span class="arithmatex">\(i \in \{1,2\}\)</span>) are arbitrarily chosen integers. Thus <span class="arithmatex">\(\pi_1\)</span> and <span class="arithmatex">\(\pi_2\)</span> will be independent unless <span class="arithmatex">\(\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2} = \frac{d_1}{d_2}\)</span> which in this case means that <span class="arithmatex">\(\pi_i\)</span> and <span class="arithmatex">\(\pi_2\)</span> are independent if <span class="arithmatex">\(\frac{p_1}{p_2} \neq \frac{q_1}{q_2}\)</span>.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 11, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../../scripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
