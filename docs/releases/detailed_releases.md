@@ -1,3 +1,16 @@
+## Release 2026/05/11
+
+- **b974-formalise-teacher-role-assignment-rules** – Made teacher role assignment authority explicit in the data model by adding `systemDefined`, `assignableByTeacher`, and `assignableByAdmin` metadata to TeacherRole, replacing hard-coded checks while keeping runtime permission evaluation unchanged.
+- **b978-improve-ui-clarity-for-restricted-student-visibility** – Improved UI transparency in restricted access scenarios (e.g. Tutor-only or no VIEW_STUDENT_DATA) by clarifying tab counts vs visible rows, adding permission tooltips for masked emails, and replacing blank progress fields with explicit “Not visible to this user” messaging.
+- **b1037-mued-adoption-for-evaluation-functions** – Added support for both Legacy and µEd evaluation functions, with switching managed via the Evaluation Function admin page.
+- **b1044-inconsistent-disabled-behaviour-for-user-access-restrictions** – Standardised disabled button and tab behaviour across Module Students, Module Teachers, and module tabs to ensure consistent clickability and tooltip display under access restrictions.
+- **b1050-move-bulk-manage-users-to-admin-users-page** – Moved the Bulk Manage Users entry point from Admin → Modules to Admin → Users for improved navigation consistency.
+- **b1051-student-stats-visibility-and-popup-behaviour-on-student-details-page** – Resolved StudentView popup flicker when opening and navigating between students, and fixed masked email flicker (masked/unmasked flashing) on the Student Details page.
+- **b1052-select-all-in-bulk-enroll-unenroll** – Added a “Select All” option to the Bulk Enrol/Unenrol module instance selection table (with clearer column titles) and improved row display to utilise available modal space.
+- **b1056-wkd-solns-not-visible-in-student-mode-for-some-users** – Fixed an issue where users with the Personal Tutor role could not see worked solutions in STUDENT mode, while other teacher roles were unaffected.
+
+---
+
 ## Release 2026/04/17
 
 - **b969-when-enrolling-already-enrolled-person-return-relevant-message** – Improved enrolment toast messages to clearly distinguish enrol, role update, already-enrolled, mixed, and no-change outcomes.
