@@ -1,3 +1,13 @@
+## Release 2026/05/29
+
+- **b1053-meq-csvs-missing-data** – Fixed discrepancies between MEQ moderation CSV exports and in-app data.
+- **b1057-analytics-db-grades-import-support-for-variable-csv-formats** – Enhanced the Analytics DB anonymisation grades import to support variable CSV formats.
+- **b1058-bulk-enrol-unenrol-improve-step-3-resolved-users-ux** – Reworked Bulk Manage User Step 3 layout with a full-height “Resolved users” panel and added “select all” for global tags.
+- **b1059-change-role-assignability-logic** – Updated Teacher Role assignment UI terminology (“Manually assignable” and “Who can assign”).
+- **b1060-fix-user-access-to-students-tabs** – Clarified and standardised student visibility rules across Students, Activities, and Errors tabs. 
+- **b1063-ra-blank-in-stats-tab** – Fixed an issue where Response Areas were not displayed in the STATS tab (showing blank instead), and standardised the width of the Explore and Configure buttons for consistent layout.
+- **b1064-roles-assignability-tweaks** – Defaulted new TEACHER roles to “Manually assignable = true”. Made the disabled state clear and added a tooltip.
+
 ## Release 2026/05/11
 
 - **b974-formalise-teacher-role-assignment-rules** – Made teacher role assignment authority explicit in the data model by adding `systemDefined`, `assignableByTeacher`, and `assignableByAdmin` metadata to TeacherRole, replacing hard-coded checks while keeping runtime permission evaluation unchanged.
