@@ -1,3 +1,9 @@
+## Release 2026/06/08
+
+- **b763-bulk-module-cloning-cpu-and-memory-problem** – Optimised module instance cloning to resolve CPU/memory pressure and timeout issues, including fixes to Bulk Rollover page timeouts.
+- **b1047-module-options-submit** – Module options now save automatically on change; the warning about publishing existing unpublished comments has been moved from the Save button to the “Publish comments instantly” switch.
+- **b1048-when-enrolling-already-enrolled-student-return-relevant-message** – Updated enrolment feedback to display counts of newly enrolled and already-enrolled students.
+
 ## Release 2026/05/29
 
 - **b1053-meq-csvs-missing-data** – Fixed discrepancies between MEQ moderation CSV exports and in-app data.
