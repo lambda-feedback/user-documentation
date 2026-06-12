@@ -1,3 +1,7 @@
+## Release 2026/06/12
+
+- **b1055-header-params-chat-functions** – Added secure secret and header management for Chat Functions, enabling authenticated integrations with external services through encrypted secret storage and secret references in request headers. Added new admin pages to manage secrets.
+
 ## Release 2026/06/08
 
 - **b763-bulk-module-cloning-cpu-and-memory-problem** – Optimised module instance cloning to resolve CPU/memory pressure and timeout issues, including fixes to Bulk Rollover page timeouts.
