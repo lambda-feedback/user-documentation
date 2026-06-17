@@ -1,3 +1,9 @@
+## Release 2026/06/17
+- **b728-teacher-question-locking** – Prevented simultaneous editing of the same question by multiple teachers.
+- **b1003-add-websocket-pub-sub** – Added WebSocket-based GraphQL subscriptions to support real-time updates across the application, including question locking and live data refreshes.
+- **b1072-evaluation-function-headers** – Added secure secret and header management for Evaluation Functions using encrypted secret storage and secret references in request headers, with improved admin guidance for secret management.
+
+
 ## Release 2026/06/12
 
 - **b1055-header-params-chat-functions** – Added secure secret and header management for Chat Functions, enabling authenticated integrations with external services through encrypted secret storage and secret references in request headers. Added new admin pages to manage secrets.
