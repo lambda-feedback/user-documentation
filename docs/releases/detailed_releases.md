@@ -1,4 +1,13 @@
+## Release 2026/06/19
+
+- **b581-microservice-restrictions-by-module** – Added module-level availability restrictions for Evaluation Functions and Chat Functions.
+- **b848-rollover-allow-chat-state** – Added rollover support for the “Allow Chatbot” setting, allowing users to retain or override the existing value when creating a new module instance.
+- **b1053-meq-csvs-missing-data** – Corrected MEQ CSV export queries to ensure moderation and dashboard exports include complete response data and generate consistent column layouts.
+- **b1070-change-colour-of-message-when-enrolling-student** – Updated enrolment feedback styling to display “already enrolled” messages in yellow warning notifications.
+
+
 ## Release 2026/06/17
+
 - **b728-teacher-question-locking** – Prevented simultaneous editing of the same question by multiple teachers.
 - **b1003-add-websocket-pub-sub** – Added WebSocket-based GraphQL subscriptions to support real-time updates across the application, including question locking and live data refreshes.
 - **b1072-evaluation-function-headers** – Added secure secret and header management for Evaluation Functions using encrypted secret storage and secret references in request headers, with improved admin guidance for secret management.
