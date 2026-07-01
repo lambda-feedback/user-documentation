@@ -1,3 +1,13 @@
+## Release 2026/07/01
+
+- **b1019-teacher-set-nav-tweaks** – Improved navigation within TEACHER sets by restoring Previous/Next buttons at the default pane width and adding a Settings button to open the Set Settings dialog.
+
+## Release 2026/06/26
+
+- **b1079-triple-backticks-appearing-in-content** - Fixed an issue where indented content could be incorrectly rendered as code blocks, causing unwanted triple backticks and syntax highlighting to appear in question content.
+
+
+
 ## Release 2026/06/19
 
 - **b581-microservice-restrictions-by-module** – Added module-level availability restrictions for Evaluation Functions and Chat Functions.
