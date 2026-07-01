@@ -6,8 +6,6 @@
 
 - **b1079-triple-backticks-appearing-in-content** - Fixed an issue where indented content could be incorrectly rendered as code blocks, causing unwanted triple backticks and syntax highlighting to appear in question content.
 
-
-
 ## Release 2026/06/19
 
 - **b581-microservice-restrictions-by-module** – Added module-level availability restrictions for Evaluation Functions and Chat Functions.
