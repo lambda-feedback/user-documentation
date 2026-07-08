@@ -91,6 +91,7 @@ nav:
       - Administrators:
           - User Access: "advanced/administrators/user_access.md"
           - User tags: "advanced/administrators/user_tags.md"
+          - Login admin approval: "advanced/administrators/login_admin_approval.md"
 
 # Configuration
 theme:
