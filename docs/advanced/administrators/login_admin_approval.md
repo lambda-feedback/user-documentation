@@ -1,6 +1,6 @@
 *Short version of this page:* 
 
-**Admins** can go to [https://www.lambdafeedback.com](https://www.lambdafeedback.com) and **click approve**.
+**Admins** can go to [https://www.lambdafeedback.com](https://www.lambdafeedback.com), click 'Login with Microsoft', and **click approve**.
 
 *Complete description:*
 
