@@ -1,3 +1,11 @@
+## Release 2026/07/10 Part 2
+
+- **b509-open-new-question-when-adding-new-question** – New questions now open automatically after creation.
+- **b792-evaluation-function-selection-improvements** – Improved the Evaluation Function selector with grouping, live filtering, alphabetical sorting, and clearer handling of legacy unavailable functions. Added an Admin Popular flag to manage featured functions.
+- **b1021-canvas-save-when-navigating-away** – Improved canvas autosave by saving pending changes when navigating away, preventing recent edits from being lost.
+- **b1088-fix-layout-of-the-lexdown-insert-table-popup** – Fixed the layout of the Lexdown Insert Table popup to ensure all controls are displayed correctly.
+- **b1091-code-response-stretching-bug** – Fixed the CODE response area layout so it resizes correctly when the workspace panel is adjusted.
+
 ## Release 2026/07/10
 
 - **b935-login-fails-when-email-address-changes** – Fixed login for users whose email address has changed, ensuring existing accounts are correctly recognised and preventing accidental creation of duplicate accounts.
@@ -6,7 +14,6 @@
 - **b1077-link-secrets-to-tenant** – Linked secrets to tenants, aligning the data model with the Tenant management UI while preserving existing single-tenant behaviour.
 - **b1078-microservices-restrictions-by-modules-follow-up** – Improved the Admin Evaluation Function and Chat Function pages with clearer labels, improved module availability layout, and general UI refinements.
 - **b1080-evaluation-function-list-is-missing-some-evaluation-functions** -     – Fixed the Evaluation Function list to display all available functions.
-
 
 ## Release 2026/07/01
 
