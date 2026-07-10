@@ -1,3 +1,13 @@
+## Release 2026/07/10
+
+- **b935-login-fails-when-email-address-changes** – Fixed login for users whose email address has changed, ensuring existing accounts are correctly recognised and preventing accidental creation of duplicate accounts.
+- **b1046-lexdown-raw-markdown-tweaks** – Improved the Raw Markdown editor with a monospace font, a dedicated title, and more reliable copy/paste of mathematical content between Raw Markdown and Rich Text modes.
+- **b1053-meq-csvs-missing-data** – Fixed missing teacher response data in MEQ moderation and dashboard CSV exports.
+- **b1077-link-secrets-to-tenant** – Linked secrets to tenants, aligning the data model with the Tenant management UI while preserving existing single-tenant behaviour.
+- **b1078-microservices-restrictions-by-modules-follow-up** – Improved the Admin Evaluation Function and Chat Function pages with clearer labels, improved module availability layout, and general UI refinements.
+- **b1080-evaluation-function-list-is-missing-some-evaluation-functions** -     – Fixed the Evaluation Function list to display all available functions.
+
+
 ## Release 2026/07/01
 
 - **b1019-teacher-set-nav-tweaks** – Improved navigation within TEACHER sets by restoring Previous/Next buttons at the default pane width and adding a Settings button to open the Set Settings dialog.
