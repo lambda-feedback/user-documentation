@@ -1,3 +1,7 @@
+## Release 2026/07/16
+
+- **b1094-ra-params-not-updated-on-change** – Fix changing the eval function when editing a response area.
+ 
 ## Release 2026/07/10 Part 2
 
 - **b509-open-new-question-when-adding-new-question** – New questions now open automatically after creation.
