@@ -1,3 +1,7 @@
+## Release 2026/07/27
+
+- **b1087-make-save-cancel-buttons-sticky-on-long-pages - Save and Cancel buttons are now sticky on long pages, making them easier to access.
+
 ## Release 2026/07/16
 
 - **b1094-ra-params-not-updated-on-change** – Fix changing the eval function when editing a response area.
