@@ -1,6 +1,10 @@
+## Release 2026/07/27 Part 2
+
+- **b1101-student-cannot-access-finished-modules** - Fixed an issue that could prevent students from viewing their finished modules.
+
 ## Release 2026/07/27
 
-- **b1087-make-save-cancel-buttons-sticky-on-long-pages - Save and Cancel buttons are now sticky on long pages, making them easier to access.
+- **b1087-make-save-cancel-buttons-sticky-on-long-pages** - Save and Cancel buttons are now sticky on long pages, making them easier to access.
 
 ## Release 2026/07/16
 
