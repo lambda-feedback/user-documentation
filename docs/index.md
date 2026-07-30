@@ -18,7 +18,7 @@ Lambda Feedback is a project at Imperial College running since 2021. For more in
 - [blog](https://blog.lambdafeedback.com)
 - [platform](https://www.lambdafeedback.com)
 - [code](github.com/lambda-feedback)
-- [mu-Ed, a public standard API for education microservices - mued.org](https://mued.org)
+- [μEd, a public standard API for education microservices - mued.org](https://mued.org)
 
 ## Overview of documentation:
 

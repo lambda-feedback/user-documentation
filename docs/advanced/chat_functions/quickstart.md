@@ -9,150 +9,170 @@ A chat function is a function which calls Large Language Models (LLMs) to respon
 
 Chat functions host a chatbot. Chatbots capture and automate the process of assisting students during their learning process when outside of classroom.
 
+## The μEd specification
+
+Chat functions on Lambda Feedback consume the [μEd API](https://mued.org/) request schema. The `messages`, `user`, `context` and `configuration` fields of an incoming request follow the μEd `ChatRequest` format, and the chat function translates them into a tutoring prompt (in the boilerplate this is done by `src/agent/context.py`).
+
+Per the μEd `ChatRequest` schema, **only `messages` is required** — `conversationId`, `user`, `context` and `configuration` are all optional. Refer to [mued.org](https://mued.org/) for the authoritative field definitions.
+
 ## Getting Setup for Development
 
 1. Get the code on your local machine (Using github desktop or the `git` cli)
 
-	- For new functions: clone the template repo for [chat-function-boilerplate](https://github.com/lambda-feedback/chat-function-boilerplate). **Make sure the new repository is set to public (it needs access to organisation secrets)**. 
+	- For new functions: use the template repo [chat-function-boilerplate](https://github.com/lambda-feedback/chat-function-boilerplate) via *Use this template > Create a new repository*, choosing the `Lambda Feedback` organisation as the owner. **Make sure the new repository is set to public (it needs access to organisation secrets and GitHub deployment protection rules)**.
 	- For existing functions: please make your changes on a new separate branch
 
-2. _If you are creating a new chatbot_, you can either edit the `src/agents/base_agent` or copy it and rename it based on the name of your chatbot.
+2. Add your LLM credentials to a `.env` file in the root of the repository. OpenAI, Google AI and Ollama are supported out of the box:
+
+	```bash
+	# If you use OpenAI:
+	OPENAI_API_KEY
+	OPENAI_MODEL
+
+	# If you use GoogleAI:
+	GOOGLE_AI_API_KEY
+	GOOGLE_AI_MODEL
+
+	# If you use Ollama:
+	OLLAMA_MODEL
+	OLLAMA_BASE_URL
+	OLLAMA_API_KEY
+	```
+
+	!!! note
+		If you use another endpoint than the one set in the template, update the `.github/workflows/{staging-deploy,production-deploy,test-lint}.yml` files so they pass the right secrets and variables during testing and deployment.
+
 3. You are now ready to start making changes and implementing features by editing each of the main function-logic files:
 
-	1. **`src/agents/{base_agent}/{base}_agent.py`**: This file contains the main LLM pipeline using [LangGraph](https://langchain-ai.github.io/langgraph/) and [LangChain](https://python.langchain.com/docs/introduction/).
+	1. **`src/agent/agent.py`**: This file contains the main LLM pipeline using [LangGraph](https://langchain-ai.github.io/langgraph/) and [LangChain](https://python.langchain.com/docs/introduction/). If you want a custom agent, copy or update this file and import the new invocation in `src/module.py`.
 
-   	- the chat function expects the following arguments when it being called:
+		The agent uses **two separate LLM instances** — one for chat responses and one for conversation summarisation and style analysis. By default both use the same provider, but you can point them at different models (e.g. a cheaper or faster model for summarisation) by changing the class used in `agent.py`.
 
-   	Body with necessary fields:
+	2. **`src/agent/prompts.py`**: This is where you can write the system prompts that describe how your AI Assistant should behave and respond to the user.
 
-   	```JSON
-   	{
-   		"conversationId": "12345Test",
-   		"messages": [{ "role": "USER", "content": "hi" }],
-   		"user": { "type": "LEARNER" }
-   	}
-   	```
+	3. **`src/agent/llm_factory.py`**: factory classes for each LLM provider. Add your own provider here if it is not supported out of the box.
 
-   	Body with optional fields:
+	4. **`src/agent/context.py`**: converts the μEd API `context` and `user` dictionaries into the prompt text given to the LLM.
 
-   	```JSON
-   	{
-   		"conversationId": "12345Test",
-   		"messages": [
-   			{ "role": "USER", "content": "<previous user message>" },
-   			{ "role": "ASSISTANT", "content": "<previous assistant reply>" },
-   			{ "role": "USER", "content": "hi" }
-   		],
-   		"user": {
-   			"type": "LEARNER",
-   			"preference": { "conversationalStyle": "<stored style string>" },
-   			"taskProgress": {
-   				"timeSpentOnQuestion": "30 minutes",
-   				"accessStatus": "a good amount of time spent on this question today.",
-   				"markedDone": "This question is still being worked on.",
-   				"currentPart": {
-   					"position": 0,
-   					"timeSpentOnPart": "10 minutes",
-   					"markedDone": "This part is not marked done.",
-   					"responseAreas": [
-   						{
-   							"responseType": "EXPRESSION",
-   							"totalSubmissions": 3,
-   							"wrongSubmissions": 2,
-   							"latestSubmission": {
-   								"submission": "<student's last answer>",
-   								"feedback": "<feedback text from evaluator>",
-   								"answer": "<reference answer used for evaluation>"
-   							}
-   						}
-   					]
-   				}
-   			}
-   		},
-   		"context": {
-   			"summary": "<compressed chat history>",
-   			"set": { "title": "Fundamentals", "number": 2, "description": "<set description>" },
-   			"question": {
-   				"title": "Understanding Polymorphism",
-   				"number": 3,
-   				"guidance": "<teacher guidance>",
-   				"content": "<master question content>",
-   				"estimatedTime": "15-25 minutes",
-   				"parts": [
-   					{
-   						"position": 0,
-   						"content": "<part prompt>",
-   						"answerContent": "<part answer>",
-   						"workedSolutionSections": [
-   							{ "position": 0, "title": "Step 1", "content": "..." }
-   						],
-   						"structuredTutorialSections": [
-   							{ "position": 0, "title": "Hint", "content": "..." }
-   						],
-   						"responseAreas": [
-   							{
-   								"position": 0,
-   								"responseType": "EXPRESSION",
-   								"answer": "<reference answer>",
-   								"preResponseText": "<label shown before input>"
-   							}
-   						]
-   					}
-   				]
-   			}
-   		}
-   	}
-   	```
+	5. Update the `config.json` file with the name of the chat function.
 
-   	Expected response:
+	6. Please add a `README.md` file (and update `docs/`) to describe the use and behaviour of your chatbot.
 
-   	```JSON
-   	{
-   		"output": { "role": "ASSISTANT", "content": "<assistant reply text>" },
-   		"metadata": {
-   			"summary": "<updated chat summary>",
-   			"conversationalStyle": "<updated style string>",
-   			"processingTimeMs": 1234
-   		}
-   	}
-   	```
+## Request and response schema
 
-   2. **`src/agents/{base_agent}/{base}_prompts.py`**: This is where you can write the system prompts that describe how your AI Assistant should behave and respond to the user.
+Minimal request — only the required [μEd API](https://mued.org/) fields populated:
 
-   3. _If you edited the chatbot agent file name_, make sure to add your chatbot `invoke()` function to the `module.py` file.
+```JSON
+{
+	"messages": [{ "role": "USER", "content": "hi" }]
+}
+```
 
-	 4. Update the `config.json` file with the name of the chat function.
+Full request as Lambda Feedback sends it, with all optional [μEd API](https://mued.org/) fields populated:
 
-   5. Please add a `README.md` file to describe the use and behaviour of your chatbot.
-
-4. Changes can be tested locally by running the pipeline tests using:
-	```bash
-	pytest
-	```
-   [Running and Testing Chat Functions Locally](local.md){ .md-button }
-
-
-5. Merge commits into dev branch will trigger the `dev.yml` workflow, which will build the docker image, push it to a shared `dev` ECR repository and deploy an AWS Lambda function available to any http requests. In order to make your new chatbot available on the `dev` environment of the Lambda Feedback platform, you will have to get in contact with the ADMINS on the platform.
-
-6. You can now test the deployed chat function using your preferred request client (such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) or simply `curl` from a terminal). `DEV` Functions are made available at:
-	```url
-	https://<***>.execute-api.eu-west-2.amazonaws.com/default/chat/<function name as defined in config.json>
-	```
-
-	!!! example "Example Request to chatFunctionBoilerplate-dev"
-			curl --location 'https://<***>.execute-api.eu-west-2.amazonaws.com/default/chat/chatFunctionBoilerplate-dev' \
-			--header 'Content-Type: application/json' \
-			--data '{
-					"conversationId": "12345Test",
-					"messages": [
-							{
-									"role": "USER",
-									"content": "hi"
-							}
+```JSON
+{
+	"conversationId": "<uuid>",
+	"messages": [
+		{ "role": "USER", "content": "<previous user message>" },
+		{ "role": "ASSISTANT", "content": "<previous assistant reply>" },
+		{ "role": "USER", "content": "<current message>" }
+	],
+	"user": {
+		"type": "LEARNER",
+		"preference": { "conversationalStyle": "<stored style string>" },
+		"taskProgress": {
+			"timeSpentOnQuestion": "30 minutes",
+			"accessStatus": "a good amount of time spent on this question today.",
+			"markedDone": "This question is still being worked on.",
+			"currentPart": {
+				"position": 0,
+				"timeSpentOnPart": "10 minutes",
+				"markedDone": "This part is not marked done.",
+				"responseAreas": [
+					{
+						"responseType": "EXPRESSION",
+						"totalSubmissions": 3,
+						"wrongSubmissions": 2,
+						"latestSubmission": {
+							"submission": "<student's last answer>",
+							"feedback": "<feedback text from evaluator>",
+							"answer": "<reference answer used for evaluation>"
+						}
+					}
+				]
+			}
+		}
+	},
+	"context": {
+		"summary": "<compressed chat history>",
+		"set": { "title": "Fundamentals", "number": 2, "description": "<set description>" },
+		"question": {
+			"title": "Understanding Polymorphism",
+			"number": 3,
+			"guidance": "<teacher guidance>",
+			"content": "<master question content>",
+			"estimatedTime": "15-25 minutes",
+			"parts": [
+				{
+					"position": 0,
+					"content": "<part prompt>",
+					"answerContent": "<part answer>",
+					"workedSolutionSections": [
+						{ "position": 0, "title": "Step 1", "content": "..." }
 					],
-					"user": { "type": "LEARNER" }
-			}'
+					"structuredTutorialSections": [
+						{ "position": 0, "title": "Hint", "content": "..." }
+					],
+					"responseAreas": [
+						{
+							"position": 0,
+							"responseType": "EXPRESSION",
+							"answer": "<reference answer>",
+							"preResponseText": "<label shown before input>"
+						}
+					]
+				}
+			]
+		}
+	}
+}
+```
 
-7. Once the `dev` chat function is fully tested, you can merge the code to the default branch (`main`). This will trigger the `main.yml` workflow, which will deploy the `staging` and `prod` versions of your chat function. Please contact the ADMIN to provide you the URLS for the `staging` and `prod` versions of your chat function.
+Expected response:
 
-8. In order to make your new chat function available on any of the environments of the Lambda Feedback platform, you will have to get in contact with the ADMINS on the platform.
+```JSON
+{
+	"output": { "role": "ASSISTANT", "content": "<assistant reply text>" },
+	"metadata": {
+		"summary": "<updated chat summary>",
+		"conversationalStyle": "<updated style string>",
+		"processingTimeMs": 1234
+	}
+}
+```
+
+## Testing your changes
+
+Changes can be tested locally by running the pipeline tests using:
+
+```bash
+pytest
+```
+
+[Running and Testing Chat Functions Locally](local.md){ .md-button }
+
+## Deploying to Lambda Feedback
+
+Deployment is handled by GitHub Actions, as long as the repository is within the [Lambda Feedback organisation](https://github.com/lambda-feedback). Add your API key as a repository **secret** and your LLM model name as a repository **variable** under `Settings > Secrets and variables > Actions`, using the same names as in your `.env` file.
+
+The pipeline has two environments:
+
+- **Staging** — pushing to the `main` branch triggers the `staging-deploy.yml` workflow, which runs the test suite and (on success) deploys the chat function to AWS. After deploying, contact one of the Lambda Feedback admins to make the function accessible on `lambdafeedback.com`.
+
+- **Production** — once you are happy with the staging deployment, create a `Release Request` using the button on the `README.md`, and run the `production-deploy.yml` workflow manually from the GitHub Actions tab. Pick a `version-bump` (`patch`/`minor`/`major`); the workflow redeploys staging, pauses on a manual approval stage (to be reviewed by a Lambda Feedback admin), then creates a `vX.Y.Z` git tag and GitHub Release and deploys to the main [Lambda Feedback platform](https://www.lambdafeedback.com/). Finally, contact one of the Lambda Feedback admins to make the function accessible on `lambdafeedback.com`.
+
+Pull requests trigger the `test-lint.yml` workflow, which runs the test suite only — no deploy.
+
+!!! note
+	Once a deployment has been successful, share the necessary environment variables (e.g. API key and LLM model) with one of the Lambda Feedback team members so the function can be enabled on the platform.
