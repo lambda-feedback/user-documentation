@@ -9,7 +9,7 @@ A chat function is a function which calls Large Language Models (LLMs) to respon
 
 Chat functions host a chatbot. Chatbots capture and automate the process of assisting students during their learning process when outside of classroom.
 
-## The μEd specification
+## The μEd API specification
 
 Chat functions on Lambda Feedback consume the [μEd API](https://mued.org/) request schema. The `messages`, `user`, `context` and `configuration` fields of an incoming request follow the μEd `ChatRequest` format, and the chat function translates them into a tutoring prompt (in the boilerplate this is done by `src/agent/context.py`).
 

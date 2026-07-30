@@ -1,6 +1,6 @@
 # Running and Testing Chat function Locally
 
-All request payloads below follow the [μEd](https://mued.org/) `ChatRequest` schema, which is the specification chat functions on Lambda Feedback follow. Only `messages` is required; `conversationId`, `user`, `context` and `configuration` are optional.
+All request payloads below follow the [μEd API](https://mued.org/) `ChatRequest` schema, which is the specification chat functions on Lambda Feedback follow. Only `messages` is required; `conversationId`, `user`, `context` and `configuration` are optional.
 
 ## Run Unit Tests
 
@@ -80,7 +80,7 @@ Minimal body — only the required `messages` field:
 }
 ```
 
-Full body as Lambda Feedback sends it, with all optional μEd fields populated:
+Full body as Lambda Feedback sends it, with all optional μEd API fields populated:
 ```json
 {
   "conversationId": "<uuid>",
