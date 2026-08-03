@@ -1,3 +1,7 @@
+## Release 2026/08/03
+
+- **b1073-refactor-question-cloning-flow** - Optimised question cloning to load and search available questions faster.
+
 ## Release 2026/07/27 Part 2
 
 - **b1101-student-cannot-access-finished-modules** - Fixed an issue that could prevent students from viewing their finished modules.
