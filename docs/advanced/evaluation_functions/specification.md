@@ -13,17 +13,48 @@ Functionality that may be required in more than one function (but not necessaril
 !!! info ""
 Finally, specific comparison logic and handling of bespoke evaluation parameters is done in the custom [**evaluation_function**](#the-evaluation_function), unique to each deployed instance. This is the logic that differenciates each function (comparing numbers, matrices, images, equations, graphs, text, tables, etc ...).
 
-## Commands
+!!! note ""
+New evaluation functions should use the [**µEd API**](#ed-api). The [**Legacy API**](#legacy-api) is being phased out — only a small number of functions that haven't yet migrated still use it.
+
+## µEd API
+
+Evaluation functions can be registered to serve the [µEd API](https://mued.org/) — a standard, path-based request/response format shared with [Chat Functions](../chat_functions/quickstart.md). Requests are routed and validated by the [base layer](#base-layer) against the [µEd OpenAPI specification](https://github.com/lambda-feedback/BaseEvalutionFunctionLayer/blob/main/schemas/muEd/openapi-v0_1_0.yml); only `POST /evaluate` and `GET /evaluate/health` are implemented for evaluation functions.
+
+Importantly, **the µEd routes call the same [`evaluation_function`](#the-evaluation_function) and `preview_function` you write for the Legacy API** — the base layer translates between the two wire formats, so no separate implementation is needed to support both.
+
+### `POST /evaluate`
+
+Runs an evaluation and returns feedback for a submission. If `preSubmissionFeedback.enabled` is `true` in the request, a non-final preview is returned instead (see [Pre-submission feedback](#pre-submission-feedback) below).
+
+!!! example
+    ```bash
+    curl --request POST \
+    --url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/isExactEqual/evaluate \
+    --header 'Content-Type: application/json' \
+    --data '{
+        "submission": {
+            "type": "OTHER",
+            "content": { "value": "x + x" }
+        },
+        "task": {
+            "referenceSolution": { "expression": "2*x" }
+        }
+    }'
+    ```
+
+
+
+## Legacy API
 
 Commands are handled by the [base layer](#base-layer). They define a unified interface for interacting with all deployed evaluation functions on the web. Practically, these are specified in the "command" request header.
 
 !!! example
-To execute the `docs-user` command for a function, the following header would be specified alonside the http request made to the endpoint on which the function is made available:
+    To execute the `docs-user` command for a function, the following header would be specified alonside the http request made to the endpoint on which the function is made available:
 
     ```bash
     curl --request GET \
-    --url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/isExactEqual \
-    --header 'command: docs-user'
+      --url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/isExactEqual \
+      --header 'command: docs-user'
     ```
 
 ### `eval`
@@ -106,12 +137,17 @@ app/
 
 .github/
     workflows/
-        test-and-deploy.yml # Testing and deployment pipeline
+        staging-deploy.yml # Test, lint and deploy to staging on push to main
+        production-deploy.yml # Manually-triggered deploy to production
+        test-lint.yml # Test and lint on pull requests
 
 config.json # Specify the name of the evaluation function in this file
 README.md
 .gitignore
 ```
+
+!!! note
+	The `staging-deploy.yml` and `production-deploy.yml` workflows call into reusable workflows maintained in [lambda-feedback/evaluation-function-workflows](https://github.com/lambda-feedback/evaluation-function-workflows), which handle the actual build and deploy steps.
 
 !!! warning
 

@@ -1,5 +1,7 @@
 # Running and Testing Chat function Locally
 
+All request payloads below follow the [μEd API](https://mued.org/) `ChatRequest` schema, which is the specification chat functions on Lambda Feedback follow. Only `messages` is required; `conversationId`, `user`, `context` and `configuration` are optional.
+
 ## Run Unit Tests
 
 You can run the unit tests using `pytest`:
@@ -44,12 +46,12 @@ docker run -e OPENAI_API_KEY={your key} -e OPENAI_MODEL={your LLM chosen model n
 docker run --env-file .env -it --name my-lambda-container -p 8080:8080 llm_chat
 ```
 
-This will start the evaluation function and expose it on port `8080` and it will be open to be curl:
+This will start the chat function and expose it on port `8080` and it will be open to be curl:
 
 ```bash
 curl --location 'http://localhost:8080/2015-03-31/functions/function/invocations' \
 --header 'Content-Type: application/json' \
---data '{"body":"{\"conversationId\": \"12345Test\", \"messages\": [{\"role\": \"USER\", \"content\": \"hi\"}], \"user\": {\"type\": \"LEARNER\"}}"}'
+--data '{"body":"{\"messages\": [{\"role\": \"USER\", \"content\": \"hi\"}]}"}'
 ```
 
 ### Call Docker Container
@@ -70,13 +72,15 @@ POST URL:
 http://localhost:8080/2015-03-31/functions/function/invocations
 ```
 
-Body (stringified within `body` for the API request):
+Minimal body — only the required `messages` field:
 
 ```JSON
-{"body":"{\"conversationId\": \"12345Test\", \"messages\": [{\"role\": \"USER\", \"content\": \"hi\"}], \"user\": {\"type\": \"LEARNER\"}}"}
+{
+	"messages": [{ "role": "USER", "content": "hi" }]
+}
 ```
 
-Input Body with optional fields:
+Full body as Lambda Feedback sends it, with all optional μEd API fields populated:
 ```json
 {
   "conversationId": "<uuid>",
