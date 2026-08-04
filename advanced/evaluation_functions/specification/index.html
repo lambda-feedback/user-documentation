@@ -1957,11 +1957,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/langModels/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    langModels
+    comparePhysicalQuantities
   </span>
   
 
@@ -1978,11 +1978,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/langModels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    comparePhysicalQuantities
+    langModels
   </span>
   
 
@@ -2083,11 +2083,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/symbolicEqual/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    symbolicEqual
+    isSimilar
   </span>
   
 
@@ -2104,11 +2104,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/symbolicEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isSimilar
+    symbolicEqual
   </span>
   
 
@@ -2472,13 +2472,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#ed-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      µEd API
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Commands">
+    <nav class="md-nav" aria-label="µEd API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-evaluate" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /evaluate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legacy API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Legacy API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2919,11 +2943,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/langModels/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    langModels
+    comparePhysicalQuantities
   </span>
   
 
@@ -2940,11 +2964,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/langModels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    comparePhysicalQuantities
+    langModels
   </span>
   
 
@@ -3045,11 +3069,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/symbolicEqual/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    symbolicEqual
+    isSimilar
   </span>
   
 
@@ -3066,11 +3090,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/symbolicEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isSimilar
+    symbolicEqual
   </span>
   
 
@@ -3446,13 +3470,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#ed-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      µEd API
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Commands">
+    <nav class="md-nav" aria-label="µEd API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-evaluate" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /evaluate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legacy API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Legacy API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3678,18 +3726,39 @@
 <p>Functionality that may be required in more than one function (but not necessarily all), such as the ability to call already deployed functions and error reporting is handled by the <a href="../module/"><strong>evaluation_function_utils</strong></a> python package. This package comes pre-installed in the base layer, and can optionally be imported and called from the <em>evaluation_function</em>.</p>
 <div class="admonition info"></div>
 <p>Finally, specific comparison logic and handling of bespoke evaluation parameters is done in the custom <a href="#the-evaluation_function"><strong>evaluation_function</strong></a>, unique to each deployed instance. This is the logic that differenciates each function (comparing numbers, matrices, images, equations, graphs, text, tables, etc ...).</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<div class="admonition note"></div>
+<p>New evaluation functions should use the <a href="#ed-api"><strong>µEd API</strong></a>. The <a href="#legacy-api"><strong>Legacy API</strong></a> is being phased out — only a small number of functions that haven't yet migrated still use it.</p>
+<h2 id="ed-api">µEd API<a class="headerlink" href="#ed-api" title="Permanent link">&para;</a></h2>
+<p>Evaluation functions can be registered to serve the <a href="https://mued.org/">µEd API</a> — a standard, path-based request/response format shared with <a href="../../chat_functions/quickstart/">Chat Functions</a>. Requests are routed and validated by the <a href="#base-layer">base layer</a> against the <a href="https://github.com/lambda-feedback/BaseEvalutionFunctionLayer/blob/main/schemas/muEd/openapi-v0_1_0.yml">µEd OpenAPI specification</a>; only <code>POST /evaluate</code> and <code>GET /evaluate/health</code> are implemented for evaluation functions.</p>
+<p>Importantly, <strong>the µEd routes call the same <a href="#the-evaluation_function"><code>evaluation_function</code></a> and <code>preview_function</code> you write for the Legacy API</strong> — the base layer translates between the two wire formats, so no separate implementation is needed to support both.</p>
+<h3 id="post-evaluate"><code>POST /evaluate</code><a class="headerlink" href="#post-evaluate" title="Permanent link">&para;</a></h3>
+<p>Runs an evaluation and returns feedback for a submission. If <code>preSubmissionFeedback.enabled</code> is <code>true</code> in the request, a non-final preview is returned instead (see <a href="#pre-submission-feedback">Pre-submission feedback</a> below).</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+--url<span class="w"> </span>https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/isExactEqual/evaluate<span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;submission&quot;: {</span>
+<span class="s1">        &quot;type&quot;: &quot;OTHER&quot;,</span>
+<span class="s1">        &quot;content&quot;: { &quot;value&quot;: &quot;x + x&quot; }</span>
+<span class="s1">    },</span>
+<span class="s1">    &quot;task&quot;: {</span>
+<span class="s1">        &quot;referenceSolution&quot;: { &quot;expression&quot;: &quot;2*x&quot; }</span>
+<span class="s1">    }</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+</div>
+<h2 id="legacy-api">Legacy API<a class="headerlink" href="#legacy-api" title="Permanent link">&para;</a></h2>
 <p>Commands are handled by the <a href="#base-layer">base layer</a>. They define a unified interface for interacting with all deployed evaluation functions on the web. Practically, these are specified in the "command" request header.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-</div>
 <p>To execute the <code>docs-user</code> command for a function, the following header would be specified alonside the http request made to the endpoint on which the function is made available:</p>
-<div class="highlight"><pre><span></span><code>```bash
-curl --request GET \
---url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/isExactEqual \
---header &#39;command: docs-user&#39;
-```
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--url<span class="w"> </span>https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/isExactEqual<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;command: docs-user&#39;</span>
 </code></pre></div>
+</div>
 <h3 id="eval"><code>eval</code><a class="headerlink" href="#eval" title="Permanent link">&para;</a></h3>
 <p>This is the default command, used to compare a student's <code>response</code> and correct <code>answer</code>, given certain <code>params</code>. Outputs for this command depend on the success of the execution of the user-defined <a href="#the-evaluation_function"><code>evaluation_function</code></a>. If an error was thrown during execution, it is caught by the main handler and an error block is returned - otherwise, successful execution outputs are supplied under a <code>result</code> field.</p>
 <div class="admonition success">
@@ -3755,12 +3824,18 @@ curl --request GET \
 
 .github/
 <span class="w">    </span>workflows/
-<span class="w">        </span>test-and-deploy.yml<span class="w"> </span><span class="c1"># Testing and deployment pipeline</span>
+<span class="w">        </span>staging-deploy.yml<span class="w"> </span><span class="c1"># Test, lint and deploy to staging on push to main</span>
+<span class="w">        </span>production-deploy.yml<span class="w"> </span><span class="c1"># Manually-triggered deploy to production</span>
+<span class="w">        </span>test-lint.yml<span class="w"> </span><span class="c1"># Test and lint on pull requests</span>
 
 config.json<span class="w"> </span><span class="c1"># Specify the name of the evaluation function in this file</span>
 README.md
 .gitignore
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>staging-deploy.yml</code> and <code>production-deploy.yml</code> workflows call into reusable workflows maintained in <a href="https://github.com/lambda-feedback/evaluation-function-workflows">lambda-feedback/evaluation-function-workflows</a>, which handle the actual build and deploy steps.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If you want to split up function logic into different files, these must be added to the <code>Dockerfile</code>. This is so they are packaged with the built image when deployed. For example, if <code>evaluation.py</code> imports functionality from an <code>app/utils.py</code> file, then the following line must be added:</p>
@@ -3961,7 +4036,7 @@ examples, and a description of parameters.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 13, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 4, 2026</span>
   </span>
 
     

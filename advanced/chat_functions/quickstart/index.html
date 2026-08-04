@@ -1957,11 +1957,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/langModels/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    langModels
+    comparePhysicalQuantities
   </span>
   
 
@@ -1978,11 +1978,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/langModels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    comparePhysicalQuantities
+    langModels
   </span>
   
 
@@ -2083,11 +2083,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/symbolicEqual/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    symbolicEqual
+    isSimilar
   </span>
   
 
@@ -2104,11 +2104,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/symbolicEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isSimilar
+    symbolicEqual
   </span>
   
 
@@ -2667,11 +2667,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/langModels/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    langModels
+    comparePhysicalQuantities
   </span>
   
 
@@ -2688,11 +2688,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/langModels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    comparePhysicalQuantities
+    langModels
   </span>
   
 
@@ -2793,11 +2793,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/symbolicEqual/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    symbolicEqual
+    isSimilar
   </span>
   
 
@@ -2814,11 +2814,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/symbolicEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isSimilar
+    symbolicEqual
   </span>
   
 
@@ -3022,9 +3022,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-ed-api-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      The μEd API specification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#getting-setup-for-development" class="md-nav__link">
     <span class="md-ellipsis">
       Getting Setup for Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-and-response-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request and response schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-your-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing your changes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-to-lambda-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying to Lambda Feedback
     </span>
   </a>
   
@@ -3254,9 +3290,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-ed-api-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      The μEd API specification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#getting-setup-for-development" class="md-nav__link">
     <span class="md-ellipsis">
       Getting Setup for Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-and-response-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request and response schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-your-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing your changes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-to-lambda-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying to Lambda Feedback
     </span>
   </a>
   
@@ -3293,42 +3365,76 @@
 <li>user data such as past responses to the problem</li>
 </ul>
 <p>Chat functions host a chatbot. Chatbots capture and automate the process of assisting students during their learning process when outside of classroom.</p>
+<h2 id="the-ed-api-specification">The μEd API specification<a class="headerlink" href="#the-ed-api-specification" title="Permanent link">&para;</a></h2>
+<p>Chat functions on Lambda Feedback consume the <a href="https://mued.org/">μEd API</a> request schema. The <code>messages</code>, <code>user</code>, <code>context</code> and <code>configuration</code> fields of an incoming request follow the μEd <code>ChatRequest</code> format, and the chat function translates them into a tutoring prompt (in the boilerplate this is done by <code>src/agent/context.py</code>).</p>
+<p>Per the μEd <code>ChatRequest</code> schema, <strong>only <code>messages</code> is required</strong> — <code>conversationId</code>, <code>user</code>, <code>context</code> and <code>configuration</code> are all optional. Refer to <a href="https://mued.org/">mued.org</a> for the authoritative field definitions.</p>
 <h2 id="getting-setup-for-development">Getting Setup for Development<a class="headerlink" href="#getting-setup-for-development" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Get the code on your local machine (Using github desktop or the <code>git</code> cli)</p>
 <ul>
-<li>For new functions: clone the template repo for <a href="https://github.com/lambda-feedback/chat-function-boilerplate">chat-function-boilerplate</a>. <strong>Make sure the new repository is set to public (it needs access to organisation secrets)</strong>. </li>
+<li>For new functions: use the template repo <a href="https://github.com/lambda-feedback/chat-function-boilerplate">chat-function-boilerplate</a> via <em>Use this template &gt; Create a new repository</em>, choosing the <code>Lambda Feedback</code> organisation as the owner. <strong>Make sure the new repository is set to public (it needs access to organisation secrets and GitHub deployment protection rules)</strong>.</li>
 <li>For existing functions: please make your changes on a new separate branch</li>
 </ul>
 </li>
 <li>
-<p><em>If you are creating a new chatbot</em>, you can either edit the <code>src/agents/base_agent</code> or copy it and rename it based on the name of your chatbot.</p>
+<p>Add your LLM credentials to a <code>.env</code> file in the root of the repository. OpenAI, Google AI and Ollama are supported out of the box:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># If you use OpenAI:</span>
+OPENAI_API_KEY
+OPENAI_MODEL
+
+<span class="c1"># If you use GoogleAI:</span>
+GOOGLE_AI_API_KEY
+GOOGLE_AI_MODEL
+
+<span class="c1"># If you use Ollama:</span>
+OLLAMA_MODEL
+OLLAMA_BASE_URL
+OLLAMA_API_KEY
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you use another endpoint than the one set in the template, update the <code>.github/workflows/{staging-deploy,production-deploy,test-lint}.yml</code> files so they pass the right secrets and variables during testing and deployment.</p>
+</div>
 </li>
 <li>
 <p>You are now ready to start making changes and implementing features by editing each of the main function-logic files:</p>
 <ol>
 <li>
-<p><strong><code>src/agents/{base_agent}/{base}_agent.py</code></strong>: This file contains the main LLM pipeline using <a href="https://langchain-ai.github.io/langgraph/">LangGraph</a> and <a href="https://python.langchain.com/docs/introduction/">LangChain</a>.</p>
+<p><strong><code>src/agent/agent.py</code></strong>: This file contains the main LLM pipeline using <a href="https://langchain-ai.github.io/langgraph/">LangGraph</a> and <a href="https://python.langchain.com/docs/introduction/">LangChain</a>. If you want a custom agent, copy or update this file and import the new invocation in <code>src/module.py</code>.</p>
+<p>The agent uses <strong>two separate LLM instances</strong> — one for chat responses and one for conversation summarisation and style analysis. By default both use the same provider, but you can point them at different models (e.g. a cheaper or faster model for summarisation) by changing the class used in <code>agent.py</code>.</p>
 </li>
 <li>
-<p>the chat function expects the following arguments when it being called:</p>
+<p><strong><code>src/agent/prompts.py</code></strong>: This is where you can write the system prompts that describe how your AI Assistant should behave and respond to the user.</p>
+</li>
+<li>
+<p><strong><code>src/agent/llm_factory.py</code></strong>: factory classes for each LLM provider. Add your own provider here if it is not supported out of the box.</p>
+</li>
+<li>
+<p><strong><code>src/agent/context.py</code></strong>: converts the μEd API <code>context</code> and <code>user</code> dictionaries into the prompt text given to the LLM.</p>
+</li>
+<li>
+<p>Update the <code>config.json</code> file with the name of the chat function.</p>
+</li>
+<li>
+<p>Please add a <code>README.md</code> file (and update <code>docs/</code>) to describe the use and behaviour of your chatbot.</p>
 </li>
 </ol>
-<p>Body with necessary fields:</p>
+</li>
+</ol>
+<h2 id="request-and-response-schema">Request and response schema<a class="headerlink" href="#request-and-response-schema" title="Permanent link">&para;</a></h2>
+<p>Minimal request — only the required <a href="https://mued.org/">μEd API</a> fields populated:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;conversationId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345Test&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;messages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USER&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hi&quot;</span><span class="w"> </span><span class="p">}],</span>
-<span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LEARNER&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">&quot;messages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USER&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hi&quot;</span><span class="w"> </span><span class="p">}]</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Body with optional fields:</p>
+<p>Full request as Lambda Feedback sends it, with all optional <a href="https://mued.org/">μEd API</a> fields populated:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;conversationId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345Test&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;conversationId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;uuid&gt;&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;messages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USER&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;previous user message&gt;&quot;</span><span class="w"> </span><span class="p">},</span>
 <span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ASSISTANT&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;previous assistant reply&gt;&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USER&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hi&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USER&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;current message&gt;&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LEARNER&quot;</span><span class="p">,</span>
@@ -3400,56 +3506,27 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-</li>
-<li>
-<p><strong><code>src/agents/{base_agent}/{base}_prompts.py</code></strong>: This is where you can write the system prompts that describe how your AI Assistant should behave and respond to the user.</p>
-</li>
-<li>
-<p><em>If you edited the chatbot agent file name</em>, make sure to add your chatbot <code>invoke()</code> function to the <code>module.py</code> file.</p>
-<ol>
-<li>Update the <code>config.json</code> file with the name of the chat function.</li>
-</ol>
-</li>
-<li>
-<p>Please add a <code>README.md</code> file to describe the use and behaviour of your chatbot.</p>
-</li>
-<li>
-<p>Changes can be tested locally by running the pipeline tests using:
-    <div class="highlight"><pre><span></span><code>pytest
+<h2 id="testing-your-changes">Testing your changes<a class="headerlink" href="#testing-your-changes" title="Permanent link">&para;</a></h2>
+<p>Changes can be tested locally by running the pipeline tests using:</p>
+<div class="highlight"><pre><span></span><code>pytest
 </code></pre></div>
-   <a class="md-button" href="../local/">Running and Testing Chat Functions Locally</a></p>
+<p><a class="md-button" href="../local/">Running and Testing Chat Functions Locally</a></p>
+<h2 id="deploying-to-lambda-feedback">Deploying to Lambda Feedback<a class="headerlink" href="#deploying-to-lambda-feedback" title="Permanent link">&para;</a></h2>
+<p>Deployment is handled by GitHub Actions, as long as the repository is within the <a href="https://github.com/lambda-feedback">Lambda Feedback organisation</a>. Add your API key as a repository <strong>secret</strong> and your LLM model name as a repository <strong>variable</strong> under <code>Settings &gt; Secrets and variables &gt; Actions</code>, using the same names as in your <code>.env</code> file.</p>
+<p>The pipeline has two environments:</p>
+<ul>
+<li>
+<p><strong>Staging</strong> — pushing to the <code>main</code> branch triggers the <code>staging-deploy.yml</code> workflow, which runs the test suite and (on success) deploys the chat function to AWS. After deploying, contact one of the Lambda Feedback admins to make the function accessible on <code>lambdafeedback.com</code>.</p>
 </li>
 <li>
-<p>Merge commits into dev branch will trigger the <code>dev.yml</code> workflow, which will build the docker image, push it to a shared <code>dev</code> ECR repository and deploy an AWS Lambda function available to any http requests. In order to make your new chatbot available on the <code>dev</code> environment of the Lambda Feedback platform, you will have to get in contact with the ADMINS on the platform.</p>
+<p><strong>Production</strong> — once you are happy with the staging deployment, create a <code>Release Request</code> using the button on the <code>README.md</code>, and run the <code>production-deploy.yml</code> workflow manually from the GitHub Actions tab. Pick a <code>version-bump</code> (<code>patch</code>/<code>minor</code>/<code>major</code>); the workflow redeploys staging, pauses on a manual approval stage (to be reviewed by a Lambda Feedback admin), then creates a <code>vX.Y.Z</code> git tag and GitHub Release and deploys to the main <a href="https://www.lambdafeedback.com/">Lambda Feedback platform</a>. Finally, contact one of the Lambda Feedback admins to make the function accessible on <code>lambdafeedback.com</code>.</p>
 </li>
-<li>
-<p>You can now test the deployed chat function using your preferred request client (such as <a href="https://insomnia.rest/">Insomnia</a> or <a href="https://www.postman.com/">Postman</a> or simply <code>curl</code> from a terminal). <code>DEV</code> Functions are made available at:
-    <div class="highlight"><pre><span></span><code>https://&lt;***&gt;.execute-api.eu-west-2.amazonaws.com/default/chat/&lt;function name as defined in config.json&gt;
-</code></pre></div></p>
-<div class="admonition example">
-<p class="admonition-title">Example Request to chatFunctionBoilerplate-dev</p>
-<div class="highlight"><pre><span></span><code>curl --location &#39;https://&lt;***&gt;.execute-api.eu-west-2.amazonaws.com/default/chat/chatFunctionBoilerplate-dev&#39; \
---header &#39;Content-Type: application/json&#39; \
---data &#39;{
-        &quot;conversationId&quot;: &quot;12345Test&quot;,
-        &quot;messages&quot;: [
-                {
-                        &quot;role&quot;: &quot;USER&quot;,
-                        &quot;content&quot;: &quot;hi&quot;
-                }
-        ],
-        &quot;user&quot;: { &quot;type&quot;: &quot;LEARNER&quot; }
-}&#39;
-</code></pre></div>
+</ul>
+<p>Pull requests trigger the <code>test-lint.yml</code> workflow, which runs the test suite only — no deploy.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Once a deployment has been successful, share the necessary environment variables (e.g. API key and LLM model) with one of the Lambda Feedback team members so the function can be enabled on the platform.</p>
 </div>
-</li>
-<li>
-<p>Once the <code>dev</code> chat function is fully tested, you can merge the code to the default branch (<code>main</code>). This will trigger the <code>main.yml</code> workflow, which will deploy the <code>staging</code> and <code>prod</code> versions of your chat function. Please contact the ADMIN to provide you the URLS for the <code>staging</code> and <code>prod</code> versions of your chat function.</p>
-</li>
-<li>
-<p>In order to make your new chat function available on any of the environments of the Lambda Feedback platform, you will have to get in contact with the ADMINS on the platform.</p>
-</li>
-</ol>
 
 
 
@@ -3470,7 +3547,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 14, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 4, 2026</span>
   </span>
 
     

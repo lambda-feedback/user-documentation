@@ -1957,11 +1957,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/langModels/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    langModels
+    comparePhysicalQuantities
   </span>
   
 
@@ -1978,11 +1978,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/langModels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    comparePhysicalQuantities
+    langModels
   </span>
   
 
@@ -2083,11 +2083,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/symbolicEqual/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    symbolicEqual
+    isSimilar
   </span>
   
 
@@ -2104,11 +2104,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/symbolicEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isSimilar
+    symbolicEqual
   </span>
   
 
@@ -2736,11 +2736,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/langModels/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    langModels
+    comparePhysicalQuantities
   </span>
   
 
@@ -2757,11 +2757,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/langModels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    comparePhysicalQuantities
+    langModels
   </span>
   
 
@@ -2862,11 +2862,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/symbolicEqual/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    symbolicEqual
+    isSimilar
   </span>
   
 
@@ -2883,11 +2883,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/symbolicEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isSimilar
+    symbolicEqual
   </span>
   
 
@@ -3352,26 +3352,44 @@
 <a class="md-button" href="../local/">Running and Testing Functions Locally</a></p>
 </li>
 <li>
-<p>Merge commits into the default branch will trigger the <code>test-and-deploy.yml</code> workflow, which will build the docker image, push it to a shared ECR repository, then call the backend <code>grading-function/ensure</code> route to build the necessary infrastructure to make the function available from the client app.</p>
+<p>The pipeline has two environments:</p>
+<ul>
+<li>
+<p><strong>Staging</strong> — pushing to the <code>main</code> branch triggers the <code>staging-deploy.yml</code> workflow, which runs the test suite and (on success) builds and deploys the docker image to staging.</p>
+</li>
+<li>
+<p><strong>Production</strong> — once you are happy with the staging deployment, run the <code>production-deploy.yml</code> workflow manually from the GitHub Actions tab, picking a <code>version-bump</code> (<code>patch</code>/<code>minor</code>/<code>major</code>).</p>
+</li>
+</ul>
+<p>Pull requests trigger the <code>test-lint.yml</code> workflow, which runs the test suite only — no deploy.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The build and deploy steps are implemented as reusable workflows maintained in <a href="https://github.com/lambda-feedback/evaluation-function-workflows">lambda-feedback/evaluation-function-workflows</a>.</p>
+</div>
 </li>
 <li>
 <p>You can now test the deployed evaluation function using your prefered request client (such as <a href="https://insomnia.rest/">Insomnia</a> or <a href="https://www.postman.com/">Postman</a> or simply <code>curl</code> from a terminal). Functions are made available at:
     <div class="highlight"><pre><span></span><code>https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/&lt;function name as defined in config.json&gt;
 </code></pre></div></p>
 <div class="admonition example">
-<p class="admonition-title">Example Request to SymbolicEqual</p>
-<div class="highlight"><pre><span></span><code>``` 
-curl --request GET \
-    --url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/symbolicEqual \
-    --header &#39;Content-Type: application/json&#39; \
-    --header &#39;command: eval&#39; \
-    --data &#39;{&quot;response&quot;: &quot;x + x&quot;, &quot;answer&quot;: &quot;2*x&quot;}&#39;
-```
+<p class="admonition-title">Example µEd Request to SymbolicEqual</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--url<span class="w"> </span>https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/symbolicEqual/evaluate<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;submission&quot;: { &quot;type&quot;: &quot;MATH&quot;, &quot;content&quot;: { &quot;expression&quot;: &quot;x + x&quot; } },</span>
+<span class="s1">    &quot;task&quot;: { &quot;referenceSolution&quot;: { &quot;expression&quot;: &quot;2*x&quot; } }</span>
+<span class="s1">  }&#39;</span>
 </code></pre></div>
+<p>See the <a href="../specification/#ed-api">µEd API</a> section of the specification for full request/response details. Functions still running the <strong>Legacy</strong> API instead use the <code>command</code> header — see <a href="../specification/#legacy-api">Legacy API</a>.</p>
 </div>
 </li>
 <li>
-<p>In order to make your new function available on the LambdaFeedback platform, you have to register it via the <a href="https://lambdafeedback.comadmin/functions">Admin Panel</a>. This is done by supplying its name, url (the same as the one above) and supported response types. </p>
+<p>In order to make your new function available on the LambdaFeedback platform, you have to register it via the <a href="https://lambdafeedback.comadmin/functions">Admin Panel</a>. This is done by supplying its name, url (the same as the one above) and supported response types.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>New evaluation functions should be registered as <strong>µEd</strong> (a standard, path-based API — see <a href="../../chat_functions/quickstart/">Chat Functions</a> for a general introduction to µEd on Lambda Feedback, and <a href="https://mued.org/">mued.org</a> for the specification). The <strong>Legacy</strong> command-header API documented on this page is being phased out — only a small number of functions that haven't yet migrated still use it.</p>
+</div>
 </li>
 </ol>
 <h2 id="more-info">More Info<a class="headerlink" href="#more-info" title="Permanent link">&para;</a></h2>
@@ -3413,7 +3431,7 @@ curl --request GET \
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 6, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 4, 2026</span>
   </span>
 
     
