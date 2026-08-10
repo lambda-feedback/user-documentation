@@ -1,3 +1,9 @@
+## Release 2026/08/10
+
+- **b1038-profile-with-research-opt-out** - Added a My profile page where users can view personal details, manage notification options, and control how their anonymised data is used for research.
+- **b1099-add-question-template-preview-when-cloning-a-question** - Added a preview panel when cloning questions or templates, allowing teachers to inspect the selected item before cloning it.
+- **b1103-default-chatbot-per-module** - Fixed default chatbot selection so the tenant default is used only where available for the module; otherwise students are prompted to choose from available chatbots. Added a Default chat function setting on the Admin Tenant page.
+
 ## Release 2026/08/03
 
 - **b1073-refactor-question-cloning-flow** - Optimised question cloning to load and search available questions faster.
