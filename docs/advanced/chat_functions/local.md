@@ -4,10 +4,10 @@ All request payloads below follow the [μEd API](https://mued.org/) `ChatRequest
 
 ## Run Unit Tests
 
-You can run the unit tests using `pytest`:
+You can run the unit tests using `pytest`. Run it from the repository root with `PYTHONPATH=.` set (as CI does), so that the `tests` and `src` packages resolve correctly:
 
 ```bash
-pytest
+PYTHONPATH=. pytest
 ```
 
 ## Run the Chat Script
@@ -46,12 +46,20 @@ docker run -e OPENAI_API_KEY={your key} -e OPENAI_MODEL={your LLM chosen model n
 docker run --env-file .env -it --name my-lambda-container -p 8080:8080 llm_chat
 ```
 
-This will start the chat function and expose it on port `8080` and it will be open to be curl:
+This will start the chat function and expose the chat API on port `8080`, ready to be curled:
 
 ```bash
-curl --location 'http://localhost:8080/2015-03-31/functions/function/invocations' \
+curl --location 'http://localhost:8080/chat' \
 --header 'Content-Type: application/json' \
---data '{"body":"{\"messages\": [{\"role\": \"USER\", \"content\": \"hi\"}]}"}'
+--header 'X-Api-Version: 0.1.0' \
+--data '{"messages": [{"role": "USER", "content": "hi"}]}'
+```
+
+Health check:
+
+```bash
+curl --location 'http://localhost:8080/chat/health' \
+--header 'X-Api-Version: 0.1.0'
 ```
 
 ### Call Docker Container
@@ -69,8 +77,10 @@ python tests/manual_agent_requests.py
 POST URL:
 
 ```bash
-http://localhost:8080/2015-03-31/functions/function/invocations
+http://localhost:8080/chat
 ```
+
+Requests may include an `X-Api-Version: 0.1.0` header.
 
 Minimal body — only the required `messages` field:
 
