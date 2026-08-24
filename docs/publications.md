@@ -12,7 +12,13 @@ hide:
 
 - [:material-download: Download PDF](assets/publications/Neagu_etal_2026_ICML_scaffolding_in_llm_tutors.pdf) or access via arxiv: [https://arxiv.org/abs/2606.15766](https://arxiv.org/abs/2606.15766)
 
-- Conference paper, presented at the Pluralistic Alignment Workshop @ ICML 2026. Observed that students in real-world deployments take up the scaffolding provided by LLM chatbots far less than what AI tutor benchmarks assume, highlighting a possible mismatch between a chatbot’s pedagogical framing and the student’s learning goals. 
+- Conference paper, presented at the Pluralistic Alignment Workshop @ ICML 2026; Observed that students in real-world deployments take up the scaffolding provided by LLM chatbots far less than what AI tutor benchmarks assume, highlighting a possible mismatch between a chatbot’s pedagogical framing and the student’s learning goals. 
+
+#### 2026c: “How Do I ... ?”: Procedural Questions Predominate Student-LLM Chatbot Conversations
+
+- [:material-download: Download PDF](assets/publications/Neagu_etal_procedural_questions_predominate_llm_chats.pdf) or access via arxiv: [https://arxiv.org/abs/2602.18372](https://arxiv.org/abs/2602.18372)
+
+- Conference paper; Analysed student messages from two STEM learning contexts (formative self-study and summative coursework), classifying student questions with LLM and human raters across existing schemas. Discusses the limits of schema-based classification of student questions to LLM chatbots.
 
 #### 2025a: Formative feedback on engineering self-study: Towards 1 million times per year per cohort
 
