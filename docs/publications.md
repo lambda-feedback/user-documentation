@@ -8,6 +8,12 @@ hide:
 
 - Conference paper; 4-page intro to the μEd ('mu Ed') API - a standard interface for education microservices.
 
+#### 2026b: Rethinking Scaffolding in LLM Tutors: The Interactional Mismatch Between Benchmarks and Real-World Deployments
+
+- [:material-download: Download PDF](assets/publications/Neagu_etal_2026_ICML_scaffolding_in_llm_tutors.pdf) or access via arxiv: [https://arxiv.org/abs/2606.15766](https://arxiv.org/abs/2606.15766)
+
+- Conference paper, presented at the Pluralistic Alignment Workshop @ ICML 2026. Observed that students in real-world deployments take up the scaffolding provided by LLM chatbots far less than what AI tutor benchmarks assume, highlighting a possible mismatch between a chatbot’s pedagogical framing and the student’s learning goals. 
+
 #### 2025a: Formative feedback on engineering self-study: Towards 1 million times per year per cohort
 
 - [:material-download: Download PDF](assets/publications/Johnson_etal_2025_EDUCON_camera_ready.pdf) or access via IEEE: [https://ieeexplore.ieee.org/abstract/document/11016422](https://ieeexplore.ieee.org/abstract/document/11016422)
