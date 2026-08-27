@@ -22,7 +22,7 @@ Per the μEd `ChatRequest` schema, **only `messages` is required** — `conversa
 	- For new functions: use the template repo [chat-function-boilerplate](https://github.com/lambda-feedback/chat-function-boilerplate) via *Use this template > Create a new repository*, choosing the `Lambda Feedback` organisation as the owner. **Make sure the new repository is set to public (it needs access to organisation secrets and GitHub deployment protection rules)**.
 	- For existing functions: please make your changes on a new separate branch
 
-2. Add your LLM credentials to a `.env` file in the root of the repository. OpenAI, Google AI and Ollama are supported out of the box:
+2. Add your LLM credentials to a `.env` file in the root of the repository. OpenAI, Google AI, OpenRouter, Azure OpenAI and Ollama are supported out of the box:
 
 	```bash
 	# If you use OpenAI:
@@ -32,6 +32,11 @@ Per the μEd `ChatRequest` schema, **only `messages` is required** — `conversa
 	# If you use GoogleAI:
 	GOOGLE_AI_API_KEY
 	GOOGLE_AI_MODEL
+
+	# If you use OpenRouter:
+	OPENROUTER_API_KEY
+	OPENROUTER_MODEL
+	OPENROUTER_BASE_URL
 
 	# If you use Ollama:
 	OLLAMA_MODEL
@@ -54,9 +59,11 @@ Per the μEd `ChatRequest` schema, **only `messages` is required** — `conversa
 
 	4. **`src/agent/context.py`**: converts the μEd API `context` and `user` dictionaries into the prompt text given to the LLM.
 
-	5. Update the `config.json` file with the name of the chat function.
+	5. **`index.py`**: the entrypoint of the deployed function. It registers the `chat` and `chat health` handlers from `src/module.py` with `lf_toolkit`'s server.
 
-	6. Please add a `README.md` file (and update `docs/`) to describe the use and behaviour of your chatbot.
+	6. Update the `config.json` file with the name of the chat function.
+
+	7. Please add a `README.md` file (and update `docs/`) to describe the use and behaviour of your chatbot.
 
 ## Request and response schema
 
@@ -154,10 +161,10 @@ Expected response:
 
 ## Testing your changes
 
-Changes can be tested locally by running the pipeline tests using:
+Changes can be tested locally by running the pipeline tests from the repository root with `PYTHONPATH=.` set (as CI does):
 
 ```bash
-pytest
+PYTHONPATH=. pytest
 ```
 
 [Running and Testing Chat Functions Locally](local.md){ .md-button }

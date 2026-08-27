@@ -1,3 +1,7 @@
+## Release 2026/08/27
+
+- **b809-shimmy-chat-functions** - Chat functions have adopted shimmy, thus a fix was needed to format the urls called by the platform.
+
 ## Release 2026/08/10
 
 - **b1038-profile-with-research-opt-out** - Added a My profile page where users can view personal details, manage notification options, and control how their anonymised data is used for research.
