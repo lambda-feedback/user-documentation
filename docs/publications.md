@@ -20,11 +20,11 @@ hide:
 
 - Conference paper; Analysed student messages from two STEM learning contexts (formative self-study and summative coursework), classifying student questions with LLM and human raters across existing schemas. Discusses the limits of schema-based classification of student questions to LLM chatbots.
 
-#### 2026d: Automated Feedback Generation for Undergraduate Mathematics: Development and Evaluation of an AI Teaching Assistant
+#### 2026d: Evaluating LLM-Generated Formative Feedback for Undergraduate Mathematics Through the Lens of Feedback Theory
 
-- Access via arxiv: [https://arxiv.org/abs/2602.18372](https://arxiv.org/abs/2601.03458)
+- Access via ACL: [https://aclanthology.org/anthology-files/pdf/bea/2026.bea-1.55.pdf](https://aclanthology.org/anthology-files/pdf/bea/2026.bea-1.55.pdf)
 
-- Technical report; 74-pages. A detailed account of LLM-based feedback on student attempts at proofs in undergraduate mathematics.
+- Conference paper; 6-pages. LLM-based feedback on student attempts at proofs in undergraduate mathematics. (Full technical report, 74 pages, also available [here](https://arxiv.org/abs/2601.03458).
 
 #### 2025a: Formative feedback on engineering self-study: Towards 1 million times per year per cohort
 
