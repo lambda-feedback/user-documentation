@@ -1,3 +1,13 @@
+## Release 2026/09/03
+
+- **b900-prevent-re-submission** - Prevented accidental duplicate submissions by disabling the Check button after feedback is returned until the response is changed, and disabling it when no submission value is provided.
+- **b1088-fix-layout-of-the-lexdown-insert-table-popup** - Migrated Lexdown interaction components from the custom floating UI implementation to MUI, fixing the Insert Table popup and bringing editor menus, dialogs, popovers, and controls more closely in line with the rest of the application.
+- **b1104-improvements-for-clone-question** - Improved question cloning with a loading indicator for slower searches and reordered columns to Module, Instance, Set, Question.
+- **b1105-improve-message-when-student-is-not-assigned-to-any-current-modules** - Improved the message for students with no current modules by adding a clear “Show finished modules” link.
+- **b1107-add-student-emails-to-stats-csv-download** - Added student email addresses to STATS CSV exports where the user has permission to view student data, while keeping emails hidden for restricted-access users.
+- **b1108-refine-question-cloning-dialog-layout-and-actions** - Refined the question cloning dialog by replacing per-row actions with a single Clone button, widening the preview panel, and clarifying the selection prompt.
+- **b1112-cleanup-expression-ra** - Completed the final cleanup of the retired EXPRESSION response area following b814, removing remaining obsolete code and references.
+
 ## Release 2026/08/27
 
 - **b809-shimmy-chat-functions** - Chat functions have adopted shimmy, thus a fix was needed to format the urls called by the platform.
