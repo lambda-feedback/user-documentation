@@ -1,3 +1,6 @@
+## Release 2026/09/04
+- **b1112-cleanup-expression-ra** - Additional cleanup of the retired EXPRESSION response area following b814, removing remaining obsolete code and references.
+
 ## Release 2026/09/03
 
 - **b900-prevent-re-submission** - Prevented accidental duplicate submissions by disabling the Check button after feedback is returned until the response is changed, and disabling it when no submission value is provided.
