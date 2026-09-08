@@ -1,17 +1,93 @@
-# evaluation-function-utils Package
+# Helper Packages
 
-- Error Reporting 
-- Schema validation
-- Local testing
+Two Python packages support evaluation functions. Which one applies depends on the
+[base layer](specification.md#base-layer):
 
-## Errors 
-Submodule containing custom error and exception classes, which can be properly caught by the base evaluation layer, and return more detailed and appropriate errors.
+| Package | Used by | Provides |
+| --- | --- | --- |
+| [`lf_toolkit`](#lf_toolkit) | Functions on the Shimmy base image | Server wiring, `Result` / `Params` / `Preview`, image upload |
+| [`evaluation-function-utils`](#evaluation-function-utils-legacy) | Functions on the older AWS Lambda base layer | `EvaluationException`, cross-function client |
 
-### class `EvaluationException`
-This class extends the usual python `Exception`, with additional functionality. It can be used to package additional fields and values to errors thrown and returned by evaluation functions.
+## `lf_toolkit`
 
-!!! example 
-    If at some point in the execution of the [`evaluation_function`](specification.md#the-evaluationfunction), an error is thrown:
+`lf_toolkit` (repo [`toolkit-python`](https://github.com/lambda-feedback/toolkit-python)) is
+pulled in via the boilerplate's `pyproject.toml` and pre-installed in the
+[`evaluation-function-base/python`](https://github.com/lambda-feedback/evaluation-function-base)
+image.
+
+### Server wiring
+
+`evaluation_function/main.py` connects your function to [Shimmy](specification.md#base-layer):
+
+```python
+from lf_toolkit import create_server, run
+from .evaluation import evaluation_function
+from .preview import preview_function
+
+
+def main():
+    server = create_server()
+    server.eval(evaluation_function)
+    server.preview(preview_function)
+    run(server)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+`create_server()` reads the `EVAL_IO` / `EVAL_RPC_TRANSPORT` environment variables that Shimmy
+injects and returns the right server (stdio, IPC or file). `healthcheck` is provided by the
+toolkit — it discovers and runs the `*_test.py` files — so you do not register it yourself.
+
+### `Result`, `Params`, `Preview`
+
+```python
+from lf_toolkit.evaluation import Result, Params
+from lf_toolkit.preview import Preview
+
+
+def evaluation_function(response, answer, params: Params) -> Result:
+    return Result(is_correct=response == answer)
+```
+
+- `Result` — `is_correct`, tagged feedback (`add_feedback(tag, text)`), `response_latex`,
+  `response_simplified`. Shimmy serialises it (`is_correct`, `feedback`, …).
+- `Params` — dict-like wrapper over the request `params`.
+- `Preview` — the value returned from `preview_function` (`latex`, `sympy`, `feedback`).
+
+### Image upload
+
+`lf_toolkit.evaluation.image_upload` provides `upload_image(...)` and `ImageUploadError` for
+functions that return generated images.
+
+### Errors
+
+`lf_toolkit` has no structured-exception class. Raising **any** exception from your function
+makes Shimmy stop the evaluation and return:
+
+```json
+{ "error": { "message": "<repr of the exception>" } }
+```
+
+## `evaluation-function-utils` (legacy)
+
+!!! note
+    This package is only present on the older AWS Lambda base layer. New functions on Shimmy use
+    [`lf_toolkit`](#lf_toolkit) instead.
+
+### Errors
+
+Submodule containing custom error and exception classes, which can be properly caught by the base
+evaluation layer, and return more detailed and appropriate errors.
+
+#### class `EvaluationException`
+
+This class extends the usual python `Exception`, with additional functionality. It can be used to
+package additional fields and values to errors thrown and returned by evaluation functions.
+
+!!! example
+    If at some point in the execution of the [`evaluation_function`](specification.md#the-evaluation_function), an error is thrown:
 
     ```python
     from evaluation_function_utils.errors import EvaluationException
@@ -39,10 +115,10 @@ This class extends the usual python `Exception`, with additional functionality. 
 
 This class contains an error_dict property, which packages the additional arguments given to the Exception instance into a JSON-serializable object. It does so in an error-safe way, also reporting serialization errors if they occur.
 
-## Client 
+### Client 
 This submodule contains a custom `EvaluationFunctionClient`, which can be used to call other deployed evaluation functions.
 
-### class `EvaluationFunctionClient`
+#### class `EvaluationFunctionClient`
 Client wrapped around the botocore.client.Lambda, for invoking deployed evaluation functions. On initialisation, it fetches credentials from environment variables "INVOKER_KEY", "INVOKER_ID" and "INVOKER_REGION", or from an optional environment file prescrived by `env_path`. 
 
 !!! example 
@@ -57,4 +133,4 @@ Client wrapped around the botocore.client.Lambda, for invoking deployed evaluati
 
     In this example, the evaluation_function completely offloads grading to the deployed 'isExactEqual' function. 
 
-*Note:* The `EvaluationFunctionClient.invoke` method was designed to behave exactly as if the [`evaluation_function`](specification.md#the-evaluationfunction) function defined in the targeted deployed function was called directly. This means that if errors are encountered an `EvaluationException` is raised.
+*Note:* The `EvaluationFunctionClient.invoke` method was designed to behave exactly as if the [`evaluation_function`](specification.md#the-evaluation_function) function defined in the targeted deployed function was called directly. This means that if errors are encountered an `EvaluationException` is raised.

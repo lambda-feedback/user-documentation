@@ -5,29 +5,37 @@ It's a cloud function which performs some computation given some user input (the
 ## Getting Setup for Development
 
 1. Get the code on your local machine (Using github desktop or the `git` cli)
-	- For new functions: create and clone a new repository using the [boilerplate template](https://github.com/lambda-feedback/Evaluation-Function-Boilerplate). **Make sure the new repository is set to public (it needs access to organisation secrets)**.
+	- For new functions: create a new repository from the [`evaluation-function-boilerplate-python`](https://github.com/lambda-feedback/evaluation-function-boilerplate-python) template via *Use this template*, choosing the `Lambda Feedback` organisation as the owner. **Make sure the new repository is set to public (it needs access to organisation secrets)**. Boilerplates for other languages also exist — [`evaluation-function-boilerplate-wolfram`](https://github.com/lambda-feedback/evaluation-function-boilerplate-wolfram) and [`evaluation-function-boilerplate-lean`](https://github.com/lambda-feedback/evaluation-function-boilerplate-lean); see [Other Languages](alternate_languages.md).
 	- For existing functions: please make your changes on a new separate branch 
-2. *If you are creating a new function*, you'll need to set it's name (as it will be deployed) in the `config.json` file, available in the root directory.
-	- The name must be unique. To view existing grading functions, go to:
-		- [Staging API Gateway Integrations](https://eu-west-2.console.aws.amazon.com/apigateway/main/develop/integrations/attach?api=c1o0u8se7b&region=eu-west-2&routes=0xsoy4q)
-		- [Production API Gateway Integrations](https://eu-west-2.console.aws.amazon.com/apigateway/main/develop/integrations/attach?api=cttolq2oph&integration=qpbgva8&region=eu-west-2&routes=0xsoy4q)
-3. You are now ready to start making changes and implementing features by editing each of the three main function-logic files:
-	1. **`app/evaluation.py`**: This file contains the main `evaluation_function` function, which ultimately gets called to compare a *response* to an *answer*. 
+2. *If you are creating a new function*, set its deployed name in the `config.json` file in the root directory:
+
+	```json
+	{ "EvaluationFunctionName": "myFunction" }
+	```
+
+	The name must be unique across the organisation and is conventionally `lowerCamelCase`.
+3. You are now ready to start making changes. The function logic lives in the `evaluation_function/` package:
+	1. **`evaluation_function/evaluation.py`**: contains the main `evaluation_function`, which is called to compare a *response* to an *answer*.
 
 		[`evaluation.py` Specification](specification.md#evaluationpy){ .md-button }
 
-	2. **`app/evaluation_tests.py`**: This is where you can test the logic in `evaluation.py`, following the standard `unittest` format. 
+	2. **`evaluation_function/preview.py`**: contains `preview_function`, which pre-processes a *response* for live display (e.g. rendered LaTeX) without grading it.
 
-		[`evaluation_tests.py` Specification](specification.md#evaluation_testspy){ .md-button }
+	3. **`evaluation_function/evaluation_test.py`**: where you test the logic in `evaluation.py`, using [`pytest`](https://docs.pytest.org/).
 
-	3. Documentation files:
-		- **`app/docs/dev.md`**: This file should be edited to reflect any changes/features implemented, following a developer perspective. It is baked into the function's image to be pulled by this documentation website under the [deployed functions](index.md) section.
-    
-		- **`app/docs/user.md`**: This file documents how the function can be used by a teacher user, from the perspective of editing content on the [LambdaFeedback]({{ urls.client }}) platform. This time, files are collated and displayed in the [Teacher](../../teacher/index.md) section.
+		[`evaluation_test.py` Specification](specification.md#evaluation_testpy){ .md-button }
 
-4. Changes can be tested locally by running the tests you've written using:
+	4. **`evaluation_function/main.py`**: the entry point. It calls `lf_toolkit.create_server()` and registers your `evaluation_function` and `preview_function` with it. You rarely need to change this file.
+
+	5. Documentation files:
+		- **`docs/dev.md`**: edited to reflect any changes/features from a developer perspective. It is baked into the function's image and pulled into this site under the [deployed functions](index.md) section.
+
+		- **`docs/user.md`**: documents how a teacher uses the function when editing content on the [LambdaFeedback]({{ urls.client }}) platform. These files are displayed in the [Teacher](../../teacher/index.md) section.
+
+4. Changes can be tested locally by running your tests from the repository root:
 ```bash
-python -m unittest app/evaluation_tests.py
+poetry install
+poetry run pytest
 ```
 [Running and Testing Functions Locally](local.md){ .md-button }
 
@@ -42,16 +50,14 @@ python -m unittest app/evaluation_tests.py
 	!!! note
 		The build and deploy steps are implemented as reusable workflows maintained in [lambda-feedback/evaluation-function-workflows](https://github.com/lambda-feedback/evaluation-function-workflows).
 
-6. You can now test the deployed evaluation function using your prefered request client (such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) or simply `curl` from a terminal). Functions are made available at:
-	```url
-	https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/<function name as defined in config.json>
-	```
+6. Once the deploy workflow has run, the platform hosts your function at a public URL. You can find it in the [Admin Panel]({{ urls.client }}admin/functions) after registering the function (next step), and test it with any request client (`curl`, [Insomnia](https://insomnia.rest/), [Postman](https://www.postman.com/)).
 
-	!!! example "Example µEd Request to SymbolicEqual"
+	!!! example "Example µEd request"
 		```bash
 		curl --request POST \
-		  --url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/symbolicEqual/evaluate \
+		  --url https://<your-function-url>/evaluate \
 		  --header 'Content-Type: application/json' \
+		  --header 'X-Api-Version: 0.1.0' \
 		  --data '{
 		    "submission": { "type": "MATH", "content": { "expression": "x + x" } },
 		    "task": { "referenceSolution": { "expression": "2*x" } }
@@ -60,19 +66,18 @@ python -m unittest app/evaluation_tests.py
 
 		See the [µEd API](specification.md#ed-api) section of the specification for full request/response details. Functions still running the **Legacy** API instead use the `command` header — see [Legacy API](specification.md#legacy-api).
 
-7. In order to make your new function available on the LambdaFeedback platform, you have to register it via the [Admin Panel]({{ urls.client }}admin/functions). This is done by supplying its name, url (the same as the one above) and supported response types.
+7. To make your new function available on the LambdaFeedback platform, register it via the [Admin Panel]({{ urls.client }}admin/functions) by supplying its name, URL and supported response types.
 
 	!!! note
-		New evaluation functions should be registered as **µEd** (a standard, path-based API — see [Chat Functions](../chat_functions/quickstart.md) for a general introduction to µEd on Lambda Feedback, and [mued.org](https://mued.org/) for the specification). The **Legacy** command-header API documented on this page is being phased out — only a small number of functions that haven't yet migrated still use it.
+		New evaluation functions should be registered as **µEd** (a standard, path-based API — see [Chat Functions](../chat_functions/quickstart.md) for a general introduction to µEd on Lambda Feedback, and [mued.org](https://mued.org/) for the specification). The **Legacy** command-header API — described in the [specification](specification.md#legacy-api) — is frozen and no longer developed, but Shimmy still serves it.
 
 ## More Info
 
 - [General Function Specification and Behaviour](specification.md)
     - Function philosophy including deployment strategy
     - Request/Response schemas and communication spec 
-    - Base layer logic, properties and behaviour
+    - Base layer (Shimmy) logic, properties and behaviour
   
-- [EvaluationFunctionUtils](module.md) (python package)
-    - Error Reporting 
-    - Schema validation
-    - Local testing
+- [Helper packages](module.md)
+    - `lf_toolkit` — server wiring, `Result` / `Params` / `Preview`, image upload
+    - `evaluation-function-utils` — the legacy package (error reporting, cross-function client)

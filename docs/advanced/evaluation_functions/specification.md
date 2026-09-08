@@ -18,19 +18,20 @@ New evaluation functions should use the [**µEd API**](#ed-api). The [**Legacy A
 
 ## µEd API
 
-Evaluation functions can be registered to serve the [µEd API](https://mued.org/) — a standard, path-based request/response format shared with [Chat Functions](../chat_functions/quickstart.md). Requests are routed and validated by the [base layer](#base-layer) against the [µEd OpenAPI specification](https://github.com/lambda-feedback/BaseEvalutionFunctionLayer/blob/main/schemas/muEd/openapi-v0_1_0.yml); only `POST /evaluate` and `GET /evaluate/health` are implemented for evaluation functions.
+Evaluation functions can be registered to serve the [µEd API](https://mued.org/) — a standard, path-based request/response format shared with [Chat Functions](../chat_functions/quickstart.md). Requests are routed and validated by the [base layer](#base-layer) against the [µEd OpenAPI specification](https://github.com/lambda-feedback/shimmy/blob/main/runtime/schema/mued_v0.1.0.yml); only `POST /evaluate` and `GET /evaluate/health` are implemented for evaluation functions. An optional `X-Api-Version: 0.1.0` header selects the schema version.
 
 Importantly, **the µEd routes call the same [`evaluation_function`](#the-evaluation_function) and `preview_function` you write for the Legacy API** — the base layer translates between the two wire formats, so no separate implementation is needed to support both.
 
 ### `POST /evaluate`
 
-Runs an evaluation and returns feedback for a submission. If `preSubmissionFeedback.enabled` is `true` in the request, a non-final preview is returned instead (see [Pre-submission feedback](#pre-submission-feedback) below).
+Runs an evaluation and returns feedback for a submission. If `preSubmissionFeedback.enabled` is `true` in the request, a non-final preview is returned instead (equivalent to the Legacy [`preview`](#preview) command).
 
 !!! example
     ```bash
     curl --request POST \
-    --url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/isExactEqual/evaluate \
+    --url https://<your-function-url>/evaluate \
     --header 'Content-Type: application/json' \
+    --header 'X-Api-Version: 0.1.0' \
     --data '{
         "submission": {
             "type": "OTHER",
@@ -46,15 +47,17 @@ Runs an evaluation and returns feedback for a submission. If `preSubmissionFeedb
 
 ## Legacy API
 
-Commands are handled by the [base layer](#base-layer). They define a unified interface for interacting with all deployed evaluation functions on the web. Practically, these are specified in the "command" request header.
+The Legacy API is the original command-based interface. It is **frozen** — no longer extended — but [Shimmy](#base-layer) still serves it, so functions do not need to migrate to keep working. It is exposed at `POST /`, with the command given in a request header named `command` (`eval` if the header is absent). The request body is a bare JSON object (`response`, `answer`, `params` — no wrapper); the response is `{"command": ..., "result": {...}}`, or `{"error": {"message": ...}}` if the function raised.
 
 !!! example
-    To execute the `docs-user` command for a function, the following header would be specified alonside the http request made to the endpoint on which the function is made available:
+    To run the `eval` command against a deployed function:
 
     ```bash
-    curl --request GET \
-      --url https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/isExactEqual \
-      --header 'command: docs-user'
+    curl --request POST \
+      --url https://<your-function-url>/ \
+      --header 'Content-Type: application/json' \
+      --header 'command: eval' \
+      --data '{ "response": "2*x", "answer": "x + x", "params": {} }'
     ```
 
 ### `eval`
@@ -107,69 +110,70 @@ This should be faster to compute than `eval`, allowing students to get live prev
 
 ### `healthcheck`
 
-This command runs and returns a summary three testing suites: requests, responses and evaluation. Request and response tests check that inputs and outputs to the function work correctly, and follow the correct syntax. Evaluation tests are unique to each evaluation function and test the actual comparison logic.
-
-### `docs-user`
-
-Command returns the `docs/user.md` file (base64 encoded)
-
-### `docs-dev`
-
-Command returns the `docs/dev.md` file (base64 encoded)
+Runs the function's own test suite (test discovery over the `*_test.py` files) and returns a summary: `{"tests_passed": <bool>, "successes": [...], "failures": [...], "errors": [...]}`.
 
 ## Base Layer
 
+The base layer is [**Shimmy**](https://github.com/lambda-feedback/shimmy), an HTTP server bundled into the [`evaluation-function-base`](https://github.com/lambda-feedback/evaluation-function-base) image that every function extends. It provides the behaviour common to all functions, so the function itself only implements comparison logic. Shimmy:
+
+- serves the [µEd API](#ed-api) (`POST /evaluate`, `GET /evaluate/health`) and the [Legacy API](#legacy-api) (`POST /`, command in a header), plus a `GET /health` liveness probe, all on port `8080`;
+- validates each request against the relevant schema before your code runs;
+- launches your function as a child process and talks to it over JSON-RPC — Python functions use the [`lf_toolkit`](module.md) package for this — or, for other languages, a file-based interface (see [Other Languages](alternate_languages.md));
+- runs the [feedback `cases`](feedback.md) loop, re-invoking your function once per case;
+- optionally sandboxes the function with [nsjail](https://github.com/google/nsjail) (`SANDBOX_ENABLED=true`).
+
+!!! note "Older base layer"
+    Functions that have not yet migrated extend [`BaseEvalutionFunctionLayer`](https://github.com/lambda-feedback/BaseEvalutionFunctionLayer) instead — an Amazon Linux image built on the AWS Lambda runtime. It serves the Legacy API only (including `docs-user` / `docs-dev`) and is tested locally with the AWS Runtime Interface Emulator; see [Running Functions Locally](local.md#older-aws-lambda-base-layer).
+
 ## File Structure
 
-A standard evaluation function repository based on the provided [boilerplate](https://github.com/lambda-feedback/Evaluation-Function-Boilerplate) will have the following file structure:
+A function created from [`evaluation-function-boilerplate-python`](https://github.com/lambda-feedback/evaluation-function-boilerplate-python) has this layout:
 
 ```bash
-app/
+evaluation_function/
     __init__.py
-    evaluation.py # Script containing the main evaluation_function
-    evaluation_tests.py # Unittests for the main evaluation_function
-    requirements.txt # list of packages needed for algorithm.py
-    Dockerfile # for building whole image to deploy to AWS
+    main.py             # Entry point: create_server() + register eval/preview (rarely edited)
+    evaluation.py       # The main evaluation_function
+    preview.py          # The preview_function
+    evaluation_test.py  # pytest tests for evaluation_function
+    preview_test.py     # pytest tests for preview_function
+    dev.py              # Local CLI: python -m evaluation_function.dev
 
-    docs/ # Documentation pages for this function (required)
-        dev.md # Developer-oriented documentation
-        user.md # LambdaFeedback content author documentation
+docs/                   # Documentation pages for this function (required)
+    dev.md              # Developer-oriented documentation
+    user.md             # LambdaFeedback content-author documentation
 
 .github/
-    workflows/
-        staging-deploy.yml # Test, lint and deploy to staging on push to main
-        production-deploy.yml # Manually-triggered deploy to production
-        test-lint.yml # Test and lint on pull requests
+    workflows/          # Reusable CI/CD from lambda-feedback/evaluation-function-workflows
 
-config.json # Specify the name of the evaluation function in this file
+config.json             # { "EvaluationFunctionName": "<unique lowerCamelCase name>" }
+Dockerfile
+pyproject.toml          # Dependencies (Poetry); lf_toolkit is pulled in here
+poetry.lock
 README.md
-.gitignore
 ```
+
+The `Dockerfile` extends the base image and tells Shimmy how to start the worker:
+
+```dockerfile
+FROM ghcr.io/lambda-feedback/evaluation-function-base/python:3.12
+# ... poetry install ...
+COPY evaluation_function ./evaluation_function
+ENV FUNCTION_COMMAND="python"
+ENV FUNCTION_ARGS="-m,evaluation_function.main"
+```
+
+Extra modules you add under `evaluation_function/` are picked up by the existing `COPY evaluation_function ./evaluation_function` line, so splitting logic across files needs no Dockerfile change.
 
 !!! note
 	The `staging-deploy.yml` and `production-deploy.yml` workflows call into reusable workflows maintained in [lambda-feedback/evaluation-function-workflows](https://github.com/lambda-feedback/evaluation-function-workflows), which handle the actual build and deploy steps.
 
-!!! warning
-
-    If you want to split up function logic into different files, these must be added to the `Dockerfile`. This is so they are packaged with the built image when deployed. For example, if `evaluation.py` imports functionality from an `app/utils.py` file, then the following line must be added:
-
-    ```dockerfile linenums="9" hl_lines="7 8"
-    RUN pip3 install -r requirements.txt
-
-    # Copy the evaluation and testing scripts
-    COPY evaluation.py ./app/
-    COPY evaluation_tests.py ./app/
-
-    # Copy additional files
-    COPY utils.py ./app/
-
-    # Copy Documentation
-    COPY docs/dev.md ./app/docs/dev.md
-    ```
+!!! note "Older `app/` layout"
+    Functions on the older AWS Lambda base layer use an `app/` directory holding `evaluation.py`, `evaluation_tests.py`, `requirements.txt`, a `Dockerfile` and `docs/`, with `config.json` and the workflows at the repository root. There, each additional source file must be added to the `Dockerfile` with its own `COPY` line.
 
 ## `evaluation.py`
 
-The entire framework, validation and testing developed around evaluation functions is ultimately used to get to this file, or the `evaluation_function` function within it, to be more precise.
+The entire framework, validation and testing developed around evaluation functions is ultimately used to get to `evaluation_function/evaluation.py`, or the `evaluation_function` within it, to be more precise. `evaluation_function/main.py` registers it with the base layer via [`lf_toolkit`](module.md); you normally only edit `evaluation.py` (and `preview.py`).
 
 ### The `evaluation_function`
 
@@ -234,7 +238,7 @@ When a student submits a response to a response area the number of previously su
 
 #### Outputs
 
-The function should output a single JSON-encodable dictionary. Although a large amount of freedom is given to what this dict contains, when utilising the function alongside the [lambdafeedback](https://lambdafeedback.com/) web app, a few values are expected/able to be consumed:
+Functions using [`lf_toolkit`](module.md) return a `Result` object (`lf_toolkit.evaluation.Result`), which the base layer serialises. Returning a plain JSON-encodable dictionary also works. Although a large amount of freedom is given to what the result contains, when utilising the function alongside the [lambdafeedback](https://lambdafeedback.com/) web app, a few values are expected/able to be consumed:
 
 **`is_correct: <bool>`**: Boolean parameter indicate whether the comparison between `response` and `answer` was deemed correct under the parameters. This field is then used by the web app to provide the most simple feedback to the user (green/red).
 
@@ -245,9 +249,12 @@ _More standardised function outputs that the frontend can consume are to come_
 
 Error reporting should follow a specific approach for all evaluation functions. **If the `evaluation_function` you've written doesn't throw any errors, then it's output is returned under the `result` field - and assumed to have worked properly**. This means that if you catch an error in your code manually, and simply return it - the frontend will assume everything went fine. Instead, errors can be handled in two ways:
 
-**Letting `evaluation_function` fail**: On the request handler in the [Base Layer](#base-layer), the call to evaluation_function is wrapped in a try/except which catches any exception. This causes the evaluation to stop completely, returning a standard message, and a repr of the exception thrown in the `error.detail` field.
+**Letting `evaluation_function` fail**: [Shimmy](#base-layer) wraps the call to `evaluation_function` in a try/except which catches any exception. This causes the evaluation to stop completely and return `{"error": {"message": "<repr of the exception>"}}`.
 
-**Custom errors**: If you want to report more detailed errors from your function, use the `EvaluationException` class provided in the [evaluation-function-utils](module.md#errors) package. These are caught before all other standard exceptions, and are dealt with in a different way. These provide a way for your function to throw errors and stop executing safely, while supplying more accurate feedback to the front-end.
+**Custom errors**: If you want to report more detailed errors from your function, use the `EvaluationException` class provided in the [evaluation-function-utils](module.md#class-evaluationexception) package. These are caught before all other standard exceptions, and are dealt with in a different way. These provide a way for your function to throw errors and stop executing safely, while supplying more accurate feedback to the front-end.
+
+!!! note
+    `EvaluationException` is part of the legacy `evaluation-function-utils` package. Functions built on Shimmy with `lf_toolkit` have no structured-error equivalent yet — raising **any** exception produces the `{"error": {"message": ...}}` block above.
 
 !!! Example
 It is discouraged to do the following in the evaluation code:
@@ -261,7 +268,7 @@ It is discouraged to do the following in the evaluation code:
         }
     `
 
-    As this causes the actual function output (by the AWS lambda function) to be:
+    As this causes the actual function output to be:
     ```json
     {
         "command": "eval",
@@ -274,7 +281,7 @@ It is discouraged to do the following in the evaluation code:
     }
     ```
 
-    Instead, use custom exceptions from the [evaluation-function-utils](module.md#errors) package.
+    Instead, use custom exceptions from the [evaluation-function-utils](module.md#class-evaluationexception) package.
     ```python
     if something.bad.happened():
         raise EvaluationException(message="Some important message", other='details')
@@ -293,29 +300,24 @@ It is discouraged to do the following in the evaluation code:
 
     This immediately indicates to the frontend client that something has gone wrong, allowing for proper feedback to be displayed.
 
-## `evaluation_tests.py`
+## `evaluation_test.py`
 
-This file is intended to contain unit tests for the `evaluation_function`. Python's built-in
-[`unittest`](https://docs.python.org/3/library/unittest.html) framework is used.
-These tests are run by Github Actions whenever changes are pushed to the main branch, and
-the evaluation function is not deployed unless all the tests pass.
+This file contains the tests for `evaluation_function`, run with [`pytest`](https://docs.pytest.org/).
+Github Actions runs them on every push and pull request, and the function is not deployed unless
+they pass.
 
 !!! Example
-A minimal example of a test:
-```python
-import unittest
-from .evaluation import evaluation_function
+    A minimal test:
+    ```python
+    from .evaluation import evaluation_function
 
-# Tests are functions beginning with "test_" in 
-# a class that inherits from unittest.TestCase
-class TestEvaluationFunction(unittest.TestCase):
-    def test_trivial(self):
+    def test_trivial():
         result = evaluation_function("a + b", "a + b", {})
-        self.assertTrue(result["is_correct"])
-```
-Tests can be run locally using 
+        assert result.is_correct
+    ```
+Run them locally from the repository root with:
 ```bash
-$ python -m unittest app.evaluation_tests
+poetry run pytest
 ```
 
 ### Autotests

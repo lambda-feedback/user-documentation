@@ -80,10 +80,10 @@ nav:
           - General Specification: "advanced/evaluation_functions/specification.md"
           - Feedback: "advanced/evaluation_functions/feedback.md"
           - Testing Functions Locally: "advanced/evaluation_functions/local.md"
-          - Evaluation Function Utils: "advanced/evaluation_functions/module.md"
+          - Helper Packages: "advanced/evaluation_functions/module.md"
           - Deployed Functions:
               - "advanced/evaluation_functions/index.md"
-          - Alternate Function Languages: "advanced/evaluation_functions/alternate_languages.md"
+          - Other Languages: "advanced/evaluation_functions/alternate_languages.md"
       - Chat functions:
           - Quickstart: "advanced/chat_functions/quickstart.md"
           - Testing Functions Locally: "advanced/chat_functions/local.md"
