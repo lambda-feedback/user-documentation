@@ -1873,27 +1873,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arrayEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../user_eval_function_docs/compareSets/" class="md-nav__link">
         
   
@@ -1915,11 +1894,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    shortTextAnswer
+    arrayEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    isSimilar
   </span>
   
 
@@ -1957,6 +1957,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shortTextAnswer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
@@ -1978,11 +1999,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/langModels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isSimilar
+    langModels
   </span>
   
 
@@ -2046,27 +2067,6 @@
   
   <span class="md-ellipsis">
     symbolicEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/langModels/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    langModels
   </span>
   
 
@@ -2542,7 +2542,7 @@
         
   
   <span class="md-ellipsis">
-    Evaluation Function Utils
+    Helper Packages
   </span>
   
 
@@ -2643,27 +2643,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arrayEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../dev_eval_function_docs/compareSets/" class="md-nav__link">
         
   
@@ -2685,11 +2664,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    shortTextAnswer
+    arrayEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    isSimilar
   </span>
   
 
@@ -2727,6 +2727,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../dev_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shortTextAnswer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
@@ -2748,11 +2769,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/langModels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isSimilar
+    langModels
   </span>
   
 
@@ -2816,27 +2837,6 @@
   
   <span class="md-ellipsis">
     symbolicEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/langModels/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    langModels
   </span>
   
 
@@ -2949,7 +2949,7 @@
         
   
   <span class="md-ellipsis">
-    Alternate Function Languages
+    Other Languages
   </span>
   
 
@@ -3286,6 +3286,10 @@
 
 
 <h1 id="base-layer-feedback-implementation">Base Layer Feedback Implementation<a class="headerlink" href="#base-layer-feedback-implementation" title="Permanent link">&para;</a></h1>
+<p>Feedback <code>cases</code> are handled by <a href="../specification/#base-layer">Shimmy</a>, not by your function —
+Shimmy re-invokes <code>evaluation_function</code> once per case.</p>
+<p>This is base-layer behaviour and applies to <strong>every</strong> function regardless of implementation
+language; the JSON below is the wire format Shimmy sends, not Python-specific.</p>
 <p>Input structure:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;response&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user input&quot;</span><span class="p">,</span>
@@ -3304,14 +3308,12 @@
 </code></pre></div>
 <h2 id="execution-logic-for-the-eval-command">Execution Logic for the <code>eval</code> command<a class="headerlink" href="#execution-logic-for-the-eval-command" title="Permanent link">&para;</a></h2>
 <ol>
-<li>First <code>evaluation_function</code> is called using the response, answer and params</li>
-<li>If evaluation threw an error, then return the error message</li>
-<li>If evaluation was successful, check for matching cases<ol>
-<li>If "params" contains a non-empty list of "cases", determine the correct feedback, add it to the result and return the block (Logic for this is described in the next section) </li>
-<li>If "params" doesn't contain a list of cases, simply return the result</li>
+<li>First <code>evaluation_function</code> is called using the response, answer and params.</li>
+<li>If evaluation threw an error, return the error message.</li>
+<li>If <code>params</code> contains a non-empty list of <code>cases</code> and the result is <code>is_correct: false</code>, run the case-matching procedure below, merge the outcome into the result and return it.</li>
+<li>Otherwise, return the result unchanged.</li>
 </ol>
-</li>
-</ol>
+<p>When a case matches, Shimmy adds <code>matched_case</code> (the case's index) to the result, and if that case defines a <code>mark</code> (<code>0</code> or <code>1</code>) it overrides <code>is_correct</code>.</p>
 <h2 id="determining-the-correct-feedback-case">Determining the correct feedback case<a class="headerlink" href="#determining-the-correct-feedback-case" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Iterate through each case in the list of <code>cases</code>:<ol>
@@ -3352,7 +3354,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 4, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2026</span>
   </span>
 
     

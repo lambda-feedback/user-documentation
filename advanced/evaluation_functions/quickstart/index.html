@@ -1873,27 +1873,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arrayEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../user_eval_function_docs/compareSets/" class="md-nav__link">
         
   
@@ -1915,11 +1894,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    shortTextAnswer
+    arrayEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    isSimilar
   </span>
   
 
@@ -1957,6 +1957,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shortTextAnswer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../user_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
@@ -1978,11 +1999,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
+      <a href="../../../user_eval_function_docs/langModels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isSimilar
+    langModels
   </span>
   
 
@@ -2046,27 +2067,6 @@
   
   <span class="md-ellipsis">
     symbolicEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/langModels/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    langModels
   </span>
   
 
@@ -2551,7 +2551,7 @@
         
   
   <span class="md-ellipsis">
-    Evaluation Function Utils
+    Helper Packages
   </span>
   
 
@@ -2652,27 +2652,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    arrayEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../dev_eval_function_docs/compareSets/" class="md-nav__link">
         
   
@@ -2694,11 +2673,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/arrayEqual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    shortTextAnswer
+    arrayEqual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    isSimilar
   </span>
   
 
@@ -2736,6 +2736,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../dev_eval_function_docs/shortTextAnswer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shortTextAnswer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
@@ -2757,11 +2778,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
+      <a href="../../../dev_eval_function_docs/langModels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    isSimilar
+    langModels
   </span>
   
 
@@ -2825,27 +2846,6 @@
   
   <span class="md-ellipsis">
     symbolicEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/langModels/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    langModels
   </span>
   
 
@@ -2958,7 +2958,7 @@
         
   
   <span class="md-ellipsis">
-    Alternate Function Languages
+    Other Languages
   </span>
   
 
@@ -3307,47 +3307,59 @@
 <h2 id="what-is-an-evaluation-function">What is an Evaluation Function?<a class="headerlink" href="#what-is-an-evaluation-function" title="Permanent link">&para;</a></h2>
 <p>It's a cloud function which performs some computation given some user input (the <em>response</em>), a problem-specific source of truth (the <em>answer</em>), and some optional parameters (<em>params</em>). Evaluation functions capture and automate the role of a teacher who has to keep marking the same question countless times. The simplest example for this would be one which checks for exact equivalence - where the function signals a <em>response</em> is correct only if it is identical to the <em>answer</em>. However, more complex and exotic ones such as symbolic expression equivalence and parsing of physical units can be imagined. </p>
 <h2 id="getting-setup-for-development">Getting Setup for Development<a class="headerlink" href="#getting-setup-for-development" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">These steps are for Python functions</p>
+<p>They assume a function created from the Python boilerplate. The concepts (config, deploy
+pipeline, µEd registration) are the same for every language, but the file layout and local
+commands in steps 3–4 are Python-specific — for other languages follow
+<a href="../alternate_languages/">Other Languages</a> and the chosen boilerplate's <code>README.md</code>.</p>
+</div>
 <ol>
 <li>Get the code on your local machine (Using github desktop or the <code>git</code> cli)<ul>
-<li>For new functions: create and clone a new repository using the <a href="https://github.com/lambda-feedback/Evaluation-Function-Boilerplate">boilerplate template</a>. <strong>Make sure the new repository is set to public (it needs access to organisation secrets)</strong>.</li>
+<li>For new functions: create a new repository from the <a href="https://github.com/lambda-feedback/evaluation-function-boilerplate-python"><code>evaluation-function-boilerplate-python</code></a> template via <em>Use this template</em>, choosing the <code>Lambda Feedback</code> organisation as the owner. <strong>Make sure the new repository is set to public (it needs access to organisation secrets)</strong>. Boilerplates for other languages also exist — <a href="https://github.com/lambda-feedback/evaluation-function-boilerplate-wolfram"><code>evaluation-function-boilerplate-wolfram</code></a> and <a href="https://github.com/lambda-feedback/evaluation-function-boilerplate-lean"><code>evaluation-function-boilerplate-lean</code></a>; see <a href="../alternate_languages/">Other Languages</a>.</li>
 <li>For existing functions: please make your changes on a new separate branch </li>
 </ul>
 </li>
-<li><em>If you are creating a new function</em>, you'll need to set it's name (as it will be deployed) in the <code>config.json</code> file, available in the root directory.<ul>
-<li>The name must be unique. To view existing grading functions, go to:<ul>
-<li><a href="https://eu-west-2.console.aws.amazon.com/apigateway/main/develop/integrations/attach?api=c1o0u8se7b&amp;region=eu-west-2&amp;routes=0xsoy4q">Staging API Gateway Integrations</a></li>
-<li><a href="https://eu-west-2.console.aws.amazon.com/apigateway/main/develop/integrations/attach?api=cttolq2oph&amp;integration=qpbgva8&amp;region=eu-west-2&amp;routes=0xsoy4q">Production API Gateway Integrations</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li>
-<p>You are now ready to start making changes and implementing features by editing each of the three main function-logic files:</p>
+<p><em>If you are creating a new function</em>, set its deployed name in the <code>config.json</code> file in the root directory:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;EvaluationFunctionName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;myFunction&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>The name must be unique across the organisation and is conventionally <code>lowerCamelCase</code>.
+3. You are now ready to start making changes. The function logic lives in the <code>evaluation_function/</code> package:
+1. <strong><code>evaluation_function/evaluation.py</code></strong>: contains the main <code>evaluation_function</code>, which is called to compare a <em>response</em> to an <em>answer</em>.</p>
+<div class="highlight"><pre><span></span><code>[`evaluation.py` Specification](specification.md#evaluationpy){ .md-button }
+</code></pre></div>
 <ol>
 <li>
-<p><strong><code>app/evaluation.py</code></strong>: This file contains the main <code>evaluation_function</code> function, which ultimately gets called to compare a <em>response</em> to an <em>answer</em>. </p>
-<p><a class="md-button" href="../specification/#evaluationpy"><code>evaluation.py</code> Specification</a></p>
+<p><strong><code>evaluation_function/preview.py</code></strong>: contains <code>preview_function</code>, which pre-processes a <em>response</em> for live display (e.g. rendered LaTeX) without grading it.</p>
 </li>
 <li>
-<p><strong><code>app/evaluation_tests.py</code></strong>: This is where you can test the logic in <code>evaluation.py</code>, following the standard <code>unittest</code> format. </p>
-<p><a class="md-button" href="../specification/#evaluation_testspy"><code>evaluation_tests.py</code> Specification</a></p>
+<p><strong><code>evaluation_function/evaluation_test.py</code></strong>: where you test the logic in <code>evaluation.py</code>, using <a href="https://docs.pytest.org/"><code>pytest</code></a>.</p>
+<p><a class="md-button" href="../specification/#evaluation_testpy"><code>evaluation_test.py</code> Specification</a></p>
+</li>
+<li>
+<p><strong><code>evaluation_function/main.py</code></strong>: the entry point. It calls <code>lf_toolkit.create_server()</code> and registers your <code>evaluation_function</code> and <code>preview_function</code> with it. You rarely need to change this file.</p>
 </li>
 <li>
 <p>Documentation files:</p>
 <ul>
 <li>
-<p><strong><code>app/docs/dev.md</code></strong>: This file should be edited to reflect any changes/features implemented, following a developer perspective. It is baked into the function's image to be pulled by this documentation website under the <a href="../">deployed functions</a> section.</p>
+<p><strong><code>docs/dev.md</code></strong>: edited to reflect any changes/features from a developer perspective. It is baked into the function's image and pulled into this site under the <a href="../">deployed functions</a> section.</p>
 </li>
 <li>
-<p><strong><code>app/docs/user.md</code></strong>: This file documents how the function can be used by a teacher user, from the perspective of editing content on the <a href="https://lambdafeedback.com">LambdaFeedback</a> platform. This time, files are collated and displayed in the <a href="../../../teacher/">Teacher</a> section.</p>
+<p><strong><code>docs/user.md</code></strong>: documents how a teacher uses the function when editing content on the <a href="https://lambdafeedback.com">LambdaFeedback</a> platform. These files are displayed in the <a href="../../../teacher/">Teacher</a> section.</p>
+</li>
+<li>
+<p><strong><code>README.md</code></strong>: replace the boilerplate's generic title, description and Quickstart section with your function's own, and have it link to <code>docs/dev.md</code>, <code>docs/user.md</code> and this site rather than restate them. See <a href="../specification/#function-repository-readmemd">the README convention</a>.</p>
 </li>
 </ul>
 </li>
 </ol>
 </li>
 <li>
-<p>Changes can be tested locally by running the tests you've written using:
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>app/evaluation_tests.py
+<p>Changes can be tested locally by running your tests from the repository root:
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>install
+poetry<span class="w"> </span>run<span class="w"> </span>pytest
 </code></pre></div>
 <a class="md-button" href="../local/">Running and Testing Functions Locally</a></p>
 </li>
@@ -3368,14 +3380,13 @@
 </div>
 </li>
 <li>
-<p>You can now test the deployed evaluation function using your prefered request client (such as <a href="https://insomnia.rest/">Insomnia</a> or <a href="https://www.postman.com/">Postman</a> or simply <code>curl</code> from a terminal). Functions are made available at:
-    <div class="highlight"><pre><span></span><code>https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/&lt;function name as defined in config.json&gt;
-</code></pre></div></p>
+<p>Once the deploy workflow has run, the platform hosts your function at a public URL. You can find it in the <a href="https://lambdafeedback.comadmin/functions">Admin Panel</a> after registering the function (next step), and test it with any request client (<code>curl</code>, <a href="https://insomnia.rest/">Insomnia</a>, <a href="https://www.postman.com/">Postman</a>).</p>
 <div class="admonition example">
-<p class="admonition-title">Example µEd Request to SymbolicEqual</p>
+<p class="admonition-title">Example µEd request</p>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--url<span class="w"> </span>https://c1o0u8se7b.execute-api.eu-west-2.amazonaws.com/default/symbolicEqual/evaluate<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--url<span class="w"> </span>https://&lt;your-function-url&gt;/evaluate<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;X-Api-Version: 0.1.0&#39;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
 <span class="s1">    &quot;submission&quot;: { &quot;type&quot;: &quot;MATH&quot;, &quot;content&quot;: { &quot;expression&quot;: &quot;x + x&quot; } },</span>
 <span class="s1">    &quot;task&quot;: { &quot;referenceSolution&quot;: { &quot;expression&quot;: &quot;2*x&quot; } }</span>
@@ -3385,10 +3396,10 @@
 </div>
 </li>
 <li>
-<p>In order to make your new function available on the LambdaFeedback platform, you have to register it via the <a href="https://lambdafeedback.comadmin/functions">Admin Panel</a>. This is done by supplying its name, url (the same as the one above) and supported response types.</p>
+<p>To make your new function available on the LambdaFeedback platform, register it via the <a href="https://lambdafeedback.comadmin/functions">Admin Panel</a> by supplying its name, URL and supported response types.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>New evaluation functions should be registered as <strong>µEd</strong> (a standard, path-based API — see <a href="../../chat_functions/quickstart/">Chat Functions</a> for a general introduction to µEd on Lambda Feedback, and <a href="https://mued.org/">mued.org</a> for the specification). The <strong>Legacy</strong> command-header API documented on this page is being phased out — only a small number of functions that haven't yet migrated still use it.</p>
+<p>New evaluation functions should be registered as <strong>µEd</strong> (a standard, path-based API — see <a href="../../chat_functions/quickstart/">Chat Functions</a> for a general introduction to µEd on Lambda Feedback, and <a href="https://mued.org/">mued.org</a> for the specification). The <strong>Legacy</strong> command-header API — described in the <a href="../specification/#legacy-api">specification</a> — is frozen and no longer developed, but Shimmy still serves it.</p>
 </div>
 </li>
 </ol>
@@ -3399,15 +3410,14 @@
 <ul>
 <li>Function philosophy including deployment strategy</li>
 <li>Request/Response schemas and communication spec </li>
-<li>Base layer logic, properties and behaviour</li>
+<li>Base layer (Shimmy) logic, properties and behaviour</li>
 </ul>
 </li>
 <li>
-<p><a href="../module/">EvaluationFunctionUtils</a> (python package)</p>
+<p><a href="../module/">Helper packages</a></p>
 <ul>
-<li>Error Reporting </li>
-<li>Schema validation</li>
-<li>Local testing</li>
+<li><code>lf_toolkit</code> — server wiring, <code>Result</code> / <code>Params</code> / <code>Preview</code>, image upload</li>
+<li><code>evaluation-function-utils</code> — the legacy package (error reporting, cross-function client)</li>
 </ul>
 </li>
 </ul>
@@ -3431,7 +3441,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 4, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2026</span>
   </span>
 
     
