@@ -1,65 +1,162 @@
 # Running and Testing Functions Locally
 
-## Simple
+Evaluation functions are developed and tested locally **without** the base-image server: you call
+your function directly and run its test suite. The full container — your function behind the
+[Shimmy](https://github.com/lambda-feedback/shimmy) base layer — is normally exercised by CI and
+in deployment, but you can also [build and run it locally](#testing-against-the-container) to
+check the real HTTP API before pushing.
 
+!!! info "This page is about Python functions"
+    It covers functions built from the current
+    [`evaluation-function-boilerplate-python`](https://github.com/lambda-feedback/evaluation-function-boilerplate-python),
+    which uses [Poetry](https://python-poetry.org/) and an `evaluation_function/` package — the
+    commands below (`poetry`, `pytest`, `python -m evaluation_function.dev`) are all
+    Python-specific. For Wolfram, Lean or other languages the local loop differs; see
+    [Other Languages](alternate_languages.md) and the relevant boilerplate's `README.md`.
+    Functions still on the older AWS Lambda base layer (those with an `app/` directory) are
+    covered [at the bottom of this page](#older-aws-lambda-base-layer).
 
-## Using Docker [:material-docker:](https://www.docker.com/)
-This method builds and runs evaluation functions in the same way they are deployed on AWS as Lambda functions. Extending a pre-built and AWS-maintained [base python image](https://docs.aws.amazon.com/lambda/latest/dg/python-image.html#python-image-base), the container contains a HTTP client which can be used to locally simulate Lambda execution events. 
+## Run unit tests
 
-Note that this is different from the [simple](#simple) method proposed, in that it gives access to all the functionality provided by the base layer. This means that commands such as `docs` and `healthcheck` can be tested.
+Install dependencies and run the test suite with [`pytest`](https://docs.pytest.org/) from the
+repository root:
 
-1. Install [Docker](https://docs.docker.com/get-docker/) on your machine
+```bash
+poetry install
+poetry run pytest
+```
 
-2. Navigate to the root directory of your function
+This is the same suite the CI pipeline runs on every push and pull request; a function is not
+deployed unless it passes.
 
-3. Build the image. This will pull our base image from Dockerhub, extend it with files specific to your evaluation function and name it `eval-tmp`.
-    ```bash
-    docker image build -t eval-tmp app
-    ```
+## Call the function directly
 
-4. Spin up a container using the image built in the previous step.
-    ```bash 
-    docker run --rm -d --name eval-function -p 9000:8080 eval-tmp 
-    ```
+The boilerplate ships an `evaluation_function/dev.py` helper that calls your `evaluation_function`
+directly — the quickest loop while iterating on comparison logic:
 
-5. You can now simulate requests to the function using any request client (like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/)). By default, the url you can hit is:
-    ```url 
-    http://localhost:9000/2015-03-31/functions/function/invocations
-    ```
+```bash
+python -m evaluation_function.dev "<response>" "<answer>" '<params-json>'
+```
 
-    ???+ warning
-        *When deployed, our Lambda functions are triggered by calls made through an AWS [API Gateway](https://aws.amazon.com/api-gateway/). This means that when testing locally, events sent should follow the structure of events triggered by that resource. That is, if you want to simulate what it would be like to make web requests to the deployed function.*
+For example:
 
-        Specifically, this means structuring requests in the following way:
-        ```json 
-        {
-          "headers": {
-            "command": "eval"
-          },
-          "body": {
-            "response": "a",
-            "answer": "a",
-            "params": {
-              "garlic": "moreish"
-            }
-          }
-        }
-        ```
+```bash
+python -m evaluation_function.dev "2*x" "x + x" '{}'
+```
 
-        The main difference is that `headers` and `body` are sent as keys in the main body of the local request. When hitting the deployed function through the API Gateway, the `command` field would instead be passed in the actual HTTP headers of the request - and the actual request body would only contain the `response`, `answer` and `params` fields.
+`answer` and the params JSON are optional. See the script's `--help` for its exact arguments,
+which vary slightly between functions.
 
-6. *(Optional)* The `run` command specifies the **-d** flag, which spins up the container in detached mode. If you want to inspect the logs of the function, you can run:
-    ```bash 
-    docker container logs -f eval-function 
-    ```
+## Testing against the container
 
-??? note "Tip"
-    You will very rarely need this, but you can peek into the running container by opening a shell within it using:
+Building the image and sending it real HTTP requests runs the **same container CI builds and
+deployment ships**: your function behind [Shimmy](https://github.com/lambda-feedback/shimmy),
+serving the API on port `8080`. Use it for the end-to-end checks that calling the function
+directly and `pytest` don't cover — schema validation, the µEd and Legacy wire formats, and the
+[feedback `cases`](feedback.md) loop.
 
-    ```bash 
-    docker exec -it eval-function bash
-    ```
+!!! info "Applies to any base image"
+    The steps below use the Python `evaluation_function/` layout for their examples, but the
+    build and run commands are the same for Wolfram, Lean and `scratch` functions — only the
+    `Dockerfile` contents differ. See [Other Languages](alternate_languages.md).
 
-## Useful Links 
+### Build the image
 
-- 
+From the repository root (where the `Dockerfile` is):
+
+```bash
+docker build -t my-eval-function .
+```
+
+!!! tip "Podman works too"
+    [Podman](https://podman.io/) is a drop-in replacement — swap `docker` for `podman` in every
+    command on this page and the arguments are identical.
+
+### Run the container
+
+Expose Shimmy's port `8080`:
+
+```bash
+docker run --rm -p 8080:8080 my-eval-function
+```
+
+Add `--name my-eval-function` if you want to `docker exec` / `docker cp` into the running
+container, and `-e SANDBOX_ENABLED=true` to also exercise the optional
+[nsjail](https://github.com/google/nsjail) sandbox that Shimmy applies in production.
+
+### Health checks
+
+```bash
+curl http://localhost:8080/health
+curl --header 'X-Api-Version: 0.1.0' http://localhost:8080/evaluate/health
+```
+
+`GET /health` is a plain liveness probe; `GET /evaluate/health` is the µEd health route.
+
+### Send a µEd request
+
+`POST /evaluate` with an `X-Api-Version: 0.1.0` header — the request the platform sends for
+newly registered functions:
+
+```bash
+curl --request POST \
+  --url http://localhost:8080/evaluate \
+  --header 'Content-Type: application/json' \
+  --header 'X-Api-Version: 0.1.0' \
+  --data '{
+    "submission": { "type": "OTHER", "content": { "value": "x + x" } },
+    "task": { "referenceSolution": { "expression": "2*x" } }
+  }'
+```
+
+See the [µEd API](specification.md#ed-api) section of the specification for the full
+request/response contract.
+
+### Send a Legacy request
+
+`POST /` with the command in a `command` header and a bare `response` / `answer` / `params`
+body:
+
+```bash
+curl --request POST \
+  --url http://localhost:8080/ \
+  --header 'Content-Type: application/json' \
+  --header 'command: eval' \
+  --data '{ "response": "2*x", "answer": "x + x", "params": {} }'
+```
+
+The response is `{"command": "eval", "result": {...}}`, or `{"error": {"message": ...}}` if the
+function raised — see [Legacy API](specification.md#legacy-api). Swapping the header for
+`command: healthcheck` runs the function's own test suite inside the container and returns a
+pass/fail summary.
+
+### Postman and other clients
+
+Any HTTP client works — `curl`, [Insomnia](https://insomnia.rest/),
+[Postman](https://www.postman.com/). Point it at the running container:
+
+- **µEd** — `POST http://localhost:8080/evaluate`, headers `Content-Type: application/json` and
+  `X-Api-Version: 0.1.0`, body as the µEd JSON above.
+- **Legacy** — `POST http://localhost:8080/`, header `Content-Type: application/json` plus a
+  `command` header (`eval`, `preview` or `healthcheck`), body `{ "response": ..., "answer": ...,
+  "params": {} }`.
+
+## Older AWS Lambda base layer
+
+??? note "Functions not yet migrated"
+    A small number of functions (for example
+    [`compareExpressions`](https://github.com/lambda-feedback/compareExpressions)) still extend
+    the older `ghcr.io/lambda-feedback/baseevalutionfunctionlayer` image and keep the `app/`
+    directory layout. Their tests run with `python -m unittest app.evaluation_tests`, and the
+    built image is exercised locally with the AWS
+    [Runtime Interface Emulator](https://github.com/aws/aws-lambda-runtime-interface-emulator)
+    (`docker run -p 9000:8080 …`, then POST an API-Gateway-style event to
+    `http://localhost:9000/2015-03-31/functions/function/invocations`). See the function's own
+    `README.md` for the details.
+
+## Useful links
+
+- [`evaluation-function-boilerplate-python`](https://github.com/lambda-feedback/evaluation-function-boilerplate-python) — template for new Python functions
+- [`toolkit-python`](https://github.com/lambda-feedback/toolkit-python) — the `lf_toolkit` helper package
+- [`evaluation-function-base`](https://github.com/lambda-feedback/evaluation-function-base) — the base images (Python, Wolfram, Lean, scratch)
+- [µEd API specification](https://mued.org/)

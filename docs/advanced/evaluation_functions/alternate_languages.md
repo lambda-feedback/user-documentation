@@ -1,37 +1,77 @@
-# Alternate Evaluation Function Languages
----
+# Evaluation Functions in Other Languages
 
-## Lambda-Compatible Images
-### Extending a pre-built Lambda image
-- Available for: Node.js, Python, Java, .NET, Go, Ruby
-- [Docs](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-images-lp)
-- [Repo](https://github.com/aws/aws-lambda-base-images)
-- These base images are regularly updated, and the most widely used (more docs)
-- They also come with pre-packaged runtime interface clients - a HTTP interface for runtimes to receive invocation events and respond
-	- Good for local development
+[Shimmy](https://github.com/lambda-feedback/shimmy) — the [base layer](specification.md#base-layer)
+in front of every evaluation function — is language-agnostic. It handles the HTTP API, request
+validation and the feedback `cases` loop, then runs *your* function as a child process over one
+of two interfaces. Writing a function in another language means providing that child process.
 
-### Creating custom base images
-- Using the [lambda/provided](https://gallery.ecr.aws/lambda/provided) image
-	- This "contains all the required components to run functions packaged as container images on Lambda"
-- Building a custom runtime from scratch 
-	- [Custom AWS Lambda runtimes](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-custom.html#runtimes-custom-build)
-	- [Runtimes walkthrough tutorial](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-walkthrough.html)
-- Emulate execution locally?
-> Lambda provides a runtime interface emulator (RIE) for you to test your function locally. The AWS base images for Lambda and base images for custom runtimes include the RIE. For other base images, you can download the [Runtime interface emulator](https://github.com/aws/aws-lambda-runtime-interface-emulator) from the AWS GitHub repository.
+## Base images
 
-### Misc Notes/Sources
-- [The Lambda Execution Environment](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtime-environment.html)
-- [Create Images from Alternative base images](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-create-from-alt)
+All base images bundle Shimmy and are published under
+[`ghcr.io/lambda-feedback/evaluation-function-base`](https://github.com/lambda-feedback/evaluation-function-base):
 
-## Development Philosophy
-Ultimately we want to call a function made by a user in any language. Two ways to do this:
+| Image | For |
+| --- | --- |
+| `evaluation-function-base/python` | Python functions (uses [`lf_toolkit`](module.md)) |
+| `evaluation-function-base/wolfram` | Wolfram Language / `wolframscript` functions |
+| `evaluation-function-base/lean` | Lean functions (compiled binary) |
+| `evaluation-function-base/scratch` | Any other language — a minimal Debian image with just Shimmy |
 
-- We write and provide runtime in all the different languages. This means that all the logic happens in that language. We write the code that actually receives the requests from lambda function events. In this case, the user function can be imported from those handlers.
-	- Writing handlers in each of those languages requires time and extensive knowledge (in order to write robust code)
-	- Handler code needs to:
-		- Have clean and reliable error catching
-  
-- We write a global runtime, which makes a call to their function via a sub-process. We call their script, which must recieve the payload as a commandline argument.
-	- User has to write more code 
-		- For allowing cmdline arguments, and parsing of inputs
-	- Might be slower than in other languages. Since another script has to be executed.
+Your `Dockerfile` does `FROM` one of these, installs your toolchain and code, and sets the
+environment variables below.
+
+## Worker interfaces
+
+Shimmy chooses the interface from the `FUNCTION_INTERFACE` environment variable.
+
+### RPC (default)
+
+The worker is a long-lived process that speaks [JSON-RPC 2.0](https://www.jsonrpc.org/specification),
+one method per command (`eval`, `preview`, `healthcheck`). Transport is set by
+`FUNCTION_RPC_TRANSPORT`:
+
+- `stdio` (default) — messages over the process's stdin/stdout, framed with `Content-Length` headers;
+- `ipc` — a Unix domain socket.
+
+Python's [`lf_toolkit`](module.md) implements this interface, so Python functions just call
+`create_server()` / `run()` in `evaluation_function/main.py` and never deal with the wire format.
+The Wolfram base image bundles [`toolkit-wolfram`](https://github.com/lambda-feedback/toolkit-wolfram),
+which handles the transport wiring for `wolframscript` functions in the same way.
+
+### File
+
+Shimmy starts a **fresh process per request**, appending two paths as the final arguments — an
+input file and an output file. The worker reads the request JSON, writes the response JSON and
+exits. This suits languages without a convenient long-running-server story, and large payloads
+(e.g. base64 images).
+
+The request file is *wrapped*:
+
+```json
+{
+  "command": "eval",
+  "params": { "response": "...", "answer": "...", "params": {} }
+}
+```
+
+The worker writes the same `{"command": ..., "result": {...}}` / `{"error": {...}}` shape the
+[Legacy API](specification.md#legacy-api) returns.
+
+## Setting the worker command
+
+The base layer reads these from the `Dockerfile`:
+
+```dockerfile
+ENV FUNCTION_COMMAND="wolframscript"
+ENV FUNCTION_ARGS="-f,evaluation_function.wl"   # comma-separated
+ENV FUNCTION_INTERFACE="file"
+```
+
+## Boilerplates
+
+- [`evaluation-function-boilerplate-python`](https://github.com/lambda-feedback/evaluation-function-boilerplate-python) — RPC interface via `lf_toolkit`
+- [`evaluation-function-boilerplate-wolfram`](https://github.com/lambda-feedback/evaluation-function-boilerplate-wolfram) — file interface, `wolframscript -f evaluation_function.wl request.json response.json`
+- [`evaluation-function-boilerplate-lean`](https://github.com/lambda-feedback/evaluation-function-boilerplate-lean) — file interface, compiled `.lake/build/bin/evaluation request.json response.json`
+
+Each boilerplate's `README.md` has the full build, run and local-test instructions for that
+language.

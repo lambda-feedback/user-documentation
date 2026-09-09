@@ -1,5 +1,11 @@
 # Base Layer Feedback Implementation
 
+Feedback `cases` are handled by [Shimmy](specification.md#base-layer), not by your function —
+Shimmy re-invokes `evaluation_function` once per case.
+
+This is base-layer behaviour and applies to **every** function regardless of implementation
+language; the JSON below is the wire format Shimmy sends, not Python-specific.
+
 Input structure:
 
 ```json
@@ -20,11 +26,12 @@ Input structure:
 ```
 
 ## Execution Logic for the `eval` command
-1. First `evaluation_function` is called using the response, answer and params
-3. If evaluation threw an error, then return the error message
-2. If evaluation was successful, check for matching cases
-	1. If "params" contains a non-empty list of "cases", determine the correct feedback, add it to the result and return the block (Logic for this is described in the next section) 
-	2. If "params" doesn't contain a list of cases, simply return the result
+1. First `evaluation_function` is called using the response, answer and params.
+2. If evaluation threw an error, return the error message.
+3. If `params` contains a non-empty list of `cases` and the result is `is_correct: false`, run the case-matching procedure below, merge the outcome into the result and return it.
+4. Otherwise, return the result unchanged.
+
+When a case matches, Shimmy adds `matched_case` (the case's index) to the result, and if that case defines a `mark` (`0` or `1`) it overrides `is_correct`.
 
 ## Determining the correct feedback case
 1. Iterate through each case in the list of `cases`:
