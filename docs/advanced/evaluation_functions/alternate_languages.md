@@ -35,6 +35,8 @@ one method per command (`eval`, `preview`, `healthcheck`). Transport is set by
 
 Python's [`lf_toolkit`](module.md) implements this interface, so Python functions just call
 `create_server()` / `run()` in `evaluation_function/main.py` and never deal with the wire format.
+The Wolfram base image bundles [`toolkit-wolfram`](https://github.com/lambda-feedback/toolkit-wolfram),
+which handles the transport wiring for `wolframscript` functions in the same way.
 
 ### File
 

@@ -1,12 +1,21 @@
 # Helper Packages
 
-Two Python packages support evaluation functions. Which one applies depends on the
+A **toolkit** implements Shimmy's worker interface so your function only has to provide
+comparison logic. Whether one is available depends on the language and the
 [base layer](specification.md#base-layer):
 
-| Package | Used by | Provides |
-| --- | --- | --- |
-| [`lf_toolkit`](#lf_toolkit) | Functions on the Shimmy base image | Server wiring, `Result` / `Params` / `Preview`, image upload |
-| [`evaluation-function-utils`](#evaluation-function-utils-legacy) | Functions on the older AWS Lambda base layer | `EvaluationException`, cross-function client |
+| Language | Toolkit | Used by | Provides |
+| --- | --- | --- | --- |
+| Python | [`lf_toolkit`](#lf_toolkit) — repo [`toolkit-python`](https://github.com/lambda-feedback/toolkit-python) | Functions on the Shimmy `python` base image | Server wiring, `Result` / `Params` / `Preview`, image upload |
+| Python (legacy) | [`evaluation-function-utils`](#evaluation-function-utils-legacy) | Functions on the older AWS Lambda base layer | `EvaluationException`, cross-function client |
+| Wolfram Language | [`toolkit-wolfram`](#toolkit-wolfram) | Functions on the Shimmy `wolfram` base image | `ServeEvaluationFunction`, transport wiring, error catching |
+| Lean, or any other language | *none yet* (can be provided on request) | Functions on the `lean` / `scratch` base images | — the function talks to Shimmy directly over the [file interface](alternate_languages.md#file) |
+
+The Python and Wolfram toolkits are loaded and wired up automatically by their base image. A
+Lean or `scratch` function has no toolkit today: it reads the request file and writes the
+response file itself — see [Other Languages](alternate_languages.md). If you are building
+functions in a language without a toolkit and would benefit from one, the Lambda Feedback team
+can provide it on request — [open an issue on `shimmy`](https://github.com/lambda-feedback/shimmy/issues).
 
 ## `lf_toolkit`
 
@@ -69,6 +78,27 @@ makes Shimmy stop the evaluation and return:
 ```json
 { "error": { "message": "<repr of the exception>" } }
 ```
+
+## `toolkit-wolfram`
+
+[`toolkit-wolfram`](https://github.com/lambda-feedback/toolkit-wolfram) — the "Evaluation
+Function Toolkit for Wolfram" — is the Wolfram-language equivalent of `lf_toolkit`. It is
+cloned into the
+[`evaluation-function-base/wolfram`](https://github.com/lambda-feedback/evaluation-function-base)
+image at a tagged version and loaded by that image's `Bootstrap.wl`.
+
+A Wolfram function repo does **not** call the toolkit directly. It only provides `evaluate.m`
+and `preview.m` defining `` evaluate`EvaluationFunction `` and `` preview`PreviewFunction ``;
+the base image's `FUNCTION_COMMAND` / `FUNCTION_ARGS` already point Shimmy at `Bootstrap.wl`,
+which loads the toolkit and wires them up.
+
+For custom wiring or local testing, call
+`ServeEvaluationFunction[EvaluationFunction, PreviewFunction]` directly — it reads Shimmy's
+`EVAL_IO` / `EVAL_RPC_TRANSPORT` contract and dispatches to whichever transport Shimmy
+selected (the file interface, or an RPC transport). A Wolfram error raised by your function is
+caught and returned as an error response instead of crashing the worker. See the
+[`toolkit-wolfram` README](https://github.com/lambda-feedback/toolkit-wolfram) for the exact
+contract and the current list of supported transports.
 
 ## `evaluation-function-utils` (legacy)
 

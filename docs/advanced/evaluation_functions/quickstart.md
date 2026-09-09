@@ -4,6 +4,12 @@ It's a cloud function which performs some computation given some user input (the
 
 ## Getting Setup for Development
 
+!!! info "These steps are for Python functions"
+    They assume a function created from the Python boilerplate. The concepts (config, deploy
+    pipeline, µEd registration) are the same for every language, but the file layout and local
+    commands in steps 3–4 are Python-specific — for other languages follow
+    [Other Languages](alternate_languages.md) and the chosen boilerplate's `README.md`.
+
 1. Get the code on your local machine (Using github desktop or the `git` cli)
 	- For new functions: create a new repository from the [`evaluation-function-boilerplate-python`](https://github.com/lambda-feedback/evaluation-function-boilerplate-python) template via *Use this template*, choosing the `Lambda Feedback` organisation as the owner. **Make sure the new repository is set to public (it needs access to organisation secrets)**. Boilerplates for other languages also exist — [`evaluation-function-boilerplate-wolfram`](https://github.com/lambda-feedback/evaluation-function-boilerplate-wolfram) and [`evaluation-function-boilerplate-lean`](https://github.com/lambda-feedback/evaluation-function-boilerplate-lean); see [Other Languages](alternate_languages.md).
 	- For existing functions: please make your changes on a new separate branch 
@@ -31,6 +37,8 @@ It's a cloud function which performs some computation given some user input (the
 		- **`docs/dev.md`**: edited to reflect any changes/features from a developer perspective. It is baked into the function's image and pulled into this site under the [deployed functions](index.md) section.
 
 		- **`docs/user.md`**: documents how a teacher uses the function when editing content on the [LambdaFeedback]({{ urls.client }}) platform. These files are displayed in the [Teacher](../../teacher/index.md) section.
+
+		- **`README.md`**: replace the boilerplate's generic title, description and Quickstart section with your function's own, and have it link to `docs/dev.md`, `docs/user.md` and this site rather than restate them. See [the README convention](specification.md#function-repository-readmemd).
 
 4. Changes can be tested locally by running your tests from the repository root:
 ```bash

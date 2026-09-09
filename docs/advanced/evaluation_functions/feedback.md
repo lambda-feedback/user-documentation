@@ -3,6 +3,9 @@
 Feedback `cases` are handled by [Shimmy](specification.md#base-layer), not by your function —
 Shimmy re-invokes `evaluation_function` once per case.
 
+This is base-layer behaviour and applies to **every** function regardless of implementation
+language; the JSON below is the wire format Shimmy sends, not Python-specific.
+
 Input structure:
 
 ```json

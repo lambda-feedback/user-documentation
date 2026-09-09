@@ -5,10 +5,13 @@ your function directly and run its test suite. The full container — your funct
 [Shimmy](https://github.com/lambda-feedback/shimmy) base layer — is exercised by CI and in
 deployment, not as part of the local loop.
 
-!!! note
-    The commands below assume a function based on the current
+!!! info "This page is about Python functions"
+    It covers functions built from the current
     [`evaluation-function-boilerplate-python`](https://github.com/lambda-feedback/evaluation-function-boilerplate-python),
-    which uses [Poetry](https://python-poetry.org/) and an `evaluation_function/` package.
+    which uses [Poetry](https://python-poetry.org/) and an `evaluation_function/` package — the
+    commands below (`poetry`, `pytest`, `python -m evaluation_function.dev`) are all
+    Python-specific. For Wolfram, Lean or other languages the local loop differs; see
+    [Other Languages](alternate_languages.md) and the relevant boilerplate's `README.md`.
     Functions still on the older AWS Lambda base layer (those with an `app/` directory) are
     covered [at the bottom of this page](#older-aws-lambda-base-layer).
 
