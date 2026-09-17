@@ -1,3 +1,7 @@
+## Release 2026/09/17
+- **b1106-more-paths-to-chat** - Add more ways to start a chat
+- **b1129-broken-empty-ra-input-check** - fix check button incorrectly disabled with specific inputs on some response areas types
+
 ## Release 2026/09/04
 - **b1112-cleanup-expression-ra** - Additional cleanup of the retired EXPRESSION response area following b814, removing remaining obsolete code and references.
 
