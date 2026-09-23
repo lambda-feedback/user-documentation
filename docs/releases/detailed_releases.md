@@ -1,3 +1,7 @@
+## Release 2026/09/23
+- **b1111-code-response-area-file-upload** - Added file upload support to the CODE response area, allowing students to include files such as CSV data or code files with their submissions for evaluation.
+- **b1129-broken-empty-ra-input-check** - Fixed an issue where valid falsy response values, such as numeric 0, were incorrectly treated as empty and disabled the Check button.
+
 ## Release 2026/09/17
 - **b1106-more-paths-to-chat** - Add more ways to start a chat
 - **b1129-broken-empty-ra-input-check** - fix check button incorrectly disabled with specific inputs on some response areas types
