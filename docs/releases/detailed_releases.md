@@ -1,3 +1,6 @@
+## Release 2026/09/24
+- **b1131-do-not-escape-markdown-links** - Fixed Markdown links being modified on save by incorrectly inserting backslashes before underscores.
+
 ## Release 2026/09/23
 - **b1111-code-response-area-file-upload** - Added file upload support to the CODE response area, allowing students to include files such as CSV data or code files with their submissions for evaluation.
 - **b1129-broken-empty-ra-input-check** - Fixed an issue where valid falsy response values, such as numeric 0, were incorrectly treated as empty and disabled the Check button.
