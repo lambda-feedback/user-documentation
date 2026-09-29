@@ -1,3 +1,6 @@
+## Release 2026/09/25
+- **b1115-implement-redesigned-user-access-model** - Redesigned user access model to support future features 
+
 ## Release 2026/09/24
 - **b1131-do-not-escape-markdown-links** - Fixed Markdown links being modified on save by incorrectly inserting backslashes before underscores.
 
