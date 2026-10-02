@@ -1,3 +1,9 @@
+## Release 2026/10/02
+- **b1142-duplicate-email-from-enrollment** - Better handling of duplicate emails found after user have changed their email
+- **b1069-configure-panel-overhaul** - Redesigned the Response Area configure panel
+- **b1134-413-set-uploads** - increased set upload size limit
+- **1130-disable-input-submit-when-check-is-disabled** - prevent submissions via keyboard when check disabled
+
 ## Release 2026/09/25
 - **b1115-implement-redesigned-user-access-model** - Redesigned user access model to support future features 
 
