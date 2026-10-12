@@ -1,3 +1,11 @@
+## Release 2026/10/12
+- **b1141-duplicate-firebase-ids** - enforce uniqueness of authentication ids
+- **b1113-split-firebase-environments** - split firebase environments
+- **b1146-allow-login-link-by-email-into-fresh-account-only** - avoid email-based login into matching account
+- **b1132-canvas-instructure-media-videos** - embed Cavas videos
+- **b1138-evaluation-function-parameters-not-updating-on-change** - fix clearing evaluation function parameters
+- **b1068-eval-function-context-support** - prepare evaluation contexts support
+
 ## Release 2026/10/02
 - **b1142-duplicate-email-from-enrollment** - Better handling of duplicate emails found after user have changed their email
 - **b1069-configure-panel-overhaul** - Redesigned the Response Area configure panel
