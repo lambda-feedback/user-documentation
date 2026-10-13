@@ -56,7 +56,7 @@ For general terminology, see [here.](../../terminology.md)
 
 To see further details on how to edit your questions, see [here.](content-sets-questions.md)
 
-## Enrolling Students
+## Enrolling Students on a single module
 
 In **Teacher mode**, open your module's home page, click the 'Students' tab, and then click 'Enrol Students'.
 
@@ -99,6 +99,14 @@ first.nameYY@ic.ac.uk
 <br>
 
 This is because we use Azure Active Directory (i.e., Microsoft) to **authorise** users.
+
+## Enrolling Students on multiple modules
+
+Click on 'Bulk manage users', which is on the [modules](https://www.lambdafeedback.com/teacher/modules) page.
+
+<img width="171" height="51" alt="bulk_manage_users" src="https://github.com/user-attachments/assets/75d85609-ac2f-4acb-bdc4-3d7cd7f91bde" />
+
+Follow the guidance on the screen to provide the data in a CSV file. A preview is provided before exectuing.
 
 ## Enrolling Teachers
 
