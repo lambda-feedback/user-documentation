@@ -56,57 +56,11 @@ For general terminology, see [here.](../../terminology.md)
 
 To see further details on how to edit your questions, see [here.](content-sets-questions.md)
 
-## Enrolling Students on a single module
+## Enrolling students
 
-In **Teacher mode**, open your module's home page, click the 'Students' tab, and then click 'Enrol Students'.
+Students can be enrolled individually within a module, in TEACHER mode, on the 'Students' tab; or bulk enrolled across multiple modules using the 'Bulk manage users' feature on the [www.lambdafeedback.com/teachers/modules](modules) page.
 
-![Teacher view students](../../teacher/guides/images/Teacher_view_students.png)
-
-Enter a student's email address, or alternatively paste in a list of email addresses separated by commas.
-
-![Add_student_before](./images/Add_student_before.png){: style="width:200px"}
-
-Press 'Enter' to add the email addresses:
-
-![Add_student_after](./images/Add_student_after.png){: style="width:200px"}
-
-Then click 'SUBMIT' to enrol the students.
-
-### Imperial College London Email Addresses
-
-You must use the long-form email address:
-
-#### Valid:
-
-first.nameYY@imperial.ac.uk (student)
-<br>
-j.doe@imperial.ac.uk (staff)
-<br>
-first.name@imperial.ac.uk (staff)
-<br>
-
-#### Invalid:
-
-abc123@ic.ac.uk
-<br>
-abc123@imperial.ac.uk
-<br>
-user@ic.ac.uk
-<br>
-user@imperial.ac.uk
-<br>
-first.nameYY@ic.ac.uk
-<br>
-
-This is because we use Azure Active Directory (i.e., Microsoft) to **authorise** users.
-
-## Enrolling Students on multiple modules
-
-Click on 'Bulk manage users', which is on the [modules](https://www.lambdafeedback.com/teacher/modules) page.
-
-<img width="171" height="51" alt="bulk_manage_users" src="https://github.com/user-attachments/assets/75d85609-ac2f-4acb-bdc4-3d7cd7f91bde" />
-
-Follow the guidance on the screen to provide the data in a CSV file. A preview is provided before exectuing.
+A [full guide to enrolling students is here](enrolling_students.md).
 
 ## Enrolling Teachers
 
