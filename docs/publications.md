@@ -26,6 +26,10 @@ hide:
 
 - Conference paper; 6-pages. LLM-based feedback on student attempts at proofs in undergraduate mathematics. (Full technical report, 74 pages, also available [here](https://arxiv.org/abs/2601.03458).
 
+#### 2026e: An Introduction to Pedagogical Evaluation of Automated Feedback (PEAF)
+- Access via CEUR-WS: [https://ceur-ws.org/Vol-4282/intro1.pdf](https://ceur-ws.org/Vol-4282/intro1.pdf)
+- Conference apper; 9-pages. Introduction to the PEAF 2026 proceedings. 
+
 #### 2025a: Formative feedback on engineering self-study: Towards 1 million times per year per cohort
 
 - [:material-download: Download PDF](assets/publications/Johnson_etal_2025_EDUCON_camera_ready.pdf) or access via IEEE: [https://ieeexplore.ieee.org/abstract/document/11016422](https://ieeexplore.ieee.org/abstract/document/11016422)

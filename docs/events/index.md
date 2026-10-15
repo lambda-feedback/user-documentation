@@ -1,6 +1,8 @@
 
 # Upcoming events
 
+# Previous events
+
 ### Pedagogical Evaluation of Automated Feedback Workshop 2026
 _Festival of Learning, South Korea_
 2026-06-28
@@ -12,8 +14,6 @@ _Festival of Learning, South Korea_
 2026-06-27
 
 Full information: [tutorial at festival of learning](20260627_fol_kor_26.md).
-
-# Previous events
 
 ### EERN Panel Discussion: AI and the Future of Feedback in Higher Education
 _UK and Ireland Engineering Education Research Network (EERN)_ 2026-04-23
