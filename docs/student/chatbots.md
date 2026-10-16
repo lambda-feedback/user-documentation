@@ -27,7 +27,7 @@ If your teacher chooses to turn on the chatbots for the module, you can choose f
 |---|---|---|---|---|
 | [Informational](#informational) | An explanation, or for it to walk you through the solution | Verbose | Gemini 2.5 Flash Lite (Google) | ~10s |
 | [Concise](#concise) | A quick hint or clarification without a wall of text | Short | Gemini 2.5 Flash Lite (Google) | ~10s |
-| [Reflective](#reflective) | To be nudged with questions instead of being given the answer | Asks you back | gpt-4o-mini (OpenAI) | ~10s |
+| [Reflective](#reflective) | To be nudged with questions instead of being given the answer | Asks you back | gpt-5-nano (OpenAI) | ~10s |
 
 For technical details behind each chatbot, see [Chat functions - More information](../advanced/chat_functions/info.md).
 
