@@ -1,3 +1,8 @@
+## Release 2026/10/19
+- **1144-mued-evaluation-functions-invalid-submissions** - fix error logging and messaging on invalid evaluation function submissions
+- **1151-improve-authentication-performances** - improve performances of the authentication flow
+- **b1155-improve-user-data-in-logs** - better user data in app logs
+
 ## Release 2026/10/12
 - **b1141-duplicate-firebase-ids** - enforce uniqueness of authentication ids
 - **b1113-split-firebase-environments** - split firebase environments
