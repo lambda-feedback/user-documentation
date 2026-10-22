@@ -1,3 +1,11 @@
+## Release 2026/10/22
+- **b1117-implement-dynamic-grouping** -
+- **b1139-students-module-progress-performances-improvements** - performances improvements when fetching students progress
+- **b1140-mask-backend-error-message** - better user-facing error messages
+- **b1156-rollover-meq-evaluated-teachers** - include evaluated teachers in MEQ module rollovers
+- **b1165-upgrade-node** - Upgrade Node to v24.22.1
+- **b1164-fix-chat-statistics-performances** - performances improvements when fetching chat statistics
+
 ## Release 2026/10/19
 - **1144-mued-evaluation-functions-invalid-submissions** - fix error logging and messaging on invalid evaluation function submissions
 - **1151-improve-authentication-performances** - improve performances of the authentication flow
