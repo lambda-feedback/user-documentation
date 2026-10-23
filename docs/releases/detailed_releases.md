@@ -1,5 +1,8 @@
+## Release 2026/10/23
+- **b1154-meq-teacher-ui** - UI refresh focused on teacher flows and MEQs
+
 ## Release 2026/10/22
-- **b1117-implement-dynamic-grouping** -
+- **b1117-implement-dynamic-grouping** - Add dynamic grouping feature
 - **b1139-students-module-progress-performances-improvements** - performances improvements when fetching students progress
 - **b1140-mask-backend-error-message** - better user-facing error messages
 - **b1156-rollover-meq-evaluated-teachers** - include evaluated teachers in MEQ module rollovers
