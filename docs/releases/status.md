@@ -16,6 +16,27 @@ Severity:
 
 The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
 
+## 2026 October 28th: login errors (Severity: SIGNIFICANT):
+
+### Timeline (GMT/UTC)
+
+18:46 First automated alert to developers
+19:09 First user email to support address
+21:30 Investigation found an expired token for Microsoft users, which needed refreshing
+21:48 Problem solved
+
+### Analysis
+
+Users already logged in were not affected. Users logging in were affected. There were ~85 users on the platform during the episode, a smaller proportion of which were affected (detailed report to follow). 
+
+The cause of the problem stems from switching to a new auth system 12 months ago, and not planning to refresh the token that was due to expire. The speed of resonse was due to being out of office hours and two developers on leave.
+
+### Actions
+
+Calendar events have been set to refresh tokens in advance of their expiry. An additional developer is being recruited.
+
+N~0.1, effect = 4, duration = 3. Severity = 1.2 (SIGNIFICANT)
+
 ## 2025 December 4th: Brief DB outage (Severity: LOW):
 
 ### Timeline (GMT/UTC)
