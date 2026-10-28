@@ -27,7 +27,7 @@ The severity is used to decide how much we invest in preventative measures, dete
 
 ### Analysis
 
-Users already logged in were not affected. Users logging in were affected. There were ~85 users on the platform during the episode, a smaller proportion of which were affected (detailed report to follow). 
+Users already logged in were not affected. Users logging in were affected. Logs show that 24 users were affected (other users relied on existing logins). There were ~85 users on the platform during the episode. 
 
 The cause of the problem stems from switching to a new auth system 12 months ago, and not planning to refresh the token that was due to expire. The speed of resonse was due to being out of office hours and two developers on leave.
 
@@ -35,7 +35,7 @@ The cause of the problem stems from switching to a new auth system 12 months ago
 
 Calendar events have been set to refresh tokens in advance of their expiry. An additional developer is being recruited.
 
-N~0.1, effect = 4, duration = 3. Severity = 1.2 (SIGNIFICANT)
+N=0.24, effect = 4, duration = 3. Severity = 2.88 (SIGNIFICANT)
 
 ## 2025 December 4th: Brief DB outage (Severity: LOW):
 
