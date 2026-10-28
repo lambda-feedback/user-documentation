@@ -1,6 +1,6 @@
 Lambda Feedback is a cloud-native application that is available with full service 24/7.
 
-This page contains information about any known incidents where service was interrupted. The page begain in November 2024 following a significant incident. The purpose is to be informative, transparent, and ensure lessons are always learned so that service improves over time.
+This page contains information about any known incidents where service was interrupted. The page began in November 2024 following a significant incident. The purpose is to be informative, transparent, and ensure lessons are always learned so that service improves over time.
 
 The Severity of incidents is the product of: 
 
@@ -15,6 +15,30 @@ Severity:
 - x >     100 is HIGH. 
 
 The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
+
+## 2026 Oct 27th: Partial Outage (Severity: SIGNIFICANT):
+
+### Timeline (GMT/UTC)
+
+09:12 Singular task hit 100% CPU Utilisation, causing task to become unavailable, 156 users experienced instability, with 12.5% of requests failing.
+
+09:28 Unhealthy task was ended, and a new task started automatically.
+
+09:35 Developers responded
+
+09:39 CPU Utilisation returned to normal
+
+09:40 Incident over
+
+### Analysis
+
+The 100% CPU utilisation was caused by in-class use that started at 09:00 GMT, before the scheduled scale up for busy periods, causing multiple users to access the application at once.
+
+### Actions
+
+Updated the scale up for busy periods to start at 09:00 UTC.
+
+N=1.56, effect = 3, duration = 0.47. Severity = 2.2 (SIGNIFICANT)
 
 ## 2025 December 4th: Brief DB outage (Severity: LOW):
 
