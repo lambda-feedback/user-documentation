@@ -1,6 +1,6 @@
 Lambda Feedback is a cloud-native application that is available with full service 24/7.
 
-This page contains information about any known incidents where service was interrupted. The page began in November 2024 following a significant incident. The purpose is to be informative, transparent, and ensure lessons are always learned so that service improves over time.
+This page contains information about any known incidents where service was interrupted. The page begain in November 2024 following a significant incident. The purpose is to be informative, transparent, and ensure lessons are always learned so that service improves over time.
 
 The Severity of incidents is the product of: 
 
@@ -16,29 +16,68 @@ Severity:
 
 The severity is used to decide how much we invest in preventative measures, detection, mitigation plans, and rehearsals.
 
-## 2026 Oct 27th: Partial Outage (Severity: SIGNIFICANT):
+## 2026 October 28th: login errors (Severity: SIGNIFICANT):
 
 ### Timeline (GMT/UTC)
 
-09:12 Singular task hit 100% CPU Utilisation, causing task to become unavailable, 156 users experienced instability, with 12.5% of requests failing.
-
-09:28 Unhealthy task was ended, and a new task started automatically.
-
-09:35 Developers responded
-
-09:39 CPU Utilisation returned to normal
-
-09:40 Incident over
+18:46 First automated alert to developers
+19:09 First user email to support address
+21:30 Investigation found an expired token for Microsoft users, which needed refreshing
+21:48 Problem solved
 
 ### Analysis
 
-The 100% CPU utilisation was caused by in-class use that started at 09:00 GMT, before the scheduled scale up for busy periods, causing multiple users to access the application at once.
+Users already logged in were not affected. Users logging in were affected. Logs show that 24 users were affected (other users relied on existing logins). There were ~85 users on the platform during the episode. 
+
+The cause of the problem stems from switching to a new auth system 12 months ago, and not planning to refresh the token that was due to expire. The speed of resonse was due to being out of office hours and two developers on leave.
 
 ### Actions
 
-Updated the scale up for busy periods to start at 09:00 UTC.
+Calendar events have been set to refresh tokens in advance of their expiry. An additional developer is also being recruited.
 
-N=1.56, effect = 3, duration = 0.47. Severity = 2.2 (SIGNIFICANT)
+N=0.24, effect = 4, duration = 3. Severity = 2.88 (SIGNIFICANT)
+
+## 2026 Oct 27th: Partial Outages (Severity: SIGNIFICANT):
+
+### Timeline (GMT/UTC)
+
+09:12 Singular task hit 100% CPU Utilisation and users experienced instability.
+
+09:28 Unhealthy task was ended, and a new task started automatically.
+
+09:39 CPU Utilisation returned to normal 
+
+We also detected significant periods of loading and slow responses in the evenings on 30/10/26, 31/10/26, 2/11/26. In those periods, the automated response was more rapid and the effects were less severe.
+
+### Analysis
+
+1. For the first detected issue, approximately 156 users were live on the application, which requires a moderate scale up of servers ('tasks'). This scale up should be automated based on the load of the tasks.
+
+2. Automated task scaling relies on sensing that a task is overloaded. In this case, despite the ~100% CPU utilisation, the task was not recognised by the automated systems as reaching capacity. Therefore, rather than the expected ~2 minutes to expand capacity, it took 16 minutes for an automated response. This is the reason for an extended period of instability.
+
+3. The number of live tasks, in addition to scaling with usage, is scheduled to have a higher minimum during busy periods. The first incident happened in the hour before the scheduled 'busy' preiods.
+
+4. For the other incidents (other than the first one), memory limits were the cause for loading and slow responses. 
+
+
+### Actions
+
+All of the following have been done to prevent future events:
+
+1. Extend the scheduled busy periods, i.e. times with an increased base number of tasks, to start one hour earlier.
+
+2. Double the memory in each task.
+
+3. Stricter measures of task health for faster and more reliable automated scaling responses.
+
+4. Stricter and more accurate memory thresholds to trigger automated scaling.
+
+5. New monitoring of slowdowns in event loops, for better detection of issues.
+
+6. Common highest-memory-usage DB queries were optimised to reduce typical memory loads on the tasks.
+
+N~2, effect = 3, duration = ~0.5. Severity ~3 (SIGNIFICANT)
+
 
 ## 2025 December 4th: Brief DB outage (Severity: LOW):
 
