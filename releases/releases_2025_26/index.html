@@ -1,0 +1,3601 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Architecture, syntax and usage details for an online learning platform focused on providing rich feedback to the user.">
+      
+      
+        <meta name="author" content="Pierre Tharreau, Louis Manestar">
+      
+      
+        <link rel="canonical" href="https://lambda-feedback.github.io/user-documentation/releases/releases_2025_26/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Releases 2025 26 - Lambda Feedback Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#release-20260925" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lambda Feedback Documentation" class="md-header__button md-logo" aria-label="Lambda Feedback Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lambda Feedback Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Releases 2025 26
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lambda-feedback/user-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../student/" class="md-tabs__link">
+          
+  
+    
+  
+  Students
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../teacher/" class="md-tabs__link">
+          
+  
+    
+  
+  Teachers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../advanced/" class="md-tabs__link">
+          
+  
+    
+  
+  Advanced
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lambda Feedback Documentation" class="md-nav__button md-logo" aria-label="Lambda Feedback Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Lambda Feedback Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lambda-feedback/user-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opportunities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opportunities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Releases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Releases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../major_releases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Major releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../detailed_releases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Detailed Releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_3" id="__nav_1_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Previous releases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Previous releases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../releases_2024_25/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-25
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../releases_2023_24/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023-24
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../student/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Students
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Students
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/getting_started_student/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/answering_questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Answering Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/response_areas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Response Areas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/chatbots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chatbots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/lexdown_student/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Editing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/MEQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module evaluation questionnaires (MEQ)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../student/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../teacher/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Teachers
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Teachers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/gettingstarted/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/content-sets-questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/lexdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lexdown content editor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/enrolling_students/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrolling students
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/question-export-import/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exporting and importing questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/analytics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/guidance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guidance (feature)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/good-practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Good practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/chatbots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chatbots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/MEQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module evaluation questionnaires (MEQ)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/guides/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/content_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Content management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/latex_functionality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latex functionality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/pdf_generation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PDF generation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../teacher/reference/response_area_components/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Response Areas
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Response Areas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Essay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Milkdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Milkdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Boolean/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boolean
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/NumericUnits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NumericUnits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Expression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Math_Single_Line/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math Single Line
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Math_Multi_Line/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math Multi Line
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/MultipleChoice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MultipleChoice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Likert/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Likert
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teacher/reference/response_area_components/Code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../teacher/reference/evaluation_functions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Evaluation Functions
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Evaluation Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../advanced/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Response Areas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Response Areas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/response_areas/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Evaluation Functions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Evaluation Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quickstart Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/specification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/local/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing Functions Locally
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Helper Packages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../advanced/evaluation_functions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deployed Functions
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Deployed Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/evaluation_functions/alternate_languages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other Languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chat functions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chat functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/chat_functions/quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quickstart
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/chat_functions/local/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing Functions Locally
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/chat_functions/info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat Functions Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Administrators
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Administrators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/administrators/user_access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/administrators/user_tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/administrators/login_admin_approval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Login admin approval
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260925" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/09/25
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260924" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/09/24
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260923" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/09/23
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260917" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/09/17
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260904" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/09/04
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260903" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/09/03
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260827" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/08/27
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260810" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/08/10
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260803" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/08/03
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260727-part-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/07/27 Part 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260727" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/07/27
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260716" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/07/16
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260710-part-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/07/10 Part 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260710" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/07/10
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260701" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/07/01
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260626" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/06/26
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260619" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/06/19
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260617" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/06/17
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260612" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/06/12
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260608" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/06/08
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260529" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/05/29
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260511" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/05/11
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260417" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/04/17
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260330" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/03/30
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260326" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/03/26
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-20260320" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/03/20
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release 2026/03/20">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#release-20260316" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/03/16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260310" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/03/10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260309" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/03/09
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260305" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/03/05
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260302" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/03/02
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260224" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/02/24
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260220" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/02/20
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260216" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/02/16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260210" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/02/10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260130" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/01/30
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260116" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/01/16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260113" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/01/13
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260107" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/01/07
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20260106" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2026/01/06
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251219" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/12/19
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251216-bis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/12/16 bis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251216" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/12/16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251211" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/12/11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251205" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/12/05
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251201" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/12/01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251127" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/11/27
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251126" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/11/26
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251120" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/11/20
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251117" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/11/17
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251106" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/11/06
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251105" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/11/05
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251031" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/31
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251030" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/30
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251029" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/29
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251028" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/28
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251027" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/27
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251017" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/17
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251010" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251009" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/09
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251008" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/08
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251003" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/03
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251002" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/02
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-20251001" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release 2025/10/01
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/lambda-feedback/user-documentation/blob/main/docs/releases/releases_2025_26.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0l-30.1 30 97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5l167.3-167.4-98-98zM96 64c-53 0-96 43-96 96v256c0 53 43 96 96 96h256c53 0 96-43 96-96v-96c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32z"/></svg>
+    </a>
+  
+  
+
+
+<h2 id="release-20260925">Release 2026/09/25<a class="headerlink" href="#release-20260925" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1115-implement-redesigned-user-access-model</strong> - Redesigned user access model to support future features </li>
+</ul>
+<h2 id="release-20260924">Release 2026/09/24<a class="headerlink" href="#release-20260924" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1131-do-not-escape-markdown-links</strong> - Fixed Markdown links being modified on save by incorrectly inserting backslashes before underscores.</li>
+</ul>
+<h2 id="release-20260923">Release 2026/09/23<a class="headerlink" href="#release-20260923" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1111-code-response-area-file-upload</strong> - Added file upload support to the CODE response area, allowing students to include files such as CSV data or code files with their submissions for evaluation.</li>
+<li><strong>b1129-broken-empty-ra-input-check</strong> - Fixed an issue where valid falsy response values, such as numeric 0, were incorrectly treated as empty and disabled the Check button.</li>
+</ul>
+<h2 id="release-20260917">Release 2026/09/17<a class="headerlink" href="#release-20260917" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1106-more-paths-to-chat</strong> - Add more ways to start a chat</li>
+<li><strong>b1129-broken-empty-ra-input-check</strong> - fix check button incorrectly disabled with specific inputs on some response areas types</li>
+</ul>
+<h2 id="release-20260904">Release 2026/09/04<a class="headerlink" href="#release-20260904" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1112-cleanup-expression-ra</strong> - Additional cleanup of the retired EXPRESSION response area following b814, removing remaining obsolete code and references.</li>
+</ul>
+<h2 id="release-20260903">Release 2026/09/03<a class="headerlink" href="#release-20260903" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b900-prevent-re-submission</strong> - Prevented accidental duplicate submissions by disabling the Check button after feedback is returned until the response is changed, and disabling it when no submission value is provided.</li>
+<li><strong>b1088-fix-layout-of-the-lexdown-insert-table-popup</strong> - Migrated Lexdown interaction components from the custom floating UI implementation to MUI, fixing the Insert Table popup and bringing editor menus, dialogs, popovers, and controls more closely in line with the rest of the application.</li>
+<li><strong>b1104-improvements-for-clone-question</strong> - Improved question cloning with a loading indicator for slower searches and reordered columns to Module, Instance, Set, Question.</li>
+<li><strong>b1105-improve-message-when-student-is-not-assigned-to-any-current-modules</strong> - Improved the message for students with no current modules by adding a clear “Show finished modules” link.</li>
+<li><strong>b1107-add-student-emails-to-stats-csv-download</strong> - Added student email addresses to STATS CSV exports where the user has permission to view student data, while keeping emails hidden for restricted-access users.</li>
+<li><strong>b1108-refine-question-cloning-dialog-layout-and-actions</strong> - Refined the question cloning dialog by replacing per-row actions with a single Clone button, widening the preview panel, and clarifying the selection prompt.</li>
+<li><strong>b1112-cleanup-expression-ra</strong> - Completed the final cleanup of the retired EXPRESSION response area following b814, removing remaining obsolete code and references.</li>
+</ul>
+<h2 id="release-20260827">Release 2026/08/27<a class="headerlink" href="#release-20260827" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b809-shimmy-chat-functions</strong> - Chat functions have adopted shimmy, thus a fix was needed to format the urls called by the platform.</li>
+</ul>
+<h2 id="release-20260810">Release 2026/08/10<a class="headerlink" href="#release-20260810" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1038-profile-with-research-opt-out</strong> - Added a My profile page where users can view personal details, manage notification options, and control how their anonymised data is used for research.</li>
+<li><strong>b1099-add-question-template-preview-when-cloning-a-question</strong> - Added a preview panel when cloning questions or templates, allowing teachers to inspect the selected item before cloning it.</li>
+<li><strong>b1103-default-chatbot-per-module</strong> - Fixed default chatbot selection so the tenant default is used only where available for the module; otherwise students are prompted to choose from available chatbots. Added a Default chat function setting on the Admin Tenant page.</li>
+</ul>
+<h2 id="release-20260803">Release 2026/08/03<a class="headerlink" href="#release-20260803" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1073-refactor-question-cloning-flow</strong> - Optimised question cloning to load and search available questions faster.</li>
+</ul>
+<h2 id="release-20260727-part-2">Release 2026/07/27 Part 2<a class="headerlink" href="#release-20260727-part-2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1101-student-cannot-access-finished-modules</strong> - Fixed an issue that could prevent students from viewing their finished modules.</li>
+</ul>
+<h2 id="release-20260727">Release 2026/07/27<a class="headerlink" href="#release-20260727" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1087-make-save-cancel-buttons-sticky-on-long-pages</strong> - Save and Cancel buttons are now sticky on long pages, making them easier to access.</li>
+</ul>
+<h2 id="release-20260716">Release 2026/07/16<a class="headerlink" href="#release-20260716" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1094-ra-params-not-updated-on-change</strong> – Fix changing the eval function when editing a response area.</li>
+</ul>
+<h2 id="release-20260710-part-2">Release 2026/07/10 Part 2<a class="headerlink" href="#release-20260710-part-2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b509-open-new-question-when-adding-new-question</strong> – New questions now open automatically after creation.</li>
+<li><strong>b792-evaluation-function-selection-improvements</strong> – Improved the Evaluation Function selector with grouping, live filtering, alphabetical sorting, and clearer handling of legacy unavailable functions. Added an Admin Popular flag to manage featured functions.</li>
+<li><strong>b1021-canvas-save-when-navigating-away</strong> – Improved canvas autosave by saving pending changes when navigating away, preventing recent edits from being lost.</li>
+<li><strong>b1088-fix-layout-of-the-lexdown-insert-table-popup</strong> – Fixed the layout of the Lexdown Insert Table popup to ensure all controls are displayed correctly.</li>
+<li><strong>b1091-code-response-stretching-bug</strong> – Fixed the CODE response area layout so it resizes correctly when the workspace panel is adjusted.</li>
+</ul>
+<h2 id="release-20260710">Release 2026/07/10<a class="headerlink" href="#release-20260710" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b935-login-fails-when-email-address-changes</strong> – Fixed login for users whose email address has changed, ensuring existing accounts are correctly recognised and preventing accidental creation of duplicate accounts.</li>
+<li><strong>b1046-lexdown-raw-markdown-tweaks</strong> – Improved the Raw Markdown editor with a monospace font, a dedicated title, and more reliable copy/paste of mathematical content between Raw Markdown and Rich Text modes.</li>
+<li><strong>b1053-meq-csvs-missing-data</strong> – Fixed missing teacher response data in MEQ moderation and dashboard CSV exports.</li>
+<li><strong>b1077-link-secrets-to-tenant</strong> – Linked secrets to tenants, aligning the data model with the Tenant management UI while preserving existing single-tenant behaviour.</li>
+<li><strong>b1078-microservices-restrictions-by-modules-follow-up</strong> – Improved the Admin Evaluation Function and Chat Function pages with clearer labels, improved module availability layout, and general UI refinements.</li>
+<li><strong>b1080-evaluation-function-list-is-missing-some-evaluation-functions</strong> -     – Fixed the Evaluation Function list to display all available functions.</li>
+</ul>
+<h2 id="release-20260701">Release 2026/07/01<a class="headerlink" href="#release-20260701" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1019-teacher-set-nav-tweaks</strong> – Improved navigation within TEACHER sets by restoring Previous/Next buttons at the default pane width and adding a Settings button to open the Set Settings dialog.</li>
+</ul>
+<h2 id="release-20260626">Release 2026/06/26<a class="headerlink" href="#release-20260626" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1079-triple-backticks-appearing-in-content</strong> - Fixed an issue where indented content could be incorrectly rendered as code blocks, causing unwanted triple backticks and syntax highlighting to appear in question content.</li>
+</ul>
+<h2 id="release-20260619">Release 2026/06/19<a class="headerlink" href="#release-20260619" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b581-microservice-restrictions-by-module</strong> – Added module-level availability restrictions for Evaluation Functions and Chat Functions.</li>
+<li><strong>b848-rollover-allow-chat-state</strong> – Added rollover support for the “Allow Chatbot” setting, allowing users to retain or override the existing value when creating a new module instance.</li>
+<li><strong>b1053-meq-csvs-missing-data</strong> – Corrected MEQ CSV export queries to ensure moderation and dashboard exports include complete response data and generate consistent column layouts.</li>
+<li><strong>b1070-change-colour-of-message-when-enrolling-student</strong> – Updated enrolment feedback styling to display “already enrolled” messages in yellow warning notifications.</li>
+</ul>
+<h2 id="release-20260617">Release 2026/06/17<a class="headerlink" href="#release-20260617" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b728-teacher-question-locking</strong> – Prevented simultaneous editing of the same question by multiple teachers.</li>
+<li><strong>b1003-add-websocket-pub-sub</strong> – Added WebSocket-based GraphQL subscriptions to support real-time updates across the application, including question locking and live data refreshes.</li>
+<li><strong>b1072-evaluation-function-headers</strong> – Added secure secret and header management for Evaluation Functions using encrypted secret storage and secret references in request headers, with improved admin guidance for secret management.</li>
+</ul>
+<h2 id="release-20260612">Release 2026/06/12<a class="headerlink" href="#release-20260612" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1055-header-params-chat-functions</strong> – Added secure secret and header management for Chat Functions, enabling authenticated integrations with external services through encrypted secret storage and secret references in request headers. Added new admin pages to manage secrets.</li>
+</ul>
+<h2 id="release-20260608">Release 2026/06/08<a class="headerlink" href="#release-20260608" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b763-bulk-module-cloning-cpu-and-memory-problem</strong> – Optimised module instance cloning to resolve CPU/memory pressure and timeout issues, including fixes to Bulk Rollover page timeouts.</li>
+<li><strong>b1047-module-options-submit</strong> – Module options now save automatically on change; the warning about publishing existing unpublished comments has been moved from the Save button to the “Publish comments instantly” switch.</li>
+<li><strong>b1048-when-enrolling-already-enrolled-student-return-relevant-message</strong> – Updated enrolment feedback to display counts of newly enrolled and already-enrolled students.</li>
+</ul>
+<h2 id="release-20260529">Release 2026/05/29<a class="headerlink" href="#release-20260529" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b1053-meq-csvs-missing-data</strong> – Fixed discrepancies between MEQ moderation CSV exports and in-app data.</li>
+<li><strong>b1057-analytics-db-grades-import-support-for-variable-csv-formats</strong> – Enhanced the Analytics DB anonymisation grades import to support variable CSV formats.</li>
+<li><strong>b1058-bulk-enrol-unenrol-improve-step-3-resolved-users-ux</strong> – Reworked Bulk Manage User Step 3 layout with a full-height “Resolved users” panel and added “select all” for global tags.</li>
+<li><strong>b1059-change-role-assignability-logic</strong> – Updated Teacher Role assignment UI terminology (“Manually assignable” and “Who can assign”).</li>
+<li><strong>b1060-fix-user-access-to-students-tabs</strong> – Clarified and standardised student visibility rules across Students, Activities, and Errors tabs. </li>
+<li><strong>b1063-ra-blank-in-stats-tab</strong> – Fixed an issue where Response Areas were not displayed in the STATS tab (showing blank instead), and standardised the width of the Explore and Configure buttons for consistent layout.</li>
+<li><strong>b1064-roles-assignability-tweaks</strong> – Defaulted new TEACHER roles to “Manually assignable = true”. Made the disabled state clear and added a tooltip.</li>
+</ul>
+<h2 id="release-20260511">Release 2026/05/11<a class="headerlink" href="#release-20260511" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b974-formalise-teacher-role-assignment-rules</strong> – Made teacher role assignment authority explicit in the data model by adding <code>systemDefined</code>, <code>assignableByTeacher</code>, and <code>assignableByAdmin</code> metadata to TeacherRole, replacing hard-coded checks while keeping runtime permission evaluation unchanged.</li>
+<li><strong>b978-improve-ui-clarity-for-restricted-student-visibility</strong> – Improved UI transparency in restricted access scenarios (e.g. Tutor-only or no VIEW_STUDENT_DATA) by clarifying tab counts vs visible rows, adding permission tooltips for masked emails, and replacing blank progress fields with explicit “Not visible to this user” messaging.</li>
+<li><strong>b1037-mued-adoption-for-evaluation-functions</strong> – Added support for both Legacy and µEd evaluation functions, with switching managed via the Evaluation Function admin page.</li>
+<li><strong>b1044-inconsistent-disabled-behaviour-for-user-access-restrictions</strong> – Standardised disabled button and tab behaviour across Module Students, Module Teachers, and module tabs to ensure consistent clickability and tooltip display under access restrictions.</li>
+<li><strong>b1050-move-bulk-manage-users-to-admin-users-page</strong> – Moved the Bulk Manage Users entry point from Admin → Modules to Admin → Users for improved navigation consistency.</li>
+<li><strong>b1051-student-stats-visibility-and-popup-behaviour-on-student-details-page</strong> – Resolved StudentView popup flicker when opening and navigating between students, and fixed masked email flicker (masked/unmasked flashing) on the Student Details page.</li>
+<li><strong>b1052-select-all-in-bulk-enroll-unenroll</strong> – Added a “Select All” option to the Bulk Enrol/Unenrol module instance selection table (with clearer column titles) and improved row display to utilise available modal space.</li>
+<li><strong>b1056-wkd-solns-not-visible-in-student-mode-for-some-users</strong> – Fixed an issue where users with the Personal Tutor role could not see worked solutions in STUDENT mode, while other teacher roles were unaffected.</li>
+</ul>
+<hr />
+<h2 id="release-20260417">Release 2026/04/17<a class="headerlink" href="#release-20260417" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b969-when-enrolling-already-enrolled-person-return-relevant-message</strong> – Improved enrolment toast messages to clearly distinguish enrol, role update, already-enrolled, mixed, and no-change outcomes.</li>
+<li><strong>b979-display-clear-message-when-student-stats-hidden-due-to-permission</strong> – Updated student statistics messaging to clearly distinguish between “no sets available” and “statistics hidden due to permissions”.</li>
+<li><strong>b981-b472-phase-5-optional-module-instance-with-intelligent-resolution</strong> – Enhanced the Bulk Enrol/Unenrol CSV flow to allow optional module instance values, automatically resolving single-instance modules and prompting for consistent instance selection when multiple instances exist.</li>
+<li><strong>b1009-mued-api-chat-adoption</strong> – Adopted the muEd API for chat functions with versioned schema fetching and auto-generated backend (TypeScript) and lf_toolkit (Python) types, supporting controlled version upgrades and backwards compatibility with existing APIs.</li>
+<li><strong>b1039-introduce-permissions-tab-and-fix-tags-ui</strong> – Added a new Permissions tab under Admin → Users (moving Teacher Roles there) and resolved UI inconsistencies in the Tags tab, including spacing, layout shift, page title alignment, and removal of redundant edit buttons.</li>
+</ul>
+<h2 id="release-20260330">Release 2026/03/30<a class="headerlink" href="#release-20260330" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b982-refactor-admin-users-section</strong> – Introduced a dedicated Tags tab under Admin -&gt; Users, moved tag creation and import flows there, and simplified and clarified the Users page layout while preserving existing student tag assignment behaviour.</li>
+<li><strong>b1017-include-response-in-activities-csv</strong> – Extended the Activities CSV export (Teacher → Module → Activities) to include feedback request and response data, aligning the download with the updated table columns.</li>
+<li><strong>b1024-b472-phase-3-follow-up-improve-fuzzy-matching-validation</strong> – Refined bulk enrol CSV matching, split validation into Modules and Users steps, and improved wizard UX and layout.</li>
+<li><strong>b1025-moderator-dashboard-tweaks-ii</strong> – Updated Moderator dashboard CSV export to include all rows (not just the current page) and all available columns, including percentage and recently added fields.</li>
+<li><strong>b1031-render-rewrite-rules-needs-updating</strong> – Ensured Render rewrite rules are regenerated when new dynamic pages are added, preventing 404 errors on reload and incorrect routing (e.g. bulkFill path resolving to a dynamic template route).</li>
+<li><strong>b1033-remove-useless-set-event-fetch</strong> – Removed redundant SetAccessEvent fetch that was discarding results and causing unnecessary <code>SetAccessEvent_setId_idx</code> reads.</li>
+<li><strong>b1034-broken-teacher-set-access-check</strong> – Fixed a missing <code>await</code> in the teacher set access check that could cause the permission validation to be bypassed.</li>
+<li><strong>b1036-event-tables-date-index</strong> – Added database indexes on createdAt for SetAccessEvent, PartAccessEvent, and ButtonEvent tables to improve performance of admin and date-based queries.</li>
+</ul>
+<h2 id="release-20260326">Release 2026/03/26<a class="headerlink" href="#release-20260326" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b996-b472-phase-4-cross-module-bulk-unenrol</strong> – Extended the Bulk Enrol wizard to support cross-module bulk unenrol for students and teachers.</li>
+<li><strong>b1008-move-bulk-fill-button-to-templates-page</strong> – Moved the Bulk Fill entry point from ADMIN → Modules to ADMIN → Templates and updated routing to align with the templates-based workflow.</li>
+</ul>
+<h1 id="release-20260320">Release 2026/03/20<a class="headerlink" href="#release-20260320" title="Permanent link">&para;</a></h1>
+<ul>
+<li><strong>b551-set-user-on-sentry</strong> – Enhanced Sentry integration by attaching authenticated user ID (and backend IP where available) to error reports, improving traceability and troubleshooting across backend and frontend.</li>
+<li><strong>b749-limit-canvas-snapshot-size</strong> – Introduced safeguards to prevent excessively large canvas snapshots from being stored, addressing rare multi‑MB snapshot payloads and protecting database storage.</li>
+<li><strong>b836-expression-response-area-bugs</strong> – Fixed UI overlap of Scan and Import (scan/draw) buttons in the EXPRESSION response area configure panel (Test tab) following the MULTI_LINES update.</li>
+<li><strong>b992-overlap-on-meq-set-settings</strong> – Fixed UI overlap in the MEQ Set settings modal (teacher auto-select covered by white bar) and adjusted modal positioning to ensure module and instance names remain visible.</li>
+<li><strong>b977-meq-sets-dont-clone-with-instance</strong> – Fixed an error occurring when cloning a module instance containing MEQ sets, ensuring instances clone successfully regardless of associated MEQ data.</li>
+<li><strong>b995-b472-phase-3-bulk-enrol-by-csv-upload</strong> – Added Phase 3 of the Bulk Enrol wizard, enabling enrolment of students or teachers onto selected module instances via CSV upload.</li>
+<li><strong>b1001-canvas-assets-store</strong> – Externalised canvas assets (e.g. images) via TLDraw <code>TLAssetStore</code>, storing them in S3 instead of embedding data URIs in snapshots, reducing snapshot size and database load.</li>
+<li><strong>b1010-canvas-blank-auto-saves</strong> – Fixed unintended canvas auto-upsert on open to prevent creation of empty snapshots, reducing redundant canvas records and database noise.</li>
+<li><strong>b1013-moderator-dashboard-tweaks</strong> – Updated the Moderator dashboard by hiding scores while an MEQ is open, introducing ordering by module name then instance name, and adding percentage completion display.</li>
+<li><strong>b1015-remove-unintended-search-bar-from-module-students-page</strong> – Removed an unintentionally introduced search bar from the Teacher → Module → Students page, restoring the intended layout (no functional filtering was previously wired).</li>
+</ul>
+<h2 id="release-20260316">Release 2026/03/16<a class="headerlink" href="#release-20260316" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b632-chat-functions-admin-page-ui-services</strong> – Introduced full ADMIN management for Chat Functions (create/edit/archive/restore) with soft-delete support (deletedAt), restricted student access to non-archived functions, a new tabbed admin UI (Functions &amp; Statistics), dashboard summary card, and aligned Evaluation Functions admin pages to the same multi-tab structure.</li>
+<li><strong>b1011-fix-set-access-for-tutors</strong> – Fixed an access-control issue where personal tutors in STUDENT mode could enter a module but were incorrectly denied access to its MEQ sets, aligning behaviour with student and module-owner access expectations.</li>
+</ul>
+<h2 id="release-20260310">Release 2026/03/10<a class="headerlink" href="#release-20260310" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b976-moderator-dashboards</strong> – Introduced a tabbed Moderator dashboard (Approvals, Module Stats, Teacher Stats placeholder) and added a comprehensive Module Stats table for moderated MEQ sets with inline editing (dates, visibility, teachers), completion metrics, template-defined reportable Likert averages, and CSV export.</li>
+</ul>
+<h2 id="release-20260309">Release 2026/03/09<a class="headerlink" href="#release-20260309" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b994-b472-phase-2-bulk-enrol-by-global-tag</strong> – Added Phase 2 of the Bulk Enrol wizard, enabling administrators to enrol students onto one or more selected module instances based on Global Tags. Supports combining manual email input, CSV import, and tag-based user resolution with deduplication and validation in a single workflow.</li>
+</ul>
+<h2 id="release-20260305">Release 2026/03/05<a class="headerlink" href="#release-20260305" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b510-double-dollars-feedback-problem</strong> – Fixed handling of feedback containing double-dollar LaTeX delimiters after reverting a previous incomplete attempt.</li>
+<li><strong>b811-rich-text-math-improvements</strong> – Improved rendering of evaluation feedback so text, HTML, LaTeX, and Markdown responses are displayed consistently and as intended.</li>
+<li><strong>b850-improve-show-hide-chat-logic</strong> – Simplified chat visibility defaults by setting <code>Question - display chatbot</code> to true and <code>Set - chatbot visibility</code> to OPEN, with a migration updating existing records accordingly.</li>
+<li><strong>b988-meq-spring-import</strong> – Updated MEQ import scripts to support additional teacher roles and evaluated-subject logic, improve CSV handling (whitespace normalisation and optional student assignment), and refine documentation for future imports.</li>
+<li><strong>b997-bulk-create-meq-sets-tweaks-1</strong> – Improved the Bulk Create MEQ Sets feature by adding instance name to the summary table and correcting release-date time handling to prevent unintended UTC time shifts.</li>
+</ul>
+<h2 id="release-20260302">Release 2026/03/02<a class="headerlink" href="#release-20260302" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b472-bulk-enrol-unenroll-enhancements</strong> – Introduced Phase 1 of the Bulk Enrol wizard, allowing administrators and teachers (subject to permissions) to enrol the same selected students or teachers onto one or more selected module instances in a single workflow.</li>
+</ul>
+<h2 id="release-20260224">Release 2026/02/24<a class="headerlink" href="#release-20260224" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b975-bulk-create-meq-sets</strong> – Added bulk creation of MEQ sets across multiple modules and instances from a template, with shared settings and background job progress reporting.</li>
+</ul>
+<h2 id="release-20260220">Release 2026/02/20<a class="headerlink" href="#release-20260220" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b961-left-handed-canvas</strong> – Improved canvas usability to address left-handed user friction by preventing unintended width resizing, adding support for flipping canvas/content sides, introducing an option to lock canvas width, and enabling a full-screen canvas mode similar to response area canvas behaviour.</li>
+<li><strong>b967-add-ui-toggle-to-mask-student-emails</strong> – Introduced a TEACHER-mode UI toggle to mask student names and email addresses in the Students table and Student View for presentation purposes.</li>
+</ul>
+<h2 id="release-20260216">Release 2026/02/16<a class="headerlink" href="#release-20260216" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b901-teacher-role-permissions-to-activities-and-errors</strong> – Aligned Activities and Errors visibility with the resolved user-access policy. Student row visibility and email masking now consistently follow View Student Data rules across both features, including correct handling of mixed Teacher and Tutor roles.</li>
+<li><strong>b962-restrict-stats-in-module-student-view</strong> – Introduced a separate View Student Stats permission to ensure consistent and explicit control of student-level statistics visibility.</li>
+<li><strong>b966-closed-modules-not-visible</strong> – Fixed client-side filtering so closed module instances are correctly hidden or shown according to the "Hide finished modules" toggle, with the default behaviour hiding finished modules for new users.</li>
+<li><strong>b968-add-user-access-documentation-for-student-stats-and-activity-permissions</strong> – Updated User Access technical documentation to reflect the clarified teacher and tutor permissions for Activities, Errors, and student-level statistics.</li>
+</ul>
+<h2 id="release-20260210">Release 2026/02/10<a class="headerlink" href="#release-20260210" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b445-pandoc-error-latex-followed-by-a-number</strong> – Improved PDF generation robustness when LaTeX expressions are immediately followed by numbers. </li>
+<li><strong>b956-case-insensitive-email-address-on-enrolment</strong> – Normalised email address handling during enrolment.</li>
+</ul>
+<h2 id="release-20260130">Release 2026/01/30<a class="headerlink" href="#release-20260130" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b909-stats-displayed-without-permission</strong> - Ensured student progress statistics are displayed only when the user has the View Stats permission. Statistics are now returned only for students the user is authorised to view, including correct handling of tutor-only access.</li>
+<li><strong>b951-images-response-area</strong> - Added a new Images response area type, allowing students to submit image-based responses and enabling teachers to view and assess image submissions consistently with other response areas.</li>
+<li><strong>b953-null-responseconfig-api-error</strong> – Prevented GraphQL errors when response configuration is absent by aligning schema nullability.</li>
+<li><strong>b954-dont-fetch-stats-without-access</strong> – Prevented stats queries from being issued when the teacher role does not grant access to set statistics, avoiding unnecessary backend errors.</li>
+</ul>
+<h2 id="release-20260116">Release 2026/01/16<a class="headerlink" href="#release-20260116" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b889-make-the-displayed-numbers-when-importing-students-less-confusing</strong> – Improved student import header mapping by making system column identifiers visually secondary.</li>
+<li><strong>b909-stats-displayed-without-permission</strong> – Fixed stats being shown without permission by enforcing VIEW STATS access in the Students table.</li>
+<li><strong>b915-header-for-personal-tutors</strong> – Fixed module header so personal tutors see the correct module title instead of the “TEACHER” label.</li>
+<li><strong>b930-navigation-to-empty-student-details-page-in-teacher-view</strong> – Fixed navigation to student details so persisted filters do not lead to an empty or incorrect view.</li>
+<li><strong>b932-api-retrieves-all-students-not-filtered-by-teacher-permissions</strong> – Fixed student filtering so teachers and tutors only see students they are authorised to view.</li>
+<li><strong>b934-admin-modules-filter-module-name-replaced-by-module-id-after-returning-to-page</strong> – Fixed Admin -&gt; Modules filter to restore module names instead of internal IDs when returning to the page.</li>
+<li><strong>b940-filter-teacher-modules-students-does-not-remember-sets</strong> – Fixed set-based filters not being restored in the Teacher -&gt; Module -&gt; Students view when navigation away and back.</li>
+</ul>
+<h2 id="release-20260113">Release 2026/01/13<a class="headerlink" href="#release-20260113" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b937-meq-likert-scale</strong> – Added Likert scale visualisation for MEQ stats and improved N/A handling.</li>
+<li><strong>b944-meq-stats-fixes</strong> – Improved MEQ statistics access control, evaluated teacher selection, and various minor changes.</li>
+</ul>
+<h2 id="release-20260107">Release 2026/01/07<a class="headerlink" href="#release-20260107" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b943-meq-explore-button-throws-error</strong> – Fixed an issue where the Explore page could throw an error for MEQ submissions with empty responses.</li>
+</ul>
+<h2 id="release-20260106">Release 2026/01/06<a class="headerlink" href="#release-20260106" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b808-meq-stats-page</strong> - Improved MEQ statistics visibility, filtering, and access control, ensuring teachers and moderators see only appropriate, recent, and sufficiently populated data.</li>
+<li><strong>b919-meq-moderation-improvements</strong> - Improved MEQ moderation by excluding empty submissions, consolidating identical responses, showing only the latest submissions, and refining moderation navigation.</li>
+</ul>
+<h2 id="release-20251219">Release 2025/12/19<a class="headerlink" href="#release-20251219" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>931-chat-cursor-fix</strong> - Keep the chat input focused after sending a message</li>
+<li><strong>b936-numeric-units-ra-type-cannot-be-cleared</strong> - Fix bug preventing NUMERIC_UNITS response type to clear</li>
+<li><strong>b933-numeric-and-numericalunits-allow-empty-student-response</strong> - Fix a bug that allowed empty submission on BOOLEAN, ESSAY, NUMBER, NUMERIC_UNITS and  TEXT response types.</li>
+</ul>
+<h2 id="release-20251216-bis">Release 2025/12/16 bis<a class="headerlink" href="#release-20251216-bis" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b935-login-fails-when-email-address-changes</strong> - Fix login for Microsoft users after they've changed their email address.</li>
+</ul>
+<h2 id="release-20251216">Release 2025/12/16<a class="headerlink" href="#release-20251216" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b547-chat-ui-tweaks</strong> - Improved chat interface behaviour, including correct tab selection when switching questions, immediate display of user messages, updated styling, and a new typing animation.</li>
+<li><strong>b890-admin-chat-statistics-tweaks</strong> - Simplified the Admin Chat Statistics page by replacing descriptive sentences with concise table headings and labels.</li>
+</ul>
+<h2 id="release-20251211">Release 2025/12/11<a class="headerlink" href="#release-20251211" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b923-cannot-assign-moderator-role-to-a-new-teacher-in-admin</strong> - Allow admin to assign moderator roles</li>
+<li><strong>b926-handle-null-submission-on-teacher-errors</strong> - Show errors with empty submittions</li>
+<li><strong>927-meq-discard-confirmation</strong> - Ask for confirmation when navigating away from a filled but not submitted MEQ</li>
+</ul>
+<h2 id="release-20251205">Release 2025/12/05<a class="headerlink" href="#release-20251205" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b916-meq-tweaks-batch-5</strong> - Minor MEQ UI tweaks: tab and title layout; green ticks on tabs.</li>
+</ul>
+<h2 id="release-20251201">Release 2025/12/01<a class="headerlink" href="#release-20251201" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b917-meq-release</strong> - Make MEQs visible on students' home page</li>
+</ul>
+<h2 id="release-20251127">Release 2025/11/27<a class="headerlink" href="#release-20251127" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b912-meq-batch-import</strong> - Added modules batch import features for MEQ launch.</li>
+<li><strong>b914-meq-tweaks-batch-4</strong> - Minor wording and layout changes for MEQ sets.</li>
+</ul>
+<h2 id="release-20251126">Release 2025/11/26<a class="headerlink" href="#release-20251126" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b830-remember-search-and-filter-settings-across-the-app</strong> - Added support for remembering search and filter settings across the app during a session.</li>
+<li><strong>b877-meq-evaluated-teachers-list</strong> - Added the ability to configure which teachers are evaluated in each MEQ set, including a new “repeat statements for each teacher” option and several small usability improvements.</li>
+<li><strong>b878-meq-likert-updates</strong> - Improved the Likert question type with editable columns, clearer submission behaviour for surveys, and several small usability and layout fixes.</li>
+<li><strong>b895-set-name-edit-issues</strong> - Fixed issues with editing set names, including unwanted navigation when opening the dialog and repositioning the edit icon next to the title.</li>
+<li><strong>b898-meq-tweaks-batch-1</strong> - Improved the MEQ sets page with corrected headers, refreshed layouts and styling (including icons, alignment, and backgrounds), and ensured the student module list always reloads correctly.</li>
+<li><strong>b906-meq-tweaks-batch-2</strong> - Improved the MEQ experience with smoother global submission, clearer messages and titles, support for empty Likert responses, a ‘Next MEQ’ button, and better handling of redacted content.</li>
+<li><strong>b908-meq-layout-fix</strong> - Fixed a layout issue that caused a double-scroll effect after adding the sets navigation bar.</li>
+<li><strong>b910-meq-tweaks-batch-3</strong> - Improved the MEQ moderation table and mobile experience, including clearer question numbering, consistent approve/reject buttons, visible essay inputs on mobile, and correct handling of draw mode.</li>
+</ul>
+<h2 id="release-20251120">Release 2025/11/20<a class="headerlink" href="#release-20251120" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b845-add-filter-to-global-tags-multi-widget</strong> – Added a search feature to the global tags multi-select widget, making it easier to find tags quickly.</li>
+<li><strong>b875-meq-student-home-page-links</strong> – Added links to Module Evaluation Questionnaires (MEQs) on the student home page.</li>
+<li><strong>b876-meq-set-navigation</strong> – Renamed “Surveys” to Module Evaluation Questionnaires (MEQs) and improved navigation so students can easily access MEQs for all their modules.</li>
+<li><strong>b879-meq-module-stats</strong> – Improved the statistics view so it is clear which sets are MEQ sets.</li>
+<li><strong>b880-meq-set-dates-defaults</strong> – Added default hide and release dates for MEQs at the tenant level to simplify setup.</li>
+<li><strong>b886-student-progress-in-teacher-view-is-not-aligned-if-it-contains-stars</strong> – Improved the alignment of progress indicators in the teacher view, including when a star (submitted solution by student) is shown.</li>
+</ul>
+<h2 id="release-20251117">Release 2025/11/17<a class="headerlink" href="#release-20251117" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b849-import-tags-with-same-column-name</strong> – Allow columns in the student-upload spreadsheet to have identical titles.</li>
+<li><strong>b864-admin-chat-statistics</strong> – Added a new page in the admin view to preview chat usage statistics.</li>
+<li><strong>b868-set-card-items-do-not-align-on-some-cards</strong> – Aligned items inside set cards in the teacher view so they line up.</li>
+<li><strong>b870-cant-add-links-in-lexdown-except-in-raw-markdown</strong> – Fixed link creation in the Lexdown editor.</li>
+<li><strong>b874-making-saving-draft-message-to-appear-subtle</strong> – Made the “saving draft” message for question versions less intrusive.</li>
+<li><strong>b882-expanded-list-of-teacher-roles-overflows-window</strong> – Improved UI to ensure the expanded teacher-roles popup is centered.</li>
+<li><strong>b886-student-progress-in-teacher-view-is-not-aligned-if-it-contains-stars</strong> – UI fix to ensure student progress bars remain aligned even when they contain stars.</li>
+</ul>
+<h2 id="release-20251106">Release 2025/11/06<a class="headerlink" href="#release-20251106" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b871-set-number-in-mobile-view</strong> - Fixed the display of set numbers shown as part of the question title in the mobile view.</li>
+<li><strong>b847-explore-should-be-grey-when-no-data</strong> - Fixed the clickability of buttons in the response area in the teacher view.</li>
+</ul>
+<h2 id="release-20251105">Release 2025/11/05<a class="headerlink" href="#release-20251105" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b851-empty-question-title-prevents-save</strong> - Question title validation and error handling improvements.</li>
+<li><strong>b765-audio-record-tweaks</strong> - Improved UI for audio recordings.</li>
+<li><strong>b839-captions-with-latex-adjustments</strong> - Revert <strong>b774-style-in-captions</strong>.</li>
+<li><strong>b842-button-widths</strong> - Teacher editor UI: response area button widths aligned.</li>
+</ul>
+<h2 id="release-20251031">Release 2025/10/31<a class="headerlink" href="#release-20251031" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b853-remove-feedback-when-user-changes-answer</strong> - Feedback disappears when user input is modified.</li>
+<li><strong>b867-sentry-disable-spans-and-replays</strong> - Adjusted Sentry configuration to prevent a large number of alerts for the same cause.</li>
+</ul>
+<h2 id="release-20251030">Release 2025/10/30<a class="headerlink" href="#release-20251030" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b860-reaction-icons-are-flashing-numbers</strong> - Fix: numbers were briefly appearing above all reaction icons.</li>
+<li><strong>b865-teacher-preview-display-feedback-on-feedback</strong> - Restored reactions in the teacher question preview.</li>
+</ul>
+<h2 id="release-20251029">Release 2025/10/29<a class="headerlink" href="#release-20251029" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b221-overall-progress</strong> - Display overall progress of all students to the teacher within a module.</li>
+</ul>
+<h2 id="release-20251028">Release 2025/10/28<a class="headerlink" href="#release-20251028" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b854-metadata-when-cloning-questions</strong> – Additional information when cloning from another question.</li>
+<li><strong>b856-global-tags-owner-validation-error</strong> – Fixed validation logic for global tag ownership.</li>
+<li><strong>b863-sentry-error-variable-input-got-invalid-value</strong> – Resolved an error reported by the automated alert system that occurred when an empty value was sent to the API.</li>
+</ul>
+<h2 id="release-20251027">Release 2025/10/27<a class="headerlink" href="#release-20251027" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b539-chasing-likes</strong> – Improved the UI for reaction icons to prevent them from disappearing before the mouse can reach them.  </li>
+<li><strong>b843-feedback-feedback</strong> – Added reactions to response areas; students can give feedback on the feedback they receive.  </li>
+<li><strong>b846-global-tags-editing-group-emails</strong> – Reordered fields on the Global Tag editing page for better clarity and usability.</li>
+</ul>
+<h2 id="release-20251017">Release 2025/10/17<a class="headerlink" href="#release-20251017" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b814-retire-expression-ra</strong> - Removed unused Mathpix equation endoint</li>
+<li><strong>782-branching-strategy</strong> - New deployment workflow</li>
+</ul>
+<h2 id="release-20251010">Release 2025/10/10<a class="headerlink" href="#release-20251010" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b638-any-external-chat-function</strong> - Chatbots implemented as external microservices</li>
+<li><strong>b810-multiple-chatbots-student</strong> - Student UI: choice of chatbot</li>
+</ul>
+<h2 id="release-20251009">Release 2025/10/09<a class="headerlink" href="#release-20251009" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b827-unenroll-many-users – part 3</strong> – Added information about the number of students to be unenroled  </li>
+<li><strong>b802-all-drop-downs-and-tables-in-correct-order</strong> – Checked and corrected default order in drop-down lists and tables across the application  </li>
+<li><strong>b824-remove-spaces-from-module-instance-dropdown</strong> – Module instance header drop-down UI tweak  </li>
+</ul>
+<h2 id="release-20251008">Release 2025/10/08<a class="headerlink" href="#release-20251008" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b827-unenroll-many-users - part 2</strong> – improved button labels  </li>
+<li><strong>b834-reduce-size-of-description-box-in-settings-modal</strong> – made the description box narrower  </li>
+<li><strong>b789-admin-global-tag-pages-tweaks</strong> – changed global tag type values to make them more explanatory  </li>
+<li><strong>b790-students-import-wizard-add-info-on-step-2</strong> – added explanations for each column in Step 2 of the students import wizard  </li>
+</ul>
+<h2 id="release-20251003">Release 2025/10/03<a class="headerlink" href="#release-20251003" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b773-export-image-captions-to-json</strong> – included image captions in exported question JSON files  </li>
+<li><strong>b774-style-in-captions</strong> – enabled LaTeX and Markdown support in image captions  </li>
+<li><strong>b775-image-caption-character-limit</strong> – removed the 250-character limit on image captions  </li>
+<li><strong>b827-unenrol-many-users - part 1</strong> – added a new feature to allow unenrolling multiple students at once in the teacher view</li>
+<li><strong>b828-display-student-stats-even-for-0-user-access</strong> – stats graphs are now displayed even when they show <em>0 student accesses</em> (previously no graph was shown)  </li>
+</ul>
+<h2 id="release-20251002">Release 2025/10/02<a class="headerlink" href="#release-20251002" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b516-set-layout-ui-upgrades</strong> - new set layout with 2 adjustable panes</li>
+<li><strong>b740-student-nav-upgrades</strong> - add set navigation within set for students</li>
+<li><strong>b831-teacher-nav-upgrades</strong> - add set navigation within set for teachers</li>
+<li><strong>b826-teacher-drag-handles</strong> - add drag handle for re-ordering response areas</li>
+<li><strong>b821-more-firebase-auth-errors-caught</strong> - ensure usre is fully authenticated before making request to the backend</li>
+</ul>
+<h2 id="release-20251001">Release 2025/10/01<a class="headerlink" href="#release-20251001" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>b815-filter-tweaks-ii</strong> - improved module filtering in the student view for closed module instances</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 3, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../../scripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
