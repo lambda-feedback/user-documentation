@@ -1,12 +1,29 @@
 # Major releases
 This page contains summaries; see also [detailed releases](detailed_releases.md).
 
+## 2026 Q3 new features
+
+### Teacher Set Navitation
+
+Improved navigation for TEACHERs within a Set. 
+
+![](../assets/releases/TeacherNav.png)
+
+### Improved question cloning
+
+Cloning a questionL: faster search, and an interactive preview before cloning.
+
+### User access model
+
+Rebuilt the user access model within the logic of the code, for a clearer management of permissions and access, and to permit scalable future developments. 
+
 ## 2026 Q2 new features
 
 ### Question locking
 
 When a teacher opens a question for editing, it is now locked to prevent conflicts due to simultaneous edits by another teacher. Teachers see a clear indicator that the question is in use. 
 ![Screenshot of tooltip saying 'you are editing this question in another tab](../assets/releases/editing_question_another_tab.png)
+
 ### µEd API 
 
 Lambda Feedback now uses the µEd API to call evaluation functions and chat functions. The Microservices for Education API (µEd - see [mued.org](https://www.mued.org)) is a public, shared API definition. Platforms can seamless call or subsitute any compatible microservice (such as evaluation functions or chat bots), which can also serve multiple platforms. 
