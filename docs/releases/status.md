@@ -21,8 +21,11 @@ The severity is used to decide how much we invest in preventative measures, dete
 ### Timeline (GMT/UTC)
 
 18:46 First automated alert to developers
+
 19:09 First user email to support address
+
 21:30 Investigation found an expired token for Microsoft users, which needed refreshing
+
 21:48 Problem solved
 
 ### Analysis
