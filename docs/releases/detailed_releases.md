@@ -1,3 +1,15 @@
+## Release 2026/11/05
+
+- **b1120-response-area-audio-upload** – Added an Audio response area and support for MIDI file uploads.
+- **b1097-import-cases-when-no-edit-rights** – Check whether a question is locked before importing cases into it.
+- **b1153-meq-teacher-notifications** – Improved teachers recap email.
+- **b1157-meq-student-notifications** – Added MEQ reminder emails for students.
+- **b1163-meq-autumn-2026-batch-import-2** – Added GTAs to the MEQ batch import.
+- **b1175-bulk-teacher-enrolment-invalidate-fix** – Fixed a premature closure of the bulk teacher enrolment modale.
+- **b1182-defer-loading-of-question-versions** – Improved performance by loading question versions only when needed.
+- **b1183-tweak-prod-tasks-configuration** – Improved server reliability with memory and event loop delay monitoring.
+- **b1066-increase-yarn-security** – Tightened dependency workflows for better security.
+
 ## Release 2026/10/23
 - **b1154-meq-teacher-ui** - UI refresh focused on teacher flows and MEQs
 
