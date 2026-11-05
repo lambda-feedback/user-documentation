@@ -54,13 +54,13 @@ We also detected significant periods of loading and slow responses in the evenin
 
 ### Analysis
 
-1. For the first detected issue, approximately 156 users were live on the application, which requires a moderate scale up of servers ('tasks'). This scale up should be automated based on the load of the tasks.
+1. Scaling of servers ('tasks') comprises a minimum number and additional automatically started tasks to meet higher demand. The minimum number is scheduled to be higher during busy periods for higher resilience.
+ 
+2. The period in question was in the hour before a scheduled increase in the minimum, so was more vulnerable to failures to autoscale.
 
-2. Automated task scaling relies on sensing that a task is overloaded. In this case, despite the ~100% CPU utilisation, the task was not recognised by the automated systems as reaching capacity. Therefore, rather than the expected ~2 minutes to expand capacity, it took 16 minutes for an automated response. This is the reason for an extended period of instability.
+3. Autoscaling relies on sensing that a task is overloaded. In this case, despite the ~100% CPU utilisation, the task was not recognised by the automated systems as reaching capacity. Therefore, rather than the expected ~2 minutes to expand capacity, it took 16 minutes for an automated response. This is the reason for an extended period of instability.
 
-3. The number of live tasks, in addition to scaling with usage, is scheduled to have a higher minimum during busy periods. The first incident happened in the hour before the scheduled 'busy' preiods.
-
-4. For the other incidents (other than the first one), memory limits were the cause for loading and slow responses. 
+4. For the other incidents (other than the first one), memory limits were the cause for slow responses. 
 
 
 ### Actions
