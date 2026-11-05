@@ -21,8 +21,11 @@ The severity is used to decide how much we invest in preventative measures, dete
 ### Timeline (GMT/UTC)
 
 18:46 First automated alert to developers
+
 19:09 First user email to support address
+
 21:30 Investigation found an expired token for Microsoft users, which needed refreshing
+
 21:48 Problem solved
 
 ### Analysis
@@ -33,9 +36,51 @@ The cause of the problem stems from switching to a new auth system 12 months ago
 
 ### Actions
 
-Calendar events have been set to refresh tokens in advance of their expiry. An additional developer is being recruited.
+Calendar events have been set to refresh tokens in advance of their expiry. An additional developer is also being recruited.
 
 N=0.24, effect = 4, duration = 3. Severity = 2.88 (SIGNIFICANT)
+
+## 2026 Oct 27th: Partial Outages (Severity: SIGNIFICANT):
+
+### Timeline (GMT/UTC)
+
+09:12 Singular task hit 100% CPU Utilisation and users experienced instability.
+
+09:28 Unhealthy task was ended, and a new task started automatically.
+
+09:39 CPU Utilisation returned to normal 
+
+We also detected significant periods of loading and slow responses in the evenings on 30/10/26, 31/10/26, 2/11/26. In those periods, the automated response was more rapid and the effects were less severe.
+
+### Analysis
+
+1. Scaling of servers ('tasks') comprises a minimum number and additional automatically started tasks to meet higher demand. The minimum number is scheduled to be higher during busy periods for higher resilience.
+ 
+2. The period in question was in the hour before a scheduled increase in the minimum, so was more vulnerable to failures to autoscale.
+
+3. Autoscaling relies on sensing that a task is overloaded. In this case, despite the ~100% CPU utilisation, the task was not recognised by the automated systems as reaching capacity. Therefore, rather than the expected ~2 minutes to expand capacity, it took 16 minutes for an automated response. This is the reason for an extended period of instability.
+
+4. For the other incidents (other than the first one), memory limits were the cause for slow responses. 
+
+
+### Actions
+
+All of the following have been done to prevent future events:
+
+1. Extend the scheduled busy periods, i.e. times with an increased base number of tasks, to start one hour earlier.
+
+2. Double the memory in each task.
+
+3. Stricter measures of task health for faster and more reliable automated scaling responses.
+
+4. Stricter and more accurate memory thresholds to trigger automated scaling.
+
+5. New monitoring of slowdowns in event loops, for better detection of issues.
+
+6. Common highest-memory-usage DB queries were optimised to reduce typical memory loads on the tasks.
+
+N~2, effect = 3, duration = ~0.5. Severity ~3 (SIGNIFICANT)
+
 
 ## 2025 December 4th: Brief DB outage (Severity: LOW):
 
