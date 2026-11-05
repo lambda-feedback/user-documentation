@@ -55,7 +55,7 @@ This opens the **Response Area Panel**, separated into four tabs:
     - Table
     - Multiple-choice
     - MATH_SINGLE_LINE
-    - MATH_MULTI_LINE
+    - MATH_MULTI_LINES
     - Numeric units (separate fields for a number and its units)
     - Code
     - Essay (for long text answers)
@@ -65,7 +65,7 @@ Each input type has suitable evaluation functions. Try to choose the most suitab
 
 - **Configuration Options**
 
-    - **Enable live preview**: Renders the typed expression in realtime. Allows to validate student input before submitting. `Default: TRUE` for the EXPRESSION input type.
+    - **Enable live preview**: Renders the typed expression in realtime. Allows to validate student input before submitting. `Default: TRUE` for the MATH_SINGLE_LINE and MATH_MULTI_LINES input types.
     - **Display input symbols**: Displays the symbols and associated shortcut codes that may be required for a problem beneath the input field. These are configured in the 'Evaluate' tab. `Default: FALSE`.
     - **Include in PDF**: Only affects the PDF version. Includes pre/post response text in the PDF, with a blank space between. `Default: FALSE` except for Multiple-choice.
     - **Pre/post response text** (optional): Add text before and after the response area to clarify to students what to input. Accepts plain text, and single-dollar-delimited latex. E.g. `Estimate $f(x)=$` is acceptable. When using fractions in this field, use `$\dfrac{}{}$` as this is more legible.
