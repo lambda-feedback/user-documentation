@@ -1,3 +1,8 @@
+## Release 2026/11/06
+- **b1167-meq-admin-dashboard** - Added a new MEQ admin dashboard for managing MEQs.
+- **b181-support-m4a-in-audio** - Added support for M4A audio files in the Audio response area.
+- **b1180-enlarge-upload-space-in-ras** - Increased the upload space in the the Image, Code and Audio response areas.
+
 ## Release 2026/11/05
 
 - **b1120-response-area-audio-upload** – Added an Audio response area and support for MIDI file uploads.
