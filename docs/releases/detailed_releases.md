@@ -1,3 +1,8 @@
+## Release 2026-11-11
+- **b1184-meq-notifications-tweaks** - Improve MEQ notification emails
+- **b1189-meq-fix-evaluated-teachers-list-on-problem-sets** - Fix evaluated teachers list on some problem Sets
+- **b1171-meq-teacher-ui-tweaks** - Various small teacher UI tweaks
+
 ## Release 2026/11/06
 - **b1167-meq-admin-dashboard** - Added a new MEQ admin dashboard for managing MEQs.
 - **b181-support-m4a-in-audio** - Added support for M4A audio files in the Audio response area.
