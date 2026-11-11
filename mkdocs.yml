@@ -53,6 +53,7 @@ nav:
           - Content management: "teacher/reference/content_management.md"
           - Latex functionality: "teacher/reference/latex_functionality.md"
           - PDF generation: "teacher/reference/pdf_generation.md"
+          - Notifications: "teacher/reference/notifications.md"
           - Response Areas:
               - "teacher/reference/response_area_components/index.md"
               - Text: "teacher/reference/response_area_components/Text.md"
@@ -154,17 +155,17 @@ plugins:
   - git-revision-date-localized:
       fallback_to_build_date: true
   - macros
-  # - evaldocsloader:
-  #     enabled: !ENV [ENABLE_EVALDOCS, true]
-  #     functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
-  #     api_key:
-  #       !ENV [
-  #         API_KEY,
-  #         "WiOS1vMpQyTuGL06ZJxjG1eZd2P0SPvuVzHpr6zjkTIJ33U2t5O5NWaZboWBv8aV",
-  #       ]
-  #     dev_section: ["Advanced", "Evaluation Functions", "Deployed Functions"]
-  #     user_section: ["Teachers", "Reference", "Evaluation Functions"]
-  #     github_token: !ENV [GITHUB_TOKEN, ""]
+  - evaldocsloader:
+      enabled: !ENV [ENABLE_EVALDOCS, true]
+      functions_announce_endpoint: "https://prod-api.lambdafeedback.com/evaluation-functions/registered"
+      api_key:
+        !ENV [
+          API_KEY,
+          "WiOS1vMpQyTuGL06ZJxjG1eZd2P0SPvuVzHpr6zjkTIJ33U2t5O5NWaZboWBv8aV",
+        ]
+      dev_section: ["Advanced", "Evaluation Functions", "Deployed Functions"]
+      user_section: ["Teachers", "Reference", "Evaluation Functions"]
+      github_token: !ENV [GITHUB_TOKEN, ""]
 
 # Extra variables, accessible within markdown pages
 extra:
