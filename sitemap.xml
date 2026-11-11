@@ -289,19 +289,19 @@
          <lastmod>2026-11-11</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/isSimilar/</loc>
-         <lastmod>2026-11-11</lastmod>
-    </url>
-    <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/isSimilar/</loc>
-         <lastmod>2026-11-11</lastmod>
-    </url>
-    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/arrayEqual/</loc>
          <lastmod>2026-11-11</lastmod>
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/arrayEqual/</loc>
+         <lastmod>2026-11-11</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/isSimilar/</loc>
+         <lastmod>2026-11-11</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/isSimilar/</loc>
          <lastmod>2026-11-11</lastmod>
     </url>
     <url>
@@ -321,15 +321,15 @@
          <lastmod>2026-11-11</lastmod>
     </url>
     <url>
-         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareExpressions/</loc>
-         <lastmod>2026-11-11</lastmod>
-    </url>
-    <url>
          <loc>https://lambda-feedback.github.io/user-documentation/dev_eval_function_docs/shortTextAnswer/</loc>
          <lastmod>2026-11-11</lastmod>
     </url>
     <url>
          <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/shortTextAnswer/</loc>
+         <lastmod>2026-11-11</lastmod>
+    </url>
+    <url>
+         <loc>https://lambda-feedback.github.io/user-documentation/user_eval_function_docs/compareExpressions/</loc>
          <lastmod>2026-11-11</lastmod>
     </url>
     <url>
