@@ -1,3 +1,7 @@
+## Release 2026-11-12
+- **b1196-node-upgrade-november-2026** - Upgrade Node to v24.22.3
+- **b1133-settings-button-on-meq-page** - Add setting button to MEQ Sets
+
 ## Release 2026-11-11
 - **b1184-meq-notifications-tweaks** - Improve MEQ notification emails
 - **b1189-meq-fix-evaluated-teachers-list-on-problem-sets** - Fix evaluated teachers list on some problem Sets
