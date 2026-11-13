@@ -1,3 +1,14 @@
+## Release 2026-11-13
+- **b1160-meq-improve-moderation-navigation** - Improve MEQ moderation navigation
+- **b1161-meq-show-moderators-on-results-page** - Show MEQ moderators on the results page
+- **b1170-bucket-submission-times** - Show approximate submission times in MEQ moderation
+- **b1170-likert-sorted** - Sort MEQ Likert answers in a fixed order
+- **b1192-meq-ignore-errors-and-flags-from-meq-sets** - Hide errors and flags from MEQ Sets
+- **b1187-dynamic-grouping-ui-enhacement-i** - Add a grouping summary and collapsible groups to the Dynamic Grouping results
+- **b1149-enhance-dynamic-grouping-css** - Improve the Dynamic Grouping CSV export
+- **b1172-response-area-configure-restructure** - Restructure the response area configure panel
+- **b1174-response-area-improvements** - Make response areas more consistent for students and teachers
+
 ## Release 2026-11-12
 - **b1196-node-upgrade-november-2026** - Upgrade Node to v24.22.3
 - **b1133-settings-button-on-meq-page** - Add setting button to MEQ Sets
