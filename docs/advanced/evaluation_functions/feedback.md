@@ -6,6 +6,9 @@ Shimmy re-invokes `evaluation_function` once per case.
 This is base-layer behaviour and applies to **every** function regardless of implementation
 language; the JSON below is the wire format Shimmy sends, not Python-specific.
 
+!!! note
+    Case `feedback` strings are rendered as Markdown, just like function feedback: use Markdown rather than HTML, and `\n` for line breaks. See [Formatting feedback](specification.md#outputs).
+
 Input structure:
 
 ```json
