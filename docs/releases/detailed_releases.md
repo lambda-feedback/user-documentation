@@ -1,3 +1,10 @@
+## Release 2026-11-18
+- **b1159-meq-show-scores-on-results-page** - Show MEQ module and teacher scores on the results page
+- **b1198-show-comments-to-moderate-for-open-meqs-in-moderators-recap** - Improve the MEQ moderators recap email
+- **b1199-ignore-moderation-for-deleted-sets** - Ignore moderation for deleted Sets
+- **b1166-module-overview-tab-design** - Redesign the module overview tab
+- **b546-more-chats-per-question** - Let students start several chats on the same Question
+
 ## Release 2026-11-13
 - **b1160-meq-improve-moderation-navigation** - Improve MEQ moderation navigation
 - **b1161-meq-show-moderators-on-results-page** - Show MEQ moderators on the results page
