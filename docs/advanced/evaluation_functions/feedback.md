@@ -7,7 +7,7 @@ This is base-layer behaviour and applies to **every** function regardless of imp
 language; the JSON below is the wire format Shimmy sends, not Python-specific.
 
 !!! note
-    Case `feedback` strings are rendered as Markdown, just like function feedback: use Markdown rather than HTML, and `\n` for line breaks. See [Formatting feedback](specification.md#outputs).
+    Case `feedback` strings are rendered using the [Lexdown](../../releases/major_releases.md#new-content-editor) component, just like function feedback. See [Outputs](specification.md#outputs).
 
 Input structure:
 

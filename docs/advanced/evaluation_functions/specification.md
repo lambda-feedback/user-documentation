@@ -109,34 +109,7 @@ few values are expected/able to be consumed:
 **`feedback: <string>`**: Optional text shown to the student alongside the result.
 
 !!! tip "Formatting feedback"
-    Feedback strings are rendered as **Markdown**. Format feedback with Markdown syntax, **not HTML tags**: HTML such as `<b>`, `<i>`, `<h3>` or `<br>` is not rendered. Use `\n` for line breaks.
-
-    | Formatting | Use (Markdown)  | Don't use (HTML)   |
-    |------------|-----------------|--------------------|
-    | Bold       | `**important**` | `<b>important</b>` |
-    | Italics    | `*note*`        | `<i>note</i>`      |
-    | Heading    | `### Hint`      | `<h3>Hint</h3>`    |
-    | Line break | `\n`            | `<br>`             |
-
-    Example combining them (headings must start on their own line, so put `\n` before and after them):
-
-    ```python
-    return {
-        "is_correct": False,
-        "feedback": (
-            "### Not quite\n"
-            "Your answer has the **wrong sign**.\n"
-            "*Hint:* expand the brackets first."
-        ),
-    }
-    ```
-
-    This renders as:
-
-    > ### Not quite
-    > Your answer has the **wrong sign**.
-    >
-    > *Hint:* expand the brackets first.
+    Feedback is rendered using the [Lexdown](../../releases/major_releases.md#new-content-editor) component, so format feedback with Markdown rather than HTML, using `\n` for line breaks.
 
 !!! info
 _More standardised function outputs that the frontend can consume are to come_
