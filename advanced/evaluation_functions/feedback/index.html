@@ -2003,6 +2003,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    isSimilar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../user_eval_function_docs/isExactEqual/" class="md-nav__link">
         
   
@@ -2029,27 +2050,6 @@
   
   <span class="md-ellipsis">
     GCSEenglish
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/isSimilar/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    isSimilar
   </span>
   
 
@@ -2129,27 +2129,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_eval_function_docs/symbolicEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    symbolicEqual
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../user_eval_function_docs/arraySymbolicEqual/" class="md-nav__link">
         
   
@@ -2197,6 +2176,27 @@
   
   <span class="md-ellipsis">
     survey
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user_eval_function_docs/symbolicEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    symbolicEqual
   </span>
   
 
@@ -2771,6 +2771,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    isSimilar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../dev_eval_function_docs/isExactEqual/" class="md-nav__link">
         
   
@@ -2813,27 +2834,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/isSimilar/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    isSimilar
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../dev_eval_function_docs/comparePhysicalQuantities/" class="md-nav__link">
         
   
@@ -2860,27 +2860,6 @@
   
   <span class="md-ellipsis">
     shortTextAnswer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../dev_eval_function_docs/symbolicEqual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    symbolicEqual
   </span>
   
 
@@ -2944,6 +2923,27 @@
   
   <span class="md-ellipsis">
     survey
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_eval_function_docs/symbolicEqual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    symbolicEqual
   </span>
   
 
@@ -3315,7 +3315,7 @@ Shimmy re-invokes <code>evaluation_function</code> once per case.</p>
 language; the JSON below is the wire format Shimmy sends, not Python-specific.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Case <code>feedback</code> strings are rendered as Markdown, just like function feedback: use Markdown rather than HTML, and <code>\n</code> for line breaks. See <a href="../specification/#outputs">Formatting feedback</a>.</p>
+<p>Case <code>feedback</code> strings are rendered using the <a href="../../../releases/major_releases/#new-content-editor">Lexdown</a> component, just like function feedback. See <a href="../specification/#outputs">Outputs</a>.</p>
 </div>
 <p>Input structure:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -3381,7 +3381,7 @@ language; the JSON below is the wire format Shimmy sends, not Python-specific.</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 19, 2026</span>
   </span>
 
     
